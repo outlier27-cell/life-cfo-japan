@@ -1,191 +1,84 @@
-<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='theme-color' content='#f5ecdc'><meta name='description' content='人生 CFO 全球篇的玩法、数据口径、结算公式和好友榜说明。'><title>《人生 CFO》完整改进分析与交付范围 · 人生 CFO</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"><link rel='stylesheet' href='style.css?v=2.0.1'><style>.doc{max-width:850px}.doc article{font-size:15px;line-height:1.85}.doc h1{font-size:32px;margin:22px 0}.doc h2{font-size:24px;margin:36px 0 14px;scroll-margin-top:16px}.doc h3{font-size:19px;margin:24px 0 10px}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:24px}.doc li{margin:7px 0}.doc td,.doc th{text-align:left;vertical-align:top;font-size:13px;padding:10px 8px}.doc table{min-width:290px}.doc code{font-size:13px;overflow-wrap:anywhere}.doc a{overflow-wrap:anywhere}.doc-toc{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}.doc-toc nav{display:grid;gap:8px;padding:12px 0}.doc-toc a{font-size:14px}.doc .nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.doc .table-wrap{margin:16px 0}.doc .end-link{margin-top:32px}@media(max-width:700px){.doc h1{font-size:28px}.doc h2{font-size:23px}.doc article{font-size:15px}.doc .header-actions{gap:6px}.doc .brand{font-size:21px}.doc .small-button{padding:5px 8px}}@media print{.masthead,.doc-toc,.end-link{display:none}.book{border:0;box-shadow:none;margin:0;padding:0;background:white}.doc h2{break-after:avoid}.doc tr{break-inside:avoid}}</style></head><body><div class='book doc'><header class='masthead'><a class='brand' href='./'><span class='seal'>人</span>人生 <b>CFO</b></a><div class='header-actions'><a class='small-button nav-link' href='./'>回到游戏</a></div></header><article><h1>《人生 CFO》完整改进分析与交付范围</h1><details class='doc-toc'><summary>查看目录</summary><nav><a href='#section-1'>结论：核心应是连续决策后的因果回顾</a><a href='#section-2'>旧版问题、影响与本次处理</a><a href='#section-3'>与原始需求逐项对应</a><a href='#section-4'>开源参考：采用什么思想，为什么不直接堆依赖</a><a href='#section-5'>数据质量：可以证明什么</a><a href='#section-6'>确定性、账本与分享的可信边界</a><a href='#section-7'>本轮验收与运营建议</a><a href='#section-8'>仍然存在的产品局限</a></nav></details>
-<p>全球篇 3.0 · 2026-11-13</p>
-<p><a href="./">试玩</a> · <a href="guide.html">完整玩法</a> · <a href="sources.html">数据来源</a></p>
-<h2 id='section-1'>结论：核心应是连续决策后的因果回顾</h2>
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='theme-color' content='#f5ecdc'><meta name='description' content='人生 CFO 全球篇的玩法、数据口径、结算公式和好友榜说明。'><title>《人生 CFO》4.0 改进分析与交付边界 · 人生 CFO</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"><link rel='stylesheet' href='style.css?v=2.0.1'><style>.doc{max-width:850px}.doc article{font-size:15px;line-height:1.85}.doc h1{font-size:32px;margin:22px 0}.doc h2{font-size:24px;margin:36px 0 14px;scroll-margin-top:16px}.doc h3{font-size:19px;margin:24px 0 10px}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:24px}.doc li{margin:7px 0}.doc td,.doc th{text-align:left;vertical-align:top;font-size:13px;padding:10px 8px}.doc table{min-width:290px}.doc code{font-size:13px;overflow-wrap:anywhere}.doc a{overflow-wrap:anywhere}.doc-toc{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}.doc-toc nav{display:grid;gap:8px;padding:12px 0}.doc-toc a{font-size:14px}.doc .nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.doc .table-wrap{margin:16px 0}.doc .end-link{margin-top:32px}@media(max-width:700px){.doc h1{font-size:28px}.doc h2{font-size:23px}.doc article{font-size:15px}.doc .header-actions{gap:6px}.doc .brand{font-size:21px}.doc .small-button{padding:5px 8px}}@media print{.masthead,.doc-toc,.end-link{display:none}.book{border:0;box-shadow:none;margin:0;padding:0;background:white}.doc h2{break-after:avoid}.doc tr{break-inside:avoid}}</style></head><body><div class='book doc'><header class='masthead'><a class='brand' href='./'><span class='seal'>人</span>人生 <b>CFO</b></a><div class='header-actions'><a class='small-button nav-link' href='./'>回到游戏</a></div></header><article><h1>《人生 CFO》4.0 改进分析与交付边界</h1><details class='doc-toc'><summary>查看目录</summary><nav><a href='#section-1'>从单一现金比例，进入完整的家庭财务安排</a><a href='#section-2'>数据扩展及专业口径</a><a href='#section-3'>对月度执行做了哪些约束</a><a href='#section-4'>模型对比的公平性</a><a href='#section-5'>兼容旧进度与好友榜</a><a href='#section-6'>手机体验与本轮修复</a><a href='#section-7'>后续仍需验证的内容</a></nav></details>
+<p>2026 年 11 月 13 日 · 本轮五项反馈的实现说明</p>
+<p><a href="./?v=4.0.0">试玩</a> · <a href="guide.html">完整玩法</a> · <a href="sources.html">数据来源与核查</a></p>
+<h2 id='section-1'>从单一现金比例，进入完整的家庭财务安排</h2>
 
-<p>本轮对照了用户提供的《中国式人生小游戏调研与开发方案》、已经上线的日本七年篇，以及全球出生、60 次选择、真实历史数据、简单手机操作、好友比较的明确要求。</p>
-<p>“只有一次选择”的反馈指向最初的单年玩法。七年版已经补了连续决策，但它仍然不足以表现长期责任、物价变化、不同经济环境和完整好友比较。本轮以“随机出生 → 30 年连续选择 → 账本结算 → 三十年回顾 → 同场好友榜”为完整网页交付闭环。</p>
-<p>用户已明确选择先用成绩链接汇总好友榜。因而本版不伪装成自动联网同步，也不把浏览器本地存储称作云端数据库。</p>
-<h2 id='section-2'>旧版问题、影响与本次处理</h2>
-
+<p>本轮保留四国随机出生、三十年六十次连续选择、同场好友成绩链接和手机操作。重点补足资产类别、剧情趣味、决策前信息、执行纪律和人机对比。没有把用户转发的聊天尾注当作开发指令，也没有把一个现代股票梗伪造成过去几十年的历史新闻。</p>
 <div class='table-wrap'><table>
 <thead>
 <tr>
-<th>问题</th>
-<th>为什么影响体验或可信度</th>
-<th>本次处理</th>
+<th>本轮反馈</th>
+<th>已实施的改变</th>
+<th>为什么这样处理</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>时间仅七年、选择数量少</td>
-<td>很难看到早期投入与长期责任的回收</td>
-<td>延长为 30 年、30 个生活节点加 30 次资产安排，共 60 次选择</td>
+<td>股票、债券、现金、保险、房/车、黄金</td>
+<td>四类金融仓位，加独立医疗保障、住房/房贷、汽车安排</td>
+<td>保险没有统一的可交易收益率；房车会带来负债、流动性限制和持有支出，不能全部当成股票滑条</td>
 </tr>
 <tr>
-<td>只体验一个国家和一段行情</td>
-<td>容易把这一段历史的有效策略误认成普遍答案</td>
-<td>4 国 × 3 个历史起点 × 3 种家庭背景；随机开局，分场比较</td>
+<td>剧情更有趣</td>
+<td>30 个年度的原创生活细节，结合已过去股价的虚构饭桌对白，保留家庭分支</td>
+<td>增加代入感，同时标明人物对白不是新闻或收益承诺</td>
 </tr>
 <tr>
-<td>生活选择之间的联系不够强</td>
-<td>事件像问卷，确认后就被遗忘</td>
-<td>技能、住房、伴侣、孩子、保障、互助和维护有持续效果与条件分支</td>
+<td>配置前回顾过去一年大事</td>
+<td>每个决策年有带原始出处的政治经济事件，配合过去12个月的市场与物价观测</td>
+<td>帮助形成判断，但不泄露下一年行情、不宣称新闻单独造成价格变化</td>
 </tr>
 <tr>
-<td>现金与股票之外缺少分散体验</td>
-<td>难解释本地集中与跨国风险的差异</td>
-<td>增加四国等权教学股票组合，纳入本币汇率变化，不承诺分散能保本</td>
+<td>止盈止损与再平衡</td>
+<td>月度观察规则、季度/偏离阈值再平衡、交易记录与费用</td>
+<td>年末两个点不足以判断年内触发；因此引入真实月度路径，并公开月均数据不能模拟盘中成交的边界</td>
 </tr>
 <tr>
-<td>长期账本不考虑物价</td>
-<td>名义金额增加容易被误读为购买力增加</td>
-<td>增加真实 CPI 调整、购买力曲线及随已知 CPI 变化的教学预算</td>
-</tr>
-<tr>
-<td>各国历史数据口径可能混乱</td>
-<td>日终收盘、月均值、价格回报与含股息回报会产生不同结果</td>
-<td>统一采用 12 月月度观测，明确价格口径、单位、基期和不计项目</td>
-</tr>
-<tr>
-<td>数据缺少可复核的发布链</td>
-<td>手抄或临时接口更新会使不同玩家结果不一致</td>
-<td>冻结原始 CSV、版本和哈希，生成年度表，复核官方表格；禁止填补缺失年份</td>
-</tr>
-<tr>
-<td>原始存档资产可被直接修改</td>
-<td>自报财富会让排行榜失去基本意义</td>
-<td>存档与成绩只接受合法选择记录，按固定规则重算资产</td>
-</tr>
-<tr>
-<td>跨场景直接比财富不公平</td>
-<td>国家货币、出生家庭、历史和运气各不相同</td>
-<td>好友榜按同一人生编号分组，分财富、现金缓冲、生活三项查看</td>
-</tr>
-<tr>
-<td>终局只有一个金额</td>
-<td>玩家看见输赢，却不理解后果</td>
-<td>提供全程日志、账本解释、现金目标、两条净资产/购买力曲线和只改一次的回放</td>
-</tr>
-<tr>
-<td>长页面易使手机操作复杂</td>
-<td>查资料、看图表挤占主要决定</td>
-<td>每次只处理一个核心选择，长账本与史料折叠，三项工具入口统一</td>
-</tr>
-<tr>
-<td>失败场景缺少说明</td>
-<td>清缓存、导入坏档、另开标签容易丢进度</td>
-<td>独立版本存档、有效备份、输入校验、冲突提醒、导出导入和复制分享兜底</td>
+<td>人与模型/多维对比</td>
+<td>现金、均衡、历史趋势三种公开规则；十项结果指标和逐年计划</td>
+<td>不再只比较玩家改一个比例，也不预设专业模型必然胜出</td>
 </tr>
 </tbody></table></div>
-<h2 id='section-3'>与原始需求逐项对应</h2>
+<h2 id='section-2'>数据扩展及专业口径</h2>
 
-<div class='table-wrap'><table>
-<thead>
-<tr>
-<th>需求</th>
-<th>本版实现与边界</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>全球随机出生</td>
-<td>日本、美国、英国、加拿大；出生年份和家庭随机，成年后开始 30 年玩法。支持 4 国，不宣称覆盖所有国家</td>
-</tr>
-<tr>
-<td>60 次快速选择</td>
-<td>30 个年度，每年生活与资产各一次；状态机明确记为 60 次有效选择。可以分次续玩</td>
-</tr>
-<tr>
-<td>真实历史经济与行情</td>
-<td>11 个 OECD/FRED 序列及有出处的央行历史节点，明确区分真实行情与虚构家庭故事</td>
-</tr>
-<tr>
-<td>资产配置的专业性</td>
-<td>现金需求、分散、汇率、物价、保障和长期投入都有可解释结果，不预设“专业路线必赚更多”</td>
-</tr>
-<tr>
-<td>智能体模拟交易</td>
-<td>财务助理按规则解释和执行配置，无在线模型费用；不把确定规则说成预测型大模型</td>
-</tr>
-<tr>
-<td>婚姻、孩子、意外</td>
-<td>关系与家庭支出进入状态，后续事件读取先前标记；没有强迫所有角色进入同一家庭路径</td>
-</tr>
-<tr>
-<td>重玩和比较</td>
-<td>同开局重玩；只改一个年度的配置，固定其他选择和外生意外后重算</td>
-</tr>
-<tr>
-<td>好友排行榜</td>
-<td>用户确认采用成绩链接汇总；导入后重算、分场排序、榜单快照分享，无自动云同步</td>
-</tr>
-<tr>
-<td>可直接公开使用</td>
-<td>保持现有 GitHub Pages 地址，零注册、无后端依赖、手机与桌面支持</td>
-</tr>
-<tr>
-<td>完整玩法说明</td>
-<td>独立网页、Markdown 源文件；包括规则、金额单位、结算示例、好友流程、数据和限制</td>
-</tr>
-</tbody></table></div>
-<p>Word 中的 Cocos、微信 AppID、广告、登录和奖励接口是后续平台化方案，不是已经获授权的线上微信产品要求。当前明确交付的是浏览器游戏，原生微信小游戏上架、支付和广告没有被伪称为完成。</p>
-<h2 id='section-4'>开源参考：采用什么思想，为什么不直接堆依赖</h2>
+<p>新增内容使用 18 条权威序列：原四国的 OECD 股价、CPI、汇率；BIS 四国住房价格；美联储美国10年国债收益率；世界银行黄金价格；BLS 美国新车价格指数。月度覆盖 1977 年12月至2020年12月，共517个连续观测点；四国住房各取44个Q4观测。1977年的额外历史用于首个决策年观察过去12个月。</p>
+<p>所有源文件冻结，按 SHA-256 记录；世界银行工作簿保留原表、列名、单位、行列坐标与提取脚本。另核对275个FRED官方HTML表格观测，以及15个黄金原工作簿单元格，全部匹配。这个复核证明提取结果与来源一致，不是多个独立数据供应商相互认证。</p>
+<p>不能把“有权威数据”扩写成“所有游戏结果都是真实历史产品净值”。债券是估值模型，住房金额是指数锚定，汽车是美国价格参考与折旧模型；保险和房贷合同是教学参数。界面、来源页与玩法使用相同口径。</p>
+<p>债券之所以采用公开的美联储长期序列构建美元国债模型，是为了覆盖原有的三个历史起点，而不将缺失的本地债券记录拼造出来。模型包含票息、剩余期限折现、利率变化和汇率变化，但采用平坦收益率曲线假设，不能冒充可交易基金的历史总回报。</p>
+<h2 id='section-3'>对月度执行做了哪些约束</h2>
 
-<p>本轮核对了项目的公开仓库与 README。它们提供组织方法，不证明原《中国式人生》的内部源码或引擎。没有复制原游戏的私有程序、人物素材或事件文本。</p>
-<div class='table-wrap'><table>
-<thead>
-<tr>
-<th>项目</th>
-<th>可借鉴内容</th>
-<th>本项目的取舍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://github.com/VickScarlet/remake">VickScarlet/remake</a>（原 lifeRestart）</td>
-<td>年龄、事件、条件和独立数据组织；当前项目为 MIT 许可</td>
-<td>借鉴状态与事件分离。重写原创家庭剧情与金融规则，不把自动事件抽取误认为玩家选择系统</td>
-</tr>
-<tr>
-<td><a href="https://github.com/y-lohse/inkjs">inkjs</a></td>
-<td>将互动叙事与前端呈现分开，适合较复杂的分支文字</td>
-<td>当前 30 年事件使用明确、受限的配置。未引入额外叙事运行时；若未来大幅增加长剧情，再评估接入</td>
-</tr>
-<tr>
-<td><a href="https://github.com/boardgameio/boardgame.io">boardgame.io</a></td>
-<td>基于动作的状态转换、阶段控制、日志与多人状态管理</td>
-<td>采用纯规则与合法命令模式。用户选择静态成绩汇总，因此当前无需实时多人网络层</td>
-</tr>
-</tbody></table></div>
-<p>本版规则、内容、数据、图表、分享协议和界面各自分离。浏览器直接执行静态文件，运行时不依赖这些开源框架，也没有把它们的演示代码当作自己的商业后端。</p>
-<h2 id='section-5'>数据质量：可以证明什么</h2>
-
-<p>数据发布链为：官方原始 CSV → 完整性与日期校验 → 43 个年度观测点 → 固定数据版本 → 规则重放 → 图表与账本。</p>
-<p>11 个原始序列各有 43 个完整的 12 月观测，合计 473 个来源观测值；美国本币兑美元恒为 1，不冒充额外的外部数据序列。每条序列的 SHA-256 随版本保存。</p>
-<p>另从 FRED 官方 HTML 数据表核对 1978、1988、1990、2008、2020 五个年份，共 55 个值，按显示精度与原始 CSV 比较。它验证了接口提取与单位对应，属于同一个上游来源的两种格式交叉检查，不能表述为两个独立经济数据供应商确认。</p>
-<p>对日本 CPI 的已选序列，2021 年以后的全年 12 月数据不完整。本版因此限定最晚从 1990 年开始并在 2020 年结束，没有补造后续数字。未来扩展年代时，应先选择兼容的新数据序列并发布新的数据版本，不应静默拼接。</p>
-<p>OECD 的<a href="https://www.oecd.org/en/data/indicators/share-prices.html">股价指标定义</a>区分价格指数与包含股息再投资的回报指数。本版使用价格口径。跨国组合使用实际汇率观测，公式和本币方向写入测试；不把跨国股价直接相加，也不忽略英镑兑美元的方向。</p>
-<h2 id='section-6'>确定性、账本与分享的可信边界</h2>
-
-<p>规则核心不读取网络或当前时间，不调用 Math.random。外生事件按人生编号和年份独立生成；界面刷新不会重新抽签，另一种配置也不会改变下一年发生什么。</p>
-<p>每次命令需要匹配当前 revision 与阶段。生活选择和资金安排必须交替，完成第 60 次后不能继续提交普通动作。存档记录规则版本、数据版本、编号与命令；导入时从头重算，不相信存档中的自填余额。</p>
-<p>每年都检查资产守恒：期初净资产减即时支出，加市场损益与收支结余，减自付账单，必须等于期末净资产。现金与股票持仓不得为负，债务明确单列，金额为整数本币单位。</p>
-<p>成绩分享同样从合法命令计算。这样能拒绝乱填余额、越界比例、错误版本和未完成的成绩，但不能阻止玩家查看历史后重玩、搜索最优路径或借用昵称。没有服务器身份认证，不能称作竞赛级防作弊。</p>
-<h2 id='section-7'>本轮验收与运营建议</h2>
-
-<p>规则测试覆盖 2,048 局完整人生、122,880 次选择，以及全部 36 种国家年代家庭组合；另有逐步保存恢复、重复提交、延后技能、育儿期限、保障、汇率组合、反事实一致性、坏数据和分享协议测试。</p>
-<p>手机界面按完整路径验证，而不仅检查首页。关注 320/390 像素窄屏、桌面、刷新续玩、复制受限、导入导出、两台独立浏览器之间的成绩链接和好友榜，以及上线后的同一路径。</p>
-<p>发布时只上传独立游戏白名单文件。主项目的其他研究材料、账号信息、用户存档与原始私人调研附件均不随站点发布。经典日本篇保留入口；旧规则与旧存档不会被新算法静默改写。发布保留 Git 提交，必要时可以回退到上一版本。</p>
-<p>面向老师和同学的首轮体验，优先记录：60 次选择完成率、在哪一阶段停止、是否理解现金缓冲、是否能解释反事实比较、是否区分价格变化与家庭净资产、是否能自行完成好友分享。当前没有上传行为数据或第三方跟踪；这些反馈应由体验者自行提供。</p>
-<h2 id='section-8'>仍然存在的产品局限</h2>
-
-<p>这些边界不妨碍当前静态网页试玩，但不能在后续汇报中省略：</p>
 <ul>
-<li>全球篇支持四国，家庭与职业剧情仍以通用情境为主，未覆盖各国完整税制、教育、医疗、养老金和法律制度。</li>
-<li>年度结算无法表现月内现金压力；工资参数是教学假设，现金、债务均不计利息，股票不计股息与交易税费。</li>
-<li>数据使用当前修订后的冻结历史值，不是完整的当年信息发布时点数据库。CPI 的发布时间滞后也未精确模拟。</li>
-<li>股价路径与新闻史料能够并列回看，不能证明某一条新闻单独造成某个价格变化。</li>
-<li>生活满意度可达到上限，不能作为真实幸福测量，也不能代表“人生胜负”。</li>
-<li>成绩榜依赖链接汇总，不能自动同步所有朋友的新增记录；昵称未认证，不适合设置有价值奖品的竞赛。</li>
-<li>自动化与浏览器测试说明功能按规则工作，不能代替目标人群的可玩性和教育效果验证。</li>
+<li>每年只确认两次主要选择，内部执行12个月；手机仍可用预设快速配置，规则与家庭安排按需展开。</li>
+<li>以本年初为固定参考点，股票、债券模型、黄金分别检查阈值；触发后当年不再买回。</li>
+<li>市场估值先于规则执行，规则执行先于再平衡。不会用年底价格猜测年中是否触发，也不会把实际越过阈值的损失硬截在阈值。</li>
+<li>金融交易按0.1%教学费率计费，房产购入/出售按3%计费；费用进入账本和模型对比。</li>
+<li>房贷本金只是现金与负债的转换。房价变化、利息、费用、车辆价格变化和折旧分别记账。</li>
+<li>月度观测价不是真实成交报价。程序没有假装知道盘中最高最低价，也未伪造日度数据。</li>
 </ul>
-<p>后续若要进入自动云同步或正式竞赛，才需要引入身份、服务器命令验证、数据库事务、限流和数据删除机制；若进入正式金融机构使用或原生微信平台，则应针对该渠道与用途单独完成内容、数据授权和平台接入评估。这些都不应以“网页已经上线”替代。</p>
-</article><a class='button end-link' href='./'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 全球篇 3.0</span><span>2026-11-13</span></footer></div></body></html>
+<h2 id='section-4'>模型对比的公平性</h2>
+
+<p>三种模型保持与玩家相同的生活选择、保障级别、房车计划、初始家庭和外部意外，替换金融配置与交易规则。历史趋势模型只读取决策时点以前的12个月数据，测试会修改未来数据以确认当前模型决策不变。</p>
+<p>同一计划可能因为流动性不同而未能执行。例如玩家有足够首付而现金模型没有，报告会展示哪一年购房没有执行；这类差异是家庭资金管理的结果，不会被隐藏成纯投资收益差。</p>
+<p>报告同时比较家庭净资产、可动用金融资产、购买力、现金缓冲、年末家庭净资产回撤、被迫变现、交易费用、保障赔付、房贷与未付款。回撤清楚注明包含收入支出，不被称作基金回撤；现金模型也不被说成全部家庭资产永远都是现金。</p>
+<h2 id='section-5'>兼容旧进度与好友榜</h2>
+
+<p>4.0 新增独立规则、数据与分享协议版本。保留3.0全球篇页面与旧存档、旧成绩链接、旧同场邀请；日本七年篇保持独立。不能把旧版的120字符成绩记录解释成4.0的多资产命令。</p>
+<p>4.0 成绩用420字符紧凑选择编码传递30年的操作，再按规则重算；不信任自报余额。好友榜仍是用户已选定的链接汇总方式，不加入自动云同步、账户或后台身份验证。</p>
+<h2 id='section-6'>手机体验与本轮修复</h2>
+
+<p>界面延续原有纸质账本、暖纸底色与深红操作按钮，没有重做无关的视觉风格。配置前先看年度回顾，随后是四资产比例、可折叠的执行规则和家庭安排，确认前可查看执行单。</p>
+<p>验收时发现手机多模型表需要横滑才能读到结果，已改为选择一个模型与自己逐项比较；桌面保留全模型并排。平局不再说“高0、费用多0”，而是明确显示相同。旧版本号、零负债的负零显示也一并修正。</p>
+<p>完整60次主流程、报告、同场链接在独立浏览器环境中的导入，以及320/390/1280宽度均做了检查。规则验证包括512局完整人生，覆盖36种背景、所有执行方式、房车与未付款路径，并检查每年账本守恒。</p>
+<h2 id='section-7'>后续仍需验证的内容</h2>
+
+<p>这些限制已经体现在产品说明中，不能在对外介绍时省略：</p>
+<ul>
+<li>仅四国、通用家庭剧情；没有各国完整税制、养老金、保险核保及房贷违约处置。</li>
+<li>未完整模拟月内发薪和账单；家庭现金流仍按年度结算，未付款不计息。</li>
+<li>股价不含股息，债券采用模型估值，车辆参考美国数据；数据采用修订后快照，不是完整的当时信息库。</li>
+<li>房产价格国家口径，不能代替城市、地段与单套住宅；没有租赁投资、二套房或汽车分期。</li>
+<li>月均观察纪律不能复刻盘中委托、跳空、滑点和无法成交的情况。</li>
+<li>规则模型不等于经过验证的投资建议或有预测能力的AI；没有依据这段历史调参后宣称普遍有效。</li>
+<li>技术测试不替代老师与同学的真实体验。建议继续收集完成时长、对账本的理解、误读发生位置和模型比较是否帮助解释选择。</li>
+</ul>
+<p>下一步应优先根据体验反馈调整信息密度和剧情分支；若未来引入可交易资产总回报、真实保险产品、日频执行或云端竞赛，需要另行解决数据许可、时间对齐、身份与服务端验证。</p>
+</article><a class='button end-link' href='./'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 多资产篇 4.0</span><span>2026-11-13</span></footer></div></body></html>

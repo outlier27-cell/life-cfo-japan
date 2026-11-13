@@ -1,0 +1,2130 @@
+{
+  "version": "multi-asset-2026-11-13",
+  "checkedAt": "2026-11-13T08:56:50.121Z",
+  "method": "FRED official HTML table vs frozen CSV, at displayed precision; World Bank gold original worksheet cell vs extracted CSV. Extraction verification, not independent-provider confirmation.",
+  "fredSeries": 17,
+  "fredObservations": 275,
+  "goldWorksheetObservations": 15,
+  "pass": true,
+  "samples": [
+    {
+      "id": "CANCPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/CANCPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 27.73242,
+          "table": 27.73242,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 28.91757,
+          "table": 28.91757,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 29.94469,
+          "table": 29.94469,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 55.069790000000005,
+          "table": 55.069790000000005,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 56.254940000000005,
+          "table": 56.254940000000005,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 57.12405,
+          "table": 57.12405,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 60.600480000000005,
+          "table": 60.600480000000005,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 61.78562,
+          "table": 61.785619999999994,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 63.128780000000006,
+          "table": 63.128780000000006,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 88.33289,
+          "table": 88.33289,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 91.17725,
+          "table": 91.17725,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 89.51804,
+          "table": 89.51804,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 108.0853,
+          "table": 108.0853,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 108.4014,
+          "table": 108.4014,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 108.5594,
+          "table": 108.5594,
+          "displayPrecision": 16,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CCUSMA02CAM618N",
+      "url": "https://fred.stlouisfed.org/data/CCUSMA02CAM618N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 1.10111639061905,
+          "table": 1.10111639061905,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 1.12104061518182,
+          "table": 1.12104061518182,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 1.17990884775,
+          "table": 1.17990884775,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 1.28548501135,
+          "table": 1.28548501135,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 1.21700000227273,
+          "table": 1.21700000227273,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 1.1953904742381,
+          "table": 1.1953904742381,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 1.1718909145,
+          "table": 1.1718909145,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 1.17288570185714,
+          "table": 1.17288570185714,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 1.1602849901,
+          "table": 1.1602849901,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 1.01157569395652,
+          "table": 1.01157569395652,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 1.01638095238095,
+          "table": 1.01638095238095,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 1.2371,
+          "table": 1.2371,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 1.30824347826087,
+          "table": 1.30824347826087,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 1.35503181818182,
+          "table": 1.35503181818182,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 1.28100869565217,
+          "table": 1.28100869565217,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CCUSMA02GBM618N",
+      "url": "https://fred.stlouisfed.org/data/CCUSMA02GBM618N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 0.516460594714286,
+          "table": 0.516460594714286,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 0.544074852272727,
+          "table": 0.544074852272727,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 0.503898532842105,
+          "table": 0.503898532842105,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 0.555764094,
+          "table": 0.555764094,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 0.562402004590909,
+          "table": 0.562402004590909,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 0.547390005,
+          "table": 0.547390005,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 0.605399996045455,
+          "table": 0.605399996045455,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 0.584990473,
+          "table": 0.584990473,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 0.519447367526316,
+          "table": 0.519447367526316,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 0.507551020304348,
+          "table": 0.507551020304348,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 0.508952380952381,
+          "table": 0.508952380952381,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 0.673,
+          "table": 0.673,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 0.764620434782609,
+          "table": 0.764620434782609,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 0.798498636363636,
+          "table": 0.798498636363636,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 0.744509130434783,
+          "table": 0.744509130434783,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CCUSMA02JPM618N",
+      "url": "https://fred.stlouisfed.org/data/CCUSMA02JPM618N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 241.209210042105,
+          "table": 241.209210042105,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 214.368182090909,
+          "table": 214.368182090909,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 196.127142771429,
+          "table": 196.127142771429,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 127.41249961,
+          "table": 127.41249961,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 127.179544627273,
+          "table": 127.179544627273,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 123.631817209091,
+          "table": 123.631817209091,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 145.17699967,
+          "table": 145.17699967,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 153.760240109524,
+          "table": 153.760240109524,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 133.727368815789,
+          "table": 133.727368815789,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 107.885869565217,
+          "table": 107.885869565217,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 106.933571428571,
+          "table": 106.933571428571,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 91.30975,
+          "table": 91.30975,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 109.33347826087,
+          "table": 109.33347826087,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 107.585909090909,
+          "table": 107.585909090909,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 103.790434782609,
+          "table": 103.790434782609,
+          "displayPrecision": 13,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CUUR0000SETA01",
+      "url": "https://fred.stlouisfed.org/data/CUUR0000SETA01",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 74.5,
+          "table": 74.5,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 75.8,
+          "table": 75.8,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 78.9,
+          "table": 78.9,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 116.1,
+          "table": 116.1,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 116.1,
+          "table": 116.1,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 119,
+          "table": 119,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 122.4,
+          "table": 122.4,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 120.6,
+          "table": 120.6,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 124.3,
+          "table": 124.3,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 136.827,
+          "table": 136.827,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 134.516,
+          "table": 134.516,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 132.308,
+          "table": 132.308,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 147.253,
+          "table": 147.253,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 147.108,
+          "table": 147.108,
+          "displayPrecision": 3,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 149.091,
+          "table": 149.091,
+          "displayPrecision": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "GBRCPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/GBRCPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 21.80798,
+          "table": 21.80798,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 22.69411,
+          "table": 22.694110000000002,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 23.49968,
+          "table": 23.499679999999998,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 46.9,
+          "table": 46.9,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 48.2,
+          "table": 48.2,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 49.3,
+          "table": 49.3,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 52.4,
+          "table": 52.4,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 55.2,
+          "table": 55.2,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 57,
+          "table": 57,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 84.1,
+          "table": 84.1,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 86.6,
+          "table": 86.6,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 87.1,
+          "table": 87.1,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 108.3,
+          "table": 108.3,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 108.8,
+          "table": 108.8,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 109.4,
+          "table": 109.4,
+          "displayPrecision": 16,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "GS10",
+      "url": "https://fred.stlouisfed.org/data/GS10",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 7.96,
+          "table": 7.96,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 8.46,
+          "table": 8.46,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 9.01,
+          "table": 9.01,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 8.67,
+          "table": 8.67,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 8.92,
+          "table": 8.92,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 9.11,
+          "table": 9.11,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 8.21,
+          "table": 8.21,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 8.48,
+          "table": 8.48,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 8.08,
+          "table": 8.08,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 3.74,
+          "table": 3.74,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 4.1,
+          "table": 4.1,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 2.42,
+          "table": 2.42,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 1.76,
+          "table": 1.76,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 0.73,
+          "table": 0.73,
+          "displayPrecision": 2,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 0.93,
+          "table": 0.93,
+          "displayPrecision": 2,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "JPNCPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/JPNCPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 64.8511,
+          "table": 64.8511,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 66.58183000000001,
+          "table": 66.58183000000001,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 67.09087,
+          "table": 67.09087,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 85.82336,
+          "table": 85.82336,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 86.3324,
+          "table": 86.3324,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 86.94324,
+          "table": 86.94324,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 89.69203,
+          "table": 89.69203,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 91.01553,
+          "table": 91.01553,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 92.64444,
+          "table": 92.64444,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 97.63299,
+          "table": 97.63299,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 99.05828,
+          "table": 99.05828000000001,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 98.14202,
+          "table": 98.14202,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 102.3161,
+          "table": 102.3161,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 101.7053,
+          "table": 101.7053,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 101.0944,
+          "table": 101.0944,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "QCAN628BIS",
+      "url": "https://fred.stlouisfed.org/data/QCAN628BIS",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 15.7144,
+          "table": 15.7144,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-04-01",
+          "csv": 16.1738,
+          "table": 16.1738,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-07-01",
+          "csv": 16.1465,
+          "table": 16.1465,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-10-01",
+          "csv": 16.9106,
+          "table": 16.9106,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 37.519,
+          "table": 37.519,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-04-01",
+          "csv": 38.3195,
+          "table": 38.3195,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-07-01",
+          "csv": 38.7015,
+          "table": 38.7015,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-10-01",
+          "csv": 41.849,
+          "table": 41.849,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 44.7235,
+          "table": 44.7235,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-04-01",
+          "csv": 41.7307,
+          "table": 41.7307,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-07-01",
+          "csv": 41.9536,
+          "table": 41.9536,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-10-01",
+          "csv": 42.2901,
+          "table": 42.2901,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 96.2352,
+          "table": 96.2352,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-04-01",
+          "csv": 96.9523,
+          "table": 96.9523,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-07-01",
+          "csv": 95.0161,
+          "table": 95.0161,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-10-01",
+          "csv": 91.2872,
+          "table": 91.2872,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 183.752,
+          "table": 183.752,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-04-01",
+          "csv": 187.8544,
+          "table": 187.8544,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-07-01",
+          "csv": 190.4183,
+          "table": 190.4183,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-10-01",
+          "csv": 195.0335,
+          "table": 195.0335,
+          "displayPrecision": 4,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "QGBN628BIS",
+      "url": "https://fred.stlouisfed.org/data/QGBN628BIS",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 7.0663,
+          "table": 7.0663,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-04-01",
+          "csv": 7.4287,
+          "table": 7.4287,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-07-01",
+          "csv": 7.9118,
+          "table": 7.9118,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-10-01",
+          "csv": 8.5158,
+          "table": 8.5158,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 25.9702,
+          "table": 25.9702,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-04-01",
+          "csv": 27.5404,
+          "table": 27.5404,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-07-01",
+          "csv": 31.1642,
+          "table": 31.1642,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-10-01",
+          "csv": 33.0968,
+          "table": 33.0968,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 34.7879,
+          "table": 34.7879,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-04-01",
+          "csv": 34.4859,
+          "table": 34.4859,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-07-01",
+          "csv": 35.0899,
+          "table": 35.0899,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-10-01",
+          "csv": 34.5463,
+          "table": 34.5463,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 108.0632,
+          "table": 108.0632,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-04-01",
+          "csv": 107.3982,
+          "table": 107.3982,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-07-01",
+          "csv": 103.2419,
+          "table": 103.2419,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-10-01",
+          "csv": 96.4256,
+          "table": 96.4256,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 135.9934,
+          "table": 135.9934,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-04-01",
+          "csv": 136.3259,
+          "table": 136.3259,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-07-01",
+          "csv": 140.3159,
+          "table": 140.3159,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-10-01",
+          "csv": 144.3059,
+          "table": 144.3059,
+          "displayPrecision": 4,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "QJPN628BIS",
+      "url": "https://fred.stlouisfed.org/data/QJPN628BIS",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 72.5,
+          "table": 72.5,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-04-01",
+          "csv": 73.6953,
+          "table": 73.6953,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-07-01",
+          "csv": 74.9039,
+          "table": 74.9039,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-10-01",
+          "csv": 76.4423,
+          "table": 76.4423,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 140.1924,
+          "table": 140.1924,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-04-01",
+          "csv": 141.6347,
+          "table": 141.6347,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-07-01",
+          "csv": 143.077,
+          "table": 143.077,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-10-01",
+          "csv": 145.4328,
+          "table": 145.4328,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 166.7308,
+          "table": 166.7308,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-04-01",
+          "csv": 172.516,
+          "table": 172.516,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-07-01",
+          "csv": 178.3655,
+          "table": 178.3655,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-10-01",
+          "csv": 180.577,
+          "table": 180.577,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 103.5577,
+          "table": 103.5577,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-04-01",
+          "csv": 102.8847,
+          "table": 102.8847,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-07-01",
+          "csv": 102.2116,
+          "table": 102.2116,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-10-01",
+          "csv": 101.1539,
+          "table": 101.1539,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 114.6429,
+          "table": 114.6429,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-04-01",
+          "csv": 113.3761,
+          "table": 113.3761,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-07-01",
+          "csv": 113.3761,
+          "table": 113.3761,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-10-01",
+          "csv": 114.3095,
+          "table": 114.3095,
+          "displayPrecision": 4,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "QUSN628BIS",
+      "url": "https://fred.stlouisfed.org/data/QUSN628BIS",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 22.0849,
+          "table": 22.0849,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-04-01",
+          "csv": 22.8362,
+          "table": 22.8362,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-07-01",
+          "csv": 23.7737,
+          "table": 23.7737,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1978-10-01",
+          "csv": 24.4597,
+          "table": 24.4597,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 47.2277,
+          "table": 47.2277,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-04-01",
+          "csv": 48.4104,
+          "table": 48.4104,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-07-01",
+          "csv": 49.7562,
+          "table": 49.7562,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1988-10-01",
+          "csv": 51.0222,
+          "table": 51.0222,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 55.0401,
+          "table": 55.0401,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-04-01",
+          "csv": 55.1105,
+          "table": 55.1105,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-07-01",
+          "csv": 54.9712,
+          "table": 54.9712,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "1990-10-01",
+          "csv": 54.7174,
+          "table": 54.7174,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 120.2914,
+          "table": 120.2914,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-04-01",
+          "csv": 114.8515,
+          "table": 114.8515,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-07-01",
+          "csv": 109.7655,
+          "table": 109.7655,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2008-10-01",
+          "csv": 104.1256,
+          "table": 104.1256,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 158.487,
+          "table": 158.487,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-04-01",
+          "csv": 159.8154,
+          "table": 159.8154,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-07-01",
+          "csv": 164.9115,
+          "table": 164.9115,
+          "displayPrecision": 4,
+          "pass": true
+        },
+        {
+          "date": "2020-10-01",
+          "csv": 171.033,
+          "table": 171.033,
+          "displayPrecision": 4,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01CAM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01CAM661N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 6.963064,
+          "table": 6.963064,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 7.853776,
+          "table": 7.853776,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 9.128892,
+          "table": 9.128892,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 21.32088,
+          "table": 21.32088,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 24.00069,
+          "table": 24.00069,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 23.6416,
+          "table": 23.6416,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 25.83497,
+          "table": 25.83497,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 24.71566,
+          "table": 24.71566,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 22.71274,
+          "table": 22.71274,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 92.35126,
+          "table": 92.35126,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 102.6479,
+          "table": 102.6479,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 58.98987,
+          "table": 58.98987,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 121.1244,
+          "table": 121.1244,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 107.9628,
+          "table": 107.9628,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 122.2525,
+          "table": 122.2525,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01GBM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01GBM661N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 6.743352,
+          "table": 6.743352,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 6.842673,
+          "table": 6.842673,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 7.255638,
+          "table": 7.255638,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 26.79842,
+          "table": 26.79842,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 28.01012,
+          "table": 28.01012,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 26.83489,
+          "table": 26.83489,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 35.90472,
+          "table": 35.90472,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 36.04324,
+          "table": 36.04324,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 32.81529,
+          "table": 32.81529,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 91.73453,
+          "table": 91.73453,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 87.6187,
+          "table": 87.6187,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 64.68772,
+          "table": 64.68772,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 114.5953,
+          "table": 114.5953,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 94.69035,
+          "table": 94.69035,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 98.82664,
+          "table": 98.82664,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01JPM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01JPM661N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 24.12752,
+          "table": 24.12752,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 26.5629,
+          "table": 26.5629,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 28.8094,
+          "table": 28.8094,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 117.8599,
+          "table": 117.8599,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 140.8903,
+          "table": 140.8903,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 148.4266,
+          "table": 148.4266,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 177.8451,
+          "table": 177.8451,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 153.405,
+          "table": 153.405,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 112.449,
+          "table": 112.449,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 87.50343,
+          "table": 87.50343,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 89.0054,
+          "table": 89.0054,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 53.48485,
+          "table": 53.48485,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 110.8787,
+          "table": 110.8787,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 102.2208,
+          "table": 102.2208,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 114.8566,
+          "table": 114.8566,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01USM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01USM661N",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 4.940922,
+          "table": 4.940922,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 5.429991,
+          "table": 5.429991,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 5.316517,
+          "table": 5.316517,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 13.91834,
+          "table": 13.91834,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 15.12444,
+          "table": 15.12444,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 15.38439,
+          "table": 15.38439,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 18.56648,
+          "table": 18.56648,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 19.47706,
+          "table": 19.47706,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 17.78271,
+          "table": 17.78271,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 85.92138,
+          "table": 85.92138,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 84.26327,
+          "table": 84.26327,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 51.73662,
+          "table": 51.73662,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 130.9052,
+          "table": 130.9052,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 113.1662,
+          "table": 113.1662,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 134.5941,
+          "table": 134.5941,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "USACPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/USACPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-01-01",
+          "csv": 26.36942,
+          "table": 26.36942,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-06-01",
+          "csv": 27.50858,
+          "table": 27.50858,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1978-12-01",
+          "csv": 28.56335,
+          "table": 28.56335,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-01-01",
+          "csv": 48.81506,
+          "table": 48.815059999999995,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-06-01",
+          "csv": 49.78546,
+          "table": 49.78546,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 50.84024,
+          "table": 50.84024,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-01-01",
+          "csv": 53.75142,
+          "table": 53.751419999999996,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-06-01",
+          "csv": 54.80619,
+          "table": 54.80619,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 56.45165,
+          "table": 56.45165,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-01-01",
+          "csv": 89.0569,
+          "table": 89.0569,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-06-01",
+          "csv": 92.32038,
+          "table": 92.32038,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 88.69743000000001,
+          "table": 88.69743000000001,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-01-01",
+          "csv": 108.8407,
+          "table": 108.8407,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-06-01",
+          "csv": 108.7673,
+          "table": 108.7673,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 109.8968,
+          "table": 109.8968,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "gold": [
+    {
+      "date": "1978-01-01",
+      "value": 173,
+      "row": 223,
+      "column": 70
+    },
+    {
+      "date": "1978-06-01",
+      "value": 184,
+      "row": 228,
+      "column": 70
+    },
+    {
+      "date": "1978-12-01",
+      "value": 208,
+      "row": 234,
+      "column": 70
+    },
+    {
+      "date": "1988-01-01",
+      "value": 477,
+      "row": 343,
+      "column": 70
+    },
+    {
+      "date": "1988-06-01",
+      "value": 451,
+      "row": 348,
+      "column": 70
+    },
+    {
+      "date": "1988-12-01",
+      "value": 419,
+      "row": 354,
+      "column": 70
+    },
+    {
+      "date": "1990-01-01",
+      "value": 410,
+      "row": 367,
+      "column": 70
+    },
+    {
+      "date": "1990-06-01",
+      "value": 352,
+      "row": 372,
+      "column": 70
+    },
+    {
+      "date": "1990-12-01",
+      "value": 377,
+      "row": 378,
+      "column": 70
+    },
+    {
+      "date": "2008-01-01",
+      "value": 890,
+      "row": 583,
+      "column": 70
+    },
+    {
+      "date": "2008-06-01",
+      "value": 889,
+      "row": 588,
+      "column": 70
+    },
+    {
+      "date": "2008-12-01",
+      "value": 816,
+      "row": 594,
+      "column": 70
+    },
+    {
+      "date": "2020-01-01",
+      "value": 1561,
+      "row": 727,
+      "column": 70
+    },
+    {
+      "date": "2020-06-01",
+      "value": 1732,
+      "row": 732,
+      "column": 70
+    },
+    {
+      "date": "2020-12-01",
+      "value": 1858,
+      "row": 738,
+      "column": 70
+    }
+  ]
+}

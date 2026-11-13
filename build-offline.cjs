@@ -7,7 +7,7 @@ const scriptNames=[];
 let html=read(entry).replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,href)=>'<style>\n'+read(href.split('?')[0])+'\n</style>').replace(/<script defer src="([^"]+)"><\/script>/g,(_,src)=>{scriptNames.push(src.split('?')[0]);return '';});
 const scripts=scriptNames.map(name=>'<script>\n'+read(name).replaceAll(artName,art).replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');
 html=html.replace('</body>',scripts+'\n</body>');
-for(const resource of ['guide.html','review.html','sources.html','japan.html','data/annual.csv','data/manifest.json','data/audit.json'])html=html.replaceAll("href='"+resource+"'","href='https://outlier27-cell.github.io/life-cfo-japan/"+resource+"'");
+for(const resource of ['guide.html','review.html','sources.html','japan.html','data/annual.csv','data/manifest.json','data/audit.json','world-v3.html','guide-v3.html','sources-v3.html','data/v4/manifest.json','data/v4/monthly.csv','data/v4/housing.csv','data/v4/audit.json'])html=html.replaceAll("href='"+resource+"'","href='https://outlier27-cell.github.io/life-cfo-japan/"+resource+"'");
 const output=path.resolve(process.argv.slice(2).find(x=>x!=='--classic')||path.join(root,classic?'japan-offline.html':'world-offline.html'));
 if([path.join(root,'index.html'),path.join(root,'japan.html')].includes(output))throw Error('Choose a separate offline output');
 fs.writeFileSync(output,html);console.log(output);

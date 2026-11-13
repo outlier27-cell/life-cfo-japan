@@ -1,0 +1,107 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='theme-color' content='#f5ecdc'><meta name='description' content='人生 CFO 全球篇的玩法、数据口径、结算公式和好友榜说明。'><title>数据来源与复核记录 · 人生 CFO</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"><link rel='stylesheet' href='style.css?v=2.0.1'><style>.doc{max-width:850px}.doc article{font-size:15px;line-height:1.85}.doc h1{font-size:32px;margin:22px 0}.doc h2{font-size:24px;margin:36px 0 14px;scroll-margin-top:16px}.doc h3{font-size:19px;margin:24px 0 10px}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:24px}.doc li{margin:7px 0}.doc td,.doc th{text-align:left;vertical-align:top;font-size:13px;padding:10px 8px}.doc table{min-width:290px}.doc code{font-size:13px;overflow-wrap:anywhere}.doc a{overflow-wrap:anywhere}.doc-toc{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}.doc-toc nav{display:grid;gap:8px;padding:12px 0}.doc-toc a{font-size:14px}.doc .nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.doc .table-wrap{margin:16px 0}.doc .end-link{margin-top:32px}@media(max-width:700px){.doc h1{font-size:28px}.doc h2{font-size:23px}.doc article{font-size:15px}.doc .header-actions{gap:6px}.doc .brand{font-size:21px}.doc .small-button{padding:5px 8px}}@media print{.masthead,.doc-toc,.end-link{display:none}.book{border:0;box-shadow:none;margin:0;padding:0;background:white}.doc h2{break-after:avoid}.doc tr{break-inside:avoid}}</style></head><body><div class='book doc'><header class='masthead'><a class='brand' href='world-v3.html'><span class='seal'>人</span>人生 <b>CFO</b></a><div class='header-actions'><a class='small-button nav-link' href='world-v3.html'>回到游戏</a></div></header><article><h1>数据来源与复核记录</h1><details class='doc-toc'><summary>查看目录</summary><nav><a href='#section-1'>数据快照</a><a href='#section-2'>各条来源</a><a href='#section-3'>核查结果</a><a href='#section-4'>组合与购买力公式</a><a href='#section-5'>不能混用的口径</a><a href='#section-6'>史料回顾</a><a href='#section-7'>引用与权利说明</a></nav></details>
+<p>全球篇 3.0 · oecd-fred-2026-11-13</p>
+<p><a href="./">返回游戏</a> · <a href="guide-v3.html">完整玩法</a> · <a href="review.html">完整改进分析</a></p>
+<h2 id='section-1'>数据快照</h2>
+
+<p>来源为 OECD，经 FRED（圣路易斯联邦储备银行）发布。固定取 1978—2020 年的 12 月月度观测；11 条序列，每条 43 个有效观测，没有缺失填补。股价和 CPI 单位为 2015 = 100；汇率为一美元对应的本币数量。美国本币对美元恒为 1。</p>
+<p>股价观测通常为月均口径，并非最后一个交易日的收盘价。股价指数不包含股息再投资。
+<a href="https://www.oecd.org/en/data/indicators/share-prices.html">OECD 股价定义</a> · <a href="data/annual.csv">年度 CSV</a> · <a href="data/manifest.json">完整来源与哈希清单</a> · <a href="data/audit.json">官方数据表复核 JSON</a></p>
+<h2 id='section-2'>各条来源</h2>
+
+<div class='table-wrap'><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>序列</th>
+<th>官方详情</th>
+<th>冻结原始 CSV</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>股价</td>
+<td>SPASTT01JPM661N</td>
+<td><a href="https://fred.stlouisfed.org/series/SPASTT01JPM661N">OECD / FRED</a></td>
+<td><a href="data/raw/SPASTT01JPM661N.csv">下载</a></td>
+</tr>
+<tr>
+<td>物价 CPI</td>
+<td>JPNCPIALLMINMEI</td>
+<td><a href="https://fred.stlouisfed.org/series/JPNCPIALLMINMEI">OECD / FRED</a></td>
+<td><a href="data/raw/JPNCPIALLMINMEI.csv">下载</a></td>
+</tr>
+<tr>
+<td>汇率</td>
+<td>CCUSMA02JPM618N</td>
+<td><a href="https://fred.stlouisfed.org/series/CCUSMA02JPM618N">OECD / FRED</a></td>
+<td><a href="data/raw/CCUSMA02JPM618N.csv">下载</a></td>
+</tr>
+<tr>
+<td>股价</td>
+<td>SPASTT01USM661N</td>
+<td><a href="https://fred.stlouisfed.org/series/SPASTT01USM661N">OECD / FRED</a></td>
+<td><a href="data/raw/SPASTT01USM661N.csv">下载</a></td>
+</tr>
+<tr>
+<td>物价 CPI</td>
+<td>USACPIALLMINMEI</td>
+<td><a href="https://fred.stlouisfed.org/series/USACPIALLMINMEI">OECD / FRED</a></td>
+<td><a href="data/raw/USACPIALLMINMEI.csv">下载</a></td>
+</tr>
+<tr>
+<td>股价</td>
+<td>SPASTT01GBM661N</td>
+<td><a href="https://fred.stlouisfed.org/series/SPASTT01GBM661N">OECD / FRED</a></td>
+<td><a href="data/raw/SPASTT01GBM661N.csv">下载</a></td>
+</tr>
+<tr>
+<td>物价 CPI</td>
+<td>GBRCPIALLMINMEI</td>
+<td><a href="https://fred.stlouisfed.org/series/GBRCPIALLMINMEI">OECD / FRED</a></td>
+<td><a href="data/raw/GBRCPIALLMINMEI.csv">下载</a></td>
+</tr>
+<tr>
+<td>汇率</td>
+<td>CCUSMA02GBM618N</td>
+<td><a href="https://fred.stlouisfed.org/series/CCUSMA02GBM618N">OECD / FRED</a></td>
+<td><a href="data/raw/CCUSMA02GBM618N.csv">下载</a></td>
+</tr>
+<tr>
+<td>股价</td>
+<td>SPASTT01CAM661N</td>
+<td><a href="https://fred.stlouisfed.org/series/SPASTT01CAM661N">OECD / FRED</a></td>
+<td><a href="data/raw/SPASTT01CAM661N.csv">下载</a></td>
+</tr>
+<tr>
+<td>物价 CPI</td>
+<td>CANCPIALLMINMEI</td>
+<td><a href="https://fred.stlouisfed.org/series/CANCPIALLMINMEI">OECD / FRED</a></td>
+<td><a href="data/raw/CANCPIALLMINMEI.csv">下载</a></td>
+</tr>
+<tr>
+<td>汇率</td>
+<td>CCUSMA02CAM618N</td>
+<td><a href="https://fred.stlouisfed.org/series/CCUSMA02CAM618N">OECD / FRED</a></td>
+<td><a href="data/raw/CCUSMA02CAM618N.csv">下载</a></td>
+</tr>
+</tbody></table></div>
+<h2 id='section-3'>核查结果</h2>
+
+<p>核查时间：2026-11-13T07:24:21.636Z。对每条序列的 1978、1988、1990、2008、2020 年 12 月观测，独立读取 FRED 官方 HTML 数据表进行比较。11 条序列、55 个观测均按显示精度匹配。CSV 与网页属于同一数据提供者的两种接口，不冒充两个独立经济数据来源。</p>
+<h2 id='section-4'>组合与购买力公式</h2>
+
+<p>本地股票价格因子 = 本年 12 月股价指数 ÷ 上年 12 月股价指数。</p>
+<p>每个外国市场的本币价格因子 = 该国股价因子 ×（本年玩家本币/美元 ÷ 本年该国本币/美元）÷（上年玩家本币/美元 ÷ 上年该国本币/美元）。</p>
+<p>四国股票仓每年起点各 25%，本年度因子是四个本币因子的算术平均。只模拟价格与汇率，不含股息、税费和交易成本，也不声称当年存在这只基金。</p>
+<p>实际购买力 = 净资产 × 起点 CPI ÷ 当前 CPI。生活预算随已经经历的 CPI 变化调整，工资与具体金额是教学模型。</p>
+<h2 id='section-5'>不能混用的口径</h2>
+
+<p>经典日本七年篇使用日经 225 年末收盘点位；全球篇使用 OECD 月度股价指标。两者的指标和观测时点不同。完整下载包含未来年份，游戏界面仅在选择完成后逐年展示。</p>
+<p>历史序列可能修订。现在使用的是 2026-11-13 冻结版本，不是历史当时发布的信息快照。没有模拟 CPI 发布滞后。</p>
+<h2 id='section-6'>史料回顾</h2>
+
+<p><a href="https://www2.boj.or.jp/archive/en/announcements/press/koen_2000/ko0005a.htm">日本银行：资产价格与政策历史回顾</a>；<a href="https://www.federalreservehistory.org/essays/great-inflation">美联储历史：大通胀</a>；<a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath">美联储历史：大衰退及后续</a>；<a href="https://www.bankofengland.co.uk/about/history">英格兰银行历史</a>；<a href="https://www.bankofcanada.ca/core-functions/monetary-policy/agreement-inflation-control-target/">加拿大银行通胀目标协议</a>。</p>
+<p>剪报依据事后史料改写，并非同期新闻原文。家庭医疗、维修和收入事件是独立的虚构情境。</p>
+<h2 id='section-7'>引用与权利说明</h2>
+
+<p>OECD (2026), Main Economic Indicators / Consumer Price Indices, retrieved from FRED, Federal Reserve Bank of St. Louis, accessed 2026-11-13. 各序列的完整引用与原始提供者说明以对应 FRED 页面为准。本站保留来源，不主张对来源数据的独占权利。原创人物与费用、剧情、规则、图表和教学组合由本作品单独构建。</p>
+</article><a class='button end-link' href='world-v3.html'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 全球篇 3.0</span><span>2026-11-13</span></footer></div></body></html>

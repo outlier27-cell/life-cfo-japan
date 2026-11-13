@@ -1,0 +1,50 @@
+(function(r){'use strict';
+const fed='https://www.federalreservehistory.org/essays/',eu='https://www.consilium.europa.eu/en/history/',imf='https://www.imf.org/external/about/timeline/index.htm',boj='https://www2.boj.or.jp/archive/en/announcements/press/koen_2000/ko0005a.htm';
+const entries=[
+ [1978,'中国启动改革开放','中国开始改革开放进程。','观察制度变化与跨境贸易的长期联系，不把政策标题直接当作买入信号。','https://www.worldbank.org/ext/en/country/china'],
+ [1979,'美联储改变操作方式','10 月，美联储宣布将政策操作重点转向准备金增长，以应对通胀。','关注物价、利率与持有现金的购买力。',fed+'great-inflation'],
+ [1980,'美国经济进入短暂衰退','美国在 1 月至 7 月经历衰退，年内信贷与利率环境明显变化。','生活账单与收入稳定性也属于资产配置的约束。',fed+'great-inflation'],
+ [1981,'美国再次进入衰退','7 月，美国经济再次进入衰退。','债券有价格风险，家庭收入也可能遇到压力。',fed+'recession-of-1981-82'],
+ [1982,'拉美债务危机','国际债务压力集中显现，墨西哥的偿债困难成为关键节点。','跨国投资还涉及货币、信用与流动性风险。',imf],
+ [1983,'美国社会保障制度调整','4 月，美国签署社会保障修正案，调整制度安排。','长期保障安排会变化；本游戏的保障合同只是明确的教学设定。','https://www.ssa.gov/history/1983amend.html'],
+ [1984,'中英签署联合声明','12 月 19 日，中英签署关于香港问题的联合声明。','政治制度安排属于长期经济背景，不能单独决定下一年回报。','https://www.cmab.gov.hk/en/issues/jd2.htm'],
+ [1985,'广场协议','五国在 9 月达成广场协议，协调汇率政策。','外币资产涨跌与兑换成本是两件事，记得看本币结果。','https://www.imf.org/en/news/articles/2015/09/28/04/53/spmds9516'],
+ [1986,'伦敦市场“大爆炸”改革','伦敦证券交易规则发生重大调整，电子屏幕交易等变化受到关注。','交易更便利，也需要先写好自己的执行纪律。','https://www.gov.uk/hmrc-internal-manuals/stamp-taxes-shares-manual/stsm121020'],
+ [1987,'全球股市经历剧烈冲击','10 月，全球多地股市大幅波动，美联储宣布提供流动性支持。','月度观测会遗漏盘中冲击；观察止损不等于保证成交价格。',fed+'stock-market-crash-of-1987'],
+ [1988,'巴塞尔资本协议发布','7 月，巴塞尔资本协议发布，为银行资本监管提供共同框架。','风险管理需要规则，规则也有适用边界。','https://www.bis.org/committees/bcbs/history'],
+ [1989,'日本开始收紧货币政策','日本银行从 5 月开始收紧货币政策。','利率与资产价格可能存在复杂关系，先检查自己承担多少风险。',boj],
+ [1990,'日本股价转弱','日本股价从年初开始下行；日本银行在 8 月前继续调整贴现率。','投资期限之外，还要考虑近期有没有刚性账单。',boj],
+ [1991,'加拿大建立通胀目标框架','加拿大银行与联邦政府建立通胀控制目标框架。','稳定名义金额与稳定购买力，并不是同一个目标。','https://www.bankofcanada.ca/core-functions/monetary-policy/agreement-inflation-control-target/'],
+ [1992,'英国退出欧洲汇率机制','9 月 16 日，英国退出欧洲汇率机制。','跨国组合仍会受到汇率变化影响。','https://www.bankofengland.co.uk/about/history'],
+ [1993,'马斯特里赫特条约生效','11 月，马斯特里赫特条约生效，欧洲联盟成立。','制度与市场的变化值得回顾，但资产安排仍需适合自己的负担。',eu],
+ [1994,'马拉喀什协定签署','4 月，建立世界贸易组织的协定签署。','贸易规则影响经营环境，收益仍有不确定性。','https://www.wto.org/english/thewto_e/30y_e/30ytimeline_e.htm'],
+ [1995,'世界贸易组织成立','1 月 1 日，世界贸易组织开始运作。','全球市场联系加深时，分散投资也要留意共同风险。','https://www.wto.org/english/thewto_e/30y_e/30ytimeline_e.htm'],
+ [1996,'信息技术协定达成','12 月，信息技术协定在新加坡部长级会议期间达成。','产业前景与买入价格要分开判断；本版未模拟个股。','https://www.wto.org/English/Tratop_e/inftec_e/inftec_e.htm'],
+ [1997,'亚洲金融危机爆发','7 月开始，亚洲多国经历货币与金融市场动荡。','分散不是所有资产永远互相对冲。',imf],
+ [1998,'金融动荡蔓延至俄罗斯','俄罗斯经历货币和债务危机，国际金融市场承压。','保留流动性，意味着遇到支出时有更多处理方式。',imf],
+ [1999,'欧元作为记账货币启用','1 月，欧元在首批 11 个成员国作为记账货币启用。','外汇制度改变，需要重新理解跨国资产的本币价值。',eu],
+ [2000,'互联网股票热潮降温','春季，互联网与科技股热潮转弱，相关价格开始下跌。','精彩故事、行业发展与股票买入成本不能画等号。','https://fraser.stlouisfed.org/files/docs/historical/fct/fcic_report_final_20110127.pdf'],
+ [2001,'中国加入世界贸易组织','12 月，中国成为世界贸易组织成员。','全球供应链发生变化，家庭配置仍需关注集中程度。','https://www.wto.org/english/thewto_e/30y_e/30ytimeline_e.htm'],
+ [2002,'欧元纸币硬币流通','1 月，欧元现金开始流通。','理解货币单位、汇率方向和真实购买力，是比较资产的基础。',eu],
+ [2003,'SARS 影响全球公共卫生','7 月，世界卫生组织宣布当时的 SARS 传播链已得到控制。','个人保障与现金准备面对的是具体账单，不只是市场涨跌。','https://www.who.int/news-room/detail/05-07-2003-sars-outbreak-contained-worldwide'],
+ [2004,'欧盟迎来大规模扩员','5 月，十个国家加入欧盟。','机会范围扩大，也要核对不同市场的数据与计价方式。',eu],
+ [2005,'京都议定书生效','2 月 16 日，京都议定书生效。','公共政策可能改变行业成本，不代表某类资产必然上涨。','https://unfccc.int/process-and-meetings/the-kyoto-protocol'],
+ [2006,'日本结束本轮量化宽松','3 月，日本银行结束自 2001 年开始的量化宽松政策。','债券收益率不是持有期回报；利率变化会影响估值。','https://www2.boj.or.jp/archive/en/announcements/press/koen_2006/ko0603a.htm'],
+ [2007,'美国金融压力上升','美国住房与金融市场压力加剧，金融机构开始应对流动性紧张。','房产价值、房贷负担与可动用现金应一起看。',fed+'great-recession-and-its-aftermath'],
+ [2008,'全球金融危机加深','金融市场承受剧烈冲击，多家金融机构出现严重困难。','资产可能同时下跌；月度止损也可能在越过阈值后才触发。',fed+'great-recession-and-its-aftermath'],
+ [2009,'里斯本条约生效','12 月，里斯本条约生效，调整欧盟的机构和运行安排。','政策框架是背景信息，不能代替风险承受能力判断。',eu],
+ [2010,'欧洲央行启动证券市场计划','5 月，欧洲央行体系启动证券市场计划。','债券价格对利率和政策变化敏感，黄金也不是固定收益产品。','https://www.ecb.europa.eu/mopo/implement/app/html/index.En.html'],
+ [2011,'日本大地震与政策应对','3 月，日本发生大地震，日本银行随后加强货币宽松和流动性供给。','灾害的现实影响复杂；本游戏的家庭意外并不与新闻机械绑定。','https://www.boj.or.jp/en/about/press/koen_2011/ko110421a.htm'],
+ [2012,'欧洲财政治理规则推进','3 月，多国签署经济与货币联盟稳定、协调和治理条约。','治理安排与风险定价有关，但不提供确定的明年答案。',eu],
+ [2013,'美联储宣布缩减购债步伐','12 月，美联储宣布将从次年 1 月开始减少每月资产购买规模。','已宣布的安排与未来市场反应要分开；不要预设后者。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20131218a.htm'],
+ [2014,'日本扩大量化与质化宽松','10 月，日本银行宣布扩大量化与质化货币宽松。','关注本币、外币资产与负债是否匹配。','https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2014/k141031a.pdf'],
+ [2015,'瑞士取消最低汇率安排','1 月，瑞士央行取消瑞郎兑欧元的最低汇率安排。','汇率制度也会变化；历史平稳不等于未来没有跳跃。','https://www.snb.ch/en/publications/communication/press-releases/2015/pre_20150115'],
+ [2016,'英国举行脱欧公投','6 月 23 日，英国公投结果支持离开欧盟。','重大事件之后仍有多种可能路径，不把新闻写成收益预言。','https://www.gov.uk/government/topical-events/eu-referendum'],
+ [2017,'美联储启动资产负债表正常化','9 月，美联储宣布从 10 月开始实施资产负债表正常化计划。','市场环境变化时，检查资产比例是否偏离原有计划。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20170920a.htm'],
+ [2018,'中美贸易摩擦升级','美国公布对部分中国商品加征关税的措施，贸易摩擦受到关注。','政策消息可能影响多个市场，跨国持仓也会有共同风险。','https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-regarding-trade-china/'],
+ [2019,'美联储下调政策利率','7 月，美联储下调联邦基金利率目标区间。','债券模型使用历史收益率重估价格；现金、股票与黄金各有不同作用。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm']
+].map(([year,title,text,focus,source])=>({year,title,text,focus,source}));
+function briefing(year){return entries.filter(e=>e.year===year);}
+function available(year){return entries.filter(e=>e.year<=year);}
+const api={entries,briefing,available};if(typeof module!=='undefined'&&module.exports)module.exports=api;else r.ProHistory=api;
+})(globalThis);

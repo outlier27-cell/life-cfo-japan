@@ -1,0 +1,104 @@
+{
+  "source": "World Bank Commodity Price Data (The Pink Sheet)",
+  "workbook": "data/v4/raw/CMO-Historical-Data-Monthly.xlsx",
+  "sha256": "3c8d9d8dbb48342fdbf24777c39a8ce8964cc2fd0958f72f6779e6e4ad99cde2",
+  "sheet": "Monthly Prices",
+  "headingRow": 5,
+  "column": 70,
+  "heading": "Gold",
+  "unit": "($/troy oz)",
+  "updated": "Updated on November 03, 2026",
+  "count": 802,
+  "samples": [
+    {
+      "date": "1978-01-01",
+      "value": 173,
+      "row": 223,
+      "column": 70
+    },
+    {
+      "date": "1978-06-01",
+      "value": 184,
+      "row": 228,
+      "column": 70
+    },
+    {
+      "date": "1978-12-01",
+      "value": 208,
+      "row": 234,
+      "column": 70
+    },
+    {
+      "date": "1988-01-01",
+      "value": 477,
+      "row": 343,
+      "column": 70
+    },
+    {
+      "date": "1988-06-01",
+      "value": 451,
+      "row": 348,
+      "column": 70
+    },
+    {
+      "date": "1988-12-01",
+      "value": 419,
+      "row": 354,
+      "column": 70
+    },
+    {
+      "date": "1990-01-01",
+      "value": 410,
+      "row": 367,
+      "column": 70
+    },
+    {
+      "date": "1990-06-01",
+      "value": 352,
+      "row": 372,
+      "column": 70
+    },
+    {
+      "date": "1990-12-01",
+      "value": 377,
+      "row": 378,
+      "column": 70
+    },
+    {
+      "date": "2008-01-01",
+      "value": 890,
+      "row": 583,
+      "column": 70
+    },
+    {
+      "date": "2008-06-01",
+      "value": 889,
+      "row": 588,
+      "column": 70
+    },
+    {
+      "date": "2008-12-01",
+      "value": 816,
+      "row": 594,
+      "column": 70
+    },
+    {
+      "date": "2020-01-01",
+      "value": 1561,
+      "row": 727,
+      "column": 70
+    },
+    {
+      "date": "2020-06-01",
+      "value": 1732,
+      "row": 732,
+      "column": 70
+    },
+    {
+      "date": "2020-12-01",
+      "value": 1858,
+      "row": 738,
+      "column": 70
+    }
+  ]
+}
