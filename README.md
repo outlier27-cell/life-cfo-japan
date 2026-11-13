@@ -65,7 +65,7 @@ npm run build:docs
 
 完整34项新旧版本测试全部通过，其中新增14项测试覆盖512局完整人生、30,720次选择、184,320个月度执行步。详细范围见[4.0验收记录](docs/RELEASE-QA-v4.md)和[设计验收](docs/DESIGN-v4.md)。浏览器覆盖320/390/1280px及完整60次流程；模拟视口不等于真实手机/微信内置浏览器认证。
 
-发布到独立仓库outlier27-cell/life-cfo-japan的main分支，由GitHub Pages托管。只发布本游戏白名单文件；不包含上级研究项目、私人Word附件、凭据、玩家本地档、node_modules或临时浏览器资料。原始CSV与工作簿按.gitattributes保持字节哈希。
+4.0已发布到独立仓库outlier27-cell/life-cfo-japan的main分支，由GitHub Pages托管。58个生产文件与发布提交逐字节一致；公网完整60次选择、实际成绩链接与榜单快照跨新浏览器上下文导入均通过，玩法和旧入口可用。只发布本游戏白名单文件；不包含上级研究项目、私人Word附件、凭据、玩家本地档、node_modules或临时浏览器资料。原始CSV与工作簿按.gitattributes保持字节哈希。
 
 上一已验证3.0发布提交：6a847c2294aa99de881ee1fa193ec50d7a30cf6b。保留旧版本入口和Git历史，便于回退。
 
