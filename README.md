@@ -25,6 +25,7 @@ node ./life-cfo/build-offline.cjs ./output/life-cfo-japan.html
 ## 模型和数据
 
 - 8 个历史观测点：1988–1995 日经 225 年末价格，来源为[日本内阁府经济社会综合研究所](https://www.esri.cao.go.jp/jp/esri/prj/sbubble/yearly/yearly.pdf)与[日本证券业协会 Fact Book 1999](https://www.jsda.or.jp/shiryoshitsu/toukei/factbook/files/efb1999.pdf)。指数名称和权利归 Nikkei Inc.；折线为本作品自行绘制。
+- 结局的「时代剪报」依据[日本银行 2000 年历史回顾](https://www2.boj.or.jp/archive/en/announcements/press/koen_2000/ko0005a.htm)，呈现 1989–1991 年的货币政策与资产价格节点，明确区分史实与教学解读。
 - 角色、收入、费用、保障合同和意外是教学模型。全年收支在年末结算，无法表现年内流动性压力；现金收益为零，不计股息、税费、交易成本与债务利息。
 - 每年顺序：生活即时费用、资产再分配、年末估值、收入减必要支出、意外自付。现金不足时卖出股票，不足部分记未付款。未来收支结余优先偿还。
 - `engine.js` 是可重放的纯规则；`content.js` 保存剧本、历史点位和版本；`charts.js` 生成原生 SVG；`app.js` 负责会话与交互。存档只保存命令，导入后从规则重算资产。
