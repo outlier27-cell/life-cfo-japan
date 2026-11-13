@@ -1,10 +1,14 @@
-# 人生 CFO · 多资产篇 4.0
+# 人生 CFO · 多资产篇 4.2
 
-[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=4.0.0) · [完整玩法](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [本轮改进分析](https://outlier27-cell.github.io/life-cfo-japan/review.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
+[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=4.2.0) · [完整玩法](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [本轮改进分析](https://outlier27-cell.github.io/life-cfo-japan/review.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
 
 四国随机出生，30年60次连续生活与财务选择。配置前回顾过去一年，安排股票、债券模型、现金、黄金，以及独立的保险、房产/房贷和汽车。每月执行观察止盈止损与再平衡，终局与三种公开规则模型同场复盘。
 
 ## 可以使用的内容
+
+- 八项资产与负债目录，选填现金底线，扣费后检查实际现金比例。
+- 五个可选理由与80字补充，年末与终局回看；随存档保留，不进入成绩链接。
+- 三种即时假设压力测试，与均衡模型比较现金、变现与未付金额；明确预留全年保费，不读取未来行情。
 
 - 日本、美国、英国、加拿大 × 1978/1988/1990起点 × 三种家庭背景，36种组合；人生编号固定外部意外。
 - 30个原创生活节点与条件分支、轻松人物对白；42个有出处的年度事件，决策页不显示未来年。
@@ -41,6 +45,7 @@ npm run build:docs
 | 文件 | 职责 |
 | --- | --- |
 | pro-engine.js | 多资产状态机、月度执行、家庭账本、模型重放 |
+| pro-planning.js | 资产目录、现金底线、便签及假设测试 |
 | pro-content.js | 4.0参数、剧情细节、配置预设与模型定义 |
 | pro-history.js | 42个年度事件和原始出处 |
 | pro-data.js | 18条来源的冻结观测 |
@@ -63,7 +68,7 @@ npm run build:docs
 
 ## 验收与发布
 
-完整34项新旧版本测试全部通过，其中新增14项测试覆盖512局完整人生、30,720次选择、184,320个月度执行步。详细范围见[4.0验收记录](docs/RELEASE-QA-v4.md)和[设计验收](docs/DESIGN-v4.md)。浏览器覆盖320/390/1280px及完整60次流程；模拟视口不等于真实手机/微信内置浏览器认证。
+4.2共43项新旧版本测试通过，新增9项覆盖现金底线、假设账本、未来数据隔离、便签和兼容性。原4.0的14项测试继续覆盖512局完整人生、30,720次选择、184,320个月度执行步。4.2在浏览器实际完成30年60次选择，检查新增配置、刷新恢复、结算便签与终局回顾；完整范围与未覆盖项目见[4.2验收记录](docs/RELEASE-QA-v4.2.md)。模拟视口不等于真实手机/微信内置浏览器认证。
 
 4.0已发布到独立仓库outlier27-cell/life-cfo-japan的main分支，由GitHub Pages托管。58个生产文件与发布提交逐字节一致；公网完整60次选择、实际成绩链接与榜单快照跨新浏览器上下文导入均通过，玩法和旧入口可用。只发布本游戏白名单文件；不包含上级研究项目、私人Word附件、凭据、玩家本地档、node_modules或临时浏览器资料。原始CSV与工作簿按.gitattributes保持字节哈希。
 
@@ -72,3 +77,9 @@ npm run build:docs
 ## 素材与参考
 
 原创旅行账本/东京街景由内置Image Gen制作；未使用原小游戏的私有代码与素材。原架构参考remake、inkjs、boardgame.io的事件组织与状态机思路，未将它们作为运行时依赖。第三方数据权利与引用遵循所列来源；数据模型与玩法边界详见sources.html和guide.html。
+
+## 4.2兼容与文档
+
+界面4.2.0继续使用pro-4.0.0财务规则及冻结数据，4.0存档和成绩可重放。便签协议planning-1保存在存档外层，不参与成绩编码。来源数据没有新增或改写。
+
+[开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [4.2验收记录](docs/RELEASE-QA-v4.2.md)。

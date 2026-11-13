@@ -7,7 +7,7 @@ async function main(){
  const type={stock:'股票价格',cpi:'消费物价',fx:'汇率',housing:'住房价格',bondYield:'国债收益率',gold:'黄金',vehiclePrice:'美国新车价格'};
  const source=[
  '# 多资产篇数据来源、估值公式与复核记录',
- `\n4.0 · 冻结数据版本 ${manifest.version} · 2026-11-13\n\n[返回游戏](./?v=4.0.0) · [完整玩法](guide.html) · [改进分析](review.html) · [3.0旧数据口径](sources-v3.html)`,
+ `\n4.2界面 · 财务规则pro-4.0.0 · 冻结数据版本 ${manifest.version} · 2026-11-13\n\n[返回游戏](./?v=4.2.0) · [完整玩法](guide.html) · [改进分析](review.html) · [3.0旧数据口径](sources-v3.html)`,
  '## 数据、估算与教学合同分开标明',
  '\n股票价格、汇率、CPI、国债收益率、黄金、住房指数和美国新车价格指数均取自下面列明的权威来源。债券持有回报需要估值模型；车辆价值需要价格参考与折旧模型；保险与房贷合同为教学设定。来源权威并不代表这些模型结果是真实可交易产品的历史净值。',
  '\n金融与物价月度观测覆盖1977年12月至2020年12月，共517个连续点；住房各取1977—2020共44个Q4观测。不插值生成缺失行情。美国本币兑美元恒为1，不冒充额外来源序列。',
@@ -37,6 +37,8 @@ async function main(){
  '## 执行时点与可用信息',
  '\n每年决策页只显示刚过去的年份；模型只用决策时点之前12个月的观测，不读取下一年。月均价、季度价格与CPI存在统计发布时间和后续修订，本版未完整还原实时信息可得性；使用固定的2026-11-13历史快照。',
  '\n止盈止损在月度观测后按观察值模拟成交；触发仓位当年留现金，不被再平衡买回。不能用月均数据声称还原盘中止损、跳空或真实滑点，也不保证在阈值成交。新闻是史料改写，不证明某条消息单独造成价格变化。',
+ '## 事前压力测试的参数',
+ '\n4.2新增三个固定假设，股票/债券/黄金分别变化-25%/-5%/-10%、-20%/-12%/0%、0%/0%/0%；账单分别为3个月医疗、2个月维修、3个月医疗基础预算。均按本币作用，没有历史概率或预测含义。先处理当前计划与费用，再施加一次冲击，预留全年保费并支付旧欠款与自付账单。不计未来收入、房车涨跌或月度止盈止损；实际年度仍按原规则结算。具体顺序见[开发文档](developer.html)与[玩法](guide.html)。',
  '## 决策前年度史料目录',
  '\n每条只摘要对应年份已经发生的内容。外部原文可能包含后来的历史；游戏不把未来段落带到当前决策页。\n\n| 年份 | 摘要 | 原始出处 |\n| --- | --- | --- |',
  ...H.entries.map(h=>`| ${h.year} | ${h.title}：${h.text} | [核对原文](${h.source}) |`),
@@ -44,8 +46,8 @@ async function main(){
  '\nOECD (2026), Main Economic Indicators / Consumer Price Indices；Board of Governors of the Federal Reserve System (US), H.15；U.S. Bureau of Labor Statistics, CPI；National sources and BIS Residential Property Price database；World Bank Commodity Price Data (The Pink Sheet)。经对应官方渠道与FRED取得，访问日期2026-11-13。各数据的完整引用与权利说明以所列原始页面为准。本站保留来源，不主张来源数据的独占权利。'
  ].join('\n');
  fs.writeFileSync(path.join(root,'docs/数据来源-v4.md'),source.trimEnd()+'\n');
- let guide=fs.readFileSync(path.join(root,'docs/玩法说明-v4.md'),'utf8');guide+='\n## 附录：三十个年度节点\n\n| 年度 | 生活主题 |\n| --- | --- |\n'+L.chapters.map((c,i)=>`| 第${i+1}年 | ${c.title} |`).join('\n')+'\n';
- const documents=[['guide.html',guide],['review.html',fs.readFileSync(path.join(root,'docs/改进分析-v4.md'),'utf8')],['sources.html',source]];
- require('./render-docs.cjs')({root,marked,documents,edition:'多资产篇 4.0'});
+ let guide=fs.readFileSync(path.join(root,'docs/玩法说明-v4.2.md'),'utf8');guide+='\n## 附录：三十个年度节点\n\n| 年度 | 生活主题 |\n| --- | --- |\n'+L.chapters.map((c,i)=>`| 第${i+1}年 | ${c.title} |`).join('\n')+'\n';
+ const documents=[['guide.html',guide],['review.html',fs.readFileSync(path.join(root,'docs/改进分析-v4.2.md'),'utf8')],['sources.html',source],['developer.html',fs.readFileSync(path.join(root,'docs/开发与持续优化文档-v4.2.md'),'utf8')]];
+ require('./render-docs.cjs')({root,marked,documents,edition:'多资产篇 4.2'});
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

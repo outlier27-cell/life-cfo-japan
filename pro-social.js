@@ -18,9 +18,9 @@ function decode(text){
  const raw=text.replace(/-/g,'+').replace(/_/g,'/');let bytes;
  try{bytes=node?Uint8Array.from(Buffer.from(raw,'base64')):Uint8Array.from(atob(raw),c=>c.charCodeAt(0));if(bytes.length>12000)throw Error();return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));}catch{throw Error('成绩链接损坏，请重新复制完整链接');}
 }
-function scoreUrl(s,name){return BASE+'?v=4.0.0#score='+encode(compact(s,name));}
-function challenge(seed){if(!E.validSeed(seed))throw Error('人生编号无效');return BASE+'?v=4.0.0&run='+seed;}
-function boardUrl(packets){if(!Array.isArray(packets)||!packets.length||packets.length>8)throw Error('一次可分享 1–8 位好友的榜单');const verified=packets.map(p=>verify(p).packet);if(new Set(verified.map(p=>p.s)).size!==1)throw Error('请先选择同一开局的榜单');return BASE+'?v=4.0.0#board='+encode({v:4,kind:'board',entries:verified});}
+function scoreUrl(s,name){return BASE+'?v=4.2.0#score='+encode(compact(s,name));}
+function challenge(seed){if(!E.validSeed(seed))throw Error('人生编号无效');return BASE+'?v=4.2.0&run='+seed;}
+function boardUrl(packets){if(!Array.isArray(packets)||!packets.length||packets.length>8)throw Error('一次可分享 1–8 位好友的榜单');const verified=packets.map(p=>verify(p).packet);if(new Set(verified.map(p=>p.s)).size!==1)throw Error('请先选择同一开局的榜单');return BASE+'?v=4.2.0#board='+encode({v:4,kind:'board',entries:verified});}
 function read(text){
  if(typeof text!=='string'||text.length>30000)throw Error('请粘贴一条完整成绩或榜单链接');
  const m=text.trim().match(/(?:#(?:score|board)=|^CF4:)([A-Za-z0-9_-]+)/);if(!m)throw Error('没有找到成绩或榜单代码');
