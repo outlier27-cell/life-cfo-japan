@@ -1,44 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f5ecdc">
-  <meta name="description" content="回到 1989 年末的东京，分配你的家庭资金，体验同一段市场历史中的两种结果。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="人生 CFO · 日本篇｜泡沫年代">
-  <meta property="og:description" content="回到 1989 年末的东京。100 万日元，你会留多少现金？换个选法再玩，看看同一年会有什么不同。">
-  <title>人生 CFO · 日本篇｜泡沫年代</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="rules.js"></script>
-  <script defer src="app.js"></script>
-</head>
-<body>
-  <div class="book">
-    <header class="masthead">
-      <div class="brand"><span class="seal" aria-hidden="true">人</span><span>人生 <b>CFO</b></span></div>
-      <button class="source-toggle" id="open-sources" type="button" aria-haspopup="dialog">史料</button>
-    </header>
-    <nav aria-label="关卡进度">
-      <ol class="steps" id="steps">
-        <li aria-current="step"><span>01</span> 决策</li><li><span>02</span> 结算</li><li><span>03</span> 对照</li>
-      </ol>
-    </nav>
-    <main id="game"></main>
-    <noscript>请开启浏览器的 JavaScript 后再开始游戏。</noscript>
-    <div class="actions" id="actions"></div>
-  </div>
-  <dialog id="sources" aria-labelledby="sources-title">
-    <div class="sources-inner">
-      <div class="dialog-top">
-        <h2 id="sources-title">本关史料</h2>
-        <form method="dialog"><button type="submit" class="close" aria-label="关闭史料"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></form>
-      </div>
-      <p id="source-summary"></p>
-      <div id="source-links" class="source-links"></div>
-      <p class="source-note">本关引用日经 225（Nikkei 225，© Nikkei Inc.）三个历史年末点位，自行绘图并作教学模拟。初始资金和家庭事件为虚构；常规收支相抵，现金不计利息，模拟股票仓不计股息、税费和交易成本。结算以日元为单位，页面以万日元显示。</p>
-    </div>
-  </dialog>
-</body>
-</html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f5ecdc">
+<meta name="description" content="七年，过好自己的生活。回到1988年的东京，在真实市场中做14次人生与财务选择，重看自己的另一种可能。">
+<meta property="og:type" content="website"><meta property="og:title" content="人生 CFO · 日本篇｜1988—1995"><meta property="og:description" content="7个年份，14次决定。真实行情、家庭故事，以及你的另一种人生。">
+<meta property="og:image" content="https://outlier27-cell.github.io/life-cfo-japan/tokyo-1989.webp">
+<title>人生 CFO · 七年，过好自己的生活</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=2.0.0"><script defer src="content.js?v=2.0.0"></script><script defer src="engine.js?v=2.0.0"></script><script defer src="charts.js?v=2.0.0"></script><script defer src="app.js?v=2.0.0"></script></head>
+<body><div class="book"><header class="masthead"><a class="brand" href="#" id="brand" aria-label="回到首页"><span class="seal" aria-hidden="true">人</span>人生 <b>CFO</b></a><div class="header-actions"><button id="source-button" class="small-button">史料</button><button id="menu-button" class="small-button" aria-label="打开存档和帮助">存档</button></div></header>
+<p id="notice" role="status" hidden></p><main id="game"></main><noscript>请开启浏览器 JavaScript，才能体验人生 CFO。</noscript><footer class="site-footer">人生 CFO · 日本篇 <span>1988—1995</span></footer></div>
+<dialog id="dialog"><div id="dialog-content"></div><form method="dialog"><button class="button secondary">关闭</button></form></dialog><div id="toast" role="status" hidden></div><input type="file" accept="application/json,.json" id="import-file" hidden></body></html>
