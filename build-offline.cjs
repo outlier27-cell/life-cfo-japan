@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const classic=process.argv.includes('--classic'),root=__dirname,read=name=>fs.readFileSync(path.join(root,name),'utf8');
+const entry=classic?'japan.html':'index.html',artName=classic?'tokyo-1989.webp':'world-journal.webp';
+const art='data:image/webp;base64,'+fs.readFileSync(path.join(root,artName)).toString('base64');
+const scriptNames=[];
+let html=read(entry).replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,href)=>'<style>\n'+read(href.split('?')[0])+'\n</style>').replace(/<script defer src="([^"]+)"><\/script>/g,(_,src)=>{scriptNames.push(src.split('?')[0]);return '';});
+const scripts=scriptNames.map(name=>'<script>\n'+read(name).replaceAll(artName,art).replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');
+html=html.replace('</body>',scripts+'\n</body>');
+for(const resource of ['guide.html','review.html','sources.html','japan.html','data/annual.csv','data/manifest.json','data/audit.json'])html=html.replaceAll("href='"+resource+"'","href='https://outlier27-cell.github.io/life-cfo-japan/"+resource+"'");
+const output=path.resolve(process.argv.slice(2).find(x=>x!=='--classic')||path.join(root,classic?'japan-offline.html':'world-offline.html'));
+if([path.join(root,'index.html'),path.join(root,'japan.html')].includes(output))throw Error('Choose a separate offline output');
+fs.writeFileSync(output,html);console.log(output);

@@ -125,7 +125,7 @@ function downloadReport(){
  const lines=['人生 CFO · 1995 家庭年报','人生编号 '+state.seed+' · '+C.scenarios[state.scenario].name,'期末净资产 '+m(E.net(state))+' 万日元','现金缓冲 '+one(E.buffer(state))+' 个月','生活满意度 '+state.mood+'/100','累计市场损益 '+sign(sum(state,'gain'))+' 万','累计被迫变现 '+m(sum(state,'forcedSale'))+' 万','',...state.history.map(r=>r.year+' | '+r.title+' | 现金 '+r.percent+'% | 期末净资产 '+m(r.net)+' 万'),'','同场体验：'+challengeUrl(),'历史市场取自日本内阁府与日本证券业协会；人物、收入、费用及事件均为虚构教学模型。'];
  download('人生CFO-'+state.seed+'-家庭年报.txt',lines.join('\n'),'text/plain;charset=utf-8');
 }
-function challengeUrl(){const url=new URL('https://outlier27-cell.github.io/life-cfo-japan/');url.searchParams.set('seed',state?.seed||chosenSeed);url.searchParams.set('family',state?.scenario||chosenScenario);return url.href;}
+function challengeUrl(){const url=new URL('https://outlier27-cell.github.io/life-cfo-japan/japan.html');url.searchParams.set('seed',state?.seed||chosenSeed);url.searchParams.set('family',state?.scenario||chosenScenario);return url.href;}
 async function share(){
  const text='《人生 CFO》日本篇：7 个年份，14 次决定。和我用同一个人生编号，看看你会怎么安排。';
  try{if(navigator.share){await navigator.share({title:'人生 CFO · 日本篇',text,url:challengeUrl()});return;}await navigator.clipboard.writeText(text+'\n'+challengeUrl());toast('试玩邀请已复制，可以粘贴到群里');}

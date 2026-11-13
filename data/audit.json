@@ -1,0 +1,461 @@
+{
+  "edition": "oecd-fred-2026-11-13",
+  "checkedAt": "2026-11-13T07:24:21.636Z",
+  "method": "Cross-check frozen CSV extraction against the official FRED HTML data table. Same upstream provider, not an independent second economic source.",
+  "series": 11,
+  "observations": 55,
+  "pass": true,
+  "samples": [
+    {
+      "id": "SPASTT01JPM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01JPM661N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 28.8094,
+          "table": 28.8094,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 148.4266,
+          "table": 148.4266,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 112.449,
+          "table": 112.449,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 53.48485,
+          "table": 53.48485,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 114.8566,
+          "table": 114.8566,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "JPNCPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/JPNCPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 67.09087,
+          "table": 67.09087,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 86.94324,
+          "table": 86.94324,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 92.64444,
+          "table": 92.64444,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 98.14202,
+          "table": 98.14202,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 101.0944,
+          "table": 101.0944,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CCUSMA02JPM618N",
+      "url": "https://fred.stlouisfed.org/data/CCUSMA02JPM618N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 196.127142771429,
+          "table": 196.127142771429,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 123.631817209091,
+          "table": 123.631817209091,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 133.727368815789,
+          "table": 133.727368815789,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 91.30975,
+          "table": 91.30975,
+          "displayPrecision": 13,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 103.790434782609,
+          "table": 103.790434782609,
+          "displayPrecision": 13,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01USM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01USM661N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 5.316517,
+          "table": 5.316517,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 15.38439,
+          "table": 15.38439,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 17.78271,
+          "table": 17.78271,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 51.73662,
+          "table": 51.73662,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 134.5941,
+          "table": 134.5941,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "USACPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/USACPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 28.56335,
+          "table": 28.56335,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 50.84024,
+          "table": 50.84024,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 56.45165,
+          "table": 56.45165,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 88.69743000000001,
+          "table": 88.69743000000001,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 109.8968,
+          "table": 109.8968,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01GBM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01GBM661N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 7.255638,
+          "table": 7.255638,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 26.83489,
+          "table": 26.83489,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 32.81529,
+          "table": 32.81529,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 64.68772,
+          "table": 64.68772,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 98.82664,
+          "table": 98.82664,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "GBRCPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/GBRCPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 23.49968,
+          "table": 23.499679999999998,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 49.3,
+          "table": 49.3,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 57,
+          "table": 57,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 87.1,
+          "table": 87.1,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 109.4,
+          "table": 109.4,
+          "displayPrecision": 16,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CCUSMA02GBM618N",
+      "url": "https://fred.stlouisfed.org/data/CCUSMA02GBM618N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 0.503898532842105,
+          "table": 0.503898532842105,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 0.547390005,
+          "table": 0.547390005,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 0.519447367526316,
+          "table": 0.519447367526316,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 0.673,
+          "table": 0.673,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 0.744509130434783,
+          "table": 0.744509130434783,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "SPASTT01CAM661N",
+      "url": "https://fred.stlouisfed.org/data/SPASTT01CAM661N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 9.128892,
+          "table": 9.128892,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 23.6416,
+          "table": 23.6416,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 22.71274,
+          "table": 22.71274,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 58.98987,
+          "table": 58.98987,
+          "displayPrecision": 6,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 122.2525,
+          "table": 122.2525,
+          "displayPrecision": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CANCPIALLMINMEI",
+      "url": "https://fred.stlouisfed.org/data/CANCPIALLMINMEI",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 29.94469,
+          "table": 29.94469,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 57.12405,
+          "table": 57.12405,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 63.128780000000006,
+          "table": 63.128780000000006,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 89.51804,
+          "table": 89.51804,
+          "displayPrecision": 16,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 108.5594,
+          "table": 108.5594,
+          "displayPrecision": 16,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "CCUSMA02CAM618N",
+      "url": "https://fred.stlouisfed.org/data/CCUSMA02CAM618N",
+      "values": [
+        {
+          "date": "1978-12-01",
+          "csv": 1.17990884775,
+          "table": 1.17990884775,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1988-12-01",
+          "csv": 1.1953904742381,
+          "table": 1.1953904742381,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "1990-12-01",
+          "csv": 1.1602849901,
+          "table": 1.1602849901,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2008-12-01",
+          "csv": 1.2371,
+          "table": 1.2371,
+          "displayPrecision": 15,
+          "pass": true
+        },
+        {
+          "date": "2020-12-01",
+          "csv": 1.28100869565217,
+          "table": 1.28100869565217,
+          "displayPrecision": 15,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}

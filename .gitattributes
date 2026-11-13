@@ -1,0 +1,4 @@
+* text=auto eol=lf
+data/raw/*.csv -text
+*.webp binary
+*.png binary
