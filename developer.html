@@ -1,14 +1,14 @@
-<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='theme-color' content='#f5ecdc'><meta name='description' content='人生 CFO 全球篇的玩法、数据口径、结算公式和好友榜说明。'><title>人生 CFO 开发与持续优化文档 · 人生 CFO</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"><link rel='stylesheet' href='style.css?v=2.0.1'><style>.doc{max-width:850px}.doc article{font-size:15px;line-height:1.85}.doc h1{font-size:32px;margin:22px 0}.doc h2{font-size:24px;margin:36px 0 14px;scroll-margin-top:16px}.doc h3{font-size:19px;margin:24px 0 10px}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:24px}.doc li{margin:7px 0}.doc td,.doc th{text-align:left;vertical-align:top;font-size:13px;padding:10px 8px}.doc table{min-width:290px}.doc code{font-size:13px;overflow-wrap:anywhere}.doc a{overflow-wrap:anywhere}.doc-toc{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}.doc-toc nav{display:grid;gap:8px;padding:12px 0}.doc-toc a{font-size:14px}.doc .nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.doc .table-wrap{margin:16px 0}.doc .end-link{margin-top:32px}@media(max-width:700px){.doc h1{font-size:28px}.doc h2{font-size:23px}.doc article{font-size:15px}.doc .header-actions{gap:6px}.doc .brand{font-size:21px}.doc .small-button{padding:5px 8px}}@media print{.masthead,.doc-toc,.end-link{display:none}.book{border:0;box-shadow:none;margin:0;padding:0;background:white}.doc h2{break-after:avoid}.doc tr{break-inside:avoid}}</style></head><body><div class='book doc'><header class='masthead'><a class='brand' href='./'><span class='seal'>人</span>人生 <b>CFO</b></a><div class='header-actions'><a class='small-button nav-link' href='./'>回到游戏</a></div></header><article><h1>人生 CFO 开发与持续优化文档</h1><details class='doc-toc'><summary>查看目录</summary><nav><a href='#section-1'>1 本轮问题和产品决定</a><a href='#section-2'>2 产品范围和体验验收</a><a href='#section-3'>3 模块与发布结构</a><a href='#section-4'>4 状态机与停止条件</a><a href='#section-5'>5 资产分类和家庭合同</a><a href='#section-6'>6 年度结算顺序</a><a href='#section-7'>7 三套金额口径和核对公式</a><a href='#section-8'>8 事件随机性和趣味设计</a><a href='#section-9'>9 决策界面与事前信息</a><a href='#section-10'>10 模型与重玩比较</a><a href='#section-11'>11 历史数据质量与边界</a><a href='#section-12'>12 存档和成绩协议</a><a href='#section-13'>13 测试与上线检查</a><a href='#section-14'>14 后续优化顺序</a></nav></details>
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='theme-color' content='#f5ecdc'><meta name='description' content='人生 CFO 全球篇的玩法、数据口径、结算公式和好友榜说明。'><title>人生 CFO 开发与持续优化文档 · 人生 CFO</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"><link rel='stylesheet' href='style.css?v=2.0.1'><style>.doc{max-width:850px}.doc article{font-size:15px;line-height:1.85}.doc h1{font-size:32px;margin:22px 0}.doc h2{font-size:24px;margin:36px 0 14px;scroll-margin-top:16px}.doc h3{font-size:19px;margin:24px 0 10px}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:24px}.doc li{margin:7px 0}.doc td,.doc th{text-align:left;vertical-align:top;font-size:13px;padding:10px 8px}.doc table{min-width:290px}.doc code{font-size:13px;overflow-wrap:anywhere}.doc a{overflow-wrap:anywhere}.doc-toc{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}.doc-toc nav{display:grid;gap:8px;padding:12px 0}.doc-toc a{font-size:14px}.doc .nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.doc .table-wrap{margin:16px 0}.doc .end-link{margin-top:32px}@media(max-width:700px){.doc h1{font-size:28px}.doc h2{font-size:23px}.doc article{font-size:15px}.doc .header-actions{gap:6px}.doc .brand{font-size:21px}.doc .small-button{padding:5px 8px}}@media print{.masthead,.doc-toc,.end-link{display:none}.book{border:0;box-shadow:none;margin:0;padding:0;background:white}.doc h2{break-after:avoid}.doc tr{break-inside:avoid}}</style></head><body><div class='book doc'><header class='masthead'><a class='brand' href='./'><span class='seal'>人</span>人生 <b>CFO</b></a><div class='header-actions'><a class='small-button nav-link' href='./'>回到游戏</a></div></header><article><h1>人生 CFO 开发与持续优化文档</h1><details class='doc-toc'><summary>查看目录</summary><nav><a href='#section-1'>1 本轮问题和产品决定</a><a href='#section-2'>2 产品范围和体验验收</a><a href='#section-3'>3 模块与发布结构</a><a href='#section-4'>4 状态机与停止条件</a><a href='#section-5'>5 资产分类和家庭合同</a><a href='#section-6'>6 年度结算顺序</a><a href='#section-7'>7 三套金额口径和核对公式</a><a href='#section-8'>8 事件随机性和趣味设计</a><a href='#section-9'>9 决策界面与事前信息</a><a href='#section-10'>10 模型与重玩比较</a><a href='#section-11'>11 历史数据质量与边界</a><a href='#section-12'>12 存档和成绩协议</a><a href='#section-13'>13 测试与上线检查</a><a href='#section-14'>14 账表交付和公开产品参考</a><a href='#section-15'>15 后续优化顺序</a></nav></details>
 <p>家庭账本篇产品规则与维护说明</p>
-<p>适用版本：5.0.0。财务规则：family-5.0.0。数据版本：multi-asset-2026-11-13。更新日期：2026年11月16日。</p>
-<p>本版把主要流程收敛为30次年度结算，每年一个生活决定、一个资产配置决定。年度现金流图和资产负债表是玩家理解结果的主要入口。无法清偿时必须停止正常推进，进入资产处置或破产复盘。止盈止损和年内自动再平衡移出本版。</p>
-<p>这份文档供后续产品、开发和数据维护使用。玩法、账务和存档协议以这里列明的5.0规则为准，旧版规则继续留在独立入口。原调研中的人生阶段、投资教育、可追溯行情、同场比较、移动端简洁体验仍保留；“全球”目前实际覆盖四个国家。</p>
-<p><a href="https://outlier27-cell.github.io/life-cfo-japan/?v=5.0.0">公网游戏</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/guide.html">玩家手册</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/sources.html">数据与公式</a> · <a href="https://github.com/outlier27-cell/life-cfo-japan">源代码</a></p>
+<p>适用版本：6.0.0。财务规则：family-6.0.0。数据版本：multi-asset-2026-11-13。更新日期：2026年11月16日。</p>
+<p>本版把主要流程收敛为30次年度结算，每年一个生活决定、一个资产配置决定。年度现金流图和资产负债表是玩家理解结果的主要入口。无法清偿时必须停止正常推进，进入资产处置或破产复盘。止盈止损和年内自动再平衡移出本版。30年总览、逐年完整账表和现金收付校验共同支撑复盘，玩家可以随时打开同年对照。</p>
+<p>这份文档供后续产品、开发和数据维护使用。玩法、账务和存档协议以这里列明的6.0规则为准，旧版规则继续留在独立入口。原调研中的人生阶段、投资教育、可追溯行情、同场比较、移动端简洁体验仍保留；“全球”目前实际覆盖四个国家。</p>
+<p><a href="https://outlier27-cell.github.io/life-cfo-japan/?v=6.0.0">公网游戏</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/guide.html">玩家手册</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/sources.html">数据与公式</a> · <a href="https://github.com/outlier27-cell/life-cfo-japan">源代码</a></p>
 <h2 id='section-1'>1 本轮问题和产品决定</h2>
 
 <p>旧界面把家庭年度差额、现金和财富放在多个数字卡片里，负数出现后缺少清楚的偿付处理。配置页又同时露出较多纪律、保障和资产设置，手机用户难以判断必须完成哪些项。只检查页面能打开和规则能计算，不能证明整局玩下来容易理解。</p>
-<p>5.0将年度收支、实际现金与净资产分别命名。每年默认展示两个生活选项、三个金融配置预设和一次年度结算；保险、房车、手动比例、便签与压力测试折叠。新增裁员、复工、换工作和遗产事件，事件影响真正进入账本。</p>
-<p>主入口使用新规则，4.2保留原入口和存档。这样可以避免旧选择记录在新规则下被重算成不同结果。原调研文件和同事提供的中国模拟器用于需求与资产分类参考，未把其代码、图像或私有数据发布到仓库。</p>
+<p>6.0将年度收支、实际现金与净资产分别命名，并在表格中明确总资产与净资产。截图中的4.2旧版允许欠款跨年，因而可能出现多年负净资产后恢复。新版遇到不能清偿的账单必须停止；旧入口顶部显示规则差异，防止继续旧存档时误以为已经使用新规则。每年默认展示两个生活选项、三个金融配置预设和一次年度结算；保险、房车、手动比例、便签与压力测试折叠。新增裁员、复工、换工作和遗产事件，事件影响真正进入账本。</p>
+<p>主入口使用新规则，5.0和4.2分别保留原入口与存档。这样可以避免旧选择记录在新规则下被重算成不同结果。原调研文件和同事提供的中国模拟器用于需求与资产分类参考，未把其代码、图像或私有数据发布到仓库。</p>
 <h2 id='section-2'>2 产品范围和体验验收</h2>
 
 <p>开局由人生编号确定：日本、美国、英国、加拿大，1978、1988、1990年末，以及三种家庭背景。人物从24岁开始，最多经历30个年度、60次主要选择。提前结束的局数少于60次；危机处理和结算页继续按钮不计入主要选择数。</p>
@@ -25,7 +25,15 @@
 </thead>
 <tbody><tr>
 <td>family-engine.js</td>
-<td>5.0事件、年度结算、危机处置、回放和模型比较</td>
+<td>6.0事件、年度结算、危机处置、回放和模型比较</td>
+</tr>
+<tr>
+<td>family-ledger.js</td>
+<td>年度余额和变化校验、30年时间轴、同年比较、历史图与48列CSV</td>
+</tr>
+<tr>
+<td>family-stories.js</td>
+<td>新增随机剧情、图鉴目录、插画映射和年代对白</td>
 </tr>
 <tr>
 <td>family-app.js</td>
@@ -60,7 +68,7 @@
 <td>预生成的原创剧情插画</td>
 </tr>
 </tbody></table></div>
-<p>网页为静态HTML、CSS和JavaScript，可部署到GitHub Pages。运行时无需账号、付费接口或大模型密钥。插画由图像模型预先生成，再编码为WebP；页面不等待在线生成。离线构建会把脚本、样式和五张插画内嵌为单文件，史料和文档链接仍需联网。</p>
+<p>网页为静态HTML、CSS和JavaScript，可部署到GitHub Pages。运行时无需账号、付费接口或大模型密钥。插画由图像模型预先生成，再编码为WebP；页面不等待在线生成。离线构建会把脚本、样式和15张插画内嵌为单文件，史料和文档链接仍需联网。</p>
 <p>开发命令包括npm test、npm run build:docs和npm run build:offline。本地静态服务默认仅监听127.0.0.1，通过白名单提供游戏文件，不暴露上级研究目录。数据重建与来源审计单独执行，不能因改界面而悄悄更新历史快照。</p>
 <h2 id='section-4'>4 状态机与停止条件</h2>
 
@@ -84,7 +92,7 @@
 <li>计算住房指数变化、车价及汇率变化、车辆折旧。</li>
 <li>抽取该编号该年的突发事件。收入中断减少收入，最低为零；医疗按保障比例抵扣，维修按准备情况抵扣。</li>
 <li>结算全年收入减必要开销和房贷还款的差额。正差额先清偿旧欠款，再进入现金；负差额先用现金，再按债券、黄金、股票出售并计费。</li>
-<li>扣减已安排还款中的房贷本金，支付额外自付账单。不足部分记未付债务。</li>
+<li>将本年到期本金从房贷余额中扣减，支付额外自付账单。未付家庭款记为未付账单；其中到期未付本金属于负债重分类，不能称作已经清偿。CSV分别列应付金额与实际家庭付款。</li>
 <li>校验账本恒等式，记录年度快照，增加年份，再判断危机或30年完成。</li>
 </ol>
 <p>这是年度家庭结算。市场资产按月估值，工资和家庭费用按年度净额处理；未完整模拟逐月领薪与账单日序。因此不能据此声称还原了某个月的真实现金违约日期。月度金融资产明细也不是银行流水。</p>
@@ -93,24 +101,27 @@
 <p>净资产＝现金＋股票＋债券＋黄金＋住房＋汽车－房贷本金－未付账单。资产与负债余额始终为非负安全整数；只有净资产和收支差额可以为负。</p>
 <p>年末净资产＝年初净资产＋遗产－生活选择支出＋金融市场损益＋住房价格变化＋车辆价格及汇率变化－车辆折旧＋收入－生活及保障支出－房贷利息－自付账单－全部交易费。房贷本金同时减少现金与负债，不在公式中重复扣损。</p>
 <p>家庭收支差额＝收入＋遗产－生活及保障支出－房贷还款－自付账单－生活选择费用。它采用本年应付口径，负数表示家庭资金缺口，不能直接标成投资亏损或破产。</p>
-<p>现金图满足：年初现金＋工资及遗产－实际家庭付款＋资产收付净额＝年末现金。实际家庭付款扣除本年仍未支付的家庭账单；资产收付净额归集金融资产、房车、融资和费用的现金影响。它是汇总调节项，不能伪称逐笔分类的法定现金流量表。年度CSV另外列出余额、收入、遗产、开销、房贷还款、自付账单、市场损益和费用。</p>
+<p>现金图满足：年初现金＋收入及遗产－实际家庭付款＋资产收付净额＝年末现金。实际家庭付款扣除本年仍未支付的家庭账单；资产收付净额归集金融资产、房车、融资和费用的现金影响。资产收付直接由生活费用引起的净变现、配置与房车安排的现金变动、年末净变现、偿债及危机处置组成，不再以年末现金倒算一个残差。引擎独立验证现金式；展示层再次核对资产负债、净资产变化、年初余额和现金式。它仍是全年汇总，不是逐笔法定现金流量表。</p>
 <p>危机清偿后更新同一年记录，额外费用降低净资产，本年未付家庭款归零，资产负债表和现金图随之重算。确认破产则保留终止当时余额；报告不能把尚未发生的处置费用提前扣入。</p>
 <h2 id='section-8'>8 事件随机性和趣味设计</h2>
 
 <p>原有婚育、学习、互助和年度目标节点保留，部分非固定年份插入新事件。随机值由人生编号和年份确定，避免刷新页面换结果。固定重要节点通常优先保留；上一年休整触发的重返工作会优先出现。</p>
-<p>非固定节点中，若尚未继承且已进入第9年以后，抽样值小于12时触发遗产；否则小于30时触发裁员，小于50时触发换工作，剩余使用原节点。这是条件分支规则，不能将12%或30%直接写成现实概率或全局每年发生率。遗产一局至多一次。</p>
+<p>非固定节点中，若尚未继承且已进入第9年以后，抽样值小于12时触发遗产；否则小于30时触发裁员，小于50时触发换工作，余下50至99分成五个区间，分别安排照料父母、奖金、小项目、维修、搬迁。新场景与上一年同类时顺延一个类别；固定节点与复工优先规则保持不变。这是条件分支规则，不能将12%或30%直接写成现实概率或全局每年发生率。遗产一局至多一次。</p>
 <p>尽快求职的当年收入乘0.75，休整乘0.25并设置次年复工。复工稳定岗位乘0.9，项目进修乘0.65并增加技能。换工作花0.4个月预算，次年起每年工资增加1个月预算。遗产为8个月预算，支持亲人分支另支出4个月。</p>
-<p>人物插画覆盖家庭、工作机会、失业、继承和核对账单五种场景，明确标为虚构。历史梗只作为角色对白，不借当前热门个股暗示历史结果。新闻摘要单独标年份和出处，避免把情绪文案混成史实。</p>
+<p>人物与历史主题插画共15张，其中10张为本轮新增，覆盖学习、育儿、搬家、照料父母、维修、能源压力、日本泡沫、互联网年代、金融危机和居家工作。所有图片标为AI情境插画，不充当新闻照片。生成提示、文件名和输出出处保存在assets/story-generation-v6.json；原始模型输出保留在本机。历史梗只作为角色对白，不借当前热门个股暗示历史结果。新闻摘要单独标年份和出处。图鉴的五个教学演示分别展示遗产、裁员、维修、归还房贷本金和现金买入股票；金额是独立假设，不改变游戏存档。</p>
+<p>照料父母可支付1.5个月预算，或保留正常收入的90%亲自照料。奖金增加3个月收入，旅行分支先付1.5个月。小项目先付0.4个月，再计入本年2个月额外收入。维修可付0.8个月并获得含当年在内五年的维修减免，或付0.2个月只处理眼前故障。搬迁付0.6个月并使当年正常收入乘0.95。上述金额全部使用同一CPI调整后的基础预算。</p>
 <h2 id='section-9'>9 决策界面与事前信息</h2>
 
 <p>三预设沿用60/15/20/5、20/40/30/10、10/65/15/10的现金、股票、债券、黄金比例。用户自行调整时自动补足现金，禁止超过100%。保险、房车、便签和压力测试不作为继续游戏的必填门槛。</p>
-<p>配置页只展示决策时点之前一年的史料和行情，确认后才读取未来一年结算。史料与数据仍属于修订后历史快照，存在发布滞后和事后修订限制；禁止用“完全无前视偏差的可交易回测”描述本产品。</p>
+<p>配置页展示决策时点过去一年的史料、按月份标记的13个观测组成的12个月价格图及物价、利率信息。股票与本币黄金各自以窗口首期归一为100；黄金同步使用历史汇率。图表末端不超过当前已知年末，确认后才读取下一年结算。史料与数据仍属于修订后历史快照，存在发布滞后和事后修订限制；禁止用“完全无前视偏差的可交易回测”描述本产品。</p>
 <p>80字决策便签在年末明细中回看。三个压力假设保留作可选练习：股债金分别变动−25%/−5%/−10%并附3个月医疗账单，−20%/−12%/0%并附2个月维修账单，或价格不变附3个月医疗账单。演练预留全年保费，不计未来工资和完整年度房车变化，不推断概率。</p>
 <h2 id='section-10'>10 模型与重玩比较</h2>
 
-<p>均衡模型每年按20/40/30/10分配，股票使用四国参考组合。现金储备模型金融资产100%现金。两者沿用玩家实际发生的生活事件和选项、保险级别与房车意图，只更换金融配置。</p>
+<p>三种对照均沿用玩家实际发生的生活事件和选项、保险级别与房车意图。均衡模型每年按20/40/30/10分配，现金储备模型金融资产100%现金；现金流管家根据本年的已知情况调整比例。股票统一使用四国参考组合。</p>
+<p>现金流管家的目标现金为必要月支出乘储备月数，再加已知年度收入缺口。收入受影响时争取12个月；否则有仍需养育的孩子或房贷时争取9个月，其余6个月。先试算房车与保障计划后的可配置资金，现金比例最低20%、最高100%。正常年份余下资金约60%配股票、30%配债券，其余黄金；收入受影响时约40%配股票、45%配债券，其余黄金。比例取整数，余数进入黄金。</p>
+<p>手续费可能使现金低于名义目标，管家会逐个百分点增加现金重新试算；资金不足时保留缺口提示。建议界面显示原因、目标和比例，玩家可以一键采用。终局回放保留每年的当时输入与理由，不根据未来价格替换理由。该智能体是公开确定性规则，没有大模型预测，也没有保证优于玩家。</p>
 <p>公平比较必须锁定同一人生编号、相同外部事件及相同观察截止时点。若模型付不起玩家的生活选择，记录plan_unaffordable并终止；禁止偷偷换成便宜选项。房车意图仍受各自可支付性约束，因此应明确是相同意图，不能声称每笔房车成交完全相同。</p>
-<p>模型遇到危机自动尝试清偿，不能清偿则破产。曲线长度按各自实际结算年数绘制，缺少的年份显示“已结束”，不补零、不延长、不使用未来收益。对比维度包括已走年数、净资产、实际购买力、现金缓冲、欠款和被迫卖出。</p>
+<p>模型遇到危机自动尝试清偿，不能清偿则破产。曲线长度按各自实际结算年数绘制，缺少的年份显示“已结束”，不补零、不延长、不使用未来收益。同年对照可在游戏过程中或结束后打开。选择年末与模型，逐项显示六项资产、两项负债、合计、双方配置和现金流。页面标明共同可比截止年；模型先停止时，后续单元格显示“已停止”，不会复制最后余额冒充当年数值。终局另保留已走年数、购买力、现金缓冲、欠款和被迫卖出等维度。</p>
 <p>玩家重玩同编号时保留上一局作参照。不同结束年份的终值必须带年份说明；只在共同经历范围内画上一局曲线。模型是规则基准，没有调用大模型进行投资预测，也不预设模型必胜。</p>
 <h2 id='section-11'>11 历史数据质量与边界</h2>
 
@@ -120,21 +131,26 @@
 <p>详细原始来源、序列标识、公式与年度史料目录集中在<a href="https://outlier27-cell.github.io/life-cfo-japan/sources.html">数据来源页</a>，方便逐项追溯。数据权威性不等于家庭模拟在现实中具有预测能力。</p>
 <h2 id='section-12'>12 存档和成绩协议</h2>
 
-<p>5.0使用独立本机键life-cfo:family:v5，另存备份、好友榜和最多三个不同编号的重玩参照。存档含schema、规则版本、数据版本、编号和命令数组；恢复时从开局重放命令。界面草稿和逐年便签单独校验，限制文件长度、选项范围和便签字数。</p>
+<p>6.0使用独立本机键life-cfo:family:v6，另存备份、好友榜和最多三个不同编号的重玩参照。存档含schema、规则版本、数据版本、编号和命令数组；恢复时从开局重放命令。界面草稿和逐年便签单独校验，限制文件长度、选项范围和便签字数。</p>
 <p>成绩链接只允许分享已完成或已破产的局，编码生活、配置与危机处理命令；接收方重放后计算金额。每次最多汇总8条同编号成绩，本机最多64条。完整30年按净资产排序，提前终止不参与同一排名。手动链接榜不具备账户身份、自动云同步或正式防作弊能力。</p>
 <p>外来昵称与便签必须转义后渲染，便签不进入成绩链接。跨标签保存前检查当前存储令牌；发现冲突停止覆盖。损坏主存档先尝试有效备份，导入先验证再请求界面确认；失败不得清空当前进度。</p>
-<p>4.2、3.0与日本篇继续独立入口。旧成绩依据版本路由到旧引擎，不能交给5.0重放。部署时必须一起检查旧入口及其文档链接。</p>
+<p>5.0、4.2、3.0与日本篇继续独立入口。旧成绩依据版本路由到旧引擎，不能交给6.0重放。5.0脚本和样式冻结为family-v5系列，旧文档也保留。新版另有文本存档入口，手机可复制全部文本或粘贴后预览恢复；恢复失败不清空当前人生。部署时必须一起检查旧入口及其文档链接。</p>
 <h2 id='section-13'>13 测试与上线检查</h2>
 
 <p>测试分三层：账务单元与多局回放、实际浏览器完整操作、发布后逐文件与页面检查。不得用自动化引擎直接快进替代浏览器中的完整游玩；测试构造极端资产状态只用于单元测试。</p>
 <p>账务测试应覆盖可手算的全现金首年、负年度差额但仍有储备、无法清偿、可变现恢复、费用守恒、偿还本金不重复扣损、随机收入生效时点、继承至多一次、破产后禁止操作、同编号重放和损坏分享拒绝。多种子模拟同时核对现金图与净资产公式。</p>
 <p>浏览器需要真实点完30年，并自然触发破产。可重复的破产例子：编号1英国1988起点，第一年选择额外工作和均衡配置，第二年裁员选择休整并继续均衡配置；结算后应出现4,152英镑未付账单、净资产−4,152英镑，必须处理后才能离开。该例子用于回归，不作为隐藏提示干预普通开局。</p>
 <p>发布前执行全部测试、语法检查、离线构建和文档渲染；确认没有秘密、私人原始文档或无关研究文件进入发布目录。发布到既有GitHub Pages后，检查部署提交、主入口、图片、脚本和来源文件实际响应，再在公网复验核心流程。具体运行结果记录在仓库发布QA文件，避免把计划写成已经通过。</p>
-<h2 id='section-14'>14 后续优化顺序</h2>
+<h2 id='section-14'>14 账表交付和公开产品参考</h2>
+
+<p>家庭账本始终保留30个年度位置，已结算年可点开完整年末资产负债表、年初年末对照和变化明细；未来或终止后的年份明确留空。不能把未发生年份填零，也不能把最后余额外推到第30年。CSV每个角色固定30行、48列，可导出玩家一人，或玩家加三个模型共120行，单位使用基础本币。</p>
+<p>公开参考采用两种可查的产品机制。Rich Dad的CASHFLOW强调用财务报表理解资产、负债和生活事件；Krash的CashFlow移动游戏以卡片组织财务与投资操作。本产品采用简短选择、直观账本和独立演示来降低操作负担，同时保持历史路径与可重算记录。没有复制其图像、文案或商业程序，也没有将两款产品视为同一开发商。</p>
+<p>参考页面：<a href="https://richdad.com/cashflow/">Rich Dad CASHFLOW</a>、<a href="https://play.google.com/store/apps/details?hl=en-US&id=com.money.rash">Krash CashFlow应用页</a>，查阅于2026年11月16日。用户提到的REA项目已核对<a href="https://github.com/morluto/rea">官方仓库</a>。现有公开资料足以支撑本轮交互参考，未安装或运行逆向工具。</p>
+<h2 id='section-15'>15 后续优化顺序</h2>
 
 <p>下一轮先观察玩家是否能解释三个数字：今年收支、手上现金、家庭净资产。收集卡住的年份、看不懂的提示和单局耗时；没有这些反馈前，不急于增加设置。</p>
 <p>现金图目前采用全年汇总。若用户需要理解月内发薪、还款和账单先后，应先实现逐月家庭现金账及对应审计，再增加月度流动性教学。保险、税制、房贷和养老制度如需国家差异，应分别补齐当地历史来源与合同边界。</p>
 <p>进阶模式可以另行引入止盈止损、再平衡和更复杂模型，但必须有独立规则版本和更高频数据适配说明，不能让月均观测冒充盘中执行。真实大模型代理若加入，应通过服务端保护密钥，记录输入截止时间、决策、费用和失败回退，并与规则基准同场比较。</p>
 <p>好友榜在有云端账号与后端后再升级为自动同步，补充身份与隐私控制。当前手动成绩链接已经满足小范围体验。更多国家、实时行情或社交功能应在年度账本可解释、破产流程稳定后逐项扩展。</p>
-<p><a href="docs/life-cfo-developer-v5.docx">下载Word版开发文档</a></p>
-</article><a class='button end-link' href='./'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 家庭账本篇 5.0</span><span>2026-11-16</span></footer></div></body></html>
+<p><a href="docs/life-cfo-developer-v6.docx">下载Word版开发文档</a></p>
+</article><a class='button end-link' href='./'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 家庭账本篇 6.0</span><span>2026-11-16</span></footer></div></body></html>

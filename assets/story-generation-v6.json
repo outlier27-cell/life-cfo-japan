@@ -1,0 +1,92 @@
+[
+  {
+    "id": "learning",
+    "prompt": "Create a standalone wide 16:9 story illustration for a Chinese financial education life game. Warm hand-painted watercolor on subtly textured ivory paper, restrained brick-red/olive/ink-blue palette, detailed people and props, cinematic but humane, no interface, no legible text, no logos, no watermarks. This is a fictional illustrative scene, not a documentary photograph. Entire frame is artwork, edge to edge. A young adult attending an evening skills class after work, a small classroom with warm lamps, notebooks, a helpful older teacher and diverse adult classmates, late 1980s to 1990s atmosphere. Mood hopeful but tired. Main figure in foreground three quarter view, horizontal composition.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-learning.webp",
+    "sourceFile": "exec-9684c3c8-32fe-4ec3-be46-fa77665ebaf4.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "baby",
+    "prompt": "Create a standalone wide 16:9 story illustration for a Chinese financial education life game. Warm hand-painted watercolor on subtly textured ivory paper, restrained brick-red/olive/ink-blue palette, detailed people and props, cinematic but humane, no interface, no legible text, no logos, no watermarks. This is a fictional illustrative scene, not a documentary photograph. Entire frame is artwork, edge to edge. Two young parents in a modest apartment gently preparing a bassinet for a newborn, tiny clothes and a handwritten household notebook on a table, a warm window, everyday love and a sense of new financial responsibility. No childbirth or medical scene. Horizontal composition.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-baby.webp",
+    "sourceFile": "exec-4a99093d-4149-4aa6-a4cf-7dce062b73e7.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "moving",
+    "prompt": "Create a standalone wide 16:9 story illustration for a Chinese financial education life game. Warm hand-painted watercolor on subtly textured ivory paper, restrained brick-red/olive/ink-blue palette, detailed people and props, cinematic but humane, no interface, no legible text, no logos, no watermarks. This is a fictional illustrative scene, not a documentary photograph. Entire frame is artwork, edge to edge. A family moving into a modest rented apartment, cardboard boxes, a key in a hand, a plant and folded blanket, an open door with afternoon light. A slightly humorous cat sitting in an empty box. Natural human proportions, household relocation rather than a luxury real estate advert.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-moving.webp",
+    "sourceFile": "exec-d84b32cf-7250-4d8e-8e4b-8383e1869208.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "care",
+    "prompt": "Create a standalone wide 16:9 story illustration for a Chinese financial education life game. Warm hand-painted watercolor on subtly textured ivory paper, restrained brick-red/olive/ink-blue palette, detailed people and props, cinematic but humane, no interface, no legible text, no logos, no watermarks. This is a fictional illustrative scene, not a documentary photograph. Entire frame is artwork, edge to edge. An adult visiting an older parent at home, preparing tea, arranging a pill organizer and helping with grocery bags, calm respectful faces, no visible medical distress. A family budget notebook sits unobtrusively on the side table. Focus on care and time as well as money.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-care.webp",
+    "sourceFile": "exec-7c9d6f00-e8b8-4a5c-90e2-d3b69d8c463c.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "repair",
+    "prompt": "Standalone wide 16:9 watercolor illustration for an educational life finance game. Ivory paper texture, hand-painted detail, warm brick red/olive/ink blue palette matching a thoughtful illustrated family journal. No UI, readable text, charts with numbers, logos, watermark or famous real people. Historically themed fictional illustration, not an archival photograph. A friendly repair technician and a young adult inspecting an old washing machine in a small apartment laundry corner, toolbox on floor, a mischievous cat watching from a cardboard box, gentle visual humor and practical everyday atmosphere.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-repair.webp",
+    "sourceFile": "exec-b86d4d30-4bc4-4af0-8847-c0bebb5f6cc0.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "history-oil",
+    "prompt": "Standalone wide 16:9 watercolor illustration for an educational life finance game. Ivory paper texture, hand-painted detail, warm brick red/olive/ink blue palette matching a thoughtful illustrated family journal. No UI, readable text, charts with numbers, logos, watermark or famous real people. Historically themed fictional illustration, not an archival photograph. Late 1970s North American gas station with a modest queue of period-accurate family cars, people quietly waiting, slightly anxious father checking coins, amber afternoon light, fuel price signs have only abstract marks without readable text. Theme of inflation and household costs.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-history-oil.webp",
+    "sourceFile": "exec-c0c14e95-5a40-4d51-8f5a-b84aeb9cd17d.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "history-bubble",
+    "prompt": "Standalone wide 16:9 watercolor illustration for an educational life finance game. Ivory paper texture, hand-painted detail, warm brick red/olive/ink blue palette matching a thoughtful illustrated family journal. No UI, readable text, charts with numbers, logos, watermark or famous real people. Historically themed fictional illustration, not an archival photograph. Tokyo in late 1980s, commuters in period business suits outside a lively securities office, crowded city lights and paper newspapers, hopeful energetic mood with one thoughtful person holding a household notebook. Period-accurate architecture, no actual logos, no identifiable real exchange display or fabricated numeric chart.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-history-bubble.webp",
+    "sourceFile": "exec-b8b36a50-04ef-4a7e-952b-6fc743fbca04.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "history-internet",
+    "prompt": "Standalone wide 16:9 watercolor illustration for an educational life finance game. Ivory paper texture, hand-painted detail, warm brick red/olive/ink blue palette matching a thoughtful illustrated family journal. No UI, readable text, charts with numbers, logos, watermark or famous real people. Historically themed fictional illustration, not an archival photograph. A modest late 1990s home office, adult couple excitedly exploring a beige CRT computer with wired keyboard and dial-up modem, floppy disks, telephone and potted plant; reflective joyous mood about the internet era. Screen has abstract blocks of color only, no visible graphs or text.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-history-internet.webp",
+    "sourceFile": "exec-a970c048-fd9e-47d3-8225-47672d817042.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "history-crisis",
+    "prompt": "Standalone wide 16:9 hand-painted watercolor illustration for a family financial education game, restrained ivory paper, olive, brick red, ink blue, believable anatomy and detailed props. No UI, readable text, logos or watermark. Fictional historical-theme illustration, never a documentary photo. An autumn 2008-style city financial district, ordinary office workers leaving a stone bank building, a couple on a bench carefully checking a household notebook while holding newspapers, rain clearing, concerned but resilient atmosphere. No recognizable real bank logos, no fabricated stock graph, no famous people.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-history-crisis.webp",
+    "sourceFile": "exec-8a1f8b0c-be06-4034-b4d2-17be443d75f2.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  },
+  {
+    "id": "history-pandemic",
+    "prompt": "Standalone wide 16:9 hand-painted watercolor illustration for a family financial education game, restrained ivory paper, olive, brick red, ink blue, believable anatomy and detailed props. No UI, readable text, logos or watermark. Fictional historical-theme illustration, never a documentary photo. A family adapting to working at home in 2020, two adults sharing a small dining table with a laptop and a child doing schoolwork, masks hung by the doorway, quiet city through the window, a grocery bag and a potted plant, tired but kind expressions. Screen has abstract blocks without text. Respectful everyday scene, no medical distress.",
+    "tool": "image_gen",
+    "created": "2026-11-16",
+    "output": "story-history-pandemic.webp",
+    "sourceFile": "exec-81281144-0b4e-4cd4-8109-1b7a909e314f.png",
+    "usage": "AI fictional illustration; not a historical photograph"
+  }
+]
