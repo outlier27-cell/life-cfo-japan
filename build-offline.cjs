@@ -5,9 +5,10 @@ const entry=classic?'japan.html':'index.html',artName=classic?'tokyo-1989.webp':
 const art='data:image/webp;base64,'+fs.readFileSync(path.join(root,artName)).toString('base64');
 const scriptNames=[];
 let html=read(entry).replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,href)=>'<style>\n'+read(href.split('?')[0])+'\n</style>').replace(/<script defer src="([^"]+)"><\/script>/g,(_,src)=>{scriptNames.push(src.split('?')[0]);return '';});
-const scripts=scriptNames.map(name=>'<script>\n'+read(name).replaceAll(artName,art).replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');
+const familyArt=Object.fromEntries(['family','career','inheritance','layoff','quiet'].map(name=>[name,'data:image/webp;base64,'+fs.readFileSync(path.join(root,'assets/story-'+name+'.webp')).toString('base64')]));
+const scripts=(classic?'':'<script>globalThis.FamilyArt='+JSON.stringify(familyArt)+'</script>\n')+scriptNames.map(name=>'<script>\n'+read(name).replaceAll(artName,art).replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');
 html=html.replace('</body>',scripts+'\n</body>');
-for(const resource of ['guide.html','developer.html','review.html','sources.html','japan.html','data/annual.csv','data/manifest.json','data/audit.json','world-v3.html','guide-v3.html','sources-v3.html','data/v4/manifest.json','data/v4/monthly.csv','data/v4/housing.csv','data/v4/audit.json'])html=html.replaceAll("href='"+resource+"'","href='https://outlier27-cell.github.io/life-cfo-japan/"+resource+"'");
+for(const resource of ['guide.html','developer.html','review.html','sources.html','japan.html','data/annual.csv','data/manifest.json','data/audit.json','world-v3.html','guide-v3.html','sources-v3.html','multi-v4.html','guide-v4.html','sources-v4.html','developer-v4.html','data/v4/manifest.json','data/v4/monthly.csv','data/v4/housing.csv','data/v4/audit.json'])for(const quote of ["'",'"'])html=html.replaceAll('href='+quote+resource+quote,'href='+quote+'https://outlier27-cell.github.io/life-cfo-japan/'+resource+quote);
 const output=path.resolve(process.argv.slice(2).find(x=>x!=='--classic')||path.join(root,classic?'japan-offline.html':'world-offline.html'));
 if([path.join(root,'index.html'),path.join(root,'japan.html')].includes(output))throw Error('Choose a separate offline output');
 fs.writeFileSync(output,html);console.log(output);

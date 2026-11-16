@@ -23,7 +23,10 @@ for (const filename of ['japan.html','guide.html','review.html','sources.html','
   files.set('/'+filename,[filename,type]);
 }
 for(const filename of ['developer.html','world-v3.html','guide-v3.html','sources-v3.html','pro.css','pro-data.js','pro-content.js','pro-history.js','pro-engine.js','pro-social.js','pro-planning.js','pro-app.js','data/v4/manifest.json','data/v4/monthly.csv','data/v4/housing.csv','data/v4/gold-extraction.json','data/v4/audit.json']) { const type={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.csv':'text/csv; charset=utf-8','.json':'application/json; charset=utf-8'}[path.extname(filename)];files.set('/'+filename,[filename,type]); }
+for(const filename of ["family-engine.js", "family-social.js", "family-charts.js", "family-app.js", "family.css", "multi-v4.html", "guide-v4.html", "sources-v4.html", "developer-v4.html", "assets/story-family.webp", "assets/story-career.webp", "assets/story-inheritance.webp", "assets/story-layoff.webp", "assets/story-quiet.webp"]){files.set('/'+filename,[filename,({'.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.webp':'image/webp'})[path.extname(filename)]]);}
 const multiManifest=JSON.parse(fs.readFileSync(path.join(__dirname,'data/v4/manifest.json'),'utf8'));
+for(const name of ['life-cfo-player-v5.docx','life-cfo-developer-v5.docx'])files.set('/docs/'+name,['docs/'+name,'application/vnd.openxmlformats-officedocument.wordprocessingml.document']);
+files.set('/review-v4.html',['review-v4.html','text/html; charset=utf-8']);
 for(const item of multiManifest.series)files.set('/'+item.file,[item.file,'text/csv; charset=utf-8']);
 files.set('/data/v4/raw/CMO-Historical-Data-Monthly.xlsx',['data/v4/raw/CMO-Historical-Data-Monthly.xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']);
 const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'data/manifest.json'),'utf8'));
