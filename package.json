@@ -1,11 +1,11 @@
 {
   "name": "life-cfo",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "private": true,
   "description": "Mobile historical life and financial education game",
   "scripts": {
     "start": "node serve.cjs",
-    "test": "node --test family.test.cjs ledger.test.cjs planning.test.cjs pro.test.cjs world.test.cjs engine.test.cjs charts.test.cjs rules.test.cjs",
+    "test": "node --test narrative.test.cjs family.test.cjs ledger.test.cjs planning.test.cjs pro.test.cjs world.test.cjs engine.test.cjs charts.test.cjs rules.test.cjs",
     "build:data": "node tools/build-pro-data.cjs",
     "build:docs": "node tools/build-family-docs.cjs",
     "audit:sources": "node tools/verify-pro-sources.cjs",

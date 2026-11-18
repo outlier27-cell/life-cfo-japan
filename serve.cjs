@@ -33,6 +33,9 @@ files.set('/data/v4/raw/CMO-Historical-Data-Monthly.xlsx',['data/v4/raw/CMO-Hist
 const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'data/manifest.json'),'utf8'));
 for(const source of manifest.series) files.set('/'+source.file,[source.file,'text/csv; charset=utf-8']);
 
+
+for(const name of ['family-story-engine.js','family-scenes.js','family-scene-assets.js','family-v6.html','family-v6.css','family-v6-engine.js','family-v6-stories.js','family-v6-ledger.js','family-v6-social.js','family-v6-charts.js','family-v6-app.js','guide-v6.html','developer-v6.html','sources-v6.html','review-v6.html','docs/life-cfo-player-v7.docx','docs/life-cfo-developer-v7.docx'])files.set('/'+name,[name,({'.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'})[path.extname(name)]]);
+files.set('/assets/scene-briefs-v7.json',['assets/scene-briefs-v7.json','application/json; charset=utf-8']);
 http.createServer((req, res) => {
   const file = files.get(req.url.split('?')[0]);
   if (req.method !== 'GET' && req.method !== 'HEAD') {
