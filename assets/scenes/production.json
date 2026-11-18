@@ -1,0 +1,515 @@
+{
+  "release": "7.1.0",
+  "produced": "2026-11-18",
+  "model": "gpt-image-2",
+  "provider": "OpenAI Images API",
+  "quality": "medium",
+  "format": "WebP",
+  "storySize": [
+    960,
+    432
+  ],
+  "portraitSize": [
+    160,
+    160
+  ],
+  "provenance": "Fictional recurring cast. One edited contact sheet per group, scene boundaries cropped, scaled and encoded for mobile.",
+  "masters": [
+    {
+      "country": "JP",
+      "group": "cast",
+      "masterSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "referenceSHA256": "c724e6fcc3e3b783322ce9a587db98c173e36932485e15f6fc3f1c404bfa8d68",
+      "prompt": "Fictional recurring cast, six solo portraits in a labeled-free 3 columns x 2 rows grid, reading order: PLAYER adult olive shirt, COLLEAGUE adult man rust shirt, FATHER elderly man glasses gray hair, SISTER adult woman bob hair burgundy shirt, PARTNER adult woman wavy hair blue shirt, CHILD age seven yellow jumper. Natural documentary film stills, distinct faces, ordinary homes, no writing. a Japanese household in Japan. Match original rust shirt colleague and olive shirt player from input.",
+      "outputs": {
+        "JP-cast-child.webp": "2f81fa4fe3afcbe37fcaf9db0a1aa45c5ba6b4d0e5b8ea2ec88012f6d0e86831",
+        "JP-cast-colleague.webp": "bdbb33428ff77b5e506a85820b0bcd37fb351233034850b63f77567d8dd396fc",
+        "JP-cast-father.webp": "5683c3318aed8668356d21d1c5971689ab911385245509966f6cfbdb93edd1bc",
+        "JP-cast-partner.webp": "069c076556c3a8b8dd874525fc6b4f5a7c55eb458520942bb9737e1f4219f5a2",
+        "JP-cast-player.webp": "aaa6114a78a930e05d3baef0aaad05ad7a90686f844fa645433bb2e93ed58fb9",
+        "JP-cast-sister.webp": "0c079aee7d7a6e2352a327bcd559d2cf8de066f3560482b7d659af04495173bc"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "care",
+      "masterSHA256": "ac1f53d8905c35299d8f985266b61b19764e0a4eadb717220e9fbf87d0b72c14",
+      "referenceSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Japanese household in Japan, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Sister and elderly father spread a blank rota on kitchen table.\n2. Sister writes the helper contact on the back of the rota while father looks on.\n3. Player in olive shirt helps father with shopping; sister puts the rota on fridge.\n4. Sister arranges transport on the phone, father prepares for his appointment.\n5. Father holds new rota while siblings take turns penciling in their days.\n6. A pencil tucked into a folded rota.\n7. Family kitchen in afternoon light.\n8. Father and sister share a quiet cup of tea.",
+      "outputs": {
+        "JP-care-first.webp": "3c6739edf89d578980dd9a6725381bb6a5725cc5a3e4da1c5f2caf8bef048449",
+        "JP-care-paid.webp": "b6d447ad8abfeb8d0b6c382d8e32ddf203f7b2d63c0896424ca0e87284145acd",
+        "JP-care-personal.webp": "a292c11f16df2de1e2612e3c0220cdeeccd659996e83e4d12515a97458949475",
+        "JP-care-shared-paid.webp": "fee958ab0eaab99fafa9049bd4cdb7969a5d55e12f621900c87731c9fc20531a",
+        "JP-care-shared-time.webp": "41c709da5866252655da7b1bac18a0727415570f5a166fd9cf494d26bc39bc98"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "project",
+      "masterSHA256": "955df3289444e2fdca5742c54cbc63fb43fca3aca1bc908205ececc2f7a9fe1d",
+      "referenceSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Japanese household in Japan, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Former colleague in rust shirt offers a folded checklist across a desk. Neither has signed.\n2. Player signs the original work sheet, colleague watches.\n3. Player politely raises palm, colleague takes the sheet back.\n4. Both examine a new supplemental page clipped to their checklist.\n5. Player hands back the original completed folder, colleague takes it.\n6. They arrange a smaller job over a daytime desk calendar.\n7. Colleague puts papers away; they drink tea together.\n8. Detail of their familiar folded worksheet on a wooden desk.",
+      "outputs": {
+        "JP-project-accept.webp": "effd2a3fa243e6f4563fcd7ad6cf666de6ca26e897c95befeaa6a030b838e6a1",
+        "JP-project-close.webp": "e86dbd45b6a81cae2a52e8b0ad7515018627355f5484d4d9e79861e7c916f0f3",
+        "JP-project-decline-again.webp": "700d2af68ecd1c53e1078c84a18a40c029a9f116caf9706aa9704a0a6a04ae3c",
+        "JP-project-decline.webp": "1a0354902a3993cf4ae2912a65f056cec7ffd0487ca433bf49b833d01983d167",
+        "JP-project-extend.webp": "87ccc1f45595b3e2226cda275da1dbf3b4cc8a0c6a5bd44d0363dfe512477957",
+        "JP-project-first.webp": "dea2c7939dded76a985e2d484e45a25d410b386b5b6b771d9dc461585e1062c7",
+        "JP-project-weekday.webp": "b2436b4bea8135c07d072693b59d6c0c75f2db3a21b4a8e730f13f97256141ae"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "return",
+      "masterSHA256": "050910ff4c090c14a463ce86c1923ee6bb908e039f21e00dd2746a3dbedfe5ee",
+      "referenceSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Japanese household in Japan, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. The same colleague in rust points out an additional item on the old folded work sheet, before any new agreement.\n2. In daylight the same colleague proposes a weekday option using a desk calendar; no signature yet.\n3. Same sister and elderly father at home, turning over the old rota to find the existing helper contact before deciding next steps.\n4. Same sister and father point at the penciled names on a worn home care rota; no hired helper present.\n5. Close-up of the old folded drawing of the sea, a pencil and a household calendar opened on a wooden table. Only objects, no people, no tickets; the promised date has arrived.\n6. Close-up of a noticeably more worn drawing of the sea, a second penciled calendar circle, a half-open wooden drawer in background. Only objects; still at home deciding. No tickets.\n7. A pencil on desk.\n8. A folded journey drawing.",
+      "outputs": {
+        "JP-return-care-paid.webp": "d61f76318267268d1b785ec1a66b16cd7f5441d51a6347b868098c06c0cdc0ac",
+        "JP-return-care-personal.webp": "ca900f05a4dde1b3c1e2d3b3f2413af565ba9bfd8b090ee1ee9fb4b70a627114",
+        "JP-return-project-accept.webp": "1f3ee331b1dbee0d1c5df926974b406984f50945ec8369bdc0c8e6819174693a",
+        "JP-return-project-decline.webp": "3c58e25545822200fa7dc9b8fb48ec692966e0902ee970afbd4f4868c17644d2",
+        "JP-return-trip-delay.webp": "6375f65d718f48c6952bf270cd1e471dc10dec4a9d815b40cb888d2feb6660d0",
+        "JP-return-trip-promise.webp": "ec6caa5fe72ce6e0d60853d0bbdc9f434f10173ea98559312c0c3f063357127d"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "trip-child",
+      "masterSHA256": "c691d52976ad19038827b542e03227e1f0d5e9d6283eedafbf2ea7ecbcdf5626",
+      "referenceSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Japanese household in Japan, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and CHILD in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "JP-trip-child-cancel.webp": "067ea5cd0e32c617cf78b83c57e6279d3b4ef275582eb929dd4cc503af756ee6",
+        "JP-trip-child-delay.webp": "8e5a40b33ba0199270063935a20756f7365eae41bb45248e209d3de5e5a80ff4",
+        "JP-trip-child-first.webp": "701e1c8890e677e19144a569c95ad0a5334f77308f5560435d0a773868e8cb14",
+        "JP-trip-child-go.webp": "f55b1264dcd282baeabe226646730dd1261591be8f075c36ec7985f0e3cfe74e",
+        "JP-trip-child-local.webp": "9587cbc0b5430aad036bb4208b1f655b8bf20a67587dc9a965839520874db145",
+        "JP-trip-child-promise.webp": "d60395240bd3feff3c9608f0273764b7a2a1dc0324afff6f61a11a643fe5f664",
+        "JP-trip-child-short.webp": "63c784c66f4f5ec4fa62499b56a532fcd3744b3207419bf87350c39358a4c79c"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "trip-teen",
+      "masterSHA256": "f24b532d13fe524b937dac994ff7835041fe0a3f4da040fb89e5e9aab683ad34",
+      "referenceSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Japanese household in Japan, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and TEEN in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. The drawing in soft window light.",
+      "outputs": {
+        "JP-trip-teen-cancel.webp": "36ef4da8308697e2ecb3230aa4ee1149d78dc589380e9c585e902a36cdeabd37",
+        "JP-trip-teen-delay.webp": "13e79002653a850d0df8dadfebd38d2fd7a2fbea815f7bb9dbdb6c1801f69326",
+        "JP-trip-teen-first.webp": "cbbf0188e9a9a952b96bc6bba5501a6a635108a14b029d6280dfdcadf96010bc",
+        "JP-trip-teen-go.webp": "e8884b55c1f91cb42b3be8acf9dae76b0057a018c4a7a099fc76a86859ca75f4",
+        "JP-trip-teen-local.webp": "29d1e353c08c7bb0a227b22a82906b72602dd7fcbcbb0d701e1d589a0ca1d30d",
+        "JP-trip-teen-promise.webp": "2399acf8251f1adc02df0c75ee07fcd5d93558083ae596f43a4d4d472ff03b07",
+        "JP-trip-teen-short.webp": "1fa57de16363ea32c51daf8d46323128aa60d47bf19f33b0738ffa7ae0b937ee"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "trip-sister",
+      "masterSHA256": "2c0188a240d5f3d10f897bc24a96eef43bf43e1cec8d4ffa98991f03ad92c32a",
+      "referenceSHA256": "ff259d4be140f8eb7184069845ebb0856b421a958ca556e70e848580860b74a3",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Japanese household in Japan, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and SISTER in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "JP-trip-sister-cancel.webp": "9ac410a6306c2ca48b6566b57ac92f159b8d29e62d9e140e82480b4e8efec492",
+        "JP-trip-sister-delay.webp": "b0e0bdbbd3530b83c89f3eb305c3446ce02eb220a01bfb6d8f21cde8fb615d26",
+        "JP-trip-sister-first.webp": "16895dc0d3b0828f95beb5e8c4f770266d33d848b8675d3060fe9d6b99cf8ea8",
+        "JP-trip-sister-go.webp": "b5d086ede7aa12a8c5cdf4778660d1f4962c5cfad0a5293df09c1dfdba22711b",
+        "JP-trip-sister-local.webp": "c18d1da2dbb62f22f13e5b384ed3d17a1697f5c9888c1eb0f145a19f3b054e9f",
+        "JP-trip-sister-promise.webp": "79c29bc4d9b20f93adb23ebd1c8d355193334c8455f434ef9f6543967fe87681",
+        "JP-trip-sister-short.webp": "6c1ee8c7a7a5e519579fdd9c8684f2d382dae9458b275ab0b95acf4fb823ccb9"
+      }
+    },
+    {
+      "country": "JP",
+      "group": "trip-partner",
+      "masterSHA256": "f9c336e685046d353d91a8ecdd3462719402b0e400d8e5bbcbdebc1af3e646b7",
+      "referenceSHA256": "70129b614219d8c638155af009468e447053fea886f9596ffc21741bd5bf7271",
+      "prompt": "Create a strict 2 column by 4 row grid of 8 distinct 20:9 wide photographic film stills. Each panel has exactly same width and height. No borders or text. Only people in the supplied identity reference may appear: from left to right player in olive, partner in blue wavy hair. EXACT facial identity, keep exact shirt COLORS and hairstyles from reference in every scene. No children in any frame. No other adults or extras. Country: a Japanese household in Japan. Modest late twentieth century domestic interior, film colors, naturally lit, close enough for mobile. Tight coherent framing.  Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "JP-trip-partner-cancel.webp": "939f70037083aa25b1576dc8d8545793e46322bc9f409827ba28f677ade59948",
+        "JP-trip-partner-delay.webp": "983f04faf18bd46fef2adf49b5846464e5bda3ea847c863b4b731eb57adcd90e",
+        "JP-trip-partner-first.webp": "986d17b80f4649799fa80a0856539ce887810febb896e2769408878fb0958a2d",
+        "JP-trip-partner-go.webp": "d2c42e0666db74978abb1e6e588bef78dd0a9929a81c8718cb42a6e65d3d0250",
+        "JP-trip-partner-local.webp": "20f4639eca9daa00f6330781b91a1162ea9e063bfc62e6d9b9337fbf2ad13b3e",
+        "JP-trip-partner-promise.webp": "93902380106b4259a09e29967530c0a3838b5125260bb547495f0e21d38fe9be",
+        "JP-trip-partner-short.webp": "94351cb789746330b14c599548f0d344e75215dc39992f23821faadf88a4e1dc"
+      }
+    },
+    {
+      "country": "US",
+      "group": "cast",
+      "masterSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "referenceSHA256": null,
+      "prompt": "Fictional recurring cast, six solo portraits in a labeled-free 3 columns x 2 rows grid, reading order: PLAYER adult olive shirt, COLLEAGUE adult man rust shirt, FATHER elderly man glasses gray hair, SISTER adult woman bob hair burgundy shirt, PARTNER adult woman wavy hair blue shirt, CHILD age seven yellow jumper. Natural documentary film stills, distinct faces, ordinary homes, no writing. a Black American family in the United States",
+      "outputs": {
+        "US-cast-child.webp": "4f93099b588803f19f3f0780f15697eec684b9a005df4155cdc13538feb50495",
+        "US-cast-colleague.webp": "2fb7950e792709214a94e61c67a9bbc3135017cbe03810f3f904116937e052b0",
+        "US-cast-father.webp": "2e91bdf86df3bd86e108cf1ef04cc91ee1448d49a2748006219f6ac04a290ad5",
+        "US-cast-partner.webp": "c89f4a8af4edc8c007b1cff84eb9a27ecbe0ba4d2d90dea5ae9d5e0a91ce2fed",
+        "US-cast-player.webp": "115afde3ee37e1c95005139775ecc4912ce1a6669ecffbee6e75d8d5af81db63",
+        "US-cast-sister.webp": "9840c5d7e2a5cbe3883afe1e1fb100d3bd1b630031a2c3fe14908d100c1db6f5"
+      }
+    },
+    {
+      "country": "US",
+      "group": "care",
+      "masterSHA256": "45d5e392518092e6e6cde83b43a5f6daf19cd5f2a160dd141bb67f21e74b4c95",
+      "referenceSHA256": "c2a53c73d4fdeee05b500b2b1ea8c9b6bc37ecd1ea600bc9278ea6639aba1ee6",
+      "prompt": "Create a strict 2 column by 4 row grid of 8 distinct 20:9 wide photographic film stills. Each panel has exactly same width and height. No borders or text. Only people in the supplied identity reference may appear: from left to right player in olive, elderly father, glasses, sister in burgundy bob haircut. EXACT facial identity, keep exact shirt COLORS and hairstyles from reference in every scene. No children in any frame. No other adults or extras. Country: a Black American family in the United States. Modest late twentieth century domestic interior, film colors, naturally lit, close enough for mobile. Tight coherent framing.  Reading order top left, top right, next row left, right and so on:\n1. Sister and elderly father spread a blank rota on kitchen table.\n2. Sister writes the helper contact on the back of the rota while father looks on.\n3. Player in olive shirt helps father with shopping; sister puts the rota on fridge.\n4. Sister arranges transport on the phone, father prepares for his appointment.\n5. Father holds new rota while siblings take turns penciling in their days.\n6. A pencil tucked into a folded rota.\n7. Family kitchen in afternoon light.\n8. Father and sister share a quiet cup of tea.",
+      "outputs": {
+        "US-care-first.webp": "37011ac5553e3effda427261153b3c3856cfdfbcb50d9c2360663e98099d2eb5",
+        "US-care-paid.webp": "0d2713eee7b5319c2097e734eb50a17b5684e38b14c1a494870aa99ce42fe5b2",
+        "US-care-personal.webp": "3eaff5a5ebf30741e22f1554c1362afb0db7f29e80e532ba2813f8ff88b8251d",
+        "US-care-shared-paid.webp": "682766b857405551cc71c70778b6d1bef6e3d04a8607b90ab7ab73100195748f",
+        "US-care-shared-time.webp": "5ec048458fb335501b8173666c92679a7e85c0d81473284d34b09a110bd0e48b"
+      }
+    },
+    {
+      "country": "US",
+      "group": "project",
+      "masterSHA256": "63e6f163c8cc679f87eec8aae3dbe33b1becc9eda03b09f501d6b1e72efbe7c7",
+      "referenceSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Black American family in the United States, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Former colleague in rust shirt offers a folded checklist across a desk. Neither has signed.\n2. Player signs the original work sheet, colleague watches.\n3. Player politely raises palm, colleague takes the sheet back.\n4. Both examine a new supplemental page clipped to their checklist.\n5. Player hands back the original completed folder, colleague takes it.\n6. They arrange a smaller job over a daytime desk calendar.\n7. Colleague puts papers away; they drink tea together.\n8. Detail of their familiar folded worksheet on a wooden desk.",
+      "outputs": {
+        "US-project-accept.webp": "f8dc71efca6ede3eb445b7a3dceba53d29050d90e659d34c6d41f3016615897c",
+        "US-project-close.webp": "c55bc282b0a297833c3c12471bad84152ba97ad190ab57d376e42fb2f61d9b21",
+        "US-project-decline-again.webp": "7d928c7f9f6132f1fd8f24737d9b3183d75c4ebe75eeb527307a895a9c6b1667",
+        "US-project-decline.webp": "d55261f1f28b106c0e547f02b0ad48ad6d8ab1d2268f8cbe8e593f96ea0ea9ea",
+        "US-project-extend.webp": "d62fc745b30d5e2d8c32edd7235052d1853fccd36376482389799d95c5ff86ad",
+        "US-project-first.webp": "9f3957ba54cf0c24891cd6a220385560c7a4a02dfcd078fd4cb700e1d60f18e3",
+        "US-project-weekday.webp": "8188672335070e6b0e849c104affdc58edbf9fb3e077681d2eeea893aeb4a936"
+      }
+    },
+    {
+      "country": "US",
+      "group": "return",
+      "masterSHA256": "b9eb0529b8102c137abc18e149c9d8c9c838cbc78e51c3419c02cb0246f03df7",
+      "referenceSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Black American family in the United States, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. The same colleague in rust points out an additional item on the old folded work sheet, before any new agreement.\n2. In daylight the same colleague proposes a weekday option using a desk calendar; no signature yet.\n3. Same sister and elderly father at home, turning over the old rota to find the existing helper contact before deciding next steps.\n4. Same sister and father point at the penciled names on a worn home care rota; no hired helper present.\n5. Close-up of the old folded drawing of the sea, a pencil and a household calendar opened on a wooden table. Only objects, no people, no tickets; the promised date has arrived.\n6. Close-up of a noticeably more worn drawing of the sea, a second penciled calendar circle, a half-open wooden drawer in background. Only objects; still at home deciding. No tickets.\n7. A pencil on desk.\n8. A folded journey drawing.",
+      "outputs": {
+        "US-return-care-paid.webp": "eb7a56ecdc950e94675f0f76676e87835f3b3b9a9a1acbe8e71ab4deb1922ebe",
+        "US-return-care-personal.webp": "e29de167868e15531520b7cf86301b85d12589bd072be23fa35f736d81057db4",
+        "US-return-project-accept.webp": "cf526d5213938176767e2860fb4cf19e66d6474f78eee29cb938ccb75e13dde4",
+        "US-return-project-decline.webp": "0898e4bdf2f6eb679f6785aad594900b0bfa961d95077d83353f4ffd343d976c",
+        "US-return-trip-delay.webp": "0d9444911f4bcfd97b9788dcbf0d7a683c68055a29aa5f6450811cc5a466f3e5",
+        "US-return-trip-promise.webp": "302947df0810f0792f605713ce33500114b5e11ac4d97c76fa166e52ef4d6e7a"
+      }
+    },
+    {
+      "country": "US",
+      "group": "trip-child",
+      "masterSHA256": "ece79c8c067ada12c2566aa5bd8bc565f6357661cd9d681c1f7a8dd86b31b4b7",
+      "referenceSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Black American family in the United States, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and CHILD in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "US-trip-child-cancel.webp": "eeafd8d8583f965acc9a3c2a480df0f8db675b2d50bb3a32feac8d8271c12790",
+        "US-trip-child-delay.webp": "a786e996949880ec32df7e8483b59f60914c173f446053acd66cd7ea3a387876",
+        "US-trip-child-first.webp": "b3876054ff33d5e1b99222889fa570960a117c893847c0164ca225ebfcf56493",
+        "US-trip-child-go.webp": "0a610d845f2c9a35bb4c8f193350b808df1ee23eb53a7d3560d9a06e666b8d42",
+        "US-trip-child-local.webp": "85fca4e7db71a09190befe78342a3197c27a6af59aee4a57feeb61aebfa5d6da",
+        "US-trip-child-promise.webp": "f855f1cbed7e7a062bced1489998507fca9c1a8f7264723b41fc5e379025db03",
+        "US-trip-child-short.webp": "850422b69d150e73e4b7181e29daa6684cc32e7009158b9858c945732e173e96"
+      }
+    },
+    {
+      "country": "US",
+      "group": "trip-teen",
+      "masterSHA256": "e40cf878725f1048d52e745b5b864315b1c47d12ae32e4f4a538ff3501b0400f",
+      "referenceSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Black American family in the United States, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and TEEN in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. The drawing in soft window light.",
+      "outputs": {
+        "US-trip-teen-cancel.webp": "1237da717fe2f62e5823f62996fe623103b9f002e3007d55cedbbc71bffe3440",
+        "US-trip-teen-delay.webp": "40790a60e4420e27f71837f76e71447019004e58b985bd62acb5f45f052b79b7",
+        "US-trip-teen-first.webp": "1a8b6121e722dc643171103ac0a7983e56af8b778212cc6e04a283f5712da291",
+        "US-trip-teen-go.webp": "7fccc1edd63463e672b3001fda4c8ded5858769329ef20597ab723f6da5cf2bc",
+        "US-trip-teen-local.webp": "4ea6aa4952ca48af4af6270c9cd8628034a47de8c95c6dc6c3dac32b7bb8e1f3",
+        "US-trip-teen-promise.webp": "18452cade29342f9226f23b7753852a44e545d296aa064fa21bbe935956278f6",
+        "US-trip-teen-short.webp": "a1728a1849b9f3e580aa4c788138d95aab25dea340b996ce2ed3883b041b85bc"
+      }
+    },
+    {
+      "country": "US",
+      "group": "trip-sister",
+      "masterSHA256": "8530029eef0448bf6cae9287c2e4f6c46a36d232cf65a865ef2239c0eea91c81",
+      "referenceSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Black American family in the United States, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and SISTER in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "US-trip-sister-cancel.webp": "250d9fb6ddd0310258fea6aade6b857e55b5ed117b2252c02f9a491625478415",
+        "US-trip-sister-delay.webp": "f206a78d91d7bb7757c5c56fa7abf7055d3d8394c627d85b9dbf341d793a5359",
+        "US-trip-sister-first.webp": "07950285f7715beb3726e13b4af07641f145d3cecbfd7e4199d839e47d014e28",
+        "US-trip-sister-go.webp": "d4bb7f7648e8e769e69931c20f0306b35aead0e446a0f261f1252efde614532c",
+        "US-trip-sister-local.webp": "f998ec706f6344389b42e177398c150eb496b0a807289c8e3765c245b2f6cd6f",
+        "US-trip-sister-promise.webp": "bc7dac0f5d38ba6f45ae053dca27e89d6f1b1656436cc5dae776ab2f77ee9b4a",
+        "US-trip-sister-short.webp": "4ad99948f065d791a9fecdf6c1da3df5e6c0efd25aa2e14431877b44cb893a9c"
+      }
+    },
+    {
+      "country": "US",
+      "group": "trip-partner",
+      "masterSHA256": "275835a1af717c24069d166ebfcda94ee2dae094523e707620e1e4b0f14ac984",
+      "referenceSHA256": "e98d7ae15be6a6658abaf5ecbf4724f035e352dec68895d0b8b9a1e06be0a6be",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Black American family in the United States, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and PARTNER in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "US-trip-partner-cancel.webp": "0b085e9c3fdbbd2aff353ba75e3013b423cf6e37757765570857efdf29559292",
+        "US-trip-partner-delay.webp": "3fe8acd4949af8e1543b42c8f59e80770cf1a2a428ddcf133bc6999f00f9f459",
+        "US-trip-partner-first.webp": "bbd664d8fe0ca31a8a8e8bd8d2df8fa54a8400f08c5c81ec4cce7e9419596a01",
+        "US-trip-partner-go.webp": "b5fa1b9e339afc58fc6217246fe1f3d2600ad5882ee969c68de79e37be2e3af5",
+        "US-trip-partner-local.webp": "2ca43e570c69fb9cead015f9f5498269615d5a17a43661f089e86e38eaaaf389",
+        "US-trip-partner-promise.webp": "9ed398c8d087cc4efc70bac9cbb940e280c6f65406e09ee67de5d083d4e4feba",
+        "US-trip-partner-short.webp": "074cc3954e521d69fdd743cac715f9d7e996b44c089f748f8d4030fc8623a68f"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "cast",
+      "masterSHA256": "d1d0da02ff36f020f5dfe17f6b085d07ee148323305650b1d5b57f5ddf79cffb",
+      "referenceSHA256": null,
+      "prompt": "Fictional recurring cast, six solo portraits in a labeled-free 3 columns x 2 rows grid, reading order: PLAYER adult olive shirt, COLLEAGUE adult man rust shirt, FATHER elderly man glasses gray hair, SISTER adult woman bob hair burgundy shirt, PARTNER adult woman wavy hair blue shirt, CHILD age seven yellow jumper. Natural documentary film stills, distinct faces, ordinary homes, no writing. a British family in Britain",
+      "outputs": {
+        "GB-cast-child.webp": "e063e004a823a8c133eaf0f09d5fe2c60316a159a0f26c604ae9fc2f03e98f6d",
+        "GB-cast-colleague.webp": "f8d2cd303f8d98e946af000ff737667936aa33bc22ade42bd3f89c6457b0a5dd",
+        "GB-cast-father.webp": "d890c33860e1de10fbe56b151493db6753aec091dd10a0015c0f620a8c390cea",
+        "GB-cast-partner.webp": "9fd4f7f14462def228f56149441f8cb13f2289e2638de55d9dc8df4f3cc51689",
+        "GB-cast-player.webp": "a12ba67ebb4aa44d0fe16d06a92cdfa4c3f5a05b9d53d702d0a238f90e9d9ba7",
+        "GB-cast-sister.webp": "6ae5a523170736a3717544ba77707f0c8d066ac7cdeeb5b3bd6ca5f1ad48de11"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "care",
+      "masterSHA256": "fbc40bd758799c1de91e5962a5490b02abbd11bdd56d2ccb17e0f2365df91fde",
+      "referenceSHA256": "d1d0da02ff36f020f5dfe17f6b085d07ee148323305650b1d5b57f5ddf79cffb",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a British family in Britain, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Sister and elderly father spread a blank rota on kitchen table.\n2. Sister writes the helper contact on the back of the rota while father looks on.\n3. Player in olive shirt helps father with shopping; sister puts the rota on fridge.\n4. Sister arranges transport on the phone, father prepares for his appointment.\n5. Father holds new rota while siblings take turns penciling in their days.\n6. A pencil tucked into a folded rota.\n7. Family kitchen in afternoon light.\n8. Father and sister share a quiet cup of tea.",
+      "outputs": {
+        "GB-care-first.webp": "f1c567277ee18bfb3c009847614deb9a756599c68e61a296168d0f01a8723d05",
+        "GB-care-paid.webp": "2ad970bb870e047610995129191f7e6c326fe61942c37a5a5d824bfc1f1afc92",
+        "GB-care-personal.webp": "fdb39662924bf681cfc6cd34837c1800cb70ac4e06ac62064a681640c958eaa3",
+        "GB-care-shared-paid.webp": "6f0d851661ba8ca63b6b89e7a41f7bb863e80dbb36a8d8ee744cca546224b08f",
+        "GB-care-shared-time.webp": "c9442a96e584d02494dc846297e9d14adcec070ce03126833cfcf55ae0cfaf5e"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "project",
+      "masterSHA256": "98b320ded3b3e4e37d8e3a119506b8017ba1d25f4974a319abccebae69384e9d",
+      "referenceSHA256": "d1d0da02ff36f020f5dfe17f6b085d07ee148323305650b1d5b57f5ddf79cffb",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a British family in Britain, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Former colleague in rust shirt offers a folded checklist across a desk. Neither has signed.\n2. Player signs the original work sheet, colleague watches.\n3. Player politely raises palm, colleague takes the sheet back.\n4. Both examine a new supplemental page clipped to their checklist.\n5. Player hands back the original completed folder, colleague takes it.\n6. They arrange a smaller job over a daytime desk calendar.\n7. Colleague puts papers away; they drink tea together.\n8. Detail of their familiar folded worksheet on a wooden desk.",
+      "outputs": {
+        "GB-project-accept.webp": "6ce20f1fc965110884e2744b70377353474d905df81064c4dac0c215f853d17e",
+        "GB-project-close.webp": "d6fca8388073810a692e977d8fce827c1fadbba458449b66151da40c95d5dfca",
+        "GB-project-decline-again.webp": "f78349f053c2c0c725345bf189a8167d5ae8fcb0eeae914a1db8b61927559b87",
+        "GB-project-decline.webp": "9ca51aa172c023a73a399b45fc028ac3ae1c94800083c142215aeba905492d7a",
+        "GB-project-extend.webp": "9c461e2a69e3bf5e2a9da44c5cc0f638dc1d5c41941bfebc75ec676a6fbab488",
+        "GB-project-first.webp": "0637afc5bafabd8d8437f7cbc603ab2fa097078ad65ae4c7ef39c4f16df22a3b",
+        "GB-project-weekday.webp": "42afd0d71198658f98288aec74746c9df4eb30fad12c556dc7178ce50dac84b6"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "return",
+      "masterSHA256": "ec993ca3a72a3156149dcad7d7eb686da10bd55a7f5042b1039b15d0958bfa59",
+      "referenceSHA256": "5f608ba4898e9abe08b5ac7eae7acfb644851445588fae33b7eee9387688a288",
+      "prompt": "Create a strict 2 column by 4 row grid of 8 distinct 20:9 wide photographic film stills. Each panel has exactly same width and height. No borders or text. Only people in the supplied identity reference may appear: from left to right player in olive, colleague in rust, elderly father, glasses, sister in burgundy bob haircut. EXACT facial identity, keep exact shirt COLORS and hairstyles from reference in every scene. No children in any frame. No other adults or extras. Country: a British family in Britain. Modest late twentieth century domestic interior, film colors, naturally lit, close enough for mobile. Tight coherent framing.  Reading order top left, top right, next row left, right and so on:\n1. The same colleague in rust points out an additional item on the old folded work sheet, before any new agreement.\n2. In daylight the same colleague proposes a weekday option using a desk calendar; no signature yet.\n3. Same sister and elderly father at home, turning over the old rota to find the existing helper contact before deciding next steps.\n4. Same sister and father point at the penciled names on a worn home care rota; no hired helper present.\n5. Close-up of the old folded drawing of the sea, a pencil and a household calendar opened on a wooden table. Only objects, no people, no tickets; the promised date has arrived.\n6. Close-up of a noticeably more worn drawing of the sea, a second penciled calendar circle, a half-open wooden drawer in background. Only objects; still at home deciding. No tickets.\n7. A pencil on desk.\n8. A folded journey drawing.",
+      "outputs": {
+        "GB-return-care-paid.webp": "4475e332ad8c3ec70a0695209a8cc4832377cb26d25cbcab5b7e98d0d79c84ab",
+        "GB-return-care-personal.webp": "49b1ca73e0f3791f10a15ba371ecb9852eb4665e41ffbedef27b01efbbf172c5",
+        "GB-return-project-accept.webp": "813ccca5565b6f0e0606fcba5363faa4d9e9c88cc93af421f0a58c06f299cb2e",
+        "GB-return-project-decline.webp": "44be6db6881d47bf621fea62822ff7bfc3f02430ac0906a0a2e681cffd8acb43",
+        "GB-return-trip-delay.webp": "f847e31ed42772d07a0657b103f20ddc2d3bd0c4e8a5fa949a1733c517f2cb49",
+        "GB-return-trip-promise.webp": "92a61be8269737c602d2b5a2e96e92a854f50da70e2008f5a680e391956ba61e"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "trip-child",
+      "masterSHA256": "080fbcbf885c85b6fa3314ea5fbaffdbf90ff25ab4c2f67c453f5dbcaf4c004f",
+      "referenceSHA256": "d1d0da02ff36f020f5dfe17f6b085d07ee148323305650b1d5b57f5ddf79cffb",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a British family in Britain, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and CHILD in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "GB-trip-child-cancel.webp": "76a5f52e0e1678d991f98d40c7e0ad43fd1c17ee49b8ba75a673e3417afa85d9",
+        "GB-trip-child-delay.webp": "fedcde87930c892c8ca2c43132f02b8916fc26af0cf90d73593ed30122c055ee",
+        "GB-trip-child-first.webp": "45bf2003e90f60c05636d3d4ad653cafe082cbdd75e81bfcae2eb7e29d977724",
+        "GB-trip-child-go.webp": "e78fe7a728f48640972817ccb21988f147241d55a2f4480cc054371b5b426d5e",
+        "GB-trip-child-local.webp": "a6a53faaa7cf0e622f95e16eb5295017c6bff7844ea08a46a3d0414bdf1c6dfc",
+        "GB-trip-child-promise.webp": "26208f05cbd77db3f2e593d8352d0e09f84f24eeb3de3a96f37bc76c4cb67c10",
+        "GB-trip-child-short.webp": "1f81e0643d242ab703b771a3f0f8273dda780cb9566504f0f9906886ad9946da"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "trip-teen",
+      "masterSHA256": "c4ea3ce7ec1611f66b67698aa4c7073e78293c2c7ed30a6c1102b074e17426f3",
+      "referenceSHA256": "d1d0da02ff36f020f5dfe17f6b085d07ee148323305650b1d5b57f5ddf79cffb",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a British family in Britain, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and TEEN in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. The drawing in soft window light.",
+      "outputs": {
+        "GB-trip-teen-cancel.webp": "10102c14ae3528152447a1d8790c63f269d056ec15faaea9eee68fed33a1f795",
+        "GB-trip-teen-delay.webp": "5fb6742cbd0d7653429520bb1b2f0544e104a6b4d77d446d62dba006cc48d598",
+        "GB-trip-teen-first.webp": "d0a5c355d8df2e17bfb406561d433be45129a10f06898bcbcd3d15a2819dde1f",
+        "GB-trip-teen-go.webp": "c45448bf58f5dbc14208c27fd1bee42dcac9ba7fb651acd26fe288aade65468d",
+        "GB-trip-teen-local.webp": "0a954a8008a4e47cc4025e1baeea80ad7522451b30993db062722e7d7a7fca37",
+        "GB-trip-teen-promise.webp": "b28509e372eb8d54918b272140498cb23f4c7170703e23fdaf6b23191de8460d",
+        "GB-trip-teen-short.webp": "d133aa9d4c9ca2abdfdfbb5987a66a8ac0c28379b48d9316d8eca267e27d9661"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "trip-sister",
+      "masterSHA256": "d60be216ed9b66abe9818965e633ef00719c2b1a6ffa38e7765caa92dd46cca3",
+      "referenceSHA256": "c4523abe6400fba4c9f07e966fdc320cccbd57b644ae72c7e266b1917c7eba02",
+      "prompt": "Create a strict 2 column by 4 row grid of 8 distinct 20:9 wide photographic film stills. Each panel has exactly same width and height. No borders or text. Only people in the supplied identity reference may appear: from left to right player in olive, sister in burgundy bob haircut. EXACT facial identity, keep exact shirt COLORS and hairstyles from reference in every scene. No children in any frame. No other adults or extras. Country: a British family in Britain. Modest late twentieth century domestic interior, film colors, naturally lit, close enough for mobile. Tight coherent framing.  Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "GB-trip-sister-cancel.webp": "d19daa006f0aecd0f314c55aa597b7121b5a9d99c973f241a4c875a03c3a8d91",
+        "GB-trip-sister-delay.webp": "922e296436f9f64501749fd464410653016d7d376edec208559234be96a1e9c3",
+        "GB-trip-sister-first.webp": "347a29cccc36f2b6aa2b0aacde425a8ad8f88da3df61ee3fc765ab8065a9a98d",
+        "GB-trip-sister-go.webp": "3f49ab136890fd354dc18709219c608a4f546c7aa614987f55cbf566f09cc11f",
+        "GB-trip-sister-local.webp": "3e6a8d6d277c7c4302188d2eaeb1a4a48deb3b5bce05923b5109a5f7eafe7c2b",
+        "GB-trip-sister-promise.webp": "1f228040dca4dcc042aaabea3b5e1de169dc197b67f6b21899bd744c2836dede",
+        "GB-trip-sister-short.webp": "7452c8789c9710eef4c4853b8377a45e6607ab9117aff47fe9198b260c7f8ffe"
+      }
+    },
+    {
+      "country": "GB",
+      "group": "trip-partner",
+      "masterSHA256": "9f572f36c75ae5fddb9f9347e0435b8b29abc0c5870e6229167dc2b4c7d9952f",
+      "referenceSHA256": "d1d0da02ff36f020f5dfe17f6b085d07ee148323305650b1d5b57f5ddf79cffb",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a British family in Britain, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and PARTNER in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "GB-trip-partner-cancel.webp": "4e85b51aafe65ce9f4ca93dbd5b895fe78aebd442a632b822ce94a315967cbc8",
+        "GB-trip-partner-delay.webp": "b6a902e8f714b78a3a6fefb17f7999a70f6ac49c8dd8f64739721fb42b719c4b",
+        "GB-trip-partner-first.webp": "3da2f09cb8d4e6ba8fb9cb0e91118e9d9c692fe8266b9bc6936861946079b9f5",
+        "GB-trip-partner-go.webp": "fa991c2834845053a2b4034fc1fc4a2bf4d838932925e9370d59295d79f4f3c4",
+        "GB-trip-partner-local.webp": "412baabffc7b2e3f06278667c2fa4dbfee3c3f484134d05afc09a8d8d6581b84",
+        "GB-trip-partner-promise.webp": "798ee84a0b1886352b5eeec11d7c7310b98f3bcd3db8a63dcf6adebd3f56bc83",
+        "GB-trip-partner-short.webp": "9068a30a79368477c3346820c6c3b8ed24fe7f4dd0efc7ed0df792ee7f9a3d19"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "cast",
+      "masterSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "referenceSHA256": null,
+      "prompt": "Fictional recurring cast, six solo portraits in a labeled-free 3 columns x 2 rows grid, reading order: PLAYER adult olive shirt, COLLEAGUE adult man rust shirt, FATHER elderly man glasses gray hair, SISTER adult woman bob hair burgundy shirt, PARTNER adult woman wavy hair blue shirt, CHILD age seven yellow jumper. Natural documentary film stills, distinct faces, ordinary homes, no writing. a Canadian family in Canada with French Canadian relatives",
+      "outputs": {
+        "CA-cast-child.webp": "80176dbf1aed6ec7314ac51d2b630f5e57ee2a1ef082e32f5d2a9bec02d8eef8",
+        "CA-cast-colleague.webp": "9a2f67c58205d095048a46149b14bcb77addc2cfbe90f32471d892de16d7cd81",
+        "CA-cast-father.webp": "b65f6e6cfbb0f1431893b190225a610d824b020b80a989dbd0afc24852db9bde",
+        "CA-cast-partner.webp": "d6449cf57b2507d172f0fa9733ca9b45c05c920b5857df15f29ee518591004b1",
+        "CA-cast-player.webp": "6b39246102a0e4543eac429f0c0b7c7c1ea6e212c9c70f10dfc3bc16865e04ad",
+        "CA-cast-sister.webp": "cee2e891165cf717665c3692fdc2ee1ec9200a55fa2705f68ecf55e3b6af099c"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "care",
+      "masterSHA256": "24667a0c734bcd22a0309711dfcc92d56e7f0e4f449d556ea94eb9b97bb7e8fb",
+      "referenceSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Canadian family in Canada with French Canadian relatives, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Sister and elderly father spread a blank rota on kitchen table.\n2. Sister writes the helper contact on the back of the rota while father looks on.\n3. Player in olive shirt helps father with shopping; sister puts the rota on fridge.\n4. Sister arranges transport on the phone, father prepares for his appointment.\n5. Father holds new rota while siblings take turns penciling in their days.\n6. A pencil tucked into a folded rota.\n7. Family kitchen in afternoon light.\n8. Father and sister share a quiet cup of tea.",
+      "outputs": {
+        "CA-care-first.webp": "4ac7dd6dd30db0ef1a30e6d7da792884cff63377801f2ed9520abba99dbffa74",
+        "CA-care-paid.webp": "d55f452a43be8217eed671b8c97b1a697b3c690feb4fce4b5fe0e795a685c890",
+        "CA-care-personal.webp": "cd61d2c82083e0a2d5841c6e8ad5c5284babb7166fd2c1df231960df48da1216",
+        "CA-care-shared-paid.webp": "aa434277bcdd03bb5874693ecf54593b04dcf4f0e25eed25b63ea35e6f36e98d",
+        "CA-care-shared-time.webp": "0a11d7b3b7fbcf44d9b41105917db850cd463d9cca21a808e7aa2aa8ed651d5c"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "project",
+      "masterSHA256": "0f6014a1061e7ad8dbc02c845da7e03189a2ca9d9806b69ee4bcb0eb437998d1",
+      "referenceSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Canadian family in Canada with French Canadian relatives, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. Former colleague in rust shirt offers a folded checklist across a desk. Neither has signed.\n2. Player signs the original work sheet, colleague watches.\n3. Player politely raises palm, colleague takes the sheet back.\n4. Both examine a new supplemental page clipped to their checklist.\n5. Player hands back the original completed folder, colleague takes it.\n6. They arrange a smaller job over a daytime desk calendar.\n7. Colleague puts papers away; they drink tea together.\n8. Detail of their familiar folded worksheet on a wooden desk.",
+      "outputs": {
+        "CA-project-accept.webp": "347047cf0f560d52aed7a203734accdb63ffb93b52962f2b5e403ed83b3c8859",
+        "CA-project-close.webp": "9d595c261b7c8f305a77d50bbbbca76738f491125cd9eeeb35e294389aafdfdd",
+        "CA-project-decline-again.webp": "3fd722792344478a4370517a7b714e6e94a2cd2ceb00f662d4aed61b87d44c97",
+        "CA-project-decline.webp": "c190ac0ea52516ebf3a2745382efe2d5fe5e76e6e9a685e4d86101a0a485a1b9",
+        "CA-project-extend.webp": "1cdc7a308944c0a4e19dbcfb67119eb4fe342b34fc41d0ac84089d02aed42c12",
+        "CA-project-first.webp": "4f5116c92da594258c90731e819cd74e00766c42c19bf0ab37b6890ca7f1f6d2",
+        "CA-project-weekday.webp": "2e1184c73ebc4fdcec7828287c941b1edb1db941a912fe1ebe590bed38aea2f2"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "return",
+      "masterSHA256": "17cbd311acee6e0184fb066a90bc4009294cfef3db42d5098d0826574ea58692",
+      "referenceSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Canadian family in Canada with French Canadian relatives, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame.  Reading order top left, top right, next row left, right and so on:\n1. The same colleague in rust points out an additional item on the old folded work sheet, before any new agreement.\n2. In daylight the same colleague proposes a weekday option using a desk calendar; no signature yet.\n3. Same sister and elderly father at home, turning over the old rota to find the existing helper contact before deciding next steps.\n4. Same sister and father point at the penciled names on a worn home care rota; no hired helper present.\n5. Close-up of the old folded drawing of the sea, a pencil and a household calendar opened on a wooden table. Only objects, no people, no tickets; the promised date has arrived.\n6. Close-up of a noticeably more worn drawing of the sea, a second penciled calendar circle, a half-open wooden drawer in background. Only objects; still at home deciding. No tickets.\n7. A pencil on desk.\n8. A folded journey drawing.",
+      "outputs": {
+        "CA-return-care-paid.webp": "47304bdf854686f5503bf64b8d87b3ccd0d7da240b6a64166ed4b91f8651ef03",
+        "CA-return-care-personal.webp": "e3c643c907d24c037ad8344272957c4732d99b556f5a89472bd5052b7ea29db9",
+        "CA-return-project-accept.webp": "a2bb7dd684dd6b8f692842e98cff070c0def336a4053f48e01e57a9278c2a699",
+        "CA-return-project-decline.webp": "399872f44f7062972377b281bef7e82e6edde9d7e42a98004925aa2c2127f71f",
+        "CA-return-trip-delay.webp": "093a668bd21eac355989d7aeee6c84da698cc19ab33dbaf5012ddf7d615a101b",
+        "CA-return-trip-promise.webp": "a9d2dcfc1a0d3879183425c8b09db0a6c5db7c468e5fedfef31c293eb088461e"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "trip-child",
+      "masterSHA256": "dab3c902f70ad8c78ddffe2d95602b752984d18aff0e6e986c16ae4b820d832d",
+      "referenceSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Canadian family in Canada with French Canadian relatives, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and CHILD in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "CA-trip-child-cancel.webp": "d2523790f11c7821ea0cd1fb64b7a79547f25e3234dd1ca94da7a983c6c95664",
+        "CA-trip-child-delay.webp": "ba996e8ec3b73a475ce9abbc4a4c191995482d0f5494bbd02cc7a350d1ddc8c4",
+        "CA-trip-child-first.webp": "32d7fe2eb7eed13b80cf845e3265539f04378d83ceb212602e2616226381dff1",
+        "CA-trip-child-go.webp": "53bbc691b577889a164901ec21a6a7175c523487e6566a582be93304c7eb759a",
+        "CA-trip-child-local.webp": "c0b105bf92e47115e758db7bb60729065e0d9cb0b24e0d34b9cb4d7a83c3e4ee",
+        "CA-trip-child-promise.webp": "553e62192fe9ab1a65fc6b02707f207bca80d339693421fdac9eb7891e98b8f3",
+        "CA-trip-child-short.webp": "c3ce1739cd3f7f7334ff1f5121760e5b9d4ad4140e47ffc9a28e13cceccf96cc"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "trip-teen",
+      "masterSHA256": "9feba2045f97883ac4c8cd126436d9c12b066ac1d0d09bc725a217edaedfd4c5",
+      "referenceSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Canadian family in Canada with French Canadian relatives, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and TEEN in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. Same child as the yellow-shirt reference now aged to a young teenager around 14 years old. The drawing in soft window light.",
+      "outputs": {
+        "CA-trip-teen-cancel.webp": "8bfb04f42a8301d08b70cd92e93fc57f71d62f11815fde14cfeaa45203830150",
+        "CA-trip-teen-delay.webp": "3c6785591f85107e57b9be4402c0fba03ff566cb4aa7f7aea31613a171d8d3b3",
+        "CA-trip-teen-first.webp": "003ccc670b52077bfaf0eac87bbc8d651c1c6d0e434e4a8b055dd6e06b7231b0",
+        "CA-trip-teen-go.webp": "afc855dc147d1912f2b8921fd264953113da87535e2ff7848db886a300f61e55",
+        "CA-trip-teen-local.webp": "841f34e3682d2dbeb54cfae0907c2f5c18dd99b01da42d5543a9b586691ed90e",
+        "CA-trip-teen-promise.webp": "b56e453107feb16e282d2f28f5fc629c9efe7b5d94ebf9c2077a19e01422d40f",
+        "CA-trip-teen-short.webp": "a92b225f0d9dce53f6f8cb5f67616d5c0b9b93b26585bfebb4a36bc85b7f366c"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "trip-sister",
+      "masterSHA256": "dca07bdd657f00e6a209ea0fa9f718800db1878a7bf1522a6e82656f9dc65230",
+      "referenceSHA256": "2a337838be11cb3d340726ca156ec022e658609ae3fd5e79e0fce76884b1393d",
+      "prompt": "Create a film contact sheet of EXACTLY EIGHT different equally sized widescreen photographs, arranged EXACTLY TWO COLUMNS and FOUR ROWS edge-to-edge. Every cell is a 20:9 landscape frame. No gutters, labels, captions, lettering, frames or printed margins. Follow reference identities strictly; input is a cast sheet in reading order PLAYER, COLLEAGUE, FATHER, SISTER, PARTNER, CHILD. Naturalistic 35mm photographs of a Canadian family in Canada with French Canadian relatives, analog props suitable for the late 20th century, ordinary clothes, keep facial structure and wardrobe across all pictures. Put faces and key props within the central safe area of each frame. Travel series: show ONLY PLAYER and SISTER in every people scene. Child ages about 7 only on child route; only adults on adult routes. Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "CA-trip-sister-cancel.webp": "bd1a0557c24e06eaa2316001d54096d6e5f4a0243ca3db1b7f63ec1c0bfc96e8",
+        "CA-trip-sister-delay.webp": "3c61dee4715efb5a90b5b6421565d2ec675ed86c8753f84c4873c5b5e2a98b0f",
+        "CA-trip-sister-first.webp": "15d717245cea9754904d9916f00744ccffc62daa110afc443af2df1aaa67ecaa",
+        "CA-trip-sister-go.webp": "6566c29a551a751dd44a43a2f8a3d1ffed752528dda1cc7a193f53f8012413b5",
+        "CA-trip-sister-local.webp": "f9128d3f3bf9c4a4f80f8fcbf53311556fa4ce0bd8ee802cd6b6607d65a11ef2",
+        "CA-trip-sister-promise.webp": "c6d1ce984f857eada30586dc85ea5dcb390ae7117fa51d66aa77abb2e65b65e8",
+        "CA-trip-sister-short.webp": "18eaaa73b29863d641b3181792b2b8eeec5dee4266fb7c014ebe59579c1c9721"
+      }
+    },
+    {
+      "country": "CA",
+      "group": "trip-partner",
+      "masterSHA256": "2bdf532c99dc0b2873e17bdb608f54284a9be4645254d1e674f6a6fe4309774b",
+      "referenceSHA256": "2904b5d885e7f9855347392987a5b38083ba66d95d9eb0d695ca8735900d0f3e",
+      "prompt": "Create a strict 2 column by 4 row grid of 8 distinct 20:9 wide photographic film stills. Each panel has exactly same width and height. No borders or text. Only people in the supplied identity reference may appear: from left to right player in olive, partner in blue wavy hair. EXACT facial identity, keep exact shirt COLORS and hairstyles from reference in every scene. No children in any frame. No other adults or extras. Country: a Canadian family in Canada with French Canadian relatives. Modest late twentieth century domestic interior, film colors, naturally lit, close enough for mobile. Tight coherent framing.  Reading order top left, top right, next row left, right and so on:\n1. At home, the relative holds up a drawing of the sea to suggest a trip. No tickets.\n2. They have made the trip: relative and player on a breezy seashore, coast in background.\n3. They stay home, fold the sea drawing and mark a future date on a calendar. No luggage or tickets.\n4. They fulfill a shorter trip together by local train; relative by a train window with a paper ticket.\n5. At home, a pencil shifts a circled date; the same drawing remains on the table. No tickets.\n6. They spend one day walking in a neighborhood park with a picnic. No railway or ticket.\n7. At home the relative quietly puts the folded sea drawing in a drawer; no tickets, bags or travel.\n8. The drawing in soft window light.",
+      "outputs": {
+        "CA-trip-partner-cancel.webp": "d9ab00492336786a6876dae58f5ea229743395ef8a2f45a7c19f2ee5ece12518",
+        "CA-trip-partner-delay.webp": "d683ae0791153e89cf8ec620ed358adf1bf71e2a7dd102e84ecad0dd560861b8",
+        "CA-trip-partner-first.webp": "54a546518ce03c868f024a87464c7487911b72bbb45f31502617a3ab19617d25",
+        "CA-trip-partner-go.webp": "9ccd29e680f7924e65c587b3d519d79d948c110d806a980a436cf673577cc5ce",
+        "CA-trip-partner-local.webp": "f316ce216565526a7e4ae130bdcdc233e6a60394feea26e7dff57ee1b2b265e3",
+        "CA-trip-partner-promise.webp": "aa23f4f957d267059a9838297adc5821ea5a676d798640ef6d82221f4b91f8a2",
+        "CA-trip-partner-short.webp": "0a18b10467365b8d688fc44f070da916025c6a54a47c8a0723bcaba1b6cce7a2"
+      }
+    }
+  ]
+}

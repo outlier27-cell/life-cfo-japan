@@ -1,6 +1,6 @@
-# 人生 CFO 跨年故事篇 7.0
+# 人生 CFO 跨年故事篇 7.1
 
-[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=7.0.0) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
+[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=7.1.0) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
 
 四国随机开局，最多30年60次生活与配置选择。每年看现金流和家庭资产负债表；无法清偿时提前结束，在同一历史中与现金流管家、均衡和现金储备三个规则模型和自己的上一局比较。
 
@@ -10,7 +10,7 @@
 - 本版去掉止盈止损和年内自动再平衡，年初按玩家确认比例调整一次。
 - 现金、股票、债券模型、黄金、保险、住房与汽车分开处理，房贷和未付账单列负债。
 - 强制财务危机处理、可变现时清偿恢复、破产终止；破产结果也能分享和重玩。
-- 裁员、复工、换工作、继承、奖金、照料父母、小项目、维修和搬迁会改变收入或支出，15张既有AI插画与新加入的连续矢量场景配合剧情。
+- 裁员、复工、换工作、继承、奖金、照料父母、小项目、维修和搬迁会改变收入或支出，15张既有AI插画与184张分支剧情横图配合剧情。
 - 现金图、完整30年账表、可点击年度明细、年初年末对账、同年模型对比、48列CSV与复盘导出。
 - 成绩链接手动汇总好友榜，无云端自动同步；同编号完整30年排名，提前结束单独列出。
 - 本机自动保存、备份、导入导出与多标签冲突保护。6.0旧存档保留在`family-v6.html`，5.0旧存档保留在`family-v5.html`，4.2旧存档保留在`multi-v4.html`，3.0在`world-v3.html`，日本篇在`japan.html`。
@@ -46,9 +46,9 @@ npm run build:docs
 - `docs/开发与持续优化文档-v7.md`：状态机、财务恒等式、事件、协议、验收与后续改进。
 - `docs/玩法守则-v7.md`：玩家操作与结果解读。
 - `docs/数据来源-v7.md`：完整来源及计算口径。
-- `QA-v7.md`：本轮实际验收记录。
+- `QA-v71.md`：本轮实际验收记录。
 - `assets/README.md`：插画来源与用途。
 
-## 后续图片制作
+## 图片制作与历史档案
 
-本版未接入 GPT 图片 API，也没有生成新的 GPT 摄影图。`family-scenes.js` 根据实际故事状态绘制原创矢量场景；`family-scene-assets.js` 是审核后图片的替换入口。运行 `node tools/export-scene-briefs.cjs` 可重新生成 `assets/scene-briefs-v7.json`，列出角色、路线和物件连续性要求。API 密钥只能放在制作工具或服务端，不能写入静态网站。
+制作端使用 gpt-image-2 及人物参考图生成剧情画面。每份家庭存档通过国家、人物、节点和选择读取成品。历史照片含署名与许可，详细条目见 assets/archive/sources.json。

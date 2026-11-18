@@ -1,14 +1,14 @@
 <!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='theme-color' content='#f5ecdc'><meta name='description' content='人生 CFO 全球篇的玩法、数据口径、结算公式和好友榜说明。'><title>人生 CFO 开发与持续优化文档 · 人生 CFO</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='5' fill='%23852d26'/%3E%3Cpath d='M20 10c0 10-4 16-11 21m11-15c2 7 6 12 11 15' fill='none' stroke='%23fff6e8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"><link rel='stylesheet' href='style.css?v=2.0.1'><style>.doc{max-width:850px}.doc article{font-size:15px;line-height:1.85}.doc h1{font-size:32px;margin:22px 0}.doc h2{font-size:24px;margin:36px 0 14px;scroll-margin-top:16px}.doc h3{font-size:19px;margin:24px 0 10px}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:24px}.doc li{margin:7px 0}.doc td,.doc th{text-align:left;vertical-align:top;font-size:13px;padding:10px 8px}.doc table{min-width:290px}.doc code{font-size:13px;overflow-wrap:anywhere}.doc a{overflow-wrap:anywhere}.doc-toc{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}.doc-toc nav{display:grid;gap:8px;padding:12px 0}.doc-toc a{font-size:14px}.doc .nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.doc .table-wrap{margin:16px 0}.doc .end-link{margin-top:32px}@media(max-width:700px){.doc h1{font-size:28px}.doc h2{font-size:23px}.doc article{font-size:15px}.doc .header-actions{gap:6px}.doc .brand{font-size:21px}.doc .small-button{padding:5px 8px}}@media print{.masthead,.doc-toc,.end-link{display:none}.book{border:0;box-shadow:none;margin:0;padding:0;background:white}.doc h2{break-after:avoid}.doc tr{break-inside:avoid}}</style></head><body><div class='book doc'><header class='masthead'><a class='brand' href='./'><span class='seal'>人</span>人生 <b>CFO</b></a><div class='header-actions'><a class='small-button nav-link' href='./'>回到游戏</a></div></header><article><h1>人生 CFO 开发与持续优化文档</h1><details class='doc-toc'><summary>查看目录</summary><nav><a href='#section-1'>1 本轮问题与改动</a><a href='#section-2'>2 产品范围和体验验收</a><a href='#section-3'>3 模块与发布结构</a><a href='#section-4'>4 状态机与停止条件</a><a href='#section-5'>5 资产分类和家庭合同</a><a href='#section-6'>6 年度结算顺序</a><a href='#section-7'>7 三套金额口径和核对公式</a><a href='#section-8'>8 人物与跨年故事</a><a href='#section-9'>9 年度调度与手机反馈</a><a href='#section-10'>10 模型与重玩比较</a><a href='#section-11'>11 历史数据质量与边界</a><a href='#section-12'>12 存档与成绩协议</a><a href='#section-13'>13 测试与发布验收</a><a href='#section-14'>14 账表与图片交付</a><a href='#section-15'>15 后续优化</a></nav></details>
 <p>跨年故事篇产品规则与维护说明</p>
-<p>适用版本：7.0.0。财务规则：family-7.0.0。数据版本：multi-asset-2026-11-13。更新日期：2026年11月18日。</p>
+<p>适用版本：7.1.0。财务规则：family-7.0.0。数据版本：multi-asset-2026-11-13。更新日期：2026年11月18日。</p>
 <p>本版为生活选择接入人物回应、跨年回访和结束记录，完成父亲照料、周末项目和旅行约定三条故事。仍为30次年度结算，每年一个生活决定、一个配置决定。年末先展示生活后果和现金流，完整资产负债表随时可查。无法清偿时必须停止正常推进，进入资产处置或破产复盘。止盈止损和年内自动再平衡移出本版。30年总览、逐年完整账表和现金收付校验共同支撑复盘，玩家可以随时打开同年对照。</p>
 <p>这份文档供后续产品、开发和数据维护使用。玩法、账务和存档协议以这里列明的7.0规则为准，旧版规则继续留在独立入口。原调研中的人生阶段、投资教育、可追溯行情、同场比较、移动端简洁体验仍保留；“全球”目前实际覆盖四个国家。</p>
-<p><a href="https://outlier27-cell.github.io/life-cfo-japan/?v=7.0.0">公网游戏</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/guide.html">玩家手册</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/sources.html">数据与公式</a> · <a href="https://github.com/outlier27-cell/life-cfo-japan">源代码</a></p>
+<p><a href="https://outlier27-cell.github.io/life-cfo-japan/?v=7.1.0">公网游戏</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/guide.html">玩家手册</a> · <a href="https://outlier27-cell.github.io/life-cfo-japan/sources.html">数据与公式</a> · <a href="https://github.com/outlier27-cell/life-cfo-japan">源代码</a></p>
 <h2 id='section-1'>1 本轮问题与改动</h2>
 
 <p>6.0部分选择只扣除费用并增加未被主要体验使用的满意度，玩家看不到生活收益。7.0将每个生活选择写入具体经历，三条主故事另有即时回应、返场和结束状态。原mood字段随底层初始状态保留作兼容，不再承诺满意度加分，也不作为新叙事的隐含奖励。</p>
 <p>生活按钮采用动作短句，已知费用仍在提交前展示。共同奖金在两个选项上方说明，避免让玩家误以为出游本身创造奖金。配置默认显示当前比例，预设和其他设置按需展开。年末保留继续按钮、现金流图、市场损益与净资产，完整账本改为可展开内容。</p>
-<p>主入口为7.0，6.0脚本、样式、文档和分享入口冻结保留。数据快照和财务结算公式沿用既有口径；故事改变了年度生活事件序列，因此不同版本成绩不混排。</p>
+<p>主入口为7.1。7.0和7.1共用同一套财务、故事和成绩协议，可继续原局并重放已经收集的好友成绩。6.0及更早的规则仍使用各自的入口。</p>
 <h2 id='section-2'>2 产品范围和体验验收</h2>
 
 <p>开局由人生编号确定：日本、美国、英国、加拿大，1978、1988、1990年末，以及三种家庭背景。人物从24岁开始，最多经历30个年度、60次主要选择。提前结束的局数少于60次；危机处理和结算页继续按钮不计入主要选择数。</p>
@@ -32,12 +32,12 @@
 <td>人物身份、三条故事、后续调度、回忆与结束记录</td>
 </tr>
 <tr>
-<td>family-scenes.js</td>
-<td>同一人物和物件的原创矢量场景，读取已结算的故事状态</td>
+<td>family-scenes.js、family-photo-view.js</td>
+<td>按国家、节点、已提交选择、人物和当年年龄取图，处理手机大图与图注</td>
 </tr>
 <tr>
-<td>family-scene-assets.js</td>
-<td>审阅后的预生成图片映射，目前为空，使用矢量场景</td>
+<td>family-scene-assets.js、family-archive.js</td>
+<td>人物及故事画面索引、现场影像和署名记录</td>
 </tr>
 <tr>
 <td>family-ledger.js</td>
@@ -80,7 +80,7 @@
 <td>预生成的原创剧情插画</td>
 </tr>
 </tbody></table></div>
-<p>网页为静态HTML、CSS和JavaScript，可部署到GitHub Pages。运行时无需账号、付费接口或大模型密钥。图鉴插画为既有模型预生成WebP；三条主故事使用原创矢量场景。页面不等待在线生成。离线构建会把脚本、样式和15张插画内嵌为单文件，史料和文档链接仍需联网。</p>
+<p>网页使用静态 HTML、CSS 和 JavaScript。人物图在制作阶段调用 GPT 图片 API，经审阅和压缩后随游戏发布。离线构建将剧情图、历史档案、插画和程序一起嵌入单文件。原始档案链接和外部史料需要联网。</p>
 <p>开发命令包括npm test、npm run build:docs和npm run build:offline。本地静态服务默认仅监听127.0.0.1，通过白名单提供游戏文件，不暴露上级研究目录。数据重建与来源审计单独执行，不能因改界面而悄悄更新历史快照。</p>
 <h2 id='section-4'>4 状态机与停止条件</h2>
 
@@ -160,15 +160,15 @@
 <h2 id='section-14'>14 账表与图片交付</h2>
 
 <p>年度账表仍有30个位置，已发生年可以打开完整六类资产、两类负债、期初期末变化和收付明细。未发生和终止后年份留空。CSV每个角色30行48列，玩家与三个模型共120行，使用基础本币。文本复盘另包含人物回忆；改变展示层不改变账本结果。</p>
-<p>三条主故事由family-scenes.js绘制原创矢量场景，采用固定人物色彩、同一工作清单、轮值表和旅行纸条。人物年龄读取出生记录；物件状态读取实际路线。图鉴保留15张既有AI情境插画，出处仍在assets/story-generation-v6.json。这些都是情境表达，不是历史新闻照片。</p>
-<p>后续GPT图片API用于制作有摄影质感的虚构剧情图。本轮未接入在线生成服务，也没有生成新的GPT摄影图。tools/export-scene-briefs.cjs输出制作清单assets/scene-briefs-v7.json；family-scene-assets.js接收审阅后的同源WebP路径。键由国家、故事、节点、路线和人物组成。未配置的键继续显示当前矢量场景，玩家无需等待网络生成。</p>
-<p>制作时先固定人物参考图，再按国家、年代、年龄与故事状态出图。孩子未出生、旅行未成行、项目尚未完成时，不得提前画出相应结果。密钥只放在制作工具或服务端环境中，不能写进GitHub Pages。图片更新需保留生成模型、提示、日期、参考图与授权记录，压缩后检查手机裁切和文字可读性。图像生成不能决定费用或修改剧情结果。</p>
+<p>每个国家使用固定人物参考图。按实际决定取工作清单、照料轮值表或旅行场景。回访有独立的事前照片。回看某年的账本时，从该行读取当时的选择与年份，依照顾者、同伴和孩子当年年龄取图。</p>
+<p>四国共184张剧情横图，每张960×432像素。孩子旅行分儿童和少年两组。172个节点、路线和人物组合共享合适的图片。维护人员可在 assets/scenes/production.json 查到参考图与提示记录。旧版资产图鉴仍可从年代影册打开。</p>
+<p>历史影像从原始档案说明核对日期、地点、署名和许可。assets/archive/sources.json 保存原件链接及 SHA-256。归档图只做等比缩放与转码，保留原画幅。配置页只展示已知年末对应的事件，影册可浏览此前已发生的年份。家庭账本独立结算。</p>
 <p>机制参考包括A Dark Room的条件与返场、CashFlowJs的费用贷款现金流表达，以及ReignsAgent的内容覆盖检查。代码与素材保持独立实现，参考用于解释设计选择。</p>
 <h2 id='section-15'>15 后续优化</h2>
 
 <p>先让愿意体验的老师和同学试玩，观察能否说出一个人物、一次旧约定，以及生活决定怎样影响现金。记录看不懂的金额、没有被记住的故事和单局耗时，依此扩充内容。不要用事件数量或图片数量替代对完整流程的判断。</p>
-<p>下一步可制作并审阅GPT剧情图片，再增加有明确出处的国家和年代细节。若需要逐月发薪与账单，应先实现逐月家庭现金账和审计；当前仍为年度家庭结算。当地税制、养老、福利和保险差异需要独立历史资料，不能从统一教学合同推断。</p>
+<p>后续可继续补充有明确拍摄记录的市场与家庭生活史料。若要模拟逐月发薪或逐笔账单，应先实现逐月现金账，再用当地税制、福利和合同数据进行核对。</p>
 <p>进阶策略、真实大模型代理、更多国家和自动同步榜单另行版本化。金融配置比较继续固定生活路径；允许不同人物选择时，另列人生路径比较，不把全部差异归因于投资能力。</p>
 <p>参考实现：<a href="https://github.com/doublespeakgames/adarkroom">A Dark Room</a>、<a href="https://github.com/Sleighs/CashFlowJs">CashFlowJs</a>、<a href="https://github.com/Sisyphe42/ReignsAgent">ReignsAgent</a>。</p>
-<p><a href="docs/life-cfo-developer-v7.docx">下载Word版开发文档</a></p>
-</article><a class='button end-link' href='./'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 跨年故事篇 7.0</span><span>2026-11-18</span></footer></div></body></html>
+<p><a href="docs/life-cfo-developer-v71.docx">下载Word版开发文档</a></p>
+</article><a class='button end-link' href='./'>回到人生 CFO</a><footer class='site-footer'><span>人生 CFO · 跨年故事篇 7.1</span><span>2026-11-18</span></footer></div></body></html>

@@ -34,8 +34,16 @@ const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'data/manifest.jso
 for(const source of manifest.series) files.set('/'+source.file,[source.file,'text/csv; charset=utf-8']);
 
 
-for(const name of ['family-story-engine.js','family-scenes.js','family-scene-assets.js','family-v6.html','family-v6.css','family-v6-engine.js','family-v6-stories.js','family-v6-ledger.js','family-v6-social.js','family-v6-charts.js','family-v6-app.js','guide-v6.html','developer-v6.html','sources-v6.html','review-v6.html','docs/life-cfo-player-v7.docx','docs/life-cfo-developer-v7.docx'])files.set('/'+name,[name,({'.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'})[path.extname(name)]]);
+for(const name of ['family-story-engine.js','family-scenes.js','family-scene-assets.js','family-v6.html','family-v6.css','family-v6-engine.js','family-v6-stories.js','family-v6-ledger.js','family-v6-social.js','family-v6-charts.js','family-v6-app.js','guide-v6.html','developer-v6.html','sources-v6.html','review-v6.html','docs/life-cfo-player-v71.docx','docs/life-cfo-developer-v71.docx','docs/life-cfo-player-v7.docx','docs/life-cfo-developer-v7.docx'])files.set('/'+name,[name,({'.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'})[path.extname(name)]]);
 files.set('/assets/scene-briefs-v7.json',['assets/scene-briefs-v7.json','application/json; charset=utf-8']);
+for (const folder of ['scenes', 'archive']) {
+  for (const file of fs.readdirSync(path.join(__dirname,'assets',folder))) {
+    if (!/^[a-zA-Z0-9-]+\.(webp|json)$/.test(file)) continue;
+    const relative = 'assets/' + folder + '/' + file;
+    files.set('/' + relative, [relative, file.endsWith('.json') ? 'application/json' : 'image/webp']);
+  }
+}
+for (const file of ['family-archive.js','family-photo-view.js']) files.set('/'+file,[file,'text/javascript; charset=utf-8']);
 http.createServer((req, res) => {
   const file = files.get(req.url.split('?')[0]);
   if (req.method !== 'GET' && req.method !== 'HEAD') {

@@ -1,6 +1,6 @@
 {
-  "version": "7.0.0",
-  "status": "production briefs; GPT API not connected",
+  "version": "7.1.0",
+  "status": "published stills produced using the official OpenAI Images API",
   "generatedBy": "tools/export-scene-briefs.cjs",
   "scenes": [
     {
@@ -46,7 +46,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-offer-first-colleague.webp",
+      "file": "assets/scenes/JP-project-first.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -54,7 +54,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -100,7 +100,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-offer-accept-colleague.webp",
+      "file": "assets/scenes/JP-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -108,7 +108,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -154,7 +154,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-offer-decline-colleague.webp",
+      "file": "assets/scenes/JP-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -162,7 +162,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -208,7 +208,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-follow-accept-colleague.webp",
+      "file": "assets/scenes/JP-return-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -216,7 +216,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -262,7 +262,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-follow-decline-colleague.webp",
+      "file": "assets/scenes/JP-return-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -270,7 +270,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -316,7 +316,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-follow-extend-colleague.webp",
+      "file": "assets/scenes/JP-project-extend.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -324,7 +324,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -370,7 +370,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-follow-close-colleague.webp",
+      "file": "assets/scenes/JP-project-close.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -378,7 +378,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -424,7 +424,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-follow-weekday-colleague.webp",
+      "file": "assets/scenes/JP-project-weekday.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -432,7 +432,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -478,7 +478,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-project-follow-decline-again-colleague.webp",
+      "file": "assets/scenes/JP-project-decline-again.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -486,7 +486,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -532,7 +532,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-offer-first-sister.webp",
+      "file": "assets/scenes/JP-care-first.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -540,7 +540,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -586,7 +586,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-offer-paid-sister.webp",
+      "file": "assets/scenes/JP-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -594,7 +594,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -640,7 +640,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-offer-personal-sister.webp",
+      "file": "assets/scenes/JP-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -648,7 +648,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -694,7 +694,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-review-paid-sister.webp",
+      "file": "assets/scenes/JP-return-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -702,7 +702,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -748,7 +748,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-review-personal-sister.webp",
+      "file": "assets/scenes/JP-return-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -756,7 +756,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -802,7 +802,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-review-shared-paid-sister.webp",
+      "file": "assets/scenes/JP-care-shared-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -810,7 +810,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -856,7 +856,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-care-review-shared-time-sister.webp",
+      "file": "assets/scenes/JP-care-shared-time.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -864,7 +864,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -911,7 +911,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-first-child.webp",
+      "file": "assets/scenes/JP-trip-child-first.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -919,7 +920,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -966,7 +967,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-go-child.webp",
+      "file": "assets/scenes/JP-trip-child-go.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -974,7 +976,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1021,7 +1023,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-promise-child.webp",
+      "file": "assets/scenes/JP-trip-child-promise.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1029,7 +1032,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1076,7 +1079,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-promise-child.webp",
+      "file": "assets/scenes/JP-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1084,7 +1087,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1131,7 +1134,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-short-child.webp",
+      "file": "assets/scenes/JP-trip-child-short.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1139,7 +1143,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1186,7 +1190,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-delay-child.webp",
+      "file": "assets/scenes/JP-trip-child-delay.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1194,7 +1199,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1241,7 +1246,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-delay-child.webp",
+      "file": "assets/scenes/JP-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1249,7 +1254,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1296,7 +1301,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-local-child.webp",
+      "file": "assets/scenes/JP-trip-child-local.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1304,7 +1310,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1351,7 +1357,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-cancel-child.webp",
+      "file": "assets/scenes/JP-trip-child-cancel.webp",
+      "teenFile": "assets/scenes/JP-trip-teen-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1359,7 +1366,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1405,7 +1412,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-first-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1413,7 +1420,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1459,7 +1466,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-go-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1467,7 +1474,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1513,7 +1520,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-promise-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1521,7 +1528,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1567,7 +1574,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-promise-partner.webp",
+      "file": "assets/scenes/JP-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1575,7 +1582,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1621,7 +1628,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-short-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1629,7 +1636,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1675,7 +1682,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-delay-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1683,7 +1690,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1729,7 +1736,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-delay-partner.webp",
+      "file": "assets/scenes/JP-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1737,7 +1744,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1783,7 +1790,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-local-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1791,7 +1798,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1837,7 +1844,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-cancel-partner.webp",
+      "file": "assets/scenes/JP-trip-partner-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1845,7 +1852,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1891,7 +1898,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-first-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1899,7 +1906,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1945,7 +1952,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-go-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -1953,7 +1960,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -1999,7 +2006,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-offer-promise-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2007,7 +2014,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2053,7 +2060,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-promise-sister.webp",
+      "file": "assets/scenes/JP-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2061,7 +2068,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2107,7 +2114,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-short-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2115,7 +2122,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2161,7 +2168,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-due-delay-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2169,7 +2176,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2215,7 +2222,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-delay-sister.webp",
+      "file": "assets/scenes/JP-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2223,7 +2230,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2269,7 +2276,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-local-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2277,7 +2284,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2323,7 +2330,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/JP-trip-last-cancel-sister.webp",
+      "file": "assets/scenes/JP-trip-sister-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2331,7 +2338,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2377,7 +2384,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-offer-first-colleague.webp",
+      "file": "assets/scenes/US-project-first.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2385,7 +2392,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2431,7 +2438,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-offer-accept-colleague.webp",
+      "file": "assets/scenes/US-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2439,7 +2446,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2485,7 +2492,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-offer-decline-colleague.webp",
+      "file": "assets/scenes/US-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2493,7 +2500,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2539,7 +2546,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-follow-accept-colleague.webp",
+      "file": "assets/scenes/US-return-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2547,7 +2554,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2593,7 +2600,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-follow-decline-colleague.webp",
+      "file": "assets/scenes/US-return-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2601,7 +2608,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2647,7 +2654,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-follow-extend-colleague.webp",
+      "file": "assets/scenes/US-project-extend.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2655,7 +2662,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2701,7 +2708,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-follow-close-colleague.webp",
+      "file": "assets/scenes/US-project-close.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2709,7 +2716,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2755,7 +2762,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-follow-weekday-colleague.webp",
+      "file": "assets/scenes/US-project-weekday.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2763,7 +2770,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2809,7 +2816,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-project-follow-decline-again-colleague.webp",
+      "file": "assets/scenes/US-project-decline-again.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2817,7 +2824,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2863,7 +2870,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-offer-first-sister.webp",
+      "file": "assets/scenes/US-care-first.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2871,7 +2878,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2917,7 +2924,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-offer-paid-sister.webp",
+      "file": "assets/scenes/US-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2925,7 +2932,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -2971,7 +2978,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-offer-personal-sister.webp",
+      "file": "assets/scenes/US-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -2979,7 +2986,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3025,7 +3032,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-review-paid-sister.webp",
+      "file": "assets/scenes/US-return-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3033,7 +3040,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3079,7 +3086,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-review-personal-sister.webp",
+      "file": "assets/scenes/US-return-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3087,7 +3094,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3133,7 +3140,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-review-shared-paid-sister.webp",
+      "file": "assets/scenes/US-care-shared-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3141,7 +3148,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3187,7 +3194,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-care-review-shared-time-sister.webp",
+      "file": "assets/scenes/US-care-shared-time.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3195,7 +3202,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3242,7 +3249,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-first-child.webp",
+      "file": "assets/scenes/US-trip-child-first.webp",
+      "teenFile": "assets/scenes/US-trip-teen-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3250,7 +3258,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3297,7 +3305,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-go-child.webp",
+      "file": "assets/scenes/US-trip-child-go.webp",
+      "teenFile": "assets/scenes/US-trip-teen-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3305,7 +3314,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3352,7 +3361,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-promise-child.webp",
+      "file": "assets/scenes/US-trip-child-promise.webp",
+      "teenFile": "assets/scenes/US-trip-teen-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3360,7 +3370,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3407,7 +3417,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-promise-child.webp",
+      "file": "assets/scenes/US-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3415,7 +3425,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3462,7 +3472,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-short-child.webp",
+      "file": "assets/scenes/US-trip-child-short.webp",
+      "teenFile": "assets/scenes/US-trip-teen-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3470,7 +3481,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3517,7 +3528,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-delay-child.webp",
+      "file": "assets/scenes/US-trip-child-delay.webp",
+      "teenFile": "assets/scenes/US-trip-teen-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3525,7 +3537,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3572,7 +3584,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-delay-child.webp",
+      "file": "assets/scenes/US-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3580,7 +3592,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3627,7 +3639,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-local-child.webp",
+      "file": "assets/scenes/US-trip-child-local.webp",
+      "teenFile": "assets/scenes/US-trip-teen-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3635,7 +3648,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3682,7 +3695,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-cancel-child.webp",
+      "file": "assets/scenes/US-trip-child-cancel.webp",
+      "teenFile": "assets/scenes/US-trip-teen-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3690,7 +3704,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3736,7 +3750,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-first-partner.webp",
+      "file": "assets/scenes/US-trip-partner-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3744,7 +3758,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3790,7 +3804,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-go-partner.webp",
+      "file": "assets/scenes/US-trip-partner-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3798,7 +3812,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3844,7 +3858,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-promise-partner.webp",
+      "file": "assets/scenes/US-trip-partner-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3852,7 +3866,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3898,7 +3912,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-promise-partner.webp",
+      "file": "assets/scenes/US-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3906,7 +3920,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -3952,7 +3966,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-short-partner.webp",
+      "file": "assets/scenes/US-trip-partner-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -3960,7 +3974,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4006,7 +4020,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-delay-partner.webp",
+      "file": "assets/scenes/US-trip-partner-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4014,7 +4028,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4060,7 +4074,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-delay-partner.webp",
+      "file": "assets/scenes/US-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4068,7 +4082,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4114,7 +4128,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-local-partner.webp",
+      "file": "assets/scenes/US-trip-partner-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4122,7 +4136,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4168,7 +4182,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-cancel-partner.webp",
+      "file": "assets/scenes/US-trip-partner-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4176,7 +4190,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4222,7 +4236,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-first-sister.webp",
+      "file": "assets/scenes/US-trip-sister-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4230,7 +4244,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4276,7 +4290,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-go-sister.webp",
+      "file": "assets/scenes/US-trip-sister-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4284,7 +4298,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4330,7 +4344,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-offer-promise-sister.webp",
+      "file": "assets/scenes/US-trip-sister-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4338,7 +4352,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4384,7 +4398,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-promise-sister.webp",
+      "file": "assets/scenes/US-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4392,7 +4406,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4438,7 +4452,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-short-sister.webp",
+      "file": "assets/scenes/US-trip-sister-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4446,7 +4460,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4492,7 +4506,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-due-delay-sister.webp",
+      "file": "assets/scenes/US-trip-sister-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4500,7 +4514,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4546,7 +4560,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-delay-sister.webp",
+      "file": "assets/scenes/US-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4554,7 +4568,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4600,7 +4614,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-local-sister.webp",
+      "file": "assets/scenes/US-trip-sister-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4608,7 +4622,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4654,7 +4668,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/US-trip-last-cancel-sister.webp",
+      "file": "assets/scenes/US-trip-sister-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4662,7 +4676,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4708,7 +4722,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-offer-first-colleague.webp",
+      "file": "assets/scenes/GB-project-first.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4716,7 +4730,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4762,7 +4776,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-offer-accept-colleague.webp",
+      "file": "assets/scenes/GB-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4770,7 +4784,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4816,7 +4830,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-offer-decline-colleague.webp",
+      "file": "assets/scenes/GB-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4824,7 +4838,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4870,7 +4884,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-follow-accept-colleague.webp",
+      "file": "assets/scenes/GB-return-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4878,7 +4892,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4924,7 +4938,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-follow-decline-colleague.webp",
+      "file": "assets/scenes/GB-return-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4932,7 +4946,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -4978,7 +4992,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-follow-extend-colleague.webp",
+      "file": "assets/scenes/GB-project-extend.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -4986,7 +5000,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5032,7 +5046,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-follow-close-colleague.webp",
+      "file": "assets/scenes/GB-project-close.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5040,7 +5054,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5086,7 +5100,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-follow-weekday-colleague.webp",
+      "file": "assets/scenes/GB-project-weekday.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5094,7 +5108,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5140,7 +5154,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-project-follow-decline-again-colleague.webp",
+      "file": "assets/scenes/GB-project-decline-again.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5148,7 +5162,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5194,7 +5208,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-offer-first-sister.webp",
+      "file": "assets/scenes/GB-care-first.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5202,7 +5216,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5248,7 +5262,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-offer-paid-sister.webp",
+      "file": "assets/scenes/GB-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5256,7 +5270,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5302,7 +5316,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-offer-personal-sister.webp",
+      "file": "assets/scenes/GB-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5310,7 +5324,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5356,7 +5370,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-review-paid-sister.webp",
+      "file": "assets/scenes/GB-return-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5364,7 +5378,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5410,7 +5424,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-review-personal-sister.webp",
+      "file": "assets/scenes/GB-return-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5418,7 +5432,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5464,7 +5478,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-review-shared-paid-sister.webp",
+      "file": "assets/scenes/GB-care-shared-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5472,7 +5486,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5518,7 +5532,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-care-review-shared-time-sister.webp",
+      "file": "assets/scenes/GB-care-shared-time.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5526,7 +5540,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5573,7 +5587,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-first-child.webp",
+      "file": "assets/scenes/GB-trip-child-first.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5581,7 +5596,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5628,7 +5643,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-go-child.webp",
+      "file": "assets/scenes/GB-trip-child-go.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5636,7 +5652,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5683,7 +5699,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-promise-child.webp",
+      "file": "assets/scenes/GB-trip-child-promise.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5691,7 +5708,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5738,7 +5755,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-promise-child.webp",
+      "file": "assets/scenes/GB-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5746,7 +5763,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5793,7 +5810,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-short-child.webp",
+      "file": "assets/scenes/GB-trip-child-short.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5801,7 +5819,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5848,7 +5866,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-delay-child.webp",
+      "file": "assets/scenes/GB-trip-child-delay.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5856,7 +5875,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5903,7 +5922,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-delay-child.webp",
+      "file": "assets/scenes/GB-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5911,7 +5930,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -5958,7 +5977,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-local-child.webp",
+      "file": "assets/scenes/GB-trip-child-local.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -5966,7 +5986,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6013,7 +6033,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-cancel-child.webp",
+      "file": "assets/scenes/GB-trip-child-cancel.webp",
+      "teenFile": "assets/scenes/GB-trip-teen-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6021,7 +6042,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6067,7 +6088,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-first-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6075,7 +6096,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6121,7 +6142,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-go-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6129,7 +6150,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6175,7 +6196,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-promise-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6183,7 +6204,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6229,7 +6250,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-promise-partner.webp",
+      "file": "assets/scenes/GB-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6237,7 +6258,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6283,7 +6304,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-short-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6291,7 +6312,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6337,7 +6358,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-delay-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6345,7 +6366,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6391,7 +6412,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-delay-partner.webp",
+      "file": "assets/scenes/GB-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6399,7 +6420,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6445,7 +6466,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-local-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6453,7 +6474,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6499,7 +6520,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-cancel-partner.webp",
+      "file": "assets/scenes/GB-trip-partner-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6507,7 +6528,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6553,7 +6574,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-first-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6561,7 +6582,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6607,7 +6628,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-go-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6615,7 +6636,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6661,7 +6682,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-offer-promise-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6669,7 +6690,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6715,7 +6736,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-promise-sister.webp",
+      "file": "assets/scenes/GB-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6723,7 +6744,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6769,7 +6790,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-short-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6777,7 +6798,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6823,7 +6844,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-due-delay-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6831,7 +6852,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6877,7 +6898,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-delay-sister.webp",
+      "file": "assets/scenes/GB-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6885,7 +6906,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6931,7 +6952,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-local-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6939,7 +6960,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -6985,7 +7006,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/GB-trip-last-cancel-sister.webp",
+      "file": "assets/scenes/GB-trip-sister-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -6993,7 +7014,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7039,7 +7060,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-offer-first-colleague.webp",
+      "file": "assets/scenes/CA-project-first.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7047,7 +7068,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7093,7 +7114,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-offer-accept-colleague.webp",
+      "file": "assets/scenes/CA-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7101,7 +7122,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7147,7 +7168,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-offer-decline-colleague.webp",
+      "file": "assets/scenes/CA-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7155,7 +7176,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7201,7 +7222,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-follow-accept-colleague.webp",
+      "file": "assets/scenes/CA-return-project-accept.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7209,7 +7230,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7255,7 +7276,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-follow-decline-colleague.webp",
+      "file": "assets/scenes/CA-return-project-decline.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7263,7 +7284,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7309,7 +7330,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-follow-extend-colleague.webp",
+      "file": "assets/scenes/CA-project-extend.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7317,7 +7338,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7363,7 +7384,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-follow-close-colleague.webp",
+      "file": "assets/scenes/CA-project-close.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7371,7 +7392,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7417,7 +7438,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-follow-weekday-colleague.webp",
+      "file": "assets/scenes/CA-project-weekday.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7425,7 +7446,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7471,7 +7492,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-project-follow-decline-again-colleague.webp",
+      "file": "assets/scenes/CA-project-decline-again.webp",
       "brief": "同一位老同事在桌边拿出工作清单，后续场景保留清单的外形和签字位置。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7479,7 +7500,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7525,7 +7546,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-offer-first-sister.webp",
+      "file": "assets/scenes/CA-care-first.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7533,7 +7554,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7579,7 +7600,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-offer-paid-sister.webp",
+      "file": "assets/scenes/CA-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7587,7 +7608,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7633,7 +7654,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-offer-personal-sister.webp",
+      "file": "assets/scenes/CA-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7641,7 +7662,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7687,7 +7708,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-review-paid-sister.webp",
+      "file": "assets/scenes/CA-return-care-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7695,7 +7716,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7741,7 +7762,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-review-personal-sister.webp",
+      "file": "assets/scenes/CA-return-care-personal.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7749,7 +7770,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7795,7 +7816,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-review-shared-paid-sister.webp",
+      "file": "assets/scenes/CA-care-shared-paid.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7803,7 +7824,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7849,7 +7870,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-care-review-shared-time-sister.webp",
+      "file": "assets/scenes/CA-care-shared-time.webp",
       "brief": "同一位父亲和姐姐在餐桌旁商量照料，冰箱上保留同一张轮值表。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7857,7 +7878,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7904,7 +7925,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-first-child.webp",
+      "file": "assets/scenes/CA-trip-child-first.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7912,7 +7934,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -7959,7 +7981,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-go-child.webp",
+      "file": "assets/scenes/CA-trip-child-go.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -7967,7 +7990,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8014,7 +8037,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-promise-child.webp",
+      "file": "assets/scenes/CA-trip-child-promise.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8022,7 +8046,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8069,7 +8093,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-promise-child.webp",
+      "file": "assets/scenes/CA-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8077,7 +8101,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8124,7 +8148,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-short-child.webp",
+      "file": "assets/scenes/CA-trip-child-short.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8132,7 +8157,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8179,7 +8204,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-delay-child.webp",
+      "file": "assets/scenes/CA-trip-child-delay.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8187,7 +8213,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8234,7 +8260,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-delay-child.webp",
+      "file": "assets/scenes/CA-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8242,7 +8268,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8289,7 +8315,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-local-child.webp",
+      "file": "assets/scenes/CA-trip-child-local.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8297,7 +8324,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8344,7 +8371,8 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-cancel-child.webp",
+      "file": "assets/scenes/CA-trip-child-cancel.webp",
+      "teenFile": "assets/scenes/CA-trip-teen-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8352,7 +8380,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8398,7 +8426,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-first-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8406,7 +8434,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8452,7 +8480,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-go-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8460,7 +8488,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8506,7 +8534,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-promise-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8514,7 +8542,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8560,7 +8588,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-promise-partner.webp",
+      "file": "assets/scenes/CA-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8568,7 +8596,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8614,7 +8642,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-short-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8622,7 +8650,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8668,7 +8696,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-delay-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8676,7 +8704,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8722,7 +8750,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-delay-partner.webp",
+      "file": "assets/scenes/CA-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8730,7 +8758,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8776,7 +8804,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-local-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8784,7 +8812,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8830,7 +8858,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-cancel-partner.webp",
+      "file": "assets/scenes/CA-trip-partner-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8838,7 +8866,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8884,7 +8912,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-first-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-first.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8892,7 +8920,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8938,7 +8966,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-go-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-go.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -8946,7 +8974,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -8992,7 +9020,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-offer-promise-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9000,7 +9028,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -9046,7 +9074,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-promise-sister.webp",
+      "file": "assets/scenes/CA-return-trip-promise.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9054,7 +9082,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -9100,7 +9128,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-short-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-short.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9108,7 +9136,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -9154,7 +9182,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-due-delay-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9162,7 +9190,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -9208,7 +9236,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-delay-sister.webp",
+      "file": "assets/scenes/CA-return-trip-delay.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9216,7 +9244,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -9262,7 +9290,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-local-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-local.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9270,7 +9298,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     },
     {
@@ -9316,7 +9344,7 @@
       },
       "format": "webp",
       "aspectRatio": "20:9",
-      "suggestedFile": "assets/v7/CA-trip-last-cancel-sister.webp",
+      "file": "assets/scenes/CA-trip-sister-cancel.webp",
       "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
@@ -9324,7 +9352,7 @@
         "摄影质感仍是虚构情境，不标成新闻照片或历史档案",
         "没有孩子的路线使用伴侣或姐姐；完成旅行之前不出现出行结果",
         "生成调用放在制作工具或服务端，API密钥不进入静态网页",
-        "审阅后写入 family-scene-assets.js 的对应键；未配置时继续使用本版原创矢量场景"
+        "发布前逐条核对 family-scene-assets.js 的文件、角色和年龄分支"
       ]
     }
   ]

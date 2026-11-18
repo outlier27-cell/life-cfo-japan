@@ -17,3 +17,26 @@
 
 .shared-income{font-size:13px;line-height:1.65;padding:10px 12px;background:#e2e6d877;border-radius:6px}
 @media(max-width:400px){.surplus-line{display:block}.surplus-line b{display:block;margin-top:6px;white-space:nowrap;font-size:20px}}
+
+/* Story photographs share one mobile frame; archival reproductions retain their full composition. */
+.photo-open{display:block;border:0;padding:0;background:transparent;width:100%;cursor:zoom-in;color:inherit}
+.photo-open img{display:block;width:100%;height:auto}
+.archive-photo{margin:16px 0 20px;border:1px solid #c9bca3;background:#fcf7ec;border-radius:10px;overflow:hidden}
+.archive-photo .photo-open{background:#e1d8c7}
+.archive-photo img{max-height:270px;object-fit:contain}
+.archive-photo figcaption{padding:12px 16px;display:grid;gap:5px;line-height:1.5}
+.archive-photo figcaption small,.scene-photo figcaption{color:#615545;font-size:.79rem}
+.archive-photo figcaption strong{font-size:1.05rem}.archive-photo figcaption span{font-size:.9rem}
+.archive-photo details{margin:3px 0 0;padding:0;border:0;font-size:.78rem;overflow-wrap:anywhere}
+.archive-photo summary{padding:4px 0}.era-cover{margin-top:0}
+.scene-photo .photo-open{overflow:hidden;border-radius:10px}
+.scene-photo .photo-open img{width:100%;height:auto;max-height:none;aspect-ratio:20/9;object-fit:contain}
+.scene-photo figcaption{display:flex;justify-content:space-between;gap:10px;padding:5px 1px}
+.cast-person img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+#photo-dialog{max-width:min(94vw,940px);width:fit-content}
+#photo-dialog::backdrop{background:#252015c9}
+#photo-dialog form{text-align:right;margin:0}
+#photo-dialog h2{font-size:1.1rem;margin:.6rem 0}
+#photo-dialog img{display:block;max-width:100%;width:auto;max-height:64vh;object-fit:contain;margin:auto}
+#photo-dialog p{font-size:.85rem;overflow-wrap:anywhere}
+@media(max-width:600px){.era-cover img{max-height:168px}.era-cover figcaption span{display:none}.archive-photo img{max-height:215px}.home-screen .era-cover{margin-bottom:12px}.home-screen h1{margin-top:8px}.scene-photo figcaption{font-size:12px}.archive-photo details summary{min-height:28px}}
