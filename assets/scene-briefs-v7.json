@@ -912,7 +912,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-first-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -967,7 +967,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-go-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1022,7 +1022,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1077,7 +1077,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1132,7 +1132,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-short-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1187,7 +1187,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1242,7 +1242,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1297,7 +1297,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-local-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1352,7 +1352,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-cancel-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1406,7 +1406,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-first-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1460,7 +1460,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-go-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1514,7 +1514,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1568,7 +1568,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1622,7 +1622,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-short-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1676,7 +1676,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1730,7 +1730,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1784,7 +1784,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-local-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1838,7 +1838,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-cancel-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1892,7 +1892,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-first-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -1946,7 +1946,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-go-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2000,7 +2000,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-offer-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2054,7 +2054,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2108,7 +2108,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-short-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2162,7 +2162,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-due-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2216,7 +2216,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2270,7 +2270,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-local-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -2324,7 +2324,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/JP-trip-last-cancel-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3243,7 +3243,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-first-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3298,7 +3298,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-go-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3353,7 +3353,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3408,7 +3408,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3463,7 +3463,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-short-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3518,7 +3518,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3573,7 +3573,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3628,7 +3628,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-local-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3683,7 +3683,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-cancel-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3737,7 +3737,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-first-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3791,7 +3791,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-go-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3845,7 +3845,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3899,7 +3899,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -3953,7 +3953,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-short-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4007,7 +4007,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4061,7 +4061,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4115,7 +4115,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-local-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4169,7 +4169,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-cancel-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4223,7 +4223,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-first-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4277,7 +4277,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-go-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4331,7 +4331,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-offer-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4385,7 +4385,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4439,7 +4439,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-short-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4493,7 +4493,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-due-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4547,7 +4547,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4601,7 +4601,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-local-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -4655,7 +4655,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/US-trip-last-cancel-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5574,7 +5574,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-first-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5629,7 +5629,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-go-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5684,7 +5684,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5739,7 +5739,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5794,7 +5794,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-short-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5849,7 +5849,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5904,7 +5904,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -5959,7 +5959,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-local-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6014,7 +6014,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-cancel-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6068,7 +6068,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-first-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6122,7 +6122,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-go-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6176,7 +6176,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6230,7 +6230,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6284,7 +6284,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-short-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6338,7 +6338,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6392,7 +6392,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6446,7 +6446,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-local-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6500,7 +6500,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-cancel-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6554,7 +6554,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-first-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6608,7 +6608,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-go-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6662,7 +6662,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-offer-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6716,7 +6716,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6770,7 +6770,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-short-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6824,7 +6824,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-due-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6878,7 +6878,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6932,7 +6932,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-local-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -6986,7 +6986,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/GB-trip-last-cancel-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -7905,7 +7905,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-first-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -7960,7 +7960,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-go-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8015,7 +8015,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8070,7 +8070,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-promise-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8125,7 +8125,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-short-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8180,7 +8180,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8235,7 +8235,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-delay-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8290,7 +8290,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-local-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8345,7 +8345,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-cancel-child.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8399,7 +8399,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-first-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8453,7 +8453,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-go-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8507,7 +8507,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8561,7 +8561,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-promise-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8615,7 +8615,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-short-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8669,7 +8669,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8723,7 +8723,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-delay-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8777,7 +8777,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-local-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8831,7 +8831,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-cancel-partner.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8885,7 +8885,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-first-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8939,7 +8939,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-go-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -8993,7 +8993,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-offer-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -9047,7 +9047,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-promise-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -9101,7 +9101,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-short-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -9155,7 +9155,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-due-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -9209,7 +9209,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-delay-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -9263,7 +9263,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-local-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",
@@ -9317,7 +9317,7 @@
       "format": "webp",
       "aspectRatio": "20:9",
       "suggestedFile": "assets/v7/CA-trip-last-cancel-sister.webp",
-      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short、local 路线完成旅行后才出现车票或出行纪念。",
+      "brief": "同一位亲人在家里拿着画海的纸；只有 go、short 路线完成旅行后才出现车票；local 在附近过一天，保留画纸，不编造车票。",
       "requirements": [
         "使用已确认的同一人物参考图，不为同一角色随机换脸",
         "按本局国家、实际年份和人物年龄生成变体；名字和对白由网页排版",

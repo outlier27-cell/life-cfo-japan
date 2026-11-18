@@ -21,11 +21,13 @@ test('拒绝项目仍有返场，照料可改约，旅行可延期后本地兑�
   const care=events.find(e=>e.eventId==='care:review');assert.ok(care.choices.find(o=>o.id==='shared-paid').title.includes('请人协助'));assert.ok(!care.choices.find(o=>o.id==='shared-paid').title.includes('继续'));
   const t=s.story.threads.trip;assert.equal(t.status,'closed');assert.equal(!!t.fulfilled,route.at(-1)!=='cancel');assert.ok(s.story.memories.some(m=>m.id==='trip:reminder'));
   if(route.at(-1)==='cancel')assert.ok(t.outcome.includes('没有成行'));
+  if(route.at(-1)==='local'){assert.ok(s.story.objects.includes('trip-day-note'));assert.ok(!s.story.objects.includes('trip-ticket'));const row={year:s.history.at(-1).year,storyReplies:[]};const copy=structuredClone(s);copy.story.closed=false;copy.story.threads.trip.status='open';N.finalize(copy,row,'结束');assert.ok(row.storyReplies[0].text.includes('抽屉'));assert.ok(!row.storyReplies[0].text.includes('车票'));}
  }
  const{s}=play(4,{'project:offer':'decline','project:follow':'decline-again'});assert.ok(s.story.memories.some(m=>m.text.includes('没有断掉')));
 });
 test('孩子按真实出生记录出现，无孩子的旅行使用已经存在的亲人',()=>{
  for(const choices of [{},{'year-3-life':1}]){const{s,events}=play(4,choices);const e=events.find(x=>x.chain==='trip');assert.ok(e);if(s.flags.child){assert.equal(e.personId,'child');assert.equal(s.story.people.child.born,s.era+6);const row=s.history.find(r=>r.lifeEvent.chain==='trip');assert.ok(row.year-s.story.people.child.born>=4);}else{assert.notEqual(e.personId,'child');assert.equal(s.story.people.child.born,null);assert.equal(N.journal(s).people.some(p=>p.id==='child'),false);}}
+ require('./family-scenes');const{s,events}=play(4,{'trip:offer':'promise','trip:due':'delay','trip:last':'local'}),e=events.find(x=>x.chain==='trip');const old=globalThis.FamilyScenes.render(s,{...e,displayYear:s.story.people.child.born+8});assert.ok(old.includes('scale(0.78)'));assert.ok(old.includes('留在抽屉里的画'));assert.ok(!old.includes('留下来的车票'));const adult=globalThis.FamilyScenes.render(s,{...e,displayYear:s.story.people.child.born+20});assert.ok(!adult.includes('scale(0.78)'));
 });
 test('每次生活费用预览与实际扣款一致，重复提交不重复写入记忆',()=>{
  let s=F.start(4);for(let i=0;i<12&&s.phase!=='ended';i++){

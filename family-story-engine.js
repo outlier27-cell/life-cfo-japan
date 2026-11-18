@@ -121,7 +121,7 @@ function onChoice(s,e,o){
  }else{
   t.route=o.id;
   if(o.id==='go'||o.id==='short'||o.id==='local'){
-   t.fulfilled=true;if(!s.story.objects.includes('trip-ticket'))s.story.objects.push('trip-ticket');
+   t.fulfilled=true;const keepsake=o.id==='local'?'trip-day-note':'trip-ticket';if(!s.story.objects.includes(keepsake))s.story.objects.push(keepsake);
    queue(s,chain,'echo',s.turn+1,'echo',person(s,t.personId).name+(o.id==='local'?'翻到那张画着海的纸，提起我们在附近过的那一天。':'整理东西时又翻到了车票，我们聊起那次旅行。'));
   }else if(o.id==='promise'){queue(s,chain,'reminder',s.turn+1,'echo',person(s,t.personId).name+'把画着海的纸贴回桌边。约好的旅行还在明年。');queue(s,chain,'due',s.turn+2);}
   else if(o.id==='delay')queue(s,chain,'last',s.turn+1);
@@ -142,7 +142,7 @@ function afterYear(s,row){const turn=s.turn-1,replies=[];
 function memoryAt(s,year,id,text,chain){if(!s.story.memories.some(x=>x.id===id))s.story.memories.push({id,year,text,chain});}
 function finalize(s,row,reason){if(s.story.closed)return;s.story.closed=true;row.storyReplies??=[];
  for(const[chain,t]of Object.entries(s.story.threads))if(t.status!=='closed'){
-  const text=t.fulfilled?'旅行已经成行，那张车票留在了相册里。':t.stage==='follow'||t.stage==='review'?t.title+'已经作出安排，后面的回访停在这里。':t.title+'还没有走完。'+reason+'，这件事留在了记录里。';
+  const text=t.fulfilled?(t.route==='local'?'我们已经在附近过了一天，画着海的纸收在抽屉里。':'旅行已经成行，那张车票留在了相册里。'):t.stage==='follow'||t.stage==='review'?t.title+'已经作出安排，后面的回访停在这里。':t.title+'还没有走完。'+reason+'，这件事留在了记录里。';
   row.storyReplies.push({chain,text});memoryAt(s,row.year,chain+':ending',text,chain);complete(s,chain,t.fulfilled?'旅行已成行':t.stage==='follow'||t.stage==='review'?'已作出安排，回访未发生':'故事未完成');
  }s.story.callbacks=[];
 }
