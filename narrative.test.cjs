@@ -60,3 +60,61 @@ test('v7成绩和好友榜保留故事版本，v6旧记录只能在冻结入口�
  const{s}=play(),packet=S.compact(s,'测试者'),v=S.verify(packet);assert.deepEqual(v.run,s);assert.equal(packet.v,7);assert.equal(S.read(S.boardUrl([packet]))[0].run.story.version,N.version);assert.throws(()=>S.verify({...packet,t:'unknown'}));
  const Old=require('./family-v6-engine');const raw=Old.pack(Old.start(4));assert.equal(Old.restore(raw).version,'family-6.0.0');assert.throws(()=>F.restore(raw));assert.throws(()=>Old.restore(F.pack(s)));
 });
+
+test('确认配置时修改医疗保障，年末回忆反映最终保单',()=>{
+ let s=F.start(2);
+ for(let i=0;i<3;i++){
+  s=act(s,{type:'life',choice:i===2?1:0});
+  const policy=F.defaultPolicy(s);
+  if(i===2)policy.coverage=2;
+  s=act(s,{type:'allocate',policy});
+ }
+ const row=s.history.at(-1);
+ assert.equal(row.covered,1066);
+ assert.equal(row.bill,266);
+ assert.match(row.storyFeedback.log,/改选了加强医疗保障/);
+ assert.ok(F.journal(s).memories.some(m=>m.year===1991&&m.text===row.storyFeedback.log));
+ assert.deepEqual(F.restore(F.pack(s)),s);
+});
+
+test('处置住房后按最后的年末现金重新核对目标，回忆只写一次',()=>{
+ let s=F.start(2);
+ for(let i=0;i<10;i++){
+  s=act(s,{type:'life',choice:i%2});
+  s=act(s,{type:'allocate',policy:{...F.defaultPolicy(s),w:[10,65,15,10],coverage:2,house:s.house?'keep':'buy'}});
+ }
+ assert.equal(s.phase,'crisis');
+ assert.match(s.story.memories.find(m=>m.id==='goal10').text,/还没有达到/);
+ s=act(s,{type:'resolve',action:'liquidate'});
+ assert.equal(s.cash,69946);
+ const memory=s.story.memories.filter(m=>m.id==='goal10');
+ assert.equal(memory.length,1);
+ assert.match(memory[0].text,/兑现了/);
+ assert.equal(s.history.at(-1).storyReplies.find(r=>r.id==='goal10').text,memory[0].text);
+ assert.deepEqual(F.restore(F.pack(s)),s);
+});
+
+test('按揭预览按实际取整逐期计算，包括最后一笔尾款',()=>{
+ let s=F.start(2),original;
+ const decisions=[0,0,0,1,1,1,0,0,0,1,0,0,1,0,1,1,1,0,0,0,1,1,0,0,0,0,0,1];
+ for(const choice of decisions){
+  s=act(s,{type:'life',choice});
+  const policy={...F.defaultPolicy(s),w:[10,65,15,10],house:s.house?'keep':'buy'};
+  if(s.turn===8)original=F.mortgageSchedule(F.preview(s,policy).state);
+  s=act(s,{type:'allocate',policy});
+ }
+ assert.deepEqual(original,{remaining:21,lastPayment:12});
+ assert.equal(s.mortgage,11);
+ assert.deepEqual(F.mortgageSchedule(s),{remaining:1,lastPayment:12});
+});
+
+test('好友榜只合并新提交的成员，重算缓存仍核对命令和协议',()=>{
+ const a=play().s,first=S.compact(a,'甲'),second=S.compact(a,'乙');
+ const forged={...second,net:999999999};
+ assert.equal(S.summary(first).metrics.net,F.net(a));
+ assert.equal(S.summary(forged).metrics.net,F.net(a));
+ assert.throws(()=>S.summary({...first,r:'old'}));
+ assert.throws(()=>S.summary({...first,c:first.c+'R1'}));
+ const result=S.merge([first],[second]);
+ assert.deepEqual(result,[first,second]);
+});

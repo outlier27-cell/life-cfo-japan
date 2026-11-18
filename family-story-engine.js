@@ -129,14 +129,35 @@ function onChoice(s,e,o){
  }
  return feedback;
 }
+function reconcileCoverage(s,row){
+ const intention=row.lifeEvent?.choices[row.choice]?.set?.insured;
+ if(typeof intention!=='boolean'||intention===(row.policy.coverage>0))return;
+ const log=intention?'我原本打算续上保障，最后决定自己承担今年的医疗账单。':
+  '我原本打算自己承担医疗账单，安排钱时改选了'+(row.policy.coverage===2?'加强':'基础')+'医疗保障。';
+ row.storyFeedback={...row.storyFeedback,log};
+ const memoryId=row.lifeEvent.eventId+':'+row.storyFeedback.choiceId;
+ const entry=s.story.memories.find(m=>m.id===memoryId);
+ if(entry)entry.text=log;
+}
+function recordCashGoal(s,row){
+ const months=({10:6,20:9,30:12})[s.turn],id='goal'+s.turn;
+ if(!months||!s.flags[id])return;
+ const met=row.cash>=Math.round(row.necessaryMonthly*months);
+ const text='第'+s.turn+'年的现金约定'+(met?'兑现了':'还没有达到')+'。';
+ const reply=row.storyReplies.find(r=>r.id===id);
+ if(reply)reply.text=text;else row.storyReplies.push({id,chain:null,text});
+ const entry=s.story.memories.find(m=>m.id===id);
+ if(entry)entry.text=text;else memoryAt(s,row.year,id,text,null);
+}
 function afterYear(s,row){const turn=s.turn-1,replies=[];
  for(const c of [...s.story.callbacks]){
   if(c.mode==='echo'&&c.dueTurn<=turn){replies.push({chain:c.chain,text:c.text});s.story.callbacks=s.story.callbacks.filter(x=>x.id!==c.id);memoryAt(s,row.year,c.id,c.text,c.chain);if(c.nodeId==='echo')complete(s,c.chain,c.chain==='trip'?'旅行留下了回忆':'约定已经完成');}
   else if(c.mode==='choice'&&c.latestTurn<=turn){const text=titles[c.chain]+'没能在约定时间继续，我们把这件事暂时收起。';replies.push({chain:c.chain,text});memoryAt(s,row.year,c.id+':expired',text,c.chain);complete(s,c.chain,'错过约定时间，已说明并收起');}
   else if(c.mode==='choice'&&c.dueTurn<=turn){const text=titles[c.chain]+'本年没有再谈，下年继续安排。';replies.push({chain:c.chain,text});memoryAt(s,row.year,c.id+':postponed-'+turn,text,c.chain);}
  }
- for(const [at,flag,months]of [[10,'goal10',6],[20,'goal20',9],[30,'goal30',12]])if(s.turn===at&&s.flags[flag]){const target=Math.round(row.necessaryMonthly*months),met=s.cash>=target,text='第'+at+'年的现金约定'+(met?'兑现了':'还没有达到')+'。';replies.push({chain:null,text});memoryAt(s,row.year,flag,text,null);}
  row.storyReplies=replies;
+ reconcileCoverage(s,row);
+ recordCashGoal(s,row);
  if(s.phase==='ended')finalize(s,row,'这段人生已经结束');
 }
 function memoryAt(s,year,id,text,chain){if(!s.story.memories.some(x=>x.id===id))s.story.memories.push({id,year,text,chain});}
@@ -147,5 +168,5 @@ function finalize(s,row,reason){if(s.story.closed)return;s.story.closed=true;row
  }s.story.callbacks=[];
 }
 function journal(s){return{people:Object.values(s.story.people).filter(p=>p.id!=='child'||p.born!==null).filter(p=>p.id!=='partner'||s.flags.partner),threads:Object.entries(s.story.threads).map(([id,t])=>({id,...t})),memories:copy(s.story.memories),objects:[...s.story.objects]};}
-const api={version,initial,select,onChoice,afterYear,finalize,journal,who,person};if(node)module.exports=api;else root.FamilyNarrative=api;
+const api={version,initial,select,onChoice,afterYear,recordCashGoal,finalize,journal,who,person};if(node)module.exports=api;else root.FamilyNarrative=api;
 })(globalThis);

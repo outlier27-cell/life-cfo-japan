@@ -37,6 +37,15 @@ async function checkMobileFlow() {
     await page.reload();
     assert.equal(await heading.innerText(), settlement);
 
+    const invitation = new URL(url.href);
+    invitation.searchParams.set('run', '2');
+    await page.goto(invitation.href);
+    await page.locator('#resume').click();
+    assert.equal(await heading.innerText(), settlement);
+    assert.equal(new URL(page.url()).searchParams.get('run'), '1');
+    await page.reload();
+    assert.equal(await heading.innerText(), settlement);
+
     await page.locator('#board-button').click();
     await page.locator('#add-score').click();
     await page.locator('#read-score').click();

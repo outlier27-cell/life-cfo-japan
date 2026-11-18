@@ -1,6 +1,6 @@
-# 人生 CFO 跨年故事篇 7.1.1
+# 人生 CFO 跨年故事篇 7.1.2
 
-[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=7.1.1) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
+[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=7.1.2) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
 
 四国随机开局，最多30年60次生活与配置选择。每年看现金流和家庭资产负债表；无法清偿时提前结束，在同一历史中与现金流管家、均衡和现金储备三个规则模型和自己的上一局比较。
 
@@ -48,7 +48,7 @@ npm run build:docs
 - `docs/开发与持续优化文档-v7.md`：状态机、财务恒等式、事件、协议、验收与后续改进。
 - `docs/玩法守则-v7.md`：玩家操作与结果解读。
 - `docs/数据来源-v7.md`：完整来源及计算口径。
-- `QA-v71.md`：影像版本及 7.1.1 公网试玩与修复记录。
+- `QA-v71.md`：影像版本及 7.1.2 公网试玩与修复记录。
 - `assets/README.md`：插画来源与用途。
 
 ## 图片制作与历史档案

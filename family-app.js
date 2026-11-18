@@ -1,11 +1,12 @@
 (()=>{'use strict';
 const F=FamilyEngine,S=FamilySocial,G=FamilyCharts,D=ProData,H=ProHistory,P=ProPlanning,T=FamilyStories,L=FamilyLedger;
 const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)],game=$('#game'),dialog=$('#dialog');
+const saveFailure='本机保存失败，当前页仍可玩；离开前请导出存档。';
 const KEY='life-cfo:family:v7',BACK=KEY+':backup',FRIENDS=KEY+':friends',PREVIOUS=KEY+':previous';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rand=()=>crypto.getRandomValues(new Uint32Array(1))[0]%999999999+1;
 const q=new URLSearchParams(location.search);let seed=F.validSeed(Number(q.get('run')))?Number(q.get('run')):rand();
-let state=null,screen='home',resumeScreen='life',draft={choice:null,policy:null,note:'',stress:''},notes=[],token=null,validToken=false,conflict=false,storageOk=true,friends=[],previous=[],selectedYear=0,benchmarks=null;
+let state=null,screen='home',resumeScreen='life',draft={choice:null,policy:null,note:'',stress:''},notes=[],token=null,validToken=false,conflict=false,friends=[],previous=[],selectedYear=0,benchmarks=null;
 const scale=s=>s.country==='JP'?10000:1,unit=s=>({JP:'万日元',US:'美元',GB:'英镑',CA:'加元'}[s.country]);
 const num=v=>new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2}).format(v===0?0:v);
 const amount=(v,s=state)=>num(v/scale(s)),money=(v,s=state)=>amount(v,s)+' '+unit(s),signed=v=>(v>0?'+':'')+money(v);
@@ -34,16 +35,20 @@ function readSave(text){
  return{s,n,d:{choice:[0,1].includes(d.choice)?d.choice:null,policy:p,note:cleanNote(d.note??''),stress:d.stress??''},view};
 }
 function envelope(){return{run:F.pack(state),notes,draft,screen:resumeScreen};}
-function writable(){if(conflict){notice('另一个页面更新了这段人生。请刷新后继续，当前页面不会覆盖它。');return false;}if(!storageOk)return true;try{if(localStorage.getItem(KEY)!==token){conflict=true;return writable();}}catch{storageOk=false;}return true;}
-function save(){if(!state||!writable())return;try{const text=JSON.stringify(envelope());if(text!==token){if(token&&validToken)localStorage.setItem(BACK,token);localStorage.setItem(KEY,text);}token=text;validToken=true;$('#save-status').textContent='进度已保存在本机';}catch{storageOk=false;notice('本机保存失败，当前页仍可玩；离开前请导出存档。');}}
+function writable(){if(conflict){notice('另一个页面更新了这段人生。请刷新后继续，当前页面不会覆盖它。');return false;}try{if(localStorage.getItem(KEY)!==token){conflict=true;return writable();}}catch{}return true;}
+function save(){if(!state||!writable())return;try{const text=JSON.stringify(envelope());if(text!==token){if(token&&validToken)localStorage.setItem(BACK,token);localStorage.setItem(KEY,text);}token=text;validToken=true;if($('#notice').textContent===saveFailure)$('#notice').hidden=true;$('#save-status').textContent='进度已保存在本机';}catch{$('#save-status').textContent='尚未保存，请导出备份';notice(saveFailure);}}
 function load(){try{token=localStorage.getItem(KEY);if(token){let loaded;try{loaded=readSave(token);validToken=true;}catch{try{loaded=readSave(localStorage.getItem(BACK));notice('主存档损坏，已恢复上一份有效备份。');}catch{notice('存档无法读取，原文件仍保留。可以导入备份或开启新人生。');}}if(loaded){state=loaded.s;notes=loaded.n;draft=loaded.d;screen=resumeScreen=loaded.view;}}
- const f=JSON.parse(localStorage.getItem(FRIENDS)||'[]');if(!Array.isArray(f)||f.length>64)throw Error();friends=f.map(x=>S.verify(x).packet);
  const p=JSON.parse(localStorage.getItem(PREVIOUS)||'[]');if(Array.isArray(p)&&p.length<=3)previous=p.filter(x=>{try{return F.restore(x).phase==='ended';}catch{return false;}});
  }catch{notice('部分本机记录无法读取，可从存档菜单导入备份。');}}
-function show(view,scroll=true){screen=view;if(view!=='home')resumeScreen=view;render();save();if(scroll){window.scrollTo(0,0);const h=game.querySelector('h1');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}}
+function replaceAddress(url){try{history.replaceState(history.state,'',url.href);}catch{}}
+function show(view,scroll=true){screen=view;if(view!=='home'){
+ resumeScreen=view;seed=state.seed;
+ const url=new URL(location.href);
+ if(url.searchParams.has('run')&&url.searchParams.get('run')!==String(seed)){url.searchParams.set('run',String(seed));replaceAddress(url);}
+ }render();save();if(scroll){window.scrollTo(0,0);const h=game.querySelector('h1');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}}
 function fresh(n){if(!writable())return;if(state?.phase==='ended'){previous=[...previous.filter(x=>x.seed!==state.seed),F.pack(state)].slice(-3);try{localStorage.setItem(PREVIOUS,JSON.stringify(previous));}catch{toast('上一局未能保存，请先导出备份');}}
  state=F.start(n);seed=n;notes=[];draft={choice:null,policy:F.defaultPolicy(state),note:'',stress:''};benchmarks=null;show('life');}
-function newGame(n){if(!state||!state.revision){fresh(n);return;}modal(`<h2>重新开启这段人生？</h2><p>本机当前进度会被替换。已结束的这一局会保留作重玩对照，也可以先导出备份。</p><button class="button" id="confirm-new">确认重新开始</button>`);$('#confirm-new').onclick=()=>{dialog.close();fresh(n);};}
+function newGame(n){if(!state||(!state.revision&&draft.choice===null)){fresh(n);return;}modal(`<h2>重新开启这段人生？</h2><p>本机当前进度会被替换。已结束的这一局会保留作重玩对照，也可以先导出备份。</p><button class="button" id="confirm-new">确认重新开始</button>`);$('#confirm-new').onclick=()=>{dialog.close();fresh(n);};}
 function dispatch(c){if(!writable())return;try{const n=cleanNote(draft.note),turn=state.turn;state=F.dispatch(state,{...c,revision:state.revision});if(c.type==='allocate'){while(notes.length<turn)notes.push(null);notes[turn]={note:n,stress:draft.stress};}draft={choice:null,policy:F.defaultPolicy(state),note:'',stress:''};benchmarks=null;show(state.phase==='crisis'?'crisis':state.phase==='ended'?'report':c.type==='allocate'?'settlement':state.phase);}catch(e){toast(e.message);}}
 function progress(){const year=screen==='life'||screen==='allocate'?state.turn+1:state.turn;return `<div class="progress-heading"><span>${D.countries[state.country].name} · ${state.era}年起点</span><span>第 ${year} / 30 年</span></div><div class="progress-line" role="progressbar" aria-label="已完成年度" aria-valuemin="0" aria-valuemax="30" aria-valuenow="${state.turn}"><i style="width:${state.turn/30*100}%"></i></div>`;}
 function art(name,alt){return `<figure class="story-art"><img src="${globalThis.FamilyArt?.[name]||'assets/story-'+name+'.webp'}" width="1200" height="675" alt="${esc(alt)}" decoding="async"><figcaption><a href="sources.html#art">情境插画 · 素材说明</a></figcaption></figure>`;}
@@ -64,10 +69,10 @@ function life(){const ch=F.event(state),image=T.imageFor(state,ch);game.innerHTM
 function news(){const k=F.known(state),h=H.briefing(k.year)[0],past=L.past(state);return `<section class="news-brief"><div class="section-heading"><h2>先看过去一年</h2><span>${k.year}年</span></div><h3>${h.title}</h3><p>${h.text}</p>${FamilyPhotos.archivePhoto(FamilyPhotos.onYear(k.year))}<details><summary>展开历史图景与真实行情</summary>${G.line(past.series,past.dates,'期初=100','过去12个月的价格变化',{tight:true})}<div class="past-values"><p>本地股价 <b>${num(k.local*100)}%</b></p><p>本币黄金 <b>${num(k.gold*100)}%</b></p><p>本地物价 <b>${num(k.cpi*100)}%</b></p><p>美国十年债收益率 <b>${num(k.yield)}%</b></p></div><blockquote>${esc(T.mood(k.year,k.local))}<small>虚构人物的年代对白，不是史料原话，也不是收益预告。</small></blockquote><a href="${h.source}" target="_blank" rel="noopener noreferrer">核对史料</a><p class="muted">图表只到 ${past.asOf}，按月份标记的历史观测已修订；不含股息。国债收益率不是债券回报。外部原文可能包含后续历史。</p></details></section>`;}
 function choices(values,current,names){return values.map((v,i)=>`<option value="${v}" ${v===current?'selected':''}>${names[i]}</option>`).join('');}
 function allocation(){const p=draft.policy||F.defaultPolicy(state);draft.policy=p;game.innerHTML=`<section class="play-screen">${progress()}${currentReply()}<div class="plan-layout"><div><h1>今年的钱，怎样安排</h1><p class="lead">可以沿用，也可以调整。</p>${news()}<div class="current-plan"><h2>这次准备这样放</h2><div id="current-strip"></div></div><details class="optional" id="change-plan"><summary>换一种配置</summary><div class="preset-options">${F.presets.map((x,i)=>`<button class="preset choice" data-preset="${i}" aria-pressed="${x.w.join()===p.w.join()}"><b>${x.name}</b><span>${x.text}</span>${strip(x.w)}</button>`).join('')}</div></details><details class="optional"><summary>自己调一调 · 可选</summary><p class="muted">四类金融资产合计100%，余下比例自动留为现金。</p><div id="manual-strip"></div>${[1,2,3].map((i)=>`<label class="weight-row">${['现金','股票','债券','黄金'][i]}<input type="range" min="0" max="100" step="1" value="${p.w[i]}" data-range="${i}" aria-label="${['现金','股票','债券','黄金'][i]}比例"><input type="number" min="0" max="100" step="1" value="${p.w[i]}" data-weight="${i}" aria-label="${['现金','股票','债券','黄金'][i]}比例数值">%</label>`).join('')}<label class="field">股票范围<select id="basket">${choices([0,1],p.basket,['本地市场','四国分散'])}</select></label></details>
- <details class="optional"><summary>保险、房车与更多设置 · 可选</summary><label class="field">医疗保障<select id="coverage">${choices([0,1,2],p.coverage,['自行承担','基础保障 · 报销50%','加强保障 · 报销80%'])}</select></label><p class="muted">年保费：0 / ${money(F.month(state)*.6)} / ${money(F.month(state)*1.2)}。无退保现金价值。</p><label class="field">住房<select id="house">${choices(state.house?['keep','sell']:['keep','buy'],p.house,state.house?['继续持有','出售并结清房贷']:['保持现状','尝试首付购房'])}</select></label><p class="muted">参考价 ${money(F.housePrice(state))}；首付30%，买卖各收3%费用；固定5%、20年教学房贷。</p><label class="field">汽车<select id="car">${choices(state.car?['keep','sell']:['keep','buy'],p.car,state.car?['继续持有','出售汽车']:['保持现状','尝试全款购车'])}</select></label><p class="muted">参考价 ${money(F.carPrice(state))}；每年15%教学折旧，另有养车开支。</p><details><summary>认识资产与数据口径</summary><p>现金不计息；股票按历史价格指数、不含股息。债券用美元国债收益率估值；黄金按美元价格及历史汇率换算。住房和汽车单独记家庭账本；负债从净资产扣除。</p><a href="sources.html">查看全部来源与规则</a></details><label class="field note-field">给年末的自己留一句 · 选填<textarea id="reason" rows="2" maxlength="80" placeholder="例如：工作可能变化，先多留些现金。">${esc(draft.note)}</textarea></label><p class="muted">便签随存档保存，成绩链接不包含它。</p></details></div>
+ <details class="optional"><summary>保险、房车与更多设置 · 可选</summary><label class="field">医疗保障<select id="coverage">${choices([0,1,2],p.coverage,['自行承担','基础保障 · 报销50%','加强保障 · 报销80%'])}</select></label><p class="muted">年保费：0 / ${money(F.month(state)*.6)} / ${money(F.month(state)*1.2)}。无退保现金价值。</p><label class="field">住房<select id="house">${choices(state.house?['keep','sell']:['keep','buy'],p.house,state.house?['继续持有','出售并结清房贷']:['保持现状','尝试首付购房'])}</select></label><p class="muted">参考价 ${money(F.housePrice(state))}；首付30%，买卖各收3%费用；利率固定为5%，按20年估算年供。每年取整，少量尾款可能在次年结清。</p><label class="field">汽车<select id="car">${choices(state.car?['keep','sell']:['keep','buy'],p.car,state.car?['继续持有','出售汽车']:['保持现状','尝试全款购车'])}</select></label><p class="muted">参考价 ${money(F.carPrice(state))}；每年15%教学折旧，另有养车开支。</p><details><summary>认识资产与数据口径</summary><p>现金不计息；股票按历史价格指数、不含股息。债券用美元国债收益率估值；黄金按美元价格及历史汇率换算。住房和汽车单独记家庭账本；负债从净资产扣除。</p><a href="sources.html">查看全部来源与规则</a></details><label class="field note-field">给年末的自己留一句 · 选填<textarea id="reason" rows="2" maxlength="80" placeholder="例如：工作可能变化，先多留些现金。">${esc(draft.note)}</textarea></label><p class="muted">便签随存档保存，成绩链接不包含它。</p></details></div>
  <aside class="plan-aside"><div id="preview"></div><details class="optional"><summary>听听现金流管家的理由 · 可选</summary><div id="agent-advice"></div><button class="small-button" id="adopt-agent">采用这份配置</button></details><details class="optional" id="stress"><summary>先试试现金够不够 · 可选</summary><p class="muted">固定假设，不预告下一年。提前预留全年保费，不计未来工资。</p><select id="stress-kind" aria-label="假设情景">${choices(['medical','double','bill'],draft.stress||'medical',['跌市加医疗账单','股债齐跌加维修','行情不变，账单先到'])}</select><div id="stress-result"></div></details><button class="button primary-action" id="allocation-confirm">按这份配置，过完今年</button><p class="action-note">结算至 ${state.era+state.turn+1} 年末</p></aside></div></section>`;
  const refreshStress=()=>{if(!$('#stress').open)return;draft.stress=$('#stress-kind').value;const a=P.compareStress(state,{...p,loss:0,profit:0,rebalance:'none'},draft.stress);$('#stress-result').innerHTML=`<p class="stress-status">${a.personal.unpaid?'仍有账单未付':a.personal.sale?'需要卖出部分投资':'现金可以覆盖'}</p><p>需用 ${money(a.personal.needed)}，含自付账单、全年保费预留与旧欠款。</p><table><thead><tr><th>付款后</th><th>我的计划</th><th>均衡模型</th></tr></thead><tbody>${[['现金','cash'],['卖出','sale'],['未付','unpaid']].map(([n,k])=>`<tr><th>${n}</th><td>${money(a.personal[k])}</td><td>${money(a.balanced[k])}</td></tr>`).join('')}</tbody></table><p class="muted">股/债/金假设：${P.scenarios.find(x=>x.id===draft.stress).returns.slice(1).map(x=>x*100+'%').join('/')}；现金不足时按债、金、股顺序卖出并计费。与实际全年结算分开看。</p>`;};
- const update=()=>{const a=F.preview(state,p),agent=F.advice(state,p);$('#agent-advice').innerHTML=`<p>${esc(agent.reason)}</p>${strip(agent.policy.w)}<p>现金目标 ${money(agent.target)}，其中已知年度缺口 ${money(agent.gap)}。</p>${agent.shortfall?`<p class="warning">即使按建议配置，距目标仍差 ${money(agent.shortfall)}。建议不保证能度过危机。</p>`:''}<p class="muted">管家根据当前信息配置。股票部分采用四国分散，沿用你选的保险和房车安排。</p>`;$('#basket').value=String(p.basket);$('#manual-strip').innerHTML=strip(p.w);$('#current-strip').innerHTML=strip(p.w);all('[data-range],[data-weight]').forEach(e=>e.value=p.w[Number(e.dataset.range||e.dataset.weight)]);all('[data-preset]').forEach(e=>e.setAttribute('aria-pressed',F.presets[Number(e.dataset.preset)].w.join()===p.w.join()));$('#preview').innerHTML=`<section class="preview"><h2>配置后留在手边的钱</h2><strong>${money(a.state.cash)}</strong><p>约 ${num(a.months)} 个月必要支出</p><p class="${a.knownFlow<0?'warning':'muted'}">${a.knownFlow<0?'按已知收支，全年还差 '+money(-a.knownFlow)+'。需要动用储备或变现，市场下跌会让余地更小。':'已知年度收支余量 '+signed(a.knownFlow)+'。'}</p><p class="muted">未计未来行情与突发账单；已计保障及房贷还款。</p>${a.notes.map(x=>`<p class="plan-note">${x}</p>`).join('')}</section>`;refreshStress();save();};
+ const update=()=>{const a=F.preview(state,p),agent=F.advice(state,p),loan=F.mortgageSchedule(a.state);$('#agent-advice').innerHTML=`<p>${esc(agent.reason)}</p>${strip(agent.policy.w)}<p>现金目标 ${money(agent.target)}，其中已知年度缺口 ${money(agent.gap)}。</p>${agent.shortfall?`<p class="warning">即使按建议配置，距目标仍差 ${money(agent.shortfall)}。建议不保证能度过危机。</p>`:''}<p class="muted">管家根据当前信息配置。股票部分采用四国分散，沿用你选的保险和房车安排。</p>`;$('#basket').value=String(p.basket);$('#manual-strip').innerHTML=strip(p.w);$('#current-strip').innerHTML=strip(p.w);all('[data-range],[data-weight]').forEach(e=>e.value=p.w[Number(e.dataset.range||e.dataset.weight)]);all('[data-preset]').forEach(e=>e.setAttribute('aria-pressed',F.presets[Number(e.dataset.preset)].w.join()===p.w.join()));$('#preview').innerHTML=`<section class="preview"><h2>配置后留在手边的钱</h2><strong>${money(a.state.cash)}</strong><p>约 ${num(a.months)} 个月必要支出</p><p class="${a.knownFlow<0?'warning':'muted'}">${a.knownFlow<0?'按已知收支，全年还差 '+money(-a.knownFlow)+'。需要动用储备或变现，市场下跌会让余地更小。':'已知年度收支余量 '+signed(a.knownFlow)+'。'}</p><p class="muted">未计未来行情与突发账单；已计保障及房贷还款。</p>${loan.remaining?`<p>按当前合同继续持有住房，还需还款 ${loan.remaining} 次，最后一次 ${money(loan.lastPayment)}。</p>`:''}${a.notes.map(x=>`<p class="plan-note">${x}</p>`).join('')}</section>`;refreshStress();save();};
  $('#adopt-agent').onclick=()=>{Object.assign(p,F.advice(state,p).policy);update();toast('已采用管家配置，确认后才结算');};all('[data-preset]').forEach(b=>b.onclick=()=>{p.w=[...F.presets[Number(b.dataset.preset)].w];update();});
  const set=(i,value)=>{const v=Number(value);if(Number.isInteger(v))p.w=P.setWeight(p.w,i,v,0);update();};all('[data-range]').forEach(e=>e.oninput=()=>set(Number(e.dataset.range),e.value));all('[data-weight]').forEach(e=>e.onchange=()=>set(Number(e.dataset.weight),e.value));
  for(const key of ['basket','coverage','house','car'])$('#'+key).onchange=e=>{p[key]=['basket','coverage'].includes(key)?Number(e.target.value):e.target.value;update();};
@@ -105,17 +110,112 @@ function exportCSV(withModels=false){const runs=[{name:'我的选择',run:state}
 function exportReport(){const lines=['人生 CFO 跨年故事篇 '+S.edition,`编号${state.seed} · ${D.countries[state.country].name} · ${status(state)} · ${state.turn}年`,`净资产 ${money(F.net(state))}`,'',...state.history.flatMap((r,i)=>[r.year+'年 | '+r.chapter+' | '+r.title,'当时的理由：'+(notes[i]?.note||'未记录'),...G.cashRows(r).map(x=>x.label+'：'+signed(x.value)),'资产 '+money(F.totalAssets(r))+'；负债 '+money(F.totalDebt(r))+'；净资产 '+money(r.net),'突发事件：'+r.shock.title,'配置：现金/股/债/金 '+r.policy.w.join('/')+'%',r.resolution?'危机处理：'+r.resolution.action:'','']),'人物与约定',...F.journal(state).memories.map(m=>m.year+'年：'+m.text),'完整玩法：https://outlier27-cell.github.io/life-cfo-japan/guide.html'];download('人生CFO-'+S.edition+'-'+state.seed+'-复盘.txt',lines.join('\n'),'text/plain;charset=utf-8');}
 function menu(){modal(`<h2>存档与分享</h2><p>${state?'编号'+state.seed+' · 已结算'+state.turn+'年':'尚未开始'}。进度只存在本机，换设备前请导出。</p><div class="actions"><button class="small-button" id="export-save">导出存档</button><button class="small-button" id="import-save">导入存档</button><button class="small-button" id="open-board">好友榜</button><button class="small-button" id="save-text">复制或粘贴存档文本</button><button class="small-button" id="home">回到首页</button></div><p><a href="family-v6.html">继续6.0旧存档</a> · <a href="multi-v4.html">继续4.2旧存档</a> · <a href="sources.html">数据与公式</a></p>`);$('#save-text').onclick=saveText;$('#export-save').onclick=exportSave;$('#import-save').onclick=()=>$('#import-file').click();$('#open-board').onclick=()=>{dialog.close();board();};$('#home').onclick=()=>{dialog.close();show('home');};}
 function saveText(){modal(`<h2>带走或恢复这段人生</h2><p>复制全部文本保存到自己的笔记，或粘贴 7.0 或 7.1 的存档恢复。存档包含你的决策便签，请自行选择分享对象。</p><textarea id="save-text-value" rows="8" aria-label="存档文本">${state?esc(JSON.stringify(envelope())):''}</textarea><button class="small-button" id="copy-save-text">复制全部</button><button class="small-button" id="read-save-text">读取并预览</button>`);$('#copy-save-text').onclick=async()=>{try{await navigator.clipboard.writeText($('#save-text-value').value);toast('存档文本已复制');}catch{$('#save-text-value').select();toast('请复制选中的完整文本');}};$('#read-save-text').onclick=()=>{try{const a=readSave($('#save-text-value').value);modal(`<h2>恢复预览</h2><p>编号${a.s.seed} · ${a.s.turn}年 · ${status(a.s)}。确认后替换当前家庭的进度。</p><button class="button" id="confirm-text-restore">确认恢复</button>`);$('#confirm-text-restore').onclick=()=>{if(!writable())return;state=a.s;notes=a.n;draft=a.d;benchmarks=null;dialog.close();show(a.view);};}catch(e){toast('无法读取：'+e.message+'。当前进度不变。');}};}
-function share(url,title){modal(`<h2>${title}</h2><label>完整链接<textarea id="share-link" readonly rows="4">${esc(url)}</textarea></label><button class="button" id="copy-link">复制链接</button><button class="small-button" id="download-link">下载链接文件</button><p class="muted">发给朋友后，对方打开即可查看或加入本机好友榜。</p>`);$('#copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(url);toast('链接已复制');}catch{$('#share-link').select();toast('请长按或全选复制完整链接');}};$('#download-link').onclick=()=>download('人生CFO-分享链接.txt',url,'text/plain;charset=utf-8');}
-function saveFriends(){try{const latest=JSON.parse(localStorage.getItem(FRIENDS)||'[]');if(!Array.isArray(latest)||latest.length>64)throw Error();friends=S.merge(latest,friends);localStorage.setItem(FRIENDS,JSON.stringify(friends));}catch{toast('好友榜未能保存，可下载链接备份');}}
-function scoreDialog(){modal(`<h2>分享本局结果</h2><label>昵称 · 最多16字<input id="nickname" maxlength="32"></label><button class="button" id="make-score">生成成绩链接</button><p class="muted">分享昵称、编号和选择记录，不含决策便签。破产结局也可分享。</p>`);$('#make-score').onclick=()=>{try{const name=S.cleanName($('#nickname').value),packet=S.compact(state,name);friends=S.merge(friends,[packet]);saveFriends();share(S.scoreUrl(state,name),'我的人生 CFO 结果');}catch(e){toast(e.message);}};}
-function acceptScores(rows){modal(`<h2>把这些结果加入好友榜？</h2><ul>${rows.map(r=>`<li>${esc(r.name)} · 编号${r.run.seed} · ${status(r.run)} · ${r.run.turn}年 · ${money(r.metrics.net,r.run)}</li>`).join('')}</ul><button class="button" id="accept-scores">确认加入本机好友榜</button>`);$('#accept-scores').onclick=()=>{friends=S.merge(friends,rows.map(r=>r.packet));saveFriends();dialog.close();board(rows[0].run.seed);};}
-function board(target=state?.seed||seed){const seeds=[...new Set(friends.map(x=>x.s))];if(!seeds.includes(target))seeds.push(target);const rows=friends.map(S.verify).filter(r=>r.run.seed===target).sort((a,b)=>(b.run.outcome==='completed')-(a.run.outcome==='completed')||b.metrics.net-a.metrics.net);let rank=0,last=null;modal(`<h2>同场好友榜</h2><label>人生编号<select id="board-seed">${seeds.map(s=>`<option value="${s}" ${s===target?'selected':''}>${s}</option>`).join('')}</select></label><p class="muted">完成30年的结果按净资产排列；提前结束单独列出，不与完整人生排名。链接需手动汇总。</p><ol class="friend-list">${rows.map((r,i)=>{const complete=r.run.outcome==='completed';if(complete&&last!==r.metrics.net){rank=i+1;last=r.metrics.net;}return `<li><b>${complete?rank+'. ':''}${esc(r.name)}</b><span>${status(r.run)} · ${r.run.turn}年</span><strong>${money(r.metrics.net,r.run)}</strong></li>`;}).join('')||'<li>还没有这个开局的成绩。</li>'}</ol><button class="button" id="add-score">添加成绩链接</button><button class="small-button" id="share-board" ${rows.length?'':'disabled'}>分享前8条榜单快照</button><button class="text-button" id="invite-board">邀请朋友玩这个开局</button>`);
- $('#board-seed').onchange=e=>board(Number(e.target.value));$('#add-score').onclick=()=>{modal('<h2>添加成绩链接</h2><textarea id="score-input" rows="5" aria-label="成绩链接"></textarea><button class="button" id="read-score">读取并验证</button>');$('#read-score').onclick=()=>{try{acceptScores(S.read($('#score-input').value));}catch(e){toast(e.message);}};};$('#share-board').onclick=()=>share(S.boardUrl(rows.slice(0,8).map(x=>x.packet)),'好友榜快照');$('#invite-board').onclick=()=>share(S.challenge(target),'邀请朋友同场体验');}
+function share(url,title,warning=''){modal(`<h2>${title}</h2>${warning?`<p class="warning" role="note">${esc(warning)}</p>`:''}<label>完整链接<textarea id="share-link" readonly rows="4">${esc(url)}</textarea></label><button class="button" id="copy-link">复制链接</button><button class="small-button" id="download-link">下载链接文件</button><p class="muted">发给朋友后，对方打开即可查看或加入本机好友榜。</p>`);$('#copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(url);toast('链接已复制');}catch{$('#share-link').select();toast('请长按或全选复制完整链接');}};$('#download-link').onclick=()=>download('人生CFO-分享链接.txt',url,'text/plain;charset=utf-8');}
+function readFriends(){
+ const list=JSON.parse(localStorage.getItem(FRIENDS)||'[]');
+ if(!Array.isArray(list)||list.length>64)throw Error('好友榜格式无效');
+ return list;
+}
+async function saveFriends(additions){
+ const write=()=>{
+  const next=S.merge(readFriends(),additions);
+  localStorage.setItem(FRIENDS,JSON.stringify(next));friends=next;
+ };
+ try{
+  if(navigator.locks)await navigator.locks.request(FRIENDS,write);
+  else write();
+  return true;
+ }catch{return false;}
+}
+function scoreDialog(){
+ modal('<h2>分享本局结果</h2><label>昵称 · 最多16字<input id="nickname" maxlength="32"></label><button class="button" id="make-score">生成成绩链接</button><p class="muted">分享昵称、编号和选择记录，不含决策便签。破产结局也可分享。</p>');
+ const button=$('#make-score');
+ button.onclick=async()=>{
+  try{
+   const name=S.cleanName($('#nickname').value),packet=S.compact(state,name),url=S.scoreUrl(state,name);
+   button.disabled=true;const saved=await saveFriends([packet]);
+   if(!dialog.open||!button.isConnected)return;
+   share(url,'我的人生 CFO 结果',saved?'':'本机好友榜保存失败。可以复制或下载这条成绩链接。');
+  }catch(e){button.disabled=false;toast(e.message);}
+ };
+}
+function acceptScores(rows){
+ modal(`<h2>把这些结果加入好友榜？</h2><ul>${rows.map(r=>`<li>${esc(r.name)} · 编号${r.run.seed} · ${status(r.run)} · ${r.run.turn}年 · ${money(r.metrics.net,r.run)}</li>`).join('')}</ul><button class="button" id="accept-scores">确认加入本机好友榜</button>`);
+ const button=$('#accept-scores');
+ button.onclick=async()=>{
+  button.disabled=true;
+  const saved=await saveFriends(rows.map(r=>r.packet));
+  if(!button.isConnected||!dialog.open)return;
+  if(!saved){button.disabled=false;$('#dialog-status').textContent='本机好友榜保存失败。请保留成绩链接，可以再试一次。';return;}
+  dialog.close();board(rows[0].run.seed);
+ };
+}
+async function board(target=screen==='home'?seed:(state?.seed||seed)){
+ let readFailed=false;
+ try{friends=readFriends();}catch{readFailed=true;}
+ const seeds=[...new Set(friends.map(x=>x?.s).filter(F.validSeed))];
+ if(!seeds.includes(target))seeds.push(target);
+ modal(`<h2>同场好友榜</h2><label class="field">人生编号<select id="board-seed">${seeds.map(s=>`<option value="${s}" ${s===target?'selected':''}>${s}</option>`).join('')}</select></label><p class="muted">完成30年的结果按净资产排列；提前结束单独列出。链接需手动汇总。</p><ol class="friend-list"><li>正在核对成绩…</li></ol><button class="button" id="add-score">添加成绩链接</button><button class="small-button" id="share-board" disabled>分享前8条榜单快照</button><button class="text-button" id="invite-board">邀请朋友玩这个开局</button>`);
+ const list=$('#dialog .friend-list'),shareButton=$('#share-board');
+ $('#board-seed').onchange=e=>board(Number(e.target.value));
+ $('#add-score').onclick=()=>{
+  modal('<h2>添加成绩链接</h2><textarea id="score-input" rows="5" aria-label="成绩链接"></textarea><button class="button" id="read-score">读取并验证</button>');
+  $('#read-score').onclick=()=>{try{acceptScores(S.read($('#score-input').value,S.summary));}catch(e){toast(e.message);}};
+ };
+ $('#invite-board').onclick=()=>share(S.challenge(target),'邀请朋友同场体验');
+ const rows=[];let skipped=0,start=performance.now();
+ for(const packet of friends.filter(p=>p?.s===target)){
+  if(performance.now()-start>24){await new Promise(resolve=>setTimeout(resolve,0));start=performance.now();}
+  if(!dialog.open||!list.isConnected)return;
+  try{rows.push(S.summary(packet));}catch{skipped++;}
+ }
+ rows.sort((a,b)=>(b.run.outcome==='completed')-(a.run.outcome==='completed')||b.metrics.net-a.metrics.net);
+ let rank=0,last=null;
+ list.innerHTML=rows.map((r,i)=>{
+  const complete=r.run.outcome==='completed';
+  if(complete&&last!==r.metrics.net){rank=i+1;last=r.metrics.net;}
+  return `<li><b>${complete?rank+'. ':''}${esc(r.name)}</b><span>${status(r.run)} · ${r.run.turn}年</span><strong>${money(r.metrics.net,r.run)}</strong></li>`;
+ }).join('')||'<li>还没有这个开局的有效成绩。</li>';
+ if(readFailed||skipped)$('#dialog-status').textContent=readFailed?'本机榜单未能读取。可以从原成绩链接重新导入。':skipped+' 条成绩未能验证，未计入排名。';
+ shareButton.disabled=!rows.length;
+ shareButton.onclick=()=>share(S.boardUrl(rows.slice(0,8).map(x=>x.packet)),'好友榜快照');
+}
 function render(){try{({home,life,allocate:allocation,settlement,crisis,report}[screen]||home)();}catch(e){notice('页面未能显示，原存档仍保留。请导出备份或刷新。');console.error(e);}}
 $('#import-file').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{if(f.size>120000)throw Error('存档过大');const a=readSave(await f.text());modal(`<h2>导入这段人生？</h2><p>编号${a.s.seed} · 已结算${a.s.turn}年。将替换当前家庭的进度。</p><button class="button" id="confirm-import">确认导入</button>`);$('#confirm-import').onclick=()=>{if(!writable())return;state=a.s;notes=a.n;draft=a.d;benchmarks=null;dialog.close();show(a.view);};}catch(e){toast('无法导入：'+e.message+'。当前进度不变。');}};
 $('#brand').onclick=e=>{e.preventDefault();show('home');};$('#menu-button').onclick=menu;$('#ledger-button').onclick=ledger;$('#compare-button').onclick=()=>comparison();$('#gallery-button').onclick=()=>photoArchive();$('#story-button').onclick=journal;$('#board-button').onclick=()=>board();
 document.addEventListener('click',e=>{const b=e.target.closest('[data-open-year]');if(b)yearBook(Number(b.dataset.openYear));});
-window.addEventListener('storage',e=>{if(e.key===KEY&&e.newValue!==token){conflict=true;notice('另一个标签页更新了进度，请刷新后继续。');}});window.addEventListener('pagehide',save);document.addEventListener('visibilitychange',()=>{if(document.hidden)save();});
-if(location.hash.startsWith('#score=')||location.hash.startsWith('#board=')){try{const raw=ProSocial.decode(location.hash.split('=')[1]);if(raw.v===6||raw.v===5||raw.v===4||raw.v===3){location.replace((raw.v===6?'family-v6.html':raw.v===5?'family-v5.html':raw.v===4?'multi-v4.html':'world-v3.html')+location.search+location.hash);return;}}catch{}}
-load();if(q.has('run')&&state&&seed!==state.seed)screen='home';render();if(location.hash.startsWith('#score=')||location.hash.startsWith('#board='))try{acceptScores(S.read(location.href));}catch(e){notice('成绩链接无法读取：'+e.message);}
+window.addEventListener('storage',e=>{if((e.key===FRIENDS||e.key===null)&&dialog.open&&$('#board-seed'))board(Number($('#board-seed').value));if((e.key===KEY||e.key===null)&&e.newValue!==token){conflict=true;notice('另一个标签页更新了进度，请刷新后继续。');}});window.addEventListener('pagehide',save);document.addEventListener('visibilitychange',()=>{if(document.hidden)save();});
+load();
+if(state){
+ if(F.validSeed(Number(q.get('run')))&&seed!==state.seed)screen='home';
+ else seed=state.seed;
+}
+render();
+let previewHash='';
+function finishSharedPreview(){
+ const url=new URL(location.href);
+ if(previewHash&&url.hash===previewHash){url.hash='';replaceAddress(url);}
+ previewHash='';
+}
+function openSharedLocation(){
+ const hash=location.hash;
+ if(!hash.startsWith('#score=')&&!hash.startsWith('#board=')){
+  if(previewHash&&dialog.open&&$('#accept-scores'))dialog.close();
+  previewHash='';return;
+ }
+ previewHash=hash;
+ try{
+  if(hash.length>30000)throw Error('链接过长');
+  const packet=ProSocial.decode(hash.slice(hash.indexOf('=')+1));
+  const oldPage=({3:'world-v3.html',4:'multi-v4.html',5:'family-v5.html',6:'family-v6.html'})[packet.v];
+  if(oldPage&&[3,4,5,6].includes(packet.v)){location.replace(oldPage+location.search+hash);return;}
+  acceptScores(S.read(location.href,S.summary));
+ }catch(e){
+  if(dialog.open&&$('#accept-scores'))dialog.close();
+  notice('成绩链接无法读取：'+e.message);finishSharedPreview();
+ }
+}
+dialog.addEventListener('close',finishSharedPreview);
+window.addEventListener('hashchange',openSharedLocation);
+openSharedLocation();
 })();

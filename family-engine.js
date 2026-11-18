@@ -44,6 +44,15 @@ function chooseLife(s,choice,forcedEvent){
  n.pending.storyFeedback=N.onChoice(n,ch,o);n.phase='allocate';n.commands.push({type:'life',choice,eventId:ch.eventId,choiceId:o.id});n.revision++;return n;
 }
 function preview(s,p){const a=E.preview(s,legacy(p));return{...a,knownFlow:s.pending.income+s.pending.extra-a.budget.expense-a.budget.mortgagePayment};}
+function mortgageSchedule(s){
+ let balance=s.mortgage,remaining=0,lastPayment=0;
+ while(balance>0){
+  const due=E.budget({...s,mortgage:balance});
+  if(due.principal<=0)throw Error('年供不足以偿还本金');
+  balance-=due.principal;remaining++;lastPayment=due.mortgagePayment;
+ }
+ return {remaining,lastPayment};
+}
 function snapshot(s){return Object.fromEntries([...keys,'house','car','mortgage','debt'].map(k=>[k,s[k]]));}
 function crisis(s){return s.debt>0||E.net(s)<0;}
 function allocate(s,input){
@@ -93,6 +102,7 @@ function resolve(s,action){
   const row=n.history.at(-1);row.resolution={action,fees:a.fees,soldHouse:a.soldHouse,soldCar:a.soldCar,netBefore:row.net};row.fees+=a.fees;
   if(row.cashMovements){row.cashMovements.rescue+=n.cash-s.cash+row.familyUnpaid;row.assetFlow=Object.values(row.cashMovements).reduce((sum,v)=>sum+v,0);}
   Object.assign(row,snapshot(n),{net:E.net(n),real:E.real(n),buffer:E.buffer(n),familyUnpaid:0});
+  N.recordCashGoal(n,row);
   if(row.net!==row.resolution.netBefore-a.fees)throw Error('处置账本不守恒');
  }else{n.phase='ended';n.outcome='bankrupt';n.history.at(-1).resolution={action,unpaid:s.debt,net:E.net(s)};}
  if(n.phase==='ended')N.finalize(n,n.history.at(-1),'本局在财务危机后结束');
@@ -127,6 +137,6 @@ function compare(run,id){
 }
 function metrics(s){let peak=E.net(start(s.seed)),drawdown=0;for(const row of s.history){peak=Math.max(peak,row.net);if(peak>0)drawdown=Math.max(drawdown,(peak-row.net)/peak*100);}return{net:E.net(s),real:E.real(s),cash:s.cash,buffer:E.buffer(s),assets:totalAssets(s),liabilities:totalDebt(s),debt:s.debt,mortgage:s.mortgage,years:s.turn,outcome:s.outcome,drawdown,fees:s.history.reduce((a,r)=>a+r.fees,0),forced:s.history.reduce((a,r)=>a+r.forcedSale,0)};}
 function lifePreview(s,choice){const e=event(s),o=e.choices[choice];if(!o)throw Error('选择无效');const b=budget(s),n=clone(s),gift=round((o.gift||0)*b.month),cost=round((o.cost||0)*b.month);receive(n,gift);const paid=E.pay(n,cost);return{cost,gift,sale:paid.sale,fee:paid.fee,unpaid:paid.gap,cash:n.cash,incomeDelta:round(b.income*((o.incomeFactor??1)-1)+(o.extra||0)*b.month),nextIncome:round(b.month*((o.skill||0)*.8+(o.salaryBonus||0))),coverage:o.set?.insured,maintenance:!!o.set?.maintenance,housing:o.set?.housing,child:o.set?.child};}
-const api={version,schema,storyVersion:N.version,comparisonVersion,lifePreview,journal:N.journal,presets,models,keys,start,budget,event,affordable,defaultPolicy,policy,preview,allocate,dispatch,pack,restore,crisis,rescuePreview,modelPolicy,advice,compare,metrics,totalAssets,totalDebt,snapshot,net:E.net,financial:E.financial,real:E.real,month:E.month,buffer:E.buffer,known:E.known,identity:E.identity,validSeed:E.validSeed,housePrice:E.housePrice,carPrice:E.carPrice};
+const api={version,schema,storyVersion:N.version,comparisonVersion,lifePreview,mortgageSchedule,journal:N.journal,presets,models,keys,start,budget,event,affordable,defaultPolicy,policy,preview,allocate,dispatch,pack,restore,crisis,rescuePreview,modelPolicy,advice,compare,metrics,totalAssets,totalDebt,snapshot,net:E.net,financial:E.financial,real:E.real,month:E.month,buffer:E.buffer,known:E.known,identity:E.identity,validSeed:E.validSeed,housePrice:E.housePrice,carPrice:E.carPrice};
 if(node)module.exports=api;else root.FamilyEngine=api;
 })(globalThis);
