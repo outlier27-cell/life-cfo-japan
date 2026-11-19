@@ -10,12 +10,25 @@
     const credit = `<a href="${escape(photo.source)}" target="_blank" rel="noopener noreferrer">${escape(photo.credit)} · 原始档案</a> · <a href="${escape(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${escape(photo.license)}</a>`;
     return `<figure class="archive-photo${hero ? ' era-cover' : ''}">
       <button type="button" class="photo-open" data-archive="${photo.year}" aria-label="放大历史影像 · ${escape(photo.title)}">
-        <img src="${media(photo.src)}" alt="${escape(photo.caption)}" decoding="async">
+        <img src="${media(photo.src)}" alt="${escape(photo.caption)}" ${hero?'':'loading="lazy"'} decoding="async">
       </button>
-      <figcaption><small>历史现场 · ${escape(photo.date)} · ${escape(photo.place)}</small>
+      <figcaption><small>同年档案 · ${escape(photo.date)} · ${escape(photo.place)}</small>
         <strong>${escape(photo.title)}</strong><span>${escape(photo.caption)}</span>
         <details><summary>影像出处</summary>${credit} · 等比缩放与 WebP 转码</details>
       </figcaption></figure>`;
+  }
+
+  function yearVisual(year, title, hero = false) {
+    const photo = byYear.get(year);
+    if (photo) return archivePhoto(photo, hero);
+    const path = 'assets/history/' + year + '.webp';
+    const alt = year + ' 年历史背景插画 · ' + title;
+    return `<figure class="archive-photo history-illustration${hero ? ' era-cover' : ''}">
+      <button type="button" class="photo-open" data-history-photo aria-label="${escape(alt)}">
+        <img src="${media(path)}" alt="${escape(alt)}" width="1280" height="576" ${hero?'':'loading="lazy"'} decoding="async">
+      </button>
+      <figcaption><small>${year} 年 · GPT 生成的历史情境插画</small><strong>${escape(title)}</strong></figcaption>
+    </figure>`;
   }
 
   function scenePhoto(s, e, year) {
@@ -42,14 +55,14 @@
     enlarged.alt = image.alt;
     dialog.querySelector('p').textContent = photo
       ? [photo.date, photo.place, photo.credit, photo.license].join(' · ')
-      : 'AI 生成的家庭故事场景';
+      : button.hasAttribute('data-history-photo') ? 'GPT 生成的历史情境插画，供理解时代背景。' : 'AI 生成的家庭故事场景';
     dialog.showModal();
     dialog.querySelector('button').focus();
   }
 
   document.addEventListener('click', event => {
-    const button = event.target.closest('button[data-archive],button[data-story-photo]');
+    const button = event.target.closest('button[data-archive],button[data-history-photo],button[data-story-photo]');
     if (button) showPhoto(button);
   });
-  root.FamilyPhotos = {media, scenePhoto, archivePhoto, onYear: year => byYear.get(year)};
+  root.FamilyPhotos = {media, scenePhoto, yearVisual};
 })(globalThis);

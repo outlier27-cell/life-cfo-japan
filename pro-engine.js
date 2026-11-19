@@ -43,11 +43,17 @@ function housePrice(s){const c=D.countries[s.country],j=s.era-1977;return round(
 function carPrice(s){const c=D.countries[s.country],i=index(s),j=index(s,0);return round(c.monthly*C.carMonths*D.car[i]/D.car[j]*c.fx[i]/c.fx[j]);}
 function plans(s,p){
  const n=copy(s),notes=[],result={fees:0,plannedSale:0,notes,houseBought:false,carBought:false};n.coverage=p.coverage;n.flags.insured=p.coverage>0;
- const purchase=(cost)=>{if(n.debt)return false;const trial=copy(n),paid=pay(trial,cost);if(paid.gap)return false;keys.forEach(k=>n[k]=trial[k]);result.fees+=paid.fee;result.plannedSale+=paid.sale;return true;};
+ const purchase=cost=>{
+  if(n.debt)return {ok:false,arrears:n.debt};
+  const trial=copy(n),paid=pay(trial,cost);
+  if(paid.gap)return {ok:false,shortfall:paid.gap};
+  keys.forEach(k=>n[k]=trial[k]);result.fees+=paid.fee;result.plannedSale+=paid.sale;
+  return {ok:true};
+ };
  if(p.house==='sell'&&n.house){const proceeds=n.house-round(n.house*C.propertyFee),fee=n.house-proceeds,owed=n.mortgage;n.house=0;n.mortgage=0;n.mortgagePayment=0;result.fees+=fee;if(proceeds>=owed)receive(n,proceeds-owed);else{const paid=pay(n,owed-proceeds);result.fees+=paid.fee;result.plannedSale+=paid.sale;}notes.push('已出售住房并结清对应房贷；交易费计入账本。');}
  if(p.car==='sell'&&n.car){receive(n,n.car);n.car=0;notes.push('已按当前折旧后估值出售汽车。');}
- if(p.house==='buy'&&!n.house){const price=housePrice(s),loan=round(price*.7),down=price-loan,fee=round(price*C.propertyFee);if(purchase(down+fee)){n.house=price;n.mortgage=loan;n.mortgagePayment=payment(loan);result.fees+=fee;result.houseBought=true;notes.push('已购入住房：首付30%，固定5%利率，年供按20年计算。');}else notes.push('住房计划未执行：金融资产需覆盖首付、交易费，且不能有未付款。');}
- if(p.car==='buy'&&!n.car){const price=carPrice(n);if(purchase(price)){n.car=price;result.carBought=true;notes.push('已全款购入教学汽车；估值随美国新车价格参考及汇率变化，再计每年15%折旧。');}else notes.push('购车计划未执行：可动用资产不足或仍有未付款。');}
+ if(p.house==='buy'&&!n.house){const price=housePrice(s),loan=round(price*.7),down=price-loan,fee=round(price*C.propertyFee);const bought=purchase(down+fee);result.housePurchase={...bought,down,fee,loan};if(bought.ok){n.house=price;n.mortgage=loan;n.mortgagePayment=payment(loan);result.fees+=fee;result.houseBought=true;notes.push('已购入住房：首付30%，固定5%利率，年供按20年计算。');}else notes.push('住房计划未执行：金融资产需覆盖首付、交易费，且不能有未付款。');}
+ if(p.car==='buy'&&!n.car){const price=carPrice(n);if(purchase(price).ok){n.car=price;result.carBought=true;notes.push('已全款购入教学汽车；估值随美国新车价格参考及汇率变化，再计每年15%折旧。');}else notes.push('购车计划未执行：可动用资产不足或仍有未付款。');}
  return{state:n,...result};
 }
 function rebalance(s,w){

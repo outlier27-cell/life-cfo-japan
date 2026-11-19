@@ -17,7 +17,7 @@ const entries=[
  [1991,'加拿大建立通胀目标框架','加拿大银行与联邦政府建立通胀控制目标框架。','稳定名义金额与稳定购买力，并不是同一个目标。','https://www.bankofcanada.ca/core-functions/monetary-policy/agreement-inflation-control-target/'],
  [1992,'英国退出欧洲汇率机制','9 月 16 日，英国退出欧洲汇率机制。','跨国组合仍会受到汇率变化影响。','https://www.bankofengland.co.uk/about/history'],
  [1993,'马斯特里赫特条约生效','11 月，马斯特里赫特条约生效，欧洲联盟成立。','制度与市场的变化值得回顾，但资产安排仍需适合自己的负担。',eu],
- [1994,'马拉喀什协定签署','4 月，建立世界贸易组织的协定签署。','贸易规则影响经营环境，收益仍有不确定性。','https://www.wto.org/english/thewto_e/30y_e/30ytimeline_e.htm'],
+ [1994,'马拉喀什协定签署','4 月 15 日，《建立世界贸易组织的马拉喀什协定》签署。','贸易规则影响经营环境，收益仍有不确定性。','https://www.wto.org/english/thewto_e/30y_e/30ytimeline_e.htm'],
  [1995,'世界贸易组织成立','1 月 1 日，世界贸易组织开始运作。','全球市场联系加深时，分散投资也要留意共同风险。','https://www.wto.org/english/thewto_e/30y_e/30ytimeline_e.htm'],
  [1996,'信息技术协定达成','12 月，信息技术协定在新加坡部长级会议期间达成。','产业前景与买入价格要分开判断；本版未模拟个股。','https://www.wto.org/English/Tratop_e/inftec_e/inftec_e.htm'],
  [1997,'亚洲金融危机爆发','7 月开始，亚洲多国经历货币与金融市场动荡。','分散不是所有资产永远互相对冲。',imf],
@@ -42,7 +42,8 @@ const entries=[
  [2016,'英国举行脱欧公投','6 月 23 日，英国公投结果支持离开欧盟。','重大事件之后仍有多种可能路径，不把新闻写成收益预言。','https://www.gov.uk/government/topical-events/eu-referendum'],
  [2017,'美联储启动资产负债表正常化','9 月，美联储宣布从 10 月开始实施资产负债表正常化计划。','市场环境变化时，检查资产比例是否偏离原有计划。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20170920a.htm'],
  [2018,'中美贸易摩擦升级','美国公布对部分中国商品加征关税的措施，贸易摩擦受到关注。','政策消息可能影响多个市场，跨国持仓也会有共同风险。','https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-regarding-trade-china/'],
- [2019,'美联储下调政策利率','7 月，美联储下调联邦基金利率目标区间。','债券模型使用历史收益率重估价格；现金、股票与黄金各有不同作用。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm']
+ [2019,'美联储下调政策利率','7 月，美联储下调联邦基金利率目标区间。','债券模型使用历史收益率重估价格；现金、股票与黄金各有不同作用。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm'],
+ [2020,'疫情冲击与美联储降息','3 月 15 日，美联储将联邦基金利率目标区间降到 0% 至 0.25%。','把家庭收入变化、账单和市场波动放在一起看。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm']
 ].map(([year,title,text,focus,source])=>({year,title,text,focus,source}));
 function briefing(year){return entries.filter(e=>e.year===year);}
 function available(year){return entries.filter(e=>e.year<=year);}

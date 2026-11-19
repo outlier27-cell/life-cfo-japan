@@ -6,7 +6,7 @@ const art='data:image/webp;base64,'+fs.readFileSync(path.join(root,artName)).toS
 const scriptNames=[];
 let html=read(entry).replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,href)=>'<style>\n'+read(href.split('?')[0])+'\n</style>').replace(/<script defer src="([^"]+)"><\/script>/g,(_,src)=>{scriptNames.push(src.split('?')[0]);return '';});
 const familyArt=Object.fromEntries(require('./family-stories.js').gallery.map(x=>x.image).map(name=>[name,'data:image/webp;base64,'+fs.readFileSync(path.join(root,'assets/story-'+name+'.webp')).toString('base64')]));
-const photoFiles = classic ? [] : ['scenes','archive'].flatMap(folder => fs.readdirSync(path.join(root,'assets',folder)).filter(n=>n.endsWith('.webp')).map(n=>'assets/'+folder+'/'+n));
+const photoFiles = classic ? [] : ['scenes','archive','history'].flatMap(folder => fs.readdirSync(path.join(root,'assets',folder)).filter(n=>n.endsWith('.webp')).map(n=>'assets/'+folder+'/'+n));
 const embedded = Object.fromEntries(photoFiles.map(name=>[name,'data:image/webp;base64,'+fs.readFileSync(path.join(root,name)).toString('base64')]));
 const scripts=(classic?'':'<script>globalThis.FamilyOfflinePhotos='+JSON.stringify(embedded)+'</script>')+(classic?'':'<script>globalThis.FamilyArt='+JSON.stringify(familyArt)+'</script>\n')+scriptNames.map(name=>'<script>\n'+read(name).replaceAll(artName,art).replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');
 html=html.replace('</body>',()=>scripts+'\n</body>');

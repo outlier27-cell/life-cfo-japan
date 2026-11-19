@@ -43,3 +43,24 @@ test('Looking back uses the decision and age recorded for that year, including c
   assert.match(scene(state,{...e,nodeId:'last',routeOverride:'delay'},2005),/JP-return-trip-delay.webp/);
   assert.match(scene(state,{...e,nodeId:'last',routeOverride:'cancel'},2005),/JP-trip-teen-cancel.webp/);
 });
+
+
+test('Every playable year has a distinct visual and a sourced event', () => {
+  const {FamilyArchive,FamilyPhotos}=viewer();
+  const {entries}=require('./pro-history.js');
+  const {createHash}=require('node:crypto');
+  const generated=require('./assets/history/manifest.json');
+  const sources=new Map([...FamilyArchive,...generated].map(item=>[item.year,item]));
+  assert.equal(sources.size,43);
+  assert.equal(FamilyArchive.length+generated.length,43);
+  for(let year=1978;year<=2020;year++){
+    const event=entries.find(item=>item.year===year), visual=sources.get(year);
+    assert.ok(event?.source.startsWith('https:'),String(year));
+    const bytes=fs.readFileSync(path.join(__dirname,visual.src));
+    assert.equal(bytes.toString('ascii',8,12),'WEBP');
+    if(visual.model) assert.equal(createHash('sha256').update(bytes).digest('hex'),visual.sha256);
+    const html=FamilyPhotos.yearVisual(year,event.title);
+    assert.ok(html.includes(visual.src),String(year));
+    assert.match(html,visual.model ? /GPT 生成的历史情境插画/ : /同年档案/);
+  }
+});

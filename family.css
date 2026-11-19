@@ -69,3 +69,7 @@
   .plan-overview .current-plan{padding:4px 0 8px}
   .plan-overview .primary-action{margin-top:8px}
 }
+
+.housing-status{padding:8px 12px;border-left:3px solid var(--line);font-size:14px;background:#fff9ef88}
+.housing-status.warning{border-left-color:var(--red)}
+.history-illustration img{aspect-ratio:20/9;object-fit:cover}

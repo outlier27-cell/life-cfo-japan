@@ -1,0 +1,200 @@
+[
+  {
+    "year": 1979,
+    "src": "assets/history/1979.webp",
+    "model": "gpt-image-2",
+    "sha256": "a9c96522881f438e372b8a9fb6eed79ffd32e55301cd2064b0462e36fa666f23"
+  },
+  {
+    "year": 1980,
+    "src": "assets/history/1980.webp",
+    "model": "gpt-image-2",
+    "sha256": "a2972f4f4f769df8cf3cb7f210463bf779fc9291cbcfac9a40f9de6e8cc2f008"
+  },
+  {
+    "year": 1981,
+    "src": "assets/history/1981.webp",
+    "model": "gpt-image-2",
+    "sha256": "eaa569254dd1935dc71cf44c195e90bc05f6f51ce4a20b8073314f719ad57e56"
+  },
+  {
+    "year": 1982,
+    "src": "assets/history/1982.webp",
+    "model": "gpt-image-2",
+    "sha256": "3cc7c23fc37ee9260f5ce9ddae2b47cd00463f440c24ce4bcc4a8c3d0d987cfa"
+  },
+  {
+    "year": 1984,
+    "src": "assets/history/1984.webp",
+    "model": "gpt-image-2",
+    "sha256": "91520fde52582d567e4c83a944dc1971f9ea3c22da34b068fbc343a14d4758cb"
+  },
+  {
+    "year": 1985,
+    "src": "assets/history/1985.webp",
+    "model": "gpt-image-2",
+    "sha256": "ee852cca9f3c8c718fdd96ab7f7c4fba1e46b82e4b70ec07959f996c3000fd0c"
+  },
+  {
+    "year": 1986,
+    "src": "assets/history/1986.webp",
+    "model": "gpt-image-2",
+    "sha256": "9b536be715b0ccb4adef76aa89c4b1d31d4ec742b7b5b59c849b11c1fca3b65a"
+  },
+  {
+    "year": 1987,
+    "src": "assets/history/1987.webp",
+    "model": "gpt-image-2",
+    "sha256": "b5d5260762eb7e230655b44f6f265a228dd997599a9f87f5e47d53b9bee96f88"
+  },
+  {
+    "year": 1991,
+    "src": "assets/history/1991.webp",
+    "model": "gpt-image-2",
+    "sha256": "8e856ec802924f6a473923830bc928b53bb65309290cb8cb4550f1de86608240"
+  },
+  {
+    "year": 1993,
+    "src": "assets/history/1993.webp",
+    "model": "gpt-image-2",
+    "sha256": "da88d92df36a8311bd12b6b3b8a20a97a9adf322673be5a930f5f201923a2247"
+  },
+  {
+    "year": 1994,
+    "src": "assets/history/1994.webp",
+    "model": "gpt-image-2",
+    "sha256": "d9f6aec3e1ab165d2dceffc1600bb4c0cff4daadf646a7d8a1d6f879f398d270"
+  },
+  {
+    "year": 1996,
+    "src": "assets/history/1996.webp",
+    "model": "gpt-image-2",
+    "sha256": "071d2a0a75bbdeb0c3251d32c794d1af1865cec7b8901b39cd4f3d0a8938fc66"
+  },
+  {
+    "year": 1997,
+    "src": "assets/history/1997.webp",
+    "model": "gpt-image-2",
+    "sha256": "a6f7f830d98e179e71915dc7c5b83945b0698f71e7ea0b99918dcfdbac57d3a5"
+  },
+  {
+    "year": 1998,
+    "src": "assets/history/1998.webp",
+    "model": "gpt-image-2",
+    "sha256": "7a0deecfd20d486a358e99a54150c0ec969188748d60e18f27f586c5e073e639"
+  },
+  {
+    "year": 1999,
+    "src": "assets/history/1999.webp",
+    "model": "gpt-image-2",
+    "sha256": "d7698d11c7f8e75289e0fc2589ec0ad730934bc976fccbc3821f06a4c16af14f"
+  },
+  {
+    "year": 2000,
+    "src": "assets/history/2000.webp",
+    "model": "gpt-image-2",
+    "sha256": "8f3498a259dee2eb8a3e886ab8e765fd8ac677b07d6dd0f1b1044d388b52c43c"
+  },
+  {
+    "year": 2001,
+    "src": "assets/history/2001.webp",
+    "model": "gpt-image-2",
+    "sha256": "94f6cb6e20281763e7678210c0dd0354174bd48fbd8f9e7c5eb3708e2e0a27d3"
+  },
+  {
+    "year": 2002,
+    "src": "assets/history/2002.webp",
+    "model": "gpt-image-2",
+    "sha256": "6897cd6814756728793636f9d6a1ab2275a072ed1aab5ebba8126918efbe07ac"
+  },
+  {
+    "year": 2003,
+    "src": "assets/history/2003.webp",
+    "model": "gpt-image-2",
+    "sha256": "dc7030534a3b6a0c279be12002d4099b21d5e6a40816b41a0e9f7cc64d09d24c"
+  },
+  {
+    "year": 2004,
+    "src": "assets/history/2004.webp",
+    "model": "gpt-image-2",
+    "sha256": "c668a0e14351e0404de3377bf0f2a0d997a1219a945aed7faec2f0c469325441"
+  },
+  {
+    "year": 2005,
+    "src": "assets/history/2005.webp",
+    "model": "gpt-image-2",
+    "sha256": "eca92da6426e6d764fb4a896d5e3ac39206a847da793c917e3bd5ff657dc2356"
+  },
+  {
+    "year": 2006,
+    "src": "assets/history/2006.webp",
+    "model": "gpt-image-2",
+    "sha256": "9e84398eb7c6b6acec842893469411aeea157aed0bf447671c40839ccc0fdf8d"
+  },
+  {
+    "year": 2009,
+    "src": "assets/history/2009.webp",
+    "model": "gpt-image-2",
+    "sha256": "5fec7588e7deed93206b6c458fd814d055639fad513621969e11869d61019d0b"
+  },
+  {
+    "year": 2010,
+    "src": "assets/history/2010.webp",
+    "model": "gpt-image-2",
+    "sha256": "27d6d4698237a4f7741ab9f203c69060888e30f98ae4bc0e201e3859d19d8cb1"
+  },
+  {
+    "year": 2012,
+    "src": "assets/history/2012.webp",
+    "model": "gpt-image-2",
+    "sha256": "e9c1ded16e2b395caa1ff741852783a93723df2d44b4d6dfa184f3122667e1b5"
+  },
+  {
+    "year": 2013,
+    "src": "assets/history/2013.webp",
+    "model": "gpt-image-2",
+    "sha256": "ca12dcac01992de23ce391f882f4baa3ee7dc306e0bbbe6ffe91c9e6368b25a6"
+  },
+  {
+    "year": 2014,
+    "src": "assets/history/2014.webp",
+    "model": "gpt-image-2",
+    "sha256": "d4bfe3b46d78944b991cfe632073154928f49349272b91a0ea1441458ae4b421"
+  },
+  {
+    "year": 2015,
+    "src": "assets/history/2015.webp",
+    "model": "gpt-image-2",
+    "sha256": "018deee624c182277e7b634654600452dab129165c2e83f3ca56d40fdff46150"
+  },
+  {
+    "year": 2016,
+    "src": "assets/history/2016.webp",
+    "model": "gpt-image-2",
+    "sha256": "c542557667b258d0a6f8c26d4ae797d15b2bced97fb65a5571127ba49fb58404"
+  },
+  {
+    "year": 2017,
+    "src": "assets/history/2017.webp",
+    "model": "gpt-image-2",
+    "sha256": "da94aa03bb2885d1e7dee8ae590e7dd7e3e7f108370cda3ef6e6fc6ae7b384a3"
+  },
+  {
+    "year": 2018,
+    "src": "assets/history/2018.webp",
+    "model": "gpt-image-2",
+    "sha256": "962a5f7216a1d820555b552746a1ab23c110626c2bb737180532b23f6a34da24"
+  },
+  {
+    "year": 2019,
+    "src": "assets/history/2019.webp",
+    "model": "gpt-image-2",
+    "sha256": "11ceddd2c503682824db036bc4617f0b7d619d0d0c0ad375ed5964e573344b12"
+  },
+  {
+    "year": 2020,
+    "src": "assets/history/2020.webp",
+    "model": "gpt-image-2",
+    "sha256": "2284d0e7c070144acb50c03f55135a4abcf836de3bebb062b07714e8c958c582"
+  }
+]

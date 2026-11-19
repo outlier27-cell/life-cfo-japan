@@ -118,3 +118,29 @@ test('好友榜只合并新提交的成员，重算缓存仍核对命令和协�
  const result=S.merge([first],[second]);
  assert.deepEqual(result,[first,second]);
 });
+
+
+test('购房预览与结算一致，未成交不扣款，成交后房贷跨年保留',()=>{
+ const begin=s=>{
+  const i=F.event(s).choices.findIndex(x=>F.affordable(s,x));
+  return act(s,{type:'life',choice:i<0?'skip':i});
+ };
+ const first=begin(F.start(4)), base=F.defaultPolicy(first);
+ const early=F.allocate(first,{...base,house:'buy'});
+ const denied=early.history[0].housePurchase;
+ assert.equal(denied.ok,false);
+ assert.ok(denied.shortfall>0);
+ assert.equal(early.mortgage,0);
+ assert.deepEqual(F.snapshot(early),F.snapshot(F.allocate(first,base)));
+
+ const ready=begin(play(4,{},24).s), buy={...F.defaultPolicy(ready),house:'buy'};
+ const preview=F.preview(ready,buy), settled=F.allocate(ready,buy), row=settled.history.at(-1);
+ assert.equal(preview.housePurchase.ok,true);
+ assert.deepEqual(row.housePurchase,preview.housePurchase);
+ assert.equal(row.mortgage,row.housePurchase.loan-row.principal);
+ assert.ok(row.mortgagePayment>0);
+ assert.equal(row.mortgagePayment,row.principal+row.interest);
+ const next=begin(F.restore(F.pack(settled)));
+ assert.equal(next.mortgage,row.mortgage);
+ assert.equal(F.budget(next).mortgagePayment,row.mortgagePayment);
+});
