@@ -1,6 +1,6 @@
 (function(root){'use strict';
 const node=typeof module!=='undefined'&&module.exports,F=node?require('./family-engine.js'):root.FamilyEngine,S=node?require('./pro-social.js'):root.ProSocial,D=node?require('./pro-data.js'):root.ProData;
-const edition='7.1.2';
+const edition='7.1.3';
 const base='https://outlier27-cell.github.io/life-cfo-japan/';
 function compact(s,name){if(s.phase!=='ended'||!['completed','bankrupt'].includes(s.outcome))throw Error('结束这一局后才能分享');return{v:7,r:F.version,d:D.version,t:F.storyVersion,b:F.comparisonVersion,n:S.cleanName(name),s:s.seed,c:s.commands.map(c=>c.type==='life'?'L'+c.choice:c.type==='resolve'?'R'+(c.action==='liquidate'?0:1):'A'+c.policy.w.slice(1).map(x=>x.toString(36).padStart(2,'0')).join('')+c.policy.basket+c.policy.coverage+['keep','buy','sell'].indexOf(c.policy.house)+['keep','buy','sell'].indexOf(c.policy.car)).join('')};}
 function checkHeader(p){

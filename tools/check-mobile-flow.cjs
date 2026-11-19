@@ -18,6 +18,11 @@ async function checkMobileFlow() {
     await page.locator('[data-choice="0"]').click();
     await page.locator('#life-confirm').click();
 
+    const advanced = page.locator('#advanced-plan');
+    assert.equal(await advanced.evaluate(el => el.open), false);
+    const confirm = await page.locator('#allocation-confirm').boundingBox();
+    assert.ok(confirm && confirm.y >= 0 && confirm.y + confirm.height <= 844);
+    await advanced.locator(':scope > summary').click();
     await page.locator('summary').filter({ hasText: '自己调一调' }).click();
     await page.locator('#basket').selectOption('0');
     await page.locator('summary').filter({ hasText: '听听现金流管家的理由' }).click();
