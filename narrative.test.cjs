@@ -144,3 +144,41 @@ test('购房预览与结算一致，未成交不扣款，成交后房贷跨年�
  assert.equal(next.mortgage,row.mortgage);
  assert.equal(F.budget(next).mortgagePayment,row.mortgagePayment);
 });
+
+
+test('自动家庭事件可回放，同场冲击一致，急售折价计入账本',()=>{
+ const run=(seed,weights)=>{
+  let s=F.start(seed,'auto');
+  while(s.phase!=='ended'){
+   if(s.phase==='life')s=act(s,{type:'auto'});
+   else if(s.phase==='allocate')s=act(s,{type:'allocate',policy:{...F.defaultPolicy(s),w:weights}});
+   else s=act(s,{type:'resolve',action:F.rescuePreview(s).canRecover?'liquidate':'bankrupt'});
+  }
+  return s;
+ };
+ const player=run(4,[10,65,15,10]);
+ assert.equal(player.outcome,'completed');
+ const sales=player.history.filter(row=>row.stockDiscount);
+ assert.ok(sales.length);
+ for(const row of sales){
+  assert.ok(Math.abs(row.stockDiscount-row.stockLiquidation*.05)<=2);
+  assert.ok(row.fees>=row.stockDiscount);
+ }
+ const model=F.compare(player,'adaptive');
+ assert.ok(model.history.length);
+ for(const [i,row] of model.history.entries()){
+  assert.deepEqual(row.shock,player.history[i].shock);
+  assert.equal(row.householdBill,player.history[i].householdBill);
+ }
+ const withChild=run(1,[60,15,20,5]);
+ assert.ok(withChild.history.some(row=>row.householdBill>0));
+ for(const s of [player,withChild]){
+  assert.deepEqual(F.restore(F.pack(s)),s);
+  assert.deepEqual(S.verify(S.compact(s,'验收')).run,s);
+  for(const row of s.history)assert.ok(Object.values(L.audit(row)).filter(v=>typeof v==='boolean').every(Boolean));
+ }
+ const old=play(4).s;
+ const oldPacket=S.compact(old,'验收'),currentPacket=S.compact(player,'验收');
+ assert.equal(S.merge([oldPacket],[currentPacket]).length,2);
+ assert.throws(()=>S.boardUrl([oldPacket,currentPacket]));
+});

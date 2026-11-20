@@ -31,6 +31,17 @@
     </figure>`;
   }
 
+  const extraYears = new Set([1985,1989,1990,1992,1997,2000,2008,2011,2016,2020]);
+  function extraVisual(year,title) {
+    if (!extraYears.has(year)) return '';
+    const alt = year + ' 年家庭与社会切面 · ' + title;
+    return `<figure class="archive-photo history-illustration">
+      <button type="button" class="photo-open" data-history-photo data-reconstruction aria-label="${escape(alt)}">
+        <img src="${media('assets/history/'+year+'-extra.webp')}" alt="${escape(alt)}" width="1280" height="576" loading="lazy" decoding="async">
+      </button>
+      <figcaption><small>${year} 年 · GPT 生成的写实历史复原</small><strong>当时的生活切面</strong></figcaption></figure>`;
+  }
+
   function scenePhoto(s, e, year) {
     const route = e.routeOverride ?? s.story.threads[e.chain]?.route ?? 'first';
     const key = [s.country, e.chain, e.nodeId, route, e.personId].join('/');
@@ -55,7 +66,7 @@
     enlarged.alt = image.alt;
     dialog.querySelector('p').textContent = photo
       ? [photo.date, photo.place, photo.credit, photo.license].join(' · ')
-      : button.hasAttribute('data-history-photo') ? 'GPT 生成的历史情境插画，供理解时代背景。' : 'AI 生成的家庭故事场景';
+      : button.hasAttribute('data-reconstruction') ? 'GPT 生成的写实历史复原，参考当年的社会背景。' : button.hasAttribute('data-history-photo') ? 'GPT 生成的历史情境插画，供理解时代背景。' : 'AI 生成的家庭故事场景';
     dialog.showModal();
     dialog.querySelector('button').focus();
   }
@@ -64,5 +75,5 @@
     const button = event.target.closest('button[data-archive],button[data-history-photo],button[data-story-photo]');
     if (button) showPhoto(button);
   });
-  root.FamilyPhotos = {media, scenePhoto, yearVisual};
+  root.FamilyPhotos = {media, scenePhoto, yearVisual, extraVisual};
 })(globalThis);

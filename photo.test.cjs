@@ -64,3 +64,17 @@ test('Every playable year has a distinct visual and a sourced event', () => {
     assert.match(html,visual.model ? /GPT 生成的历史情境插画/ : /同年档案/);
   }
 });
+
+
+test('Focus years use audited local reconstructions and retain annual visuals',()=>{
+ const ctx=viewer(),{createHash}=require('node:crypto');
+ const reconstructions=require('./assets/history/extra-manifest.json');
+ assert.equal(reconstructions.length,10);
+ for(const image of reconstructions){
+  const bytes=fs.readFileSync(path.join(__dirname,image.src));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),image.sha256);
+  assert.ok(ctx.FamilyPhotos.extraVisual(image.year,'历史事件').includes(image.src));
+  assert.match(ctx.FamilyPhotos.extraVisual(image.year,'历史事件'),/写实历史复原/);
+  assert.ok(ctx.FamilyPhotos.yearVisual(image.year,'历史事件'));
+ }
+});

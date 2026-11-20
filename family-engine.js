@@ -10,7 +10,7 @@ const presets=[{id:'reserve',name:'现金优先',w:[60,15,20,5],text:'多留一�
 const models=[{id:'adaptive',name:'现金流管家',text:'规则智能体：按当时的收入缺口、必要支出和家庭责任预留现金，再分配投资。逐年公开理由，不调用大模型预测。'},{id:'balanced',name:'均衡模型',text:'每年现金20%、四国股票40%、美元国债模型30%、黄金10%。年内不调仓。'},{id:'reserve',name:'现金储备模型',text:'金融资产全部留现金，仍尝试与你相同的生活、保险和房车安排。'}];
 const totalAssets=s=>E.financial(s)+s.house+s.car,totalDebt=s=>s.mortgage+s.debt;
 function budget(s){const b=E.budget(s);return{...b,income:b.income+round(E.month(s)*(s.flags.salaryBonus||0))};}
-function start(seed){const s=E.start(seed);return{...s,version,commands:[],outcome:null,story:N.initial(s),flags:{...s.flags,salaryBonus:0,inherited:false,returning:false}};}
+function start(seed,mode='story'){if(!['story','auto'].includes(mode))throw Error('无效玩法');const s=E.start(seed);return{...s,...(mode==='auto'?{mode}:{}),version,commands:[],outcome:null,story:N.initial(s),flags:{...s.flags,salaryBonus:0,inherited:false,returning:false}};}
 function policy(p){
  if(!p||p.loss||p.profit||(p.rebalance&&p.rebalance!=='none'))throw Error('基础篇不使用止盈止损或年内再平衡');
  const v=E.validatePolicy({...p,basket:p.basket??1,loss:0,profit:0,rebalance:'none'});
@@ -43,7 +43,34 @@ function chooseLife(s,choice,forcedEvent){
  for(const[k,v]of Object.entries(o.set||{})){if(k==='maintenance')n.flags.maintenanceUntil=s.turn+5;else{n.flags[k]=v;if(k==='insured')n.coverage=v?Math.max(1,n.coverage):0;}}
  n.pending.storyFeedback=N.onChoice(n,ch,o);n.phase='allocate';n.commands.push({type:'life',choice,eventId:ch.eventId,choiceId:o.id});n.revision++;return n;
 }
-function preview(s,p){const a=E.preview(s,legacy(p));return{...a,knownFlow:s.pending.income+s.pending.extra-a.budget.expense-a.budget.mortgagePayment};}
+function householdYear(s){
+ if(s.mode!=='auto'||s.phase!=='life')throw Error('当前无法进入配置');
+ const n=clone(s),m=E.month(s),b=budget(s),birth=3+B.noise(s.seed,991)%8;
+ const child=s.turn===birth&&B.noise(s.seed,992)%100<75;
+ if(child){n.flags.child=true;n.flags.housing=true;n.story.people.child.born=s.era+s.turn+1;}
+ const title=child?'孩子出生了，需要更大的住处':'新一年的家庭安排';
+ const story=child?'家里需要换一套更大的住处。系统计入搬家费用和更高的住房与育儿预算。房屋是否买入仍由你在配置时决定。':'家庭收入与开支按现有安排估算，意外账单和工资变化在年末揭晓。';
+ n.pending={choice:null,title,chapter:title,event:{kind:'household',title,story},opening:E.net(s),openingCash:s.cash,openingBalance:snapshot(s),gift:0,cost:0,payment:{sale:0,fee:0,gap:0},income:b.income,extra:0,month:m,skillBefore:s.flags.skill,incomeFactor:1,householdBill:child?round(2*m):0};
+ n.phase='allocate';n.commands.push({type:'auto'});n.revision++;
+ return n;
+}
+function annualShock(s){
+ if(s.mode!=='auto'){
+  const shock=B.shock(s);return {...shock,gross:round(shock.gross/B.month(s)*E.month(s))};
+ }
+ const roll=B.noise(s.seed,7300+s.turn),month=E.month(s);
+ const scenarios=[
+  [9,'lottery','彩票中了小奖','中奖金到账，先进入家庭资金。',[4,8,16]],
+  [21,'accident','一次交通事故','修理、交通和其他费用临时增加。',[2,4,6]],
+  [36,'income','工资断了一段','工资延迟或求职空档拉长，实际收入减少。',[2,3,5]],
+  [48,'medical','一张医疗账单','保障合同会降低这笔医疗自付。',[1.5,3,5]],
+  [59,'repair','突然要修理家里的东西','维修不能拖到下一年。',[1,2,4]],
+  [70,'bonus','这年多发了一笔奖金','实际收入高于年初估算。',[2,3,5]],
+ ];
+ const hit=scenarios.find(row=>roll%100<row[0]);
+ return hit?{kind:hit[1],title:hit[2],text:hit[3],gross:round(month*hit[4][(roll>>>8)%3])}:{kind:'none',title:'平稳的一年',text:'没有额外收支。',gross:0};
+}
+function preview(s,p){const a=E.preview(s,legacy(p));return{...a,knownFlow:s.pending.income+s.pending.extra-a.budget.expense-a.budget.mortgagePayment-(s.pending.householdBill||0)};}
 function mortgageSchedule(s){
  let balance=s.mortgage,remaining=0,lastPayment=0;
  while(balance>0){
@@ -65,17 +92,18 @@ function allocate(s,input){
  const markedCar=round(n.car*D.car[i+12]/D.car[i]*c.fx[i+12]/c.fx[i]);n.car=round(markedCar*.85);
  const houseGain=n.house-previousHouse,carGain=markedCar-previousCar,depreciation=markedCar-n.car;
  // Shock amounts use this edition's monthly CPI scale, not the old annual dataset.
- const surprise=B.shock(s);surprise.gross=round(surprise.gross/B.month(s)*E.month(s));
- let income=pending.income+pending.extra,bill=surprise.gross,covered=0,avoided=0;
- if(surprise.kind==='income'){avoided=Math.min(bill,round(pending.month*(Math.min(pending.skillBefore,4)*.2+(n.flags.network?.5:0))));income=Math.max(0,income-bill+avoided);bill=0;}
+ const surprise=annualShock(s),discount=s.mode==='auto'?.05:0;
+ let income=pending.income+pending.extra,bill=surprise.gross,covered=0,avoided=0,incomeShortfall=0;
+ if(surprise.kind==='income'){avoided=Math.min(bill,round(pending.month*(Math.min(pending.skillBefore,4)*.2+(n.flags.network?.5:0))));incomeShortfall=Math.min(income,bill-avoided);income=Math.max(0,income-bill+avoided);bill=0;}
+ if(['lottery','bonus'].includes(surprise.kind)){income+=bill;bill=0;}
  if(surprise.kind==='medical'){covered=round(bill*[0,.5,.8][n.coverage]);bill-=covered;}
  if(surprise.kind==='repair'&&n.flags.maintenanceUntil>s.turn){avoided=round(bill/2);bill-=avoided;}
- const flow=income-b.expense-b.mortgagePayment;let paid={sale:0,fee:0,gap:0},repaid=0;
- if(flow>=0)repaid=receive(n,flow);else paid=E.pay(n,-flow);
- n.mortgage-=b.principal;const billed=E.pay(n,bill);fees+=paid.fee+billed.fee;
+ bill+=pending.householdBill||0;const flow=income-b.expense-b.mortgagePayment;let paid={sale:0,fee:0,gap:0},repaid=0;
+ if(flow>=0)repaid=receive(n,flow);else paid=E.pay(n,-flow,discount);
+ n.mortgage-=b.principal;const billed=E.pay(n,bill,discount);fees+=paid.fee+billed.fee;
  n.turn++;n.revision++;n.pending=null;n.policy=p;n.commands.push({type:'allocate',policy:clone(p)});
  n.phase=crisis(n)?'crisis':n.turn===30?'ended':'life';n.outcome=n.phase==='ended'?'completed':null;
- const row={storyFeedback:pending.storyFeedback,necessaryMonthly:b.monthlyExpense,year:s.era+n.turn,title:pending.title,chapter:pending.chapter,lifeEvent:pending.event,choice:pending.choice,opening:pending.opening,openingCash:pending.openingCash,openingBalance:pending.openingBalance,familyUnpaid:paid.gap+billed.gap,cost:pending.cost,gift:pending.gift,policy:p,housePurchase:a.housePurchase??null,income,expense:b.expense,premium:b.premium,mortgagePayment:b.mortgagePayment,principal:b.principal,interest:b.interest,flow,bill,covered,avoided,shock:surprise,gain,houseGain,carGain,depreciation,fees,monthly,notes:a.notes,forcedSale:paid.sale+billed.sale,plannedSale:pending.payment.sale+a.plannedSale,repaid,...snapshot(n),net:E.net(n),real:E.real(n),buffer:E.buffer(n)};
+ const row={storyFeedback:pending.storyFeedback,necessaryMonthly:b.monthlyExpense,year:s.era+n.turn,title:pending.title,chapter:pending.chapter,lifeEvent:pending.event,choice:pending.choice,opening:pending.opening,openingCash:pending.openingCash,openingBalance:pending.openingBalance,familyUnpaid:paid.gap+billed.gap,cost:pending.cost,gift:pending.gift,policy:p,...(s.mode==='auto'?{stockLiquidation:(paid.stockSale||0)+(billed.stockSale||0),stockDiscount:(paid.discount||0)+(billed.discount||0),householdBill:pending.householdBill,incomeShortfall}:{}),housePurchase:a.housePurchase??null,income,expense:b.expense,premium:b.premium,mortgagePayment:b.mortgagePayment,principal:b.principal,interest:b.interest,flow,bill,covered,avoided,shock:surprise,gain,houseGain,carGain,depreciation,fees,monthly,notes:a.notes,forcedSale:paid.sale+billed.sale,plannedSale:pending.payment.sale+a.plannedSale,repaid,...snapshot(n),net:E.net(n),real:E.real(n),buffer:E.buffer(n)};
  row.familySurplus=income+pending.gift-b.expense-b.mortgagePayment-bill-pending.cost;
  row.cashMovements={lifeSales:pending.payment.sale-pending.payment.fee,plans:planCash,forcedSales:paid.sale+billed.sale-paid.fee-billed.fee,debtRepaid:-repaid,rescue:0};
  row.assetFlow=Object.values(row.cashMovements).reduce((sum,value)=>sum+value,0);
@@ -84,7 +112,7 @@ function allocate(s,input){
  const expected=pending.opening+pending.gift-pending.cost+gain+houseGain+carGain-depreciation+income-b.expense-b.interest-bill-fees;
  if(expected!==row.net)throw Error('年度账本不守恒');
  if(Object.values(snapshot(n)).some(x=>!Number.isSafeInteger(x)||x<0))throw Error('资产超出有效范围');
- n.history.push(row);N.afterYear(n,row);return n;
+ n.history.push(row);if(s.mode!=='auto')N.afterYear(n,row);return n;
 }
 function rescuePreview(s){
  if(s.phase!=='crisis')throw Error('当前不需要危机处理');
@@ -102,19 +130,19 @@ function resolve(s,action){
   const row=n.history.at(-1);row.resolution={action,fees:a.fees,soldHouse:a.soldHouse,soldCar:a.soldCar,netBefore:row.net};row.fees+=a.fees;
   if(row.cashMovements){row.cashMovements.rescue+=n.cash-s.cash+row.familyUnpaid;row.assetFlow=Object.values(row.cashMovements).reduce((sum,v)=>sum+v,0);}
   Object.assign(row,snapshot(n),{net:E.net(n),real:E.real(n),buffer:E.buffer(n),familyUnpaid:0});
-  N.recordCashGoal(n,row);
+  if(s.mode!=='auto')N.recordCashGoal(n,row);
   if(row.net!==row.resolution.netBefore-a.fees)throw Error('处置账本不守恒');
  }else{n.phase='ended';n.outcome='bankrupt';n.history.at(-1).resolution={action,unpaid:s.debt,net:E.net(s)};}
- if(n.phase==='ended')N.finalize(n,n.history.at(-1),'本局在财务危机后结束');
+ if(n.phase==='ended'&&s.mode!=='auto')N.finalize(n,n.history.at(-1),'本局在财务危机后结束');
  return n;
 }
-function dispatch(s,c){if(!c||c.revision!==s.revision||s.phase==='ended')throw Error('操作已过期或人生已结束');if(c.type==='life'){const e=event(s);if((c.eventId&&c.eventId!==e.eventId)||(c.choiceId&&c.choiceId!==e.choices[c.choice]?.id))throw Error('故事版本或选择标识不匹配');return chooseLife(s,c.choice);}if(c.type==='allocate')return allocate(s,c.policy);if(c.type==='resolve')return resolve(s,c.action);throw Error('未知操作');}
-function pack(s){return{schema,version,dataVersion:D.version,storyVersion:N.version,comparisonVersion,seed:s.seed,commands:clone(s.commands)};}
-function restore(raw){if(!raw||raw.schema!==schema||raw.version!==version||raw.dataVersion!==D.version||raw.storyVersion!==N.version||raw.comparisonVersion!==comparisonVersion||!Array.isArray(raw.commands)||raw.commands.length>90)throw Error('存档版本或选择记录不兼容');let s=start(raw.seed);for(const c of raw.commands){if(c.type==='life'&&(!c.eventId||!c.choiceId))throw Error('故事记录缺少事件或选择标识');s=dispatch(s,{...c,revision:s.revision});}return s;}
+function dispatch(s,c){if(!c||c.revision!==s.revision||s.phase==='ended')throw Error('操作已过期或人生已结束');if(c.type==='auto')return householdYear(s);if(c.type==='life'){if(s.mode==='auto')throw Error('本局自动经历家庭事件');const e=event(s);if((c.eventId&&c.eventId!==e.eventId)||(c.choiceId&&c.choiceId!==e.choices[c.choice]?.id))throw Error('故事版本或选择标识不匹配');return chooseLife(s,c.choice);}if(c.type==='allocate')return allocate(s,c.policy);if(c.type==='resolve')return resolve(s,c.action);throw Error('未知操作');}
+function pack(s){return{schema,version,dataVersion:D.version,storyVersion:N.version,comparisonVersion,seed:s.seed,...(s.mode==='auto'?{mode:s.mode}:{}),commands:clone(s.commands)};}
+function restore(raw){if(!raw||raw.schema!==schema||raw.version!==version||raw.dataVersion!==D.version||raw.storyVersion!==N.version||raw.comparisonVersion!==comparisonVersion||!Array.isArray(raw.commands)||raw.commands.length>90)throw Error('存档版本或选择记录不兼容');let s=start(raw.seed,raw.mode);for(const c of raw.commands){if(c.type==='life'&&(!c.eventId||!c.choiceId))throw Error('故事记录缺少事件或选择标识');s=dispatch(s,{...c,revision:s.revision});}return s;}
 function advice(s,input){
  if(s.phase!=='allocate')throw Error('先完成生活选择再安排资金');
  const p=policy(input),base=preview(s,{...p,w:[100,0,0,0]}),b=base.budget,available=E.financial(base.state),income=s.pending.income+s.pending.extra;
- const gap=Math.max(0,b.expense+b.mortgagePayment-income),interrupted=(s.pending.incomeFactor??1)<1;
+ const gap=Math.max(0,b.expense+b.mortgagePayment+(s.pending.householdBill||0)-income),interrupted=(s.pending.incomeFactor??1)<1;
  const months=interrupted?12:(b.child||base.state.mortgage)?9:6,target=round(b.monthlyExpense*months+gap);
  let cash=available?Math.min(100,Math.max(20,Math.ceil(target/available*100))):100;
  const rest=100-cash,stock=Math.floor(rest*(interrupted?.4:.6)),bond=Math.floor(rest*(interrupted?.45:.3)),gold=rest-stock-bond;
@@ -125,10 +153,10 @@ function advice(s,input){
 }
 function modelPolicy(s,id,p){if(!models.some(m=>m.id===id))throw Error('未知模型');return id==='adaptive'?advice(s,p).policy:{...policy(p),basket:1,w:id==='reserve'?[100,0,0,0]:[20,40,30,10]};}
 function compare(run,id){
- let s=start(run.seed);
+ let s=start(run.seed,run.mode);
  for(const row of run.history){
   if(s.phase==='ended')break;
-  try{s=chooseLife(s,row.choice,row.lifeEvent);}catch(e){if(!e.message.includes('资金不足'))throw e;s.phase='ended';s.outcome='plan_unaffordable';s.endNote='第'+(s.turn+1)+'年资金不足，无法执行相同生活选择';break;}
+  try{s=s.mode==='auto'?householdYear(s):chooseLife(s,row.choice,row.lifeEvent);}catch(e){if(!e.message.includes('资金不足'))throw e;s.phase='ended';s.outcome='plan_unaffordable';s.endNote='第'+(s.turn+1)+'年资金不足，无法执行相同生活选择';break;}
   const explanation=id==='adaptive'?advice(s,row.policy):null;
   s=allocate(s,explanation?explanation.policy:modelPolicy(s,id,row.policy));if(explanation)s.history.at(-1).agentDecision=explanation;
   if(s.phase==='crisis')s=resolve(s,rescuePreview(s).canRecover?'liquidate':'bankrupt');

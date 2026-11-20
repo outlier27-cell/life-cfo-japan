@@ -7,6 +7,7 @@ const { edition } = require('../family-social');
 async function checkMobileFlow() {
   const url = new URL(process.argv[2] || 'http://127.0.0.1:4173/');
   url.searchParams.set('run', '1');
+  url.searchParams.set('mode', 'story');
   const browser = await chromium.launch({ channel: process.env.LIFE_CFO_BROWSER_CHANNEL || undefined });
   try {
     const context = await browser.newContext({ viewport: { width: 390, height: 844 } });

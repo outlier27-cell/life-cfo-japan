@@ -8,8 +8,8 @@ const month=(s,t=s.turn)=>round(D.countries[s.country].monthly*inflation(s,t));
 const real=s=>round(net(s)/inflation(s));
 function payment(principal,years=C.mortgageYears){return round(principal*C.mortgageRate/(1-Math.pow(1+C.mortgageRate,-years)));}
 function budget(s){
- const m=month(s),h=L.households[s.household],child=s.flags.child&&s.turn<23;
- const premium=m*[0,.6,1.2][s.coverage],living=round(m*(h.expense+(s.flags.housing?2.4:0)+(child?2:0)-(s.house?3:0)+(s.house?.5:0)+(s.car?.6:0)));
+ const m=month(s),h=L.households[s.household],child=s.flags.child&&(s.mode==='auto'?s.era+s.turn+1-s.story.people.child.born<18:s.turn<23);
+ const premium=m*[0,.6,1.2][s.coverage],living=round(m*(h.expense+(s.flags.housing?(s.mode==='auto'?1.2:2.4):0)+(child?(s.mode==='auto'?1.3:2):0)-(s.house?3:0)+(s.house?.5:0)+(s.car?.6:0)));
  const interest=round(s.mortgage*C.mortgageRate),mortgagePayment=s.mortgage?Math.min(s.mortgage+interest,s.mortgagePayment):0;
  return{month:m,income:round(m*(h.income+s.flags.skill*.8)),living,premium:round(premium),expense:living+round(premium),interest,mortgagePayment,principal:Math.max(0,mortgagePayment-interest),monthlyExpense:(living+round(premium)+mortgagePayment)/12,child};
 }
@@ -20,11 +20,11 @@ function validatePolicy(p){
  return{w:[...p.w],basket:p.basket,loss:p.loss,profit:p.profit,rebalance:p.rebalance,coverage:p.coverage,house:p.house,car:p.car};
 }
 function defaultPolicy(s){return{w:s.policy?[...s.policy.w]:[20,40,30,10],basket:s.policy?.basket??1,loss:s.policy?.loss??0,profit:s.policy?.profit??0,rebalance:s.policy?.rebalance??'quarter',coverage:s.coverage,house:'keep',car:'keep'};}
-function pay(s,amount){
+function pay(s,amount,stockDiscount=0){
  if(!Number.isSafeInteger(amount)||amount<0)throw Error('无效支付');
- const cash=Math.min(s.cash,amount);s.cash-=cash;let remaining=amount-cash,sale=0,fee=0;
- for(const k of ['bond','gold','stock']){if(!remaining)break;const x=Math.min(s[k],Math.ceil(remaining/(1-C.financialFee)));const f=round(x*C.financialFee),proceeds=x-f;s[k]-=x;sale+=x;fee+=f;const used=Math.min(remaining,proceeds);remaining-=used;s.cash+=proceeds-used;}
- s.debt+=remaining;return{sale,fee,gap:remaining};
+ const cash=Math.min(s.cash,amount);s.cash-=cash;let remaining=amount-cash,sale=0,fee=0,stockSale=0,discount=0;
+ for(const k of ['bond','gold','stock']){if(!remaining)break;const rate=C.financialFee+(k==='stock'?stockDiscount:0),x=Math.min(s[k],Math.ceil(remaining/(1-rate)));const f=round(x*rate),proceeds=x-f;s[k]-=x;sale+=x;fee+=f;if(k==='stock'){stockSale=x;discount=f-round(x*C.financialFee);}const used=Math.min(remaining,proceeds);remaining-=used;s.cash+=proceeds-used;}
+ s.debt+=remaining;return{sale,fee,gap:remaining,...(stockDiscount?{stockSale,discount}:{})};
 }
 function receive(s,amount){const repay=Math.min(s.debt,amount);s.debt-=repay;s.cash+=amount-repay;return repay;}
 function event(s){const ch=B.event(s);ch.story=C.flavor[s.turn]+' '+ch.story;
