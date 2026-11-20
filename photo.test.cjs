@@ -91,3 +91,26 @@ test('Every monthly family event has a verified mobile image',()=>{
   assert.ok(ctx.FamilyPhotos.eventVisual(row.kind,'家庭事件').includes(row.src));
  }
 });
+
+
+test('Annual briefings cover every country and year with separate locally grounded and global accounts',()=>{
+ const {pick}=require('./annual-briefings');
+ const rates=require('./annual-policy-rates');
+ for(const country of ['JP','US','GB','CA']){
+  for(let year=1978;year<=2020;year++){
+   const edition=pick(country,year);
+   assert.deepEqual(edition,pick(country,year));
+   assert.notEqual(edition.local.title,edition.global.title);
+   for(const card of Object.values(edition)){
+    assert.equal(card.year,year);
+    assert.match(card.source,/^https:/);
+    assert.ok(card.text&&card.impact&&card.uncertainty);
+    assert.doesNotMatch(card.text,/undefined|NaN/);
+   }
+   if(edition.local.kind==='政策数据')assert.ok(edition.local.text.includes(String(rates[country][year-1977])+'%'));
+  }
+ }
+ assert.match(pick('JP',2001).local.title,/量化宽松/);
+ assert.match(pick('JP',1989).global.title,/柏林墙/);
+ assert.throws(()=>pick('JP',2021));
+});

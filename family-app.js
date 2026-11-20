@@ -99,34 +99,21 @@ function familySignal(s){
  return '眼下没有新增的长期家庭开支。意外收支仍可能发生。';
 }
 function briefing(){
- const k=F.known(state),h=H.briefing(k.year)[0];
- const signals={
-  'JP:1989':['日本银行开始收紧货币政策','5 月，日本银行调高贴现率。','https://www.imes.boj.or.jp/research/papers/english/me19-s1-14.pdf'],
-  'JP:1991':['日本银行下调贴现率','7 月，官方贴现率从 6% 降至 5.5%。','https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k241219b.pdf'],
-  'JP:1999':['日本进入零利率政策时期','2 月，日本银行采取零利率政策。','https://www.boj.or.jp/en/mopo/mpmdeci/mpr_1999/k990921a.htm'],
-  'CA:1991':['加拿大采用通胀目标','加拿大银行与联邦政府公布通胀控制目标。','https://www.bankofcanada.ca/core-functions/monetary-policy/agreement-inflation-control-target/'],
-  'GB:1992':['英国退出欧洲汇率机制','9 月，英镑退出欧洲汇率机制。','https://www.bankofengland.co.uk/about/history'],
-  'US:1987':['美国股市大跌','10 月股市大幅下跌，随后美联储宣布支持流动性。','https://www.federalreservehistory.org/essays/stock-market-crash-of-1987'],
-  'US:2020':['美联储下调政策利率','3 月，目标区间降至 0–0.25%。','https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm']
- };
- const local=signals[state.country+':'+k.year];
- const repeated=local&&['JP:1989','CA:1991','GB:1992','US:1987','US:2020'].includes(state.country+':'+k.year);
+ const k=F.known(state),main=AnnualBriefings.pick(state.country,k.year);
  const items=[
-  ['住房','本地住房指数 '+signedPct(k.house)+'。如果房价继续涨，首付会改变；如果回落，净资产也会受影响。'],
-  ['外汇与黄金','本币计价黄金 '+signedPct(k.gold)+'。金价和汇率都可能影响明年的结果。'],
-  ['利率','美国十年债收益率为 '+num(k.yield)+'%。利率变动会影响债券估值。']
+  ['住房','本地住房指数 '+signedPct(k.house)+'。房价变化会影响首付门槛和房产估值。'],
+  ['外汇与黄金','本币计价黄金 '+signedPct(k.gold)+'。金价和汇率都会影响以本币计算的结果。'],
+  ['利率','美国十年债收益率为 '+num(k.yield)+'%。收益率变化会影响债券估值。']
  ];
  const [topic,detail]=items[WorldEngine.noise(state.seed,40470+state.turn)%items.length];
- const localLead=[['股指',k.local],['住房价格',k.house],['物价',k.cpi]].sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]))[0];
- const question=k.local<0?'本地股价已经回落。你更担心下跌持续，还是更担心现金留太多、错过反弹？':'本地股价没有下跌。你更愿意多留现金防意外，还是继续承担市场波动？';
- return `<section class="annual-brief"><p class="brief-date">截至 ${k.year} 年 12 月</p><h1>${k.year+1} 年配置前简报</h1>
- <dl class="brief-stories"><div><dt>本地 · ${D.countries[state.country].name}</dt><dd>${local?`<strong>${local[0]}</strong>。${local[1]} <a href="${local[2]}" target="_blank" rel="noopener noreferrer">出处</a>。`:`<strong>${localLead[0]}${localLead[1]<0?'回落':'上升'} ${signedPct(localLead[1])}</strong>。<a href="sources.html">历史统计</a>。`}过去一年股指 ${signedPct(k.local)}，物价 ${signedPct(k.cpi)}。</dd></div>
- <div><dt>${repeated?'国际市场':'国际与政策 · '+esc(h.title)}</dt><dd>${repeated?'四国组合按本币计价 '+signedPct(k.global)+'，本币黄金 '+signedPct(k.gold)+'。<a href="sources.html">数据</a>':`${esc(h.text)} <a href="${esc(h.source)}" target="_blank" rel="noopener noreferrer">出处</a>`}</dd></div>
- <div><dt>家里的事</dt><dd>${familySignal(state)}</dd></div></dl>
- <p class="brief-question">${question} 下一年的市场走势和临时账单要等结算时揭晓。</p>
+ const story=(label,c)=>`<article class="brief-card"><p class="brief-label">${label} · ${c.kind}</p><h2>${esc(c.title)}</h2><p>${esc(c.text)}</p><p><b>和家里的钱有什么关系</b>　${esc(c.impact)}</p><p><b>当时还不知道什么</b>　${esc(c.uncertainty)}</p><a href="${esc(c.source)}" target="_blank" rel="noopener noreferrer">核对来源</a></article>`;
+ return `<section class="annual-brief"><p class="brief-date">历史回顾 · 截至 ${k.year} 年 12 月</p><h1>${k.year+1} 年配置前简报</h1>
+ <div class="brief-news">${story('本地 · '+D.countries[state.country].name,main.local)}${story('全球',main.global)}</div>
+ <section class="brief-family"><h2>家里的事</h2><p>${familySignal(state)}</p></section>
  <details><summary>再读一条 · ${topic}</summary><p>${detail}</p></details>
  </section>`;
 }
+
 function signedPct(x){return (x>0?'+':'')+num(x*100)+'%';}
 function automaticYear(){
  const prepared=F.dispatch(state,{type:'auto',revision:state.revision}),p=prepared.pending;
@@ -189,7 +176,7 @@ function annual(row,index){return `<section class="annual-account"><div class="s
 function feedback(){
  const stage=state?state.turn+' / 30 年':'首页';
  const url=state?S.challenge(state.seed,state.mode||'story'):location.href.split('#')[0];
- const prompt='《人生 CFO》'+S.edition+' 试玩反馈\n开局：'+url+'\n进度：'+stage+'\n1. 前三年哪一步不容易找到下一步？\n2. 能否看懂账单或急售如何发生？哪项最难看懂？\n3. 你想不想换一个配置重玩？为什么？';
+ const prompt='《人生 CFO》'+S.edition+' 试玩反馈\n开局：'+url+'\n进度：'+stage+'\n1. 前三年哪一步不容易找到下一步？\n2. 能否看懂账单或急售如何发生？哪项最难看懂？\n3. 我看到了哪条消息？它为什么影响我的配置？\n4. 年底实际变动的是哪笔钱？\n5. 想换一种配置重玩吗？';
  modal(`<h2>留下试玩反馈</h2><p>可以编辑下面的内容，复制后发给邀请你的人。</p><textarea id="feedback-note" rows="8" aria-label="试玩反馈">${esc(prompt)}</textarea><button class="button" id="copy-feedback">复制反馈</button>`);
  $('#copy-feedback').onclick=async()=>{
   const field=$('#feedback-note');

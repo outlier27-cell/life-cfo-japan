@@ -1,6 +1,6 @@
-# 人生 CFO 年度简报篇 8.0.0
+# 人生 CFO 年度简报篇 8.1.0
 
-[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=8.0.0) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
+[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=8.1.0) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
 
 四国随机开局，最多30年60次生活与配置选择。每年看现金流和家庭资产负债表；无法清偿时提前结束，在同一历史中与现金流管家、均衡和现金储备三个规则模型和自己的上一局比较。
 
