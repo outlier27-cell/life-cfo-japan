@@ -78,3 +78,16 @@ test('Focus years use audited local reconstructions and retain annual visuals',(
   assert.ok(ctx.FamilyPhotos.yearVisual(image.year,'历史事件'));
  }
 });
+
+
+test('Every monthly family event has a verified mobile image',()=>{
+ const ctx=viewer(),{definitions}=require('./family-monthly'),{createHash}=require('node:crypto');
+ const manifest=require('./assets/history/event-manifest.json');
+ assert.deepEqual(Object.keys(definitions).concat('quiet').sort(),manifest.map(row=>row.kind).sort());
+ for(const row of manifest){
+  const content=fs.readFileSync(path.join(__dirname,row.src));
+  assert.equal(content.toString('ascii',8,12),'WEBP');
+  assert.equal(createHash('sha256').update(content).digest('hex'),row.sha256);
+  assert.ok(ctx.FamilyPhotos.eventVisual(row.kind,'家庭事件').includes(row.src));
+ }
+});

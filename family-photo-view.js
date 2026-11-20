@@ -42,6 +42,9 @@
       <figcaption><small>${year} 年 · GPT 生成的写实历史复原</small><strong>当时的生活切面</strong></figcaption></figure>`;
   }
 
+  function eventVisual(kind,title) {
+    return `<figure class="archive-photo history-illustration"><button type="button" class="photo-open" data-story-photo aria-label="${escape(title)}"><img src="${media('assets/history/event-'+kind+'.webp')}" alt="${escape(title)}" width="1280" height="576" loading="lazy" decoding="async"></button><figcaption><small>GPT 生成 · 家庭情境图</small></figcaption></figure>`;
+  }
   function scenePhoto(s, e, year) {
     const route = e.routeOverride ?? s.story.threads[e.chain]?.route ?? 'first';
     const key = [s.country, e.chain, e.nodeId, route, e.personId].join('/');
@@ -75,5 +78,5 @@
     const button = event.target.closest('button[data-archive],button[data-history-photo],button[data-story-photo]');
     if (button) showPhoto(button);
   });
-  root.FamilyPhotos = {media, scenePhoto, yearVisual, extraVisual};
+  root.FamilyPhotos = {media, scenePhoto, yearVisual, extraVisual,eventVisual};
 })(globalThis);

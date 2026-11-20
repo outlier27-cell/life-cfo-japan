@@ -182,3 +182,30 @@ test('自动家庭事件可回放，同场冲击一致，急售折价计入账�
  assert.equal(S.merge([oldPacket],[currentPacket]).length,2);
  assert.throws(()=>S.boardUrl([oldPacket,currentPacket]));
 });
+
+
+test('按月过账保留先急售后到账的因果，单年重算不改原局',()=>{
+ let run=F.start(7,'monthly');
+ for(let i=0;i<12;i++){
+  run=act(run,{type:'auto'});
+  run=F.allocate(run,{...F.defaultPolicy(run),coverage:1});
+ }
+ const saved=F.pack(run), original=run.history[3];
+ const alternative=F.retryYear(run,3,{...original.policy,w:[0,100,0,0]});
+ assert.equal(original.year,1992);
+ assert.equal(original.firstShortage,null);
+ assert.equal(alternative.firstShortage,1);
+ assert.ok(alternative.stockDiscount>0);
+ assert.deepEqual(alternative.events,original.events);
+ assert.deepEqual(F.pack(run),saved);
+ assert.ok(run.history.some(r=>r.events.some(e=>e.kind==='birth')));
+ assert.ok(original.events.some(e=>e.kind==='payout'&&e.month===3));
+ assert.ok(original.events.some(e=>e.kind==='bonus'&&e.month===12));
+ assert.deepEqual(F.restore(saved),run);
+ for(const r of [...run.history,alternative]){
+  assert.ok(Object.values(L.audit(r)).filter(v=>typeof v==='boolean').every(Boolean));
+  assert.equal(r.monthly.length,12);
+ }
+ assert.equal(L.monthlyCsv(run).split('\r\n').length,145);
+ assert.throws(()=>F.retryYear(run,12,original.policy));
+});

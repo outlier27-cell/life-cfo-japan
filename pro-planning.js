@@ -70,7 +70,7 @@ function stress(s,policy,id){
  const gross=Math.round(E.month(s)*scenario.billMonths),covered=scenario.kind==='medical'?Math.round(gross*[0,.5,.8][p.coverage]):0;
  const bill=gross-covered+(s.pending.householdBill||0),premium=preview.budget.premium,oldDebt=n.debt,needed=bill+premium+oldDebt,cashBefore=n.cash;
  // Reserve one annual premium now; settle old payables and the hypothetical bill once.
- n.debt=0;const payment=E.pay(n,needed,s.mode==='auto'?.05:0);
+ n.debt=0;const payment=E.pay(n,needed,s.mode?.05:0);
  const result={scenario:id,opening,initialFees:preview.fees+preview.trade.fee,gain,gross,covered,bill,premium,oldDebt,needed,cashBefore,cashGap:Math.max(0,needed-cashBefore),cash:n.cash,financial:E.financial(n),net:E.net(n),sale:payment.sale,fees:payment.fee,unpaid:n.debt,months:n.cash/preview.budget.monthlyExpense,holdings:E.keys.map(k=>n[k]),notes:preview.notes};
  if(result.net!==opening+gain-bill-premium-payment.fee)throw Error('压力情景账本不守恒');
  return result;

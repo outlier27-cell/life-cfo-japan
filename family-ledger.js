@@ -9,5 +9,11 @@ function csv(runs){const h=['角色','年份','状态','币种','现金','股票
  for(const {name,run}of runs)for(const t of timeline(run)){const r=t.row,currency={JP:'日元',US:'美元',GB:'英镑',CA:'加元'}[run.country];if(!r){rows.push([name,t.year,t.status,currency,...Array(h.length-4).fill('')]);continue;}const a=audit(r);rows.push([name,r.year,t.status,currency,...fields.slice(0,6).map(k=>r[k]),a.assets,r.mortgage,r.debt,a.liabilities,r.net,r.opening,r.net-r.opening,r.income,r.gift,r.expense,r.mortgagePayment,r.principal,r.interest,r.bill,r.cost,r.covered,r.fees,r.familySurplus,r.openingCash,a.paid,r.assetFlow,r.cash,...r.policy.w,r.premium,r.gain,r.houseGain,r.carGain,r.depreciation,r.familyUnpaid,r.cashMovements.lifeSales,r.cashMovements.plans,r.cashMovements.forcedSales,r.cashMovements.debtRepaid,r.cashMovements.rescue,Object.values(a).filter(v=>typeof v==='boolean').every(Boolean)?'一致':'需复核']);}
  return'\ufeff'+rows.map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n');
 }
-const api={fields,audit,timeline,compareAt,past,csv};if(node)module.exports=api;else root.FamilyLedger=api;
+function monthlyCsv(run){
+ const fields=['月份','本月期初现金（1月为配置后）','工资及其他收入','实际赔付','必要支出','房贷应还','临时账单','急售金额','股票折价损失','应付未付','本月偿还欠款','月末现金','月末欠款','事件'];
+ const rows=[fields];
+ for(const row of run.history)for(const m of row.monthly)rows.push([m.date,m.openingCash,m.income,m.covered,m.expense,m.mortgagePayment,m.bill,m.forcedSale,m.stockDiscount,m.gap,m.repaid,m.cash,m.debt,m.events.map(e=>e.title).join(' / ')]);
+ return '\ufeff'+rows.map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n');
+}
+const api={fields,audit,timeline,compareAt,past,csv,monthlyCsv};if(node)module.exports=api;else root.FamilyLedger=api;
 })(globalThis);

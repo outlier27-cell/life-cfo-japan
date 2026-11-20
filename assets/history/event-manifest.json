@@ -1,0 +1,92 @@
+[
+  {
+    "kind": "accident",
+    "src": "assets/history/event-accident.webp",
+    "model": "gpt-image-2",
+    "sha256": "9b2616c53a3ef560be2c064ee67ca2468e83361ad17ce5111442e0933851cc2f"
+  },
+  {
+    "kind": "birth",
+    "src": "assets/history/event-birth.webp",
+    "model": "gpt-image-2",
+    "sha256": "f718125d52e876fb68fa70f630e1e6b4b8fb97554bfe7d6e8b154ca445035ac7"
+  },
+  {
+    "kind": "bonus",
+    "src": "assets/history/event-bonus.webp",
+    "model": "gpt-image-2",
+    "sha256": "af013a4a12c2c4e602b2119133c18c669ca40512400b20e1d638a6bfaed59364"
+  },
+  {
+    "kind": "car",
+    "src": "assets/history/event-car.webp",
+    "model": "gpt-image-2",
+    "sha256": "71131fbd4e8fbf1239c5c9f84e98bb63356e879735a3995e5b39035d217ea74e"
+  },
+  {
+    "kind": "care",
+    "src": "assets/history/event-care.webp",
+    "model": "gpt-image-2",
+    "sha256": "6e9881c25eedd58ad5ea7f243708631f39b9014f68824fca57caf2e745809d3a"
+  },
+  {
+    "kind": "house",
+    "src": "assets/history/event-house.webp",
+    "model": "gpt-image-2",
+    "sha256": "1dc389a21ff91f0f4646ad6cb077564b485139a017d6dddb499dcdbb51754932"
+  },
+  {
+    "kind": "inheritance",
+    "src": "assets/history/event-inheritance.webp",
+    "model": "gpt-image-2",
+    "sha256": "a12671612b6d8e88f47a7eebc645a8da6cdeb6263a8281879c20bf0e66a90e77"
+  },
+  {
+    "kind": "layoff",
+    "src": "assets/history/event-layoff.webp",
+    "model": "gpt-image-2",
+    "sha256": "275c8b5b02fe152ac414005c6e34a5bc38e771ba0e24a658966cbf4d98bec7a8"
+  },
+  {
+    "kind": "lottery",
+    "src": "assets/history/event-lottery.webp",
+    "model": "gpt-image-2",
+    "sha256": "ad4a9a80cf1b725b63cd4366d10731448ed78f07e2981cc3a9e4723019aa8d72"
+  },
+  {
+    "kind": "medical",
+    "src": "assets/history/event-medical.webp",
+    "model": "gpt-image-2",
+    "sha256": "014531893d32458d7f02d9c917c5a3b1d434639028c56929270f26561194b524"
+  },
+  {
+    "kind": "payout",
+    "src": "assets/history/event-payout.webp",
+    "model": "gpt-image-2",
+    "sha256": "d3d775806f7a966ecba5336e8eff06eb2ed02d4ef2ba89265b593376333e5b11"
+  },
+  {
+    "kind": "promotion",
+    "src": "assets/history/event-promotion.webp",
+    "model": "gpt-image-2",
+    "sha256": "a4751f1b321671d3f6719d94e70c4209de44b7eba7c2c00c463ce74b85081a7d"
+  },
+  {
+    "kind": "quiet",
+    "src": "assets/history/event-quiet.webp",
+    "model": "gpt-image-2",
+    "sha256": "8dccb662c5afbf97d7be17c1787633321fd0444b3eb109b62d6c8dd65ba8287d"
+  },
+  {
+    "kind": "rehire",
+    "src": "assets/history/event-rehire.webp",
+    "model": "gpt-image-2",
+    "sha256": "e6ffcba50c7a785525a5199067376206b51fb91fc12343f7a35eb7d3211a5c54"
+  },
+  {
+    "kind": "school",
+    "src": "assets/history/event-school.webp",
+    "model": "gpt-image-2",
+    "sha256": "304d88a6656a87a4e49fd80b2c50f48ab7c6fe39dfa0c59ee44c1961059fdab9"
+  }
+]
