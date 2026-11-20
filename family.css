@@ -121,3 +121,8 @@
 .brief-card a{font-size:.82rem}
 .brief-family{border-left:3px solid var(--olive);padding:6px 12px;margin:8px 0;background:#ece5d4}
 @media(max-width:600px){.brief-news{grid-template-columns:1fr;gap:0}}
+
+.decision-context-lines{padding:6px 12px;margin:8px 0;background:#efe7d6;border-left:2px solid var(--line)}
+.decision-context-lines p{margin:5px 0;font-size:.87rem;line-height:1.55}
+.decision-context-lines a{overflow-wrap:anywhere}
+.reasoning-note{margin-top:10px}

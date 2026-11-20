@@ -1,13 +1,19 @@
 (function(root){'use strict';
 const node=typeof module!=='undefined'&&module.exports;
 const H=node?require('./pro-history.js'):root.ProHistory;
-const R=node?require('./annual-policy-rates.js'):root.AnnualPolicyRates;
+const E=node?require('./annual-policy-events.js'):root.AnnualPolicyEvents;
 const bis='https://data.bis.org/topics/CBPOL/BIS%2CWS_CBPOL%2C1.0/M.';
 const boj='https://www.boj.or.jp/en/mopo/';
 const qqe=boj+'outline/ref_qqe.htm';
 const europe='https://www.ecb.europa.eu/ecb/history-arts-culture/history/emu/html/index.en.html';
 const berlin='https://history.state.gov/milestones/1989-1992/fall-of-communism';
 const canadaTrade='https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/united_states-etats_unis/fta-ale/background-contexte.aspx?lang=eng';
+const boe='https://www.bankofengland.co.uk/';
+const boc='https://www.bankofcanada.ca/';
+const taxFamily='https://www.canada.ca/en/department-finance/services/publications/federal-tax-expenditures/2019/part-4.html';
+const gst='https://www.canada.ca/en/department-finance/services/publications/federal-tax-expenditures/2017/part-10.html';
+const discount= 'https://www.boj.or.jp/en/statistics/boj/other/discount/discount.htm';
+const fedTimeline='https://www.federalreserve.gov/monetarypolicy/timeline-balance-sheet-policies.htm';
 const fed='https://www.federalreservehistory.org/essays/';
 const topics={
  rate:['贷款报价和存款收益可能随利率变化。','银行何时调整报价、调多少，当时仍不确定。'],
@@ -25,6 +31,17 @@ const topics={
 };
 const localEdits={
  JP:{
+  1982:['日本银行维持贴现率','1981 年 12 月降至 5.5% 后，1982 年内未调整官方贴现率。','rate',discount,'家庭可以用当时的贷款报价估算新贷负担。','日元和物价是否会让央行随后改变政策，仍要观察。'],
+  1984:['日本维持 5% 官方贴现率','1983 年 10 月降至 5% 后，1984 年没有再调整。','rate',discount],
+  1988:['日本延续低贴现率','1987 年 2 月降至 2.5% 后，日本银行在 1988 年继续维持这一水平。','rate',discount,'信贷条件对准备首付或计划换房的家庭尤其重要。','利率会维持多久、房价上涨会不会持续，当时还没有答案。'],
+  1994:['日本延续 1.75% 官方贴现率','1993 年 9 月降至 1.75% 后，1994 年未再调整。','rate',discount],
+  1996:['日本银行参与处理阪和银行问题','12 月，日本银行就接收阪和银行业务的机构资本安排发表意见。','banking','https://www2.boj.or.jp/archive/en/announcements/release_1997/giji96.htm'],
+  2009:['日本扩展企业融资支持','2 月，日本银行扩大面向企业融资的特别资金供应操作。','banking',boj+'mpmdeci/mpr_2009/un0902b.pdf'],
+  2012:['日本银行扩大支持增长的贷款工具','3 月，工具对应的可贷总额由 3.5 万亿日元增至 5.5 万亿日元。','easing',boj+'mpmdeci/mpr_2012/k120313a.pdf'],
+  2017:['日本银行延续收益率曲线控制','年内继续以短期利率与长期国债收益率配合实施政策。','rate',qqe],
+  2018:['日本银行调整收益率曲线控制的实施安排','7 月加强宽松框架的可持续性，并引入针对政策利率的前瞻指引。','rate',qqe],
+  2019:['日本银行明确低利率指引','4 月宣布，极低的短期和长期利率至少维持到 2020 年春季前后。','rate',boj+'mpmdeci/state_2019/k190425a.htm'],
+  2020:['日本银行加强企业融资支持','疫情期间，日本银行采用融资支持措施缓解企业资金压力。','health',boj+'outline/bpreview/ref.htm'],
   1997:['日本多家金融机构陷入困境','包括三洋证券在内的金融机构在当年出现破产。','banking','https://www2.boj.or.jp/archive/en/announcements/press/koen_2001/ko0112a.htm'],
   2000:['日本银行结束零利率政策','8 月，央行宣布结束零利率政策，把隔夜拆借利率引导到约 0.25%。','rate',boj+'mpmdeci/mpr_2000/k000811.htm'],
   2010:['日本启动全面货币宽松','10 月，日本银行公布全面货币宽松安排。','easing',boj+'outline/bpreview/ref.htm'],
@@ -47,6 +64,12 @@ const localEdits={
   2016:['日本引入收益率曲线控制','9 月，日本银行引入短期政策利率与长期国债收益率相结合的框架。','rate',qqe]
  },
  US:{
+  1993:['美国短期资金利率维持在低位','年中联邦基金利率仍处于约 3% 的水平。','rate','https://www.federalreserve.gov/monetarypolicy/files/FOMC20120801material.htm'],
+  2009:['美联储扩大危机期间的资产购买','3 月，美联储扩大抵押贷款支持证券购买，并宣布购买长期国债。','banking',fedTimeline],
+  2010:['美联储公布新一轮国债购买','11 月，宣布再购买 6,000 亿美元长期国债。','easing',fedTimeline],
+  2011:['美联储调整持有国债的期限结构','9 月宣布卖出较短期限国债，并购买较长期国债。','easing',fedTimeline],
+  2012:['美联储增加抵押贷款支持证券购买','9 月宣布每月额外购买 400 亿美元的机构抵押贷款支持证券。','easing',fedTimeline],
+  2014:['美联储结束本轮新增资产购买','10 月宣布结束本轮资产购买计划，存量证券的再投资仍继续。','easing',fedTimeline],
   1980:['美国通过《货币控制法》','该法扩展了美联储对存款机构准备金要求的适用范围。','banking','https://www.federalreservehistory.org/topics/legislation'],
   1982:['美国放宽储蓄机构经营限制','1982 年的《加恩—圣杰曼存款机构法》放宽了部分存款和贷款业务限制。','banking',fed+'garn-st-germain-act'],
   1999:['美国修改金融行业经营规则','11 月签署的金融服务现代化法放宽了银行、证券与保险公司的联合经营限制。','banking',fed+'gramm-leach-bliley-act'],
@@ -61,6 +84,13 @@ const localEdits={
   2020:['美联储因疫情紧急降息','3 月 15 日，联邦基金利率目标区间降到 0–0.25%。','rate','https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm','新贷款可能变便宜，但家庭是否借得到钱还取决于工资和信贷审核。','疫情持续多久、就业多久能恢复，当时还不知道。']
  },
  GB:{
+  1998:['英国通过最低工资法','7 月获御准的法律设立全国最低工资制度。','work','https://www.legislation.gov.uk/ukpga/1998/39/body/enacted'],
+  2002:['英国货币政策委员会维持利率','英格兰银行公布的官方利率历史显示，2002 年沿用 2001 年 11 月的 4%。','rate',boe+'boeapps/database/Bank-Rate.asp'],
+  2010:['英国暂停新增资产购买','第一轮购买在年初结束时，累计规模约为 2,000 亿英镑。','easing',boe+'-/media/boe/files/quarterly-bulletin/2012/quarterly-bulletin-2012-q4.pdf'],
+  2011:['英国重启新一轮资产购买','10 月，英格兰银行启动第二轮资产购买。','easing',boe+'-/media/boe/files/quarterly-bulletin/2012/quarterly-bulletin-2012-q4.pdf'],
+  2014:['英国继续维持低政策利率','英格兰银行的官方利率仍为 0.5%。','rate',boe+'boeapps/database/Bank-Rate.asp'],
+  2015:['英国公布货币政策委员会新职责文件','3 月，财政部公布当年的职责文件，说明物价稳定与经济增长之间的政策框架。','prices',boe+'-/media/boe/files/letter/2015/chancellor-letter-180315-mpc.pdf'],
+  2019:['英国维持 0.75% 的官方利率','英格兰银行年内维持 2018 年 8 月设定的利率。','rate',boe+'boeapps/database/Bank-Rate.asp'],
   2009:['英国启用资产购买工具','英格兰银行在 3 月启动这一轮资产购买。','easing','https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2012/quarterly-bulletin-2012-q4.pdf'],
   2012:['英国推出融资换贷款计划','夏季，英格兰银行与财政部推出计划，通过银行融资成本支持信贷。','banking','https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2012/quarterly-bulletin-2012-q4.pdf'],
   2013:['英国央行公布利率前瞻指引','8 月公布的指引说明了货币政策与经济条件之间的关系。','rate','https://www.bankofengland.co.uk/news/2013/september/mpc-september-2013'],
@@ -72,9 +102,24 @@ const localEdits={
   2020:['英国完成脱欧过渡','过渡期在年底结束，英国与欧盟就未来关系达成协议。','trade','https://www.gov.uk/government/publications/cabinet-office-records-selection-policy/cabinet-office-records-selection-policy-html']
  },
  CA:{
+  2000:['加拿大公布固定的利率公告日程','央行宣布每年预设八个利率公告日。','rate',boc+'core-functions/monetary-policy/key-interest-rate/history-key-interest-rate/'],
+  2011:['加拿大维持隔夜利率目标','政策参考利率继续保持在 1%。','rate',bis+'CA'],
+  2012:['加拿大央行公开利率决策流程','5 月，央行公开说明八个利率公告日背后的研判流程。','rate',boc+'2012/05/monetary-policy-decision-making/'],
+  2013:['加拿大按预设日程公布利率决定','央行使用此前发布的 2013 年政策公告日程。','rate',boc+'2012/08/2013-schedule-policy-interest-rate-announcements-monetary-policy-report/'],
+  2014:['加拿大维持 1% 的政策参考利率','在 BIS 的月末序列中，2014 年政策参考利率维持在 1%。','rate',bis+'CA'],
+  2016:['加拿大续签通胀目标协议','10 月，政府与央行续签协议，继续把 2% 作为通胀目标。','prices',boc+'2016/10/renewal-of-the-inflation-control-target-2016/'],
+  2019:['加拿大维持 1.75% 的政策参考利率','在 BIS 的月末序列中，2019 年政策参考利率保持在 1.75%。','rate',bis+'CA'],
   2009:['加拿大央行有条件承诺维持低利率','4 月，央行把隔夜利率目标降至 0.25%，并对维持时间作出与通胀前景挂钩的承诺。','rate','https://www.bankofcanada.ca/2009/05/unconventional-becomes-conventional-monetary-policy/'],
   1988:['加拿大央行行长将物价稳定列为重点','1 月，行长约翰·克劳在公开演讲中强调物价稳定。','prices','https://www.bankofcanada.ca/2000/10/can-a-bank-change/'],
-  1993:['加拿大延长通胀控制目标','12 月，政府与加拿大银行宣布将 1% 至 3% 的通胀目标区间延续至 1998 年。','prices','https://www.bankofcanada.ca/1995/03/uncertainty-transmission-monetary-policy-in-canada/'],
+  1992:['加拿大预算提出儿童税收福利','联邦预算提出更换现有的儿童税收抵免及家庭津贴制度，定于次年实施。','welfare',taxFamily,'有孩子的家庭可以检查预期每年能收到多少补助。','家庭实际能拿到多少，取决于收入和资格。'],
+  1993:['加拿大儿童税收福利开始实施','1 月，新制度替代原有的儿童税收抵免及家庭津贴。','welfare',taxFamily],
+  1998:['加拿大实施新儿童福利','加拿大儿童税收福利和全国儿童福利补充款在当年推出。','welfare',taxFamily],
+  2003:['加拿大推出儿童残障福利','联邦新设面向符合条件家庭的儿童残障福利。','welfare',taxFamily],
+  2006:['加拿大调低商品和服务税','7 月 1 日，商品和服务税由 7% 降至 6%。','prices',gst,'常买的应税商品可能变便宜，可以重估实际生活开支。','商家是否同步改价，以及每个家庭的购物篮能省多少，当时仍有差别。'],
+  2007:['加拿大公布儿童税收抵免','2007 年联邦预算宣布新增儿童税收抵免。','welfare','https://www.canada.ca/content/dam/esdc-edsc/documents/programs/child-benefit/papers/progress-report-2008/ncb-progress-report-2008.pdf'],
+  2008:['加拿大商品和服务税再次下降','1 月 1 日，税率由 6% 降至 5%。','prices',gst],
+  2017:['加拿大提前为儿童福利作通胀调整','秋季经济声明宣布把福利金额及门槛的调节提前到 2018–19 福利年度。','welfare',taxFamily],
+
   1978:['加拿大新移民法生效','新制度将难民列为独立的移民类别，并允许私人担保。','welfare','https://www.canada.ca/en/immigration-refugees-citizenship/services/refugees/about-refugee-system/how-system-works/timeline.html'],
   1982:['加拿大确立权利与自由宪章','1982 年《宪法法令》将权利与自由宪章纳入宪法。','welfare','https://www.canada.ca/en/intergovernmental-affairs/services/provinces-territories.html'],
   1989:['加美自由贸易协定生效','1 月 1 日，加美自由贸易协定开始实施。','trade',canadaTrade],
@@ -107,22 +152,27 @@ const alternate={
 const globalTags=['trade','prices','work','work','banking','welfare','transition','currency','markets','markets','banking','rate','markets','prices','currency','transition','trade','trade','trade','currency','banking','currency','markets','trade','currency','health','trade','climate','rate','banking','banking','transition','rate','health','banking','rate','easing','currency','transition','rate','trade','rate','health'];
 const overlaps={JP:new Set([1985,1989,1990,2006,2011,2014]),US:new Set([1979,1980,1983,1987,2007,2008,2013,2017,2020]),GB:new Set([1986,1992,2016]),CA:new Set([1991])};
 const names={JP:'日本',US:'美国',GB:'英国',CA:'加拿大'};
-const institutions={JP:'日本银行',US:'美联储',GB:'英格兰银行',CA:'加拿大银行'};
 const fmt=n=>Number(n.toFixed(4)).toString();
 function card(year,raw,kind){
  const [title,text,topic,source,customImpact,customUncertainty]=raw;
  const [impact,uncertainty]=[customImpact||topics[topic][0],customUncertainty||topics[topic][1]];
  return {year,title,text,impact,uncertainty,source,kind};
 }
+function rateStory(country,[date,before,after]){
+ const rising=after>before, [year,month,day]=date.split('-').map(Number);
+ const direction=rising?'上行':'下行';
+ const rate=country==='CA'&&year<1996?'银行利率参考值':'政策利率参考值';
+ const label=rising?'新借款的压力可能上升，手上有浮息债务的家庭可以核对还款预算。':'借贷报价可能下降，靠利息收入的家庭也要留意可用收入。';
+ const question=rising?'较高利率会持续多久，以及存款利率何时跟上，当时仍不确定。':'银行是否会把降息传给借款人、贷款能否批下来，当时仍不确定。';
+ return [names[country]+rate+direction+' · '+month+' 月 '+day+' 日',
+  'BIS 日度记录从 '+fmt(before)+'% 变为 '+fmt(after)+'%。日期为序列观测日。','rate',bis.replace('/M.','/D.')+country,label,question];
+}
 function pick(country,year){
- if(!Object.hasOwn(R,country)||!Number.isInteger(year)||year<1978||year>2020)throw Error('简报年份或国家无效');
+ if(!Object.hasOwn(localEdits,country)||!Number.isInteger(year)||year<1978||year>2020)throw Error('简报年份或国家无效');
  const local=localEdits[country][year];
- const rates=R[country], rate=rates[year-1977], previous=rates[year-1978];
- if(!local&&!Number.isFinite(rate))throw Error('该年缺少政策资料');
- const move=!Number.isFinite(previous)?'年末水平':rate>previous?'年末高于上年':rate<previous?'年末低于上年':'年末与上年持平';
- const authority=institutions[country];
- const rateName=country==='JP'?'政策参考利率':country==='CA'&&year<1996?'银行利率':'政策参考利率';
- const policy=local?null:[names[country]+rateName+' · '+move,authority+'对应的 12 月参考值为 '+fmt(rate)+'%。'+(Number.isFinite(previous)?'去年同期为 '+fmt(previous)+'%。':''),'rate',bis+country];
+ const change=E[country]?.[year];
+ if(!local&&!change)throw Error('该年缺少本地史事或可核对的政策观察');
+ const policy=change?rateStory(country,change):null;
  const h=H.briefing(year)[0];
  const knownText={
   1980:'美国当年经历了经济活动收缩。到年底，持续多长时间仍无法确定。',
@@ -130,7 +180,7 @@ function pick(country,year){
  };
  const globalSource=h.source.includes('/external/about/timeline/')?'https://www.elibrary.imf.org/display/book/9781498306836/ch01.xml':h.source;
  const global=overlaps[country].has(year)?alternate[year]:[year===1981?'美国经济活动转弱':year===1980?'美国经济活动收缩':h.title,knownText[year]||h.text,globalTags[year-1978],globalSource];
- return {local:card(year,local||policy,local?'史事':'政策数据'),global:card(year,global,'史事')};
+ return {local:card(year,local||policy,local?'史事':'政策变动记录'),global:card(year,global,'史事')};
 }
 const api={pick};
 if(node)module.exports=api;else root.AnnualBriefings=api;

@@ -95,7 +95,7 @@ test('Every monthly family event has a verified mobile image',()=>{
 
 test('Annual briefings cover every country and year with separate locally grounded and global accounts',()=>{
  const {pick}=require('./annual-briefings');
- const rates=require('./annual-policy-rates');
+ const events=require('./annual-policy-events');
  for(const country of ['JP','US','GB','CA']){
   for(let year=1978;year<=2020;year++){
    const edition=pick(country,year);
@@ -107,7 +107,12 @@ test('Annual briefings cover every country and year with separate locally ground
     assert.ok(card.text&&card.impact&&card.uncertainty);
     assert.doesNotMatch(card.text,/undefined|NaN/);
    }
-   if(edition.local.kind==='政策数据')assert.ok(edition.local.text.includes(String(rates[country][year-1977])+'%'));
+   if(edition.local.kind==='政策变动记录'){
+    const [date,before,after]=events[country][year];
+    assert.ok(date.startsWith(year+'-'));
+    assert.notEqual(before,after);
+    assert.ok(edition.local.text.includes(String(before)+'%')&&edition.local.text.includes(String(after)+'%'));
+   }else assert.equal(edition.local.kind,'史事');
   }
  }
  assert.match(pick('JP',2001).local.title,/量化宽松/);

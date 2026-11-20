@@ -149,13 +149,14 @@ function allocation(){const p=draft.policy||F.defaultPolicy(state),response=F.re
   </details>`:''}
   <button class="button primary-action" id="allocation-confirm">按这份配置，过完今年</button>
   <p class="action-note">结算至 ${state.era+state.turn+1} 年末</p>
+  <details class="optional reasoning-note" ${draft.note?'open':''}><summary>记一句为什么这样配 · 选填</summary><label class="field note-field">给年末的自己留一句 · 选填<textarea id="reason" rows="2" maxlength="80" placeholder="例如：工作可能变化，先多留些现金。">${esc(draft.note)}</textarea></label><p class="muted">便签随存档保存，成绩链接不包含它。</p></details>
  </div>
  <div class="plan-options">
   ${currentReply()}
   ${news()}
   <details class="optional" id="advanced-plan"><summary>调整配置与高级设置</summary>
 <details class="optional" id="change-plan"><summary>换一种配置</summary><div class="preset-options">${F.presets.map((x,i)=>`<button class="preset choice" data-preset="${i}" aria-pressed="${x.w.join()===p.w.join()}"><b>${x.name}</b><span>${x.text}</span>${strip(x.w)}</button>`).join('')}</div></details><details class="optional"><summary>自己调一调 · 可选</summary><p class="muted">四类金融资产合计100%，余下比例自动留为现金。</p><div id="manual-strip"></div>${[1,2,3].map((i)=>`<label class="weight-row">${['现金','股票','债券','黄金'][i]}<input type="range" min="0" max="100" step="1" value="${p.w[i]}" data-range="${i}" aria-label="${['现金','股票','债券','黄金'][i]}比例"><input type="number" min="0" max="100" step="1" value="${p.w[i]}" data-weight="${i}" aria-label="${['现金','股票','债券','黄金'][i]}比例数值">%</label>`).join('')}<label class="field">股票范围<select id="basket">${choices([0,1],p.basket,['本地市场','四国分散'])}</select></label></details>
- <details class="optional"><summary>保险、房车与更多设置 · 可选</summary><label class="field">医疗保障<select id="coverage">${choices([0,1,2],p.coverage,['自行承担','基础保障 · 报销50%','加强保障 · 报销80%'])}</select></label><p class="muted">年保费：0 / ${money(F.month(state)*.6)} / ${money(F.month(state)*1.2)}。无退保现金价值。</p><label class="field">住房<select id="house">${choices(state.house?['keep','sell']:['keep','buy'],p.house,state.house?['继续持有','出售并结清房贷']:['保持现状','申请首付购房'])}</select></label><div id="house-preview" role="status"></div><p class="muted">参考价 ${money(F.housePrice(state))}；首付30%，买卖各收3%费用；利率固定为5%，按20年估算年供。每年取整，少量尾款可能在次年结清。</p><label class="field">汽车<select id="car">${choices(state.car?['keep','sell']:['keep','buy'],p.car,state.car?['继续持有','出售汽车']:['保持现状','尝试全款购车'])}</select></label><p class="muted">参考价 ${money(F.carPrice(state))}；每年15%教学折旧，另有养车开支。</p><details><summary>认识资产与数据口径</summary><p>现金不计息；股票按历史价格指数、不含股息。债券用美元国债收益率估值；黄金按美元价格及历史汇率换算。住房和汽车单独记家庭账本；负债从净资产扣除。</p><a href="sources.html">查看全部来源与规则</a></details><label class="field note-field">给年末的自己留一句 · 选填<textarea id="reason" rows="2" maxlength="80" placeholder="例如：工作可能变化，先多留些现金。">${esc(draft.note)}</textarea></label><p class="muted">便签随存档保存，成绩链接不包含它。</p></details>
+ <details class="optional"><summary>保险、房车与更多设置 · 可选</summary><label class="field">医疗保障<select id="coverage">${choices([0,1,2],p.coverage,['自行承担','基础保障 · 报销50%','加强保障 · 报销80%'])}</select></label><p class="muted">年保费：0 / ${money(F.month(state)*.6)} / ${money(F.month(state)*1.2)}。无退保现金价值。</p><label class="field">住房<select id="house">${choices(state.house?['keep','sell']:['keep','buy'],p.house,state.house?['继续持有','出售并结清房贷']:['保持现状','申请首付购房'])}</select></label><div id="house-preview" role="status"></div><p class="muted">参考价 ${money(F.housePrice(state))}；首付30%，买卖各收3%费用；利率固定为5%，按20年估算年供。每年取整，少量尾款可能在次年结清。</p><label class="field">汽车<select id="car">${choices(state.car?['keep','sell']:['keep','buy'],p.car,state.car?['继续持有','出售汽车']:['保持现状','尝试全款购车'])}</select></label><p class="muted">参考价 ${money(F.carPrice(state))}；每年15%教学折旧，另有养车开支。</p><details><summary>认识资产与数据口径</summary><p>现金不计息；股票按历史价格指数、不含股息。债券用美元国债收益率估值；黄金按美元价格及历史汇率换算。住房和汽车单独记家庭账本；负债从净资产扣除。</p><a href="sources.html">查看全部来源与规则</a></details></details>
  <details class="optional"><summary>听听现金流管家的理由 · 可选</summary><div id="agent-advice"></div><button class="small-button" id="adopt-agent">采用这份配置</button></details><details class="optional" id="stress"><summary>先试试现金够不够 · 可选</summary><p class="muted">固定假设，不预告下一年。提前预留全年保费，不计未来工资。</p><select id="stress-kind" aria-label="假设情景">${choices(['medical','double','bill'],draft.stress||'medical',['跌市加医疗账单','股债齐跌加维修','行情不变，账单先到'])}</select><div id="stress-result"></div></details>
   </details>
  </div>
@@ -223,6 +224,20 @@ function settlement(){const row=state.history.at(-1);game.innerHTML=`<section cl
 function crisis(){const a=F.rescuePreview(state),row=state.history.at(-1);game.innerHTML=`<section class="play-screen">${progress()}${art('quiet','家人在灯下核对账单')}<h1>${F.net(state)<0?'家庭已经资不抵债':'这笔账单，暂时付不起'}</h1><p class="lead">本年有 ${money(state.debt)} 未付账单，净资产为 ${money(F.net(state))}。先处理这次财务危机，才能进入下一年。</p>${assetsOverview(row,'年末家庭总资产')}${state.monthlyFamily?annualPhoto(row.year):''}${state.mode?automaticResult(row):remembered(row)}${settledHousing(row)}<section class="crisis-plan"><h2>还能怎样处理</h2>${a.canRecover?`<p>出售现有房车、结清房贷，并把金融资产转为现金后，可以清偿。交易费 ${money(a.fees)}，处置后净资产 ${money(a.net)}。</p><button class="button" id="liquidate">出售资产，清偿后继续</button><button class="button secondary" id="bankrupt">结束这局，按破产复盘</button>`:`<p>即使变卖现有资产，仍有 ${money(a.unpaid)} 未能支付；处置后净资产 ${money(a.net)}。这局无法继续举债进入下一年。</p><button class="button" id="bankrupt">确认破产，查看复盘</button>`}<p class="muted">这是游戏的偿付规则，不代表现实中的法律破产程序。</p></section><details><summary>查看完整资产负债与本年账本</summary>${annual(row,state.turn-1)}</details></section>`;
  if($('#liquidate'))$('#liquidate').onclick=()=>dispatch({type:'resolve',action:'liquidate'});$('#bankrupt').onclick=()=>dispatch({type:'resolve',action:'bankrupt'});}
 function getBenchmarks(){if(!benchmarks)benchmarks=F.models.map(m=>({...m,run:F.compare(state,m.id)}));return benchmarks;}
+function decisionContext(row){
+ if(state.mode!=='briefing')return '';
+ const previous=row.year-1,main=AnnualBriefings.pick(state.country,previous);
+ const index=row.year-state.era-1,reason=notes[index]?.note;
+ const allocation=F.keys.map((_,i)=>['现金','股票','债券','黄金'][i]+' '+row.policy.w[i]+'%').join('、');
+ return `<div class="decision-context-lines"><p><b>配置前简报</b>　${previous} 年底：<a href="${esc(main.local.source)}" target="_blank" rel="noopener noreferrer">${esc(main.local.title)}</a>；<a href="${esc(main.global.source)}" target="_blank" rel="noopener noreferrer">${esc(main.global.title)}</a>。</p>
+ <p><b>实际配置</b>　${allocation}。${row.arrangement?' 家庭应对：'+esc(row.arrangement.title)+'。':''}</p>
+ ${reason?`<p><b>你留下的理由</b>　${esc(reason)}</p>`:'<p class="muted">这年没有留下配置理由。</p>'}</div>`;
+}
+function decisionImpact(row){
+ const first=row.firstShortage&&row.monthly.find(m=>m.month===row.firstShortage);
+ const event=(first?.events||[]).filter(e=>e.direction==='out').sort((a,b)=>b.amount-a.amount)[0]||row.events?.find(e=>e.direction==='out');
+ return `<p><b>账本结果</b>　${event?event.month+' 月 '+esc(event.title)+' '+money(event.amount)+'。':''}${first?first.month+' 月首次现金不足，该月急售 '+money(first.forcedSale)+'，股票折价 '+money(first.stockDiscount||0)+'。':'全年未发生现金不足。'}年末净资产 ${money(row.net)}。</p>`;
+}
 function decisionReview(models){
  const history=state.history,years=history.length,full=state.outcome==='completed';
  const reserveYears=history.filter(row=>row.buffer>=6).length;
@@ -247,14 +262,14 @@ function decisionReview(models){
   <p class="muted">用游戏账本评价储备与账单承受力。净资产与购买力单独展示。</p>
   <details><summary>分数怎么来的</summary><ul><li>经营进度 ${progressPoints}/40</li><li>年末现金覆盖至少六个月的年份比例 ${reservePoints}/30</li><li>未被迫卖出投资的年份比例 ${salePoints}/20</li><li>通关且无未付账单 ${payablePoints}/10</li></ul></details>
   ${low?`<p>最低月末现金 ${low.date.slice(0,7)} · ${money(low.cash)}。全局急售折价 ${money(losses)}，期末未付账单 ${money(state.debt)}。</p>`:''}
-  ${facts}<p><b>${review.year} 年 · 值得再试 ${timing}</b> ${next}</p>
+  ${facts}${sound&&sound!==review?decisionContext(sound)+decisionImpact(sound):''}<p><b>${review.year} 年 · 值得再试 ${timing}</b> ${next}</p>${decisionContext(review)}${state.mode==='briefing'?decisionImpact(review):''}
   ${state.monthlyFamily?`<button class="button secondary" id="retry-year" data-index="${history.indexOf(review)}">重算一个关键年份</button>`:''}
   ${bench?`<p>同年现金流管家留下 ${num(bench.buffer)} 个月现金，变现 ${money(bench.forcedSale)}。两边此前的持仓与资金积累也可能不同。</p>`:''}
  </section>`;
 }
 function openRetry(index){
  const history=state.history, original=F.retryYear(state,index,history[index].policy);
- modal(`<h2>重算一个年份</h2><p>沿用原来的年初资产、保障、房车安排、历史行情和随机事件。只调整投资配置。</p>
+ modal(`<h2>重算一个年份</h2><p>沿用原来的年初资产、保障、房车安排、历史行情和随机事件。只调整投资配置。</p>${decisionContext(original)}${state.mode==='briefing'?decisionImpact(original):''}
  <label>年份 <select id="retry-index">${history.map((row,i)=>`<option value="${i}" ${i===index?'selected':''}>${row.year} 年</option>`).join('')}</select></label>
  <label>改用 <select id="retry-preset">${F.presets.map((item,i)=>`<option value="${i}">${esc(item.name)}</option>`).join('')}<option value="0cash">流动性对照 · 现金 0%，股票 100%</option><option value="100cash">流动性对照 · 全部留现金</option></select></label>
  <button class="button" id="retry-calculate">计算对照</button><div id="retry-result" aria-live="polite"></div>`);
@@ -267,7 +282,7 @@ function openRetry(index){
    const compare=(label,read)=>`<tr><th>${label}</th><td>${read(original)}</td><td>${read(alternative)}</td></tr>`;
    const shortage=row=>row.firstShortage?row.firstShortage+' 月':'无';
    const note=history[index].resolution?'两列均为危机处置前的结果。可结合未付账单判断是否还需要变卖房车。':'';
-   $('#retry-result').innerHTML=`<div class="table-wrap"><table><thead><tr><th>结果</th><th>原局</th><th>重算</th></tr></thead><tbody>${compare('首次现金不足',shortage)}${compare('急售股票折价',r=>money(r.stockDiscount))}${compare('年末未付账单',r=>money(r.debt))}${compare('年末净资产',r=>money(r.net))}</tbody></table></div><p>${note}</p>`;
+   $('#retry-result').innerHTML=`<div class="table-wrap"><table><thead><tr><th>结果</th><th>原局</th><th>重算</th></tr></thead><tbody>${compare('首次现金不足',shortage)}${compare('急售股票折价',r=>money(r.stockDiscount))}${compare('年末未付账单',r=>money(r.debt))}${compare('年末净资产',r=>money(r.net))}</tbody></table></div><p>${note}</p><p class="retry-delta">只替换配置后，期末净资产变化 ${signed(alternative.net-original.net)}，股票折价损失变化 ${signed(alternative.stockDiscount-original.stockDiscount)}。</p>`;
   }catch(e){$('#retry-result').textContent=e.message;}
  };
 }
