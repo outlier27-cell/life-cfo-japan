@@ -104,3 +104,16 @@
 .monthly-events details{border-block-end:1px solid var(--line)}
 .monthly-events img{max-height:160px}
 .monthly-events summary{font-weight:700}
+
+.annual-brief{padding:12px 0 4px;border-bottom:1px solid var(--line)}
+.brief-date{margin:0;color:var(--muted);font-size:.82rem}
+.annual-brief h1{margin:.25rem 0 .65rem}
+.brief-stories{margin:.5rem 0}
+.brief-stories>div{display:grid;grid-template-columns:minmax(88px,1fr) 3fr;gap:9px;padding:8px 0;border-top:1px solid var(--line)}
+.brief-stories dt{font-size:.8rem;font-weight:700;color:var(--red)}
+.brief-stories dd{margin:0;font-size:.9rem;line-height:1.55}
+.brief-question{padding:9px 12px;background:#ece5d4;border-left:3px solid var(--olive);font-size:.9rem}
+.response-option{margin-top:8px}
+.annual-explanation{margin:14px 0;padding:10px 12px;background:#efe7d6}
+.annual-explanation h2{margin:0;font-size:1rem}
+.annual-explanation p{margin:6px 0;font-size:.88rem}

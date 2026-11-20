@@ -209,3 +209,34 @@ test('按月过账保留先急售后到账的因果，单年重算不改原局',
  assert.equal(L.monthlyCsv(run).split('\r\n').length,145);
  assert.throws(()=>F.retryYear(run,12,original.policy));
 });
+
+
+test('第八版关键家庭应对随配置重放，费用及门槛能在年底解释',()=>{
+ let s=F.start(7,'briefing'),chosen=null;
+ while(s.phase!=='ended'){
+  if(s.phase==='life')s=act(s,{type:'auto'});
+  else if(s.phase==='crisis')s=act(s,{type:'resolve',action:F.rescuePreview(s).canRecover?'liquidate':'bankrupt'});
+  else {
+   const option=F.response(s),p=F.defaultPolicy(s);
+   if(option&&!chosen)p.response=option.id;
+   const before=F.pack(s),next=F.allocate(s,p),row=next.history.at(-1);
+   assert.deepEqual(F.pack(s),before);
+   assert.ok(L.audit(row).change&&L.audit(row).cash);
+   assert.equal(row.entryHousePrice,F.housePrice(s));
+   if(p.response){
+    assert.equal(row.arrangement.id,option.id);
+    assert.ok(row.monthly[0].bill>=option.cost);
+    assert.equal(row.expectedBills,option.cost);
+    chosen=row;
+   }
+   s=next;
+  }
+ }
+ assert.ok(chosen);
+ assert.equal(s.outcome,'completed');
+ assert.deepEqual(S.verify(S.compact(s,'第八版')).run,s);
+ assert.deepEqual(F.restore(F.pack(s)),s);
+ assert.ok(F.compare(s,'balanced').history.length);
+ const recalculated=F.retryYear(s,chosen.year-s.era-1,{...chosen.policy,w:[100,0,0,0]});
+ assert.deepEqual(recalculated.arrangement,chosen.arrangement);
+});

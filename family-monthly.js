@@ -35,7 +35,7 @@ function timeline(s){
   push('school',9,1,2,24);
  if(y===10+mix(s,0,93)%18&&mix(s,0,94)%100<65)push('care',1+roll(25)%12,.7,2,26);
  if(y===12+mix(s,0,95)%17&&mix(s,0,96)%100<33)push('inheritance',1+roll(27)%12,3,11,28);
- annual('layoff',30,135,0,0);
+ annual('layoff',30,s.mode==='briefing'?95:135,0,0,s.mode!=='briefing'||s.turn>=(s.monthlyFamily.nextLayoffYear||0));
  annual('promotion',35,120,0,0);
  annual('accident',40,95,1.8,6.5);
  annual('medical',45,140,1.5,7);
@@ -48,7 +48,28 @@ function timeline(s){
 function newFamily(){
  return {childAge:-1,school:false,care:0,unemployed:0,raise:0,claims:[]};
 }
-function settle(open,n,b,market){
+const responseLabels={home:'租更大的住处',work:'投入短期培训',care:'安排家庭轮班'};
+function response(s){
+ const f=s.monthlyFamily;
+ if(!f||s.mode!=='briefing')return null;
+ const month=E.month(s);
+ if(f.childAge>=0&&f.childAge<216&&!f.moved&&!s.house)return {id:'home',cost:round(month*.85),monthly:round(month*.12),until:18};
+ if(f.unemployed>2&&!f.trained)return {id:'work',cost:round(month*.55),monthly:0,until:Math.min(2,f.unemployed-2)};
+ if(f.care>5&&!f.carePlan)return {id:'care',cost:round(month*.25),monthly:round(month*.07),until:f.care};
+ return null;
+}
+function plan(s,n,choice){
+ if(!choice)return null;
+ const item=response(s);
+ if(!item||item.id!==choice)throw Error('当前年份不可选择这项家庭安排');
+ if(choice==='home'&&n.house)throw Error('购买住房时无需同时安排租房');
+ const f=n.monthlyFamily;
+ if(choice==='home'){f.moved=true;f.commute=18;}
+ if(choice==='work'){f.trained=true;f.unemployed-=item.until;}
+ if(choice==='care')f.carePlan=true;
+ return {...item,title:responseLabels[choice]};
+}
+function settle(open,n,b,market,arrangement){
  const f=n.monthlyFamily, schedule=timeline(open), annualWage=open.pending.income;
  const out={gain:0,fees:0,income:0,expense:0,mortgagePayment:0,principal:0,interest:0,bill:0,covered:0,forcedSale:0,stockLiquidation:0,stockDiscount:0,repaid:0,gap:0,netSale:0,events:[],monthly:[]};
  let lowestCash=Infinity, firstShortage=null;
@@ -78,10 +99,14 @@ function settle(open,n,b,market){
   f.claims=f.claims.filter(c=>c.wait>0);
   for(const c of due){receive(c.amount);month.covered+=c.amount;record('payout',c.amount,'in');}
   const recovering=f.unemployed===1;
-  if(recovering){f.unemployed=0;f.raise=Math.max(-.4,f.raise-.04+mix(open,open.turn,103)%9/100);record('rehire',0,'change');}
+  if(recovering){f.unemployed=0;f.raise=Math.max(-.4,f.raise-.04+mix(open,open.turn,103)%9/100);if(open.mode==='briefing')f.trained=false;record('rehire',0,'change');}
   const dueEvents=schedule.filter(e=>e.month===m);
   for(const e of dueEvents){
-   if(e.kind==='layoff'&&!f.unemployed){f.unemployed=3+mix(open,open.turn,75)%6;record(e.kind,0,'change');}
+   if(e.kind==='layoff'&&!f.unemployed&&!(open.mode==='briefing'&&recovering)){
+    f.unemployed=3+mix(open,open.turn,75)%6;
+    if(open.mode==='briefing')f.nextLayoffYear=open.turn+3;
+    record(e.kind,0,'change');
+   }
    if(e.kind==='promotion'&&!f.unemployed){f.raise+=.08;record(e.kind,0,'change');}
    if(e.kind==='birth')f.childAge=0;
    if(e.kind==='school')f.school=true;
@@ -92,10 +117,12 @@ function settle(open,n,b,market){
   month.income+=wage;receive(wage);
   if(f.unemployed>1)f.unemployed--;
   const child=f.childAge>=0&&f.childAge<216;
-  const household=round(open.pending.month*((child?.19:0)+(f.care>0?.15:0)+(f.childAge>=0&&!n.house?.1:0)));
+  const household=round(open.pending.month*((child?.19:0)+(f.care>0?(f.carePlan?.08:.15):0)+(f.childAge>=0&&!n.house?.1:0)+(f.commute>0&&!n.house?.12:0)));
+  if(f.commute>0)f.commute--;
   if(f.care>0)f.care--;
   if(f.childAge>=0)f.childAge++;
   month.expense=each(b.expense,m)+household;pay(month.expense);
+  if(m===1&&arrangement){month.bill+=arrangement.cost;pay(arrangement.cost);}
   const principal=each(b.principal,m);
   month.mortgagePayment=principal+each(b.interest,m);pay(month.mortgagePayment);n.mortgage-=principal;
   for(const e of dueEvents){
@@ -129,10 +156,11 @@ function budget(s){
  const rent=f.childAge>=0&&!s.house?.1:0;
  const childMonths=f.childAge>=0?Math.max(0,Math.min(12,216-f.childAge)):0;
  const careMonths=Math.min(12,f.care);
- const expense=round(month*(rent+(childMonths?.19:0)+(careMonths?.15:0)));
- const annualExpense=round(month*(rent*12+childMonths*.19+careMonths*.15));
+ const careRate=f.carePlan?.08:.15,extraRent=!s.house&&f.commute>0?.12:0;
+ const expense=round(month*(rent+(childMonths?.19:0)+(careMonths?careRate:0)+extraRent));
+ const annualExpense=round(month*(rent*12+childMonths*.19+careMonths*careRate+Math.min(12,f.commute||0)*extraRent));
  return {expense,annualExpense,blocked:Math.min(12,Math.max(0,f.unemployed-1)),raise:f.raise};
 }
-const api={budget,newFamily,timeline,settle,definitions};
+const api={budget,response,plan,responseLabels,newFamily,timeline,settle,definitions};
 if(node)module.exports=api;else root.FamilyMonthly=api;
 })(globalThis);
