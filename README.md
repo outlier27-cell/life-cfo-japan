@@ -1,10 +1,10 @@
-# 人生 CFO 年度简报篇 8.2.0
+# 人生 CFO 年度简报篇 8.3.0
 
-[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=8.2.0) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
+[公网试玩](https://outlier27-cell.github.io/life-cfo-japan/?v=8.3.0) · [玩法守则](https://outlier27-cell.github.io/life-cfo-japan/guide.html) · [开发文档](https://outlier27-cell.github.io/life-cfo-japan/developer.html) · [数据与公式](https://outlier27-cell.github.io/life-cfo-japan/sources.html)
 
-四国随机开局，最多30年60次生活与配置选择。每年看现金流和家庭资产负债表；无法清偿时提前结束，在同一历史中与现金流管家、均衡和现金储备三个规则模型和自己的上一局比较。
+四国随机开局，默认每年读一份简报并确认一次配置，最多 30 年。每年看现金流和家庭资产负债表，年末可回看当时的消息、账单和配置。无法清偿时提前结束，并可回看同年的模型结果。
 
-- 每年处理一件生活小事，再确认资产配置。按钮写动作，已知费用和收入变化在提交前展示。配置沿用上次比例，需要时展开三种预设或其他安排。
+- 四国各有 1978–2020 年的日常财务相关史事和全球新闻；关键年份优先显示有署名和许可的本地档案。旧故事模式每年再做一次生活选择。
 - 照料父母、老同事的周末项目和家庭旅行各有后续选择、回访与结尾。名字、参与人物和关键物件在同一局中保持一致；取消或提前结束会如实记下。
 - 生活选择留下具体回应和回忆；年末先展示这一年发生的事、现金流与净资产，完整账本随时展开。
 - 本版去掉止盈止损和年内自动再平衡，年初按玩家确认比例调整一次。

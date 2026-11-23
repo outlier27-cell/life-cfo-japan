@@ -25,12 +25,28 @@ test('Every planned story path has a local photo and every archive entry include
     if (asset.teen) files.add(asset.teen);
   }
   assert.equal(files.size,184);
-  for (const photo of ctx.FamilyArchive) {
+  for (const photo of [...ctx.FamilyArchive,...ctx.FamilyLocalArchive]) {
     assert.ok(photo.credit && photo.date && photo.license && photo.source.startsWith('https:'));
     assert.match(photo.sha256,/^[a-f0-9]{64}$/);
     files.add(photo.src);
   }
   for (const file of files) assert.equal(fs.readFileSync(path.join(__dirname,file)).toString('ascii',8,12),'WEBP');
+});
+
+test('Country-specific archive photos take precedence and retain the local file hash and license',()=>{
+ const {FamilyLocalArchive,FamilyPhotos}=viewer();
+ const {createHash}=require('node:crypto');
+ for(const photo of FamilyLocalArchive){
+  const bytes=fs.readFileSync(path.join(__dirname,photo.src));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),photo.webpSha256);
+  const html=FamilyPhotos.yearVisual(photo.year,'同年新闻',false,photo.country);
+  assert.ok(html.includes(photo.src)&&html.includes(photo.licenseUrl)&&html.includes(photo.id));
+  assert.ok(!FamilyPhotos.yearVisual(photo.year,'同年新闻',false,'OTHER').includes(photo.src));
+ }
+ for(const key of ['JP-1995','JP-2011','GB-1984','GB-2007','GB-2017','US-2008','US-2010','CA-1988','CA-1992']){
+  const [country,year]=key.split('-');
+  assert.match(FamilyPhotos.yearVisual(Number(year),'同年新闻',false,country),new RegExp('data-archive="'+key+'"'));
+ }
 });
 
 test('Looking back uses the decision and age recorded for that year, including cancellation and deferral', () => {
@@ -101,21 +117,30 @@ test('Annual briefings cover every country and year with separate locally ground
    const edition=pick(country,year);
    assert.deepEqual(edition,pick(country,year));
    assert.notEqual(edition.local.title,edition.global.title);
-   for(const card of Object.values(edition)){
+   for(const card of [edition.local,edition.global,...(edition.policy?[edition.policy]:[])]){
     assert.equal(card.year,year);
     assert.match(card.source,/^https:/);
     assert.ok(card.text&&card.impact&&card.uncertainty);
     assert.doesNotMatch(card.text,/undefined|NaN/);
    }
-   if(edition.local.kind==='政策变动记录'){
+   assert.equal(edition.local.kind,'史事');
+   if(edition.policy){
     const [date,before,after]=events[country][year];
     assert.ok(date.startsWith(year+'-'));
     assert.notEqual(before,after);
-    assert.ok(edition.local.text.includes(String(before)+'%')&&edition.local.text.includes(String(after)+'%'));
-   }else assert.equal(edition.local.kind,'史事');
+    assert.equal(edition.policy.kind,'政策变动记录');
+    assert.ok(edition.policy.text.includes(String(before)+'%')&&edition.policy.text.includes(String(after)+'%'));
+   }
   }
  }
  assert.match(pick('JP',2001).local.title,/量化宽松/);
  assert.match(pick('JP',1989).global.title,/柏林墙/);
+ for(const [year,title] of [[1992,'地价'],[1993,'消费'],[1998,'长期信用银行'],[2007,'邮政'],[2008,'出口']]){
+  assert.ok(pick('JP',year).local.title.includes(title));
+  assert.ok(pick('JP',year).policy);
+ }
+ assert.match(pick('GB',2007).local.title,/北岩银行/);
+ assert.match(pick('US',2010).local.title,/平价医疗/);
+ assert.match(pick('CA',1988).local.title,/自由贸易协定/);
  assert.throws(()=>pick('JP',2021));
 });

@@ -140,3 +140,93 @@ globalThis.FamilyArchive = [
     "src": "assets/archive/2011.webp"
   }
 ];
+
+// Country-specific archives used by the four annual briefing routes.
+globalThis.FamilyLocalArchive = [
+  {
+    "id": "GB-1984",
+    "country": "GB",
+    "year": 1984,
+    "date": "1984年",
+    "place": "英国 · 伦敦",
+    "title": "矿工罢工期间的伦敦集会",
+    "caption": "罢工中的矿工及支持者在伦敦集会。",
+    "credit": "Nick from Bristol, UK",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Miners_strike_rally_London_1984.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/da/Miners_strike_rally_London_1984.jpg",
+    "sha256": "0a700b2a9444981de754f2ed747453f4c82a8228aa654a123dcec80825bc9f0a",
+    "webpSha256": "f013d8847c48277714df051b0fbec0a125aa6587a412a8c071ea4365306fd638",
+    "src": "assets/archive/GB-1984.webp"
+  },
+  {
+    "id": "US-2008",
+    "country": "US",
+    "year": 2008,
+    "date": "2008年10月3日",
+    "place": "美国 · 白宫玫瑰园",
+    "title": "布什就《紧急经济稳定法》发表声明",
+    "caption": "美国政府在通过金融救助立法当天发布公开说明。",
+    "credit": "Joyce N. Boghosian · 美国白宫",
+    "license": "美国公有领域",
+    "licenseUrl": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+    "source": "https://georgewbush-whitehouse.archives.gov/news/releases/2008/10/images/20081003-11_p100308jb-0111-691v.html",
+    "original": "https://georgewbush-whitehouse.archives.gov/news/releases/2008/10/images/20081003-11_p100308jb-0111-691v.jpg",
+    "sha256": "b2fd2b25ab99d8def8109de5e7cd9bee07429cac4b8af31055c339f097c6e212",
+    "webpSha256": "1475d15b61ec8b9da3127d8f2b4f25a66a2a1fba138c1539622bdb874c54e7b1",
+    "src": "assets/archive/US-2008.webp"
+  },
+  {
+    "id": "US-2010",
+    "country": "US",
+    "year": 2010,
+    "date": "2010年3月23日",
+    "place": "美国 · 白宫",
+    "title": "《平价医疗法》的签署页",
+    "caption": "白宫摄影师记录了医疗改革法上的总统签名。",
+    "credit": "Chuck Kennedy · 美国白宫",
+    "license": "美国公有领域",
+    "licenseUrl": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+    "source": "https://obamawhitehouse.archives.gov/blog/2016/03/23/look-six-years-affordable-care-act/",
+    "original": "https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/images/1_NoBg5VWsgE_JvGUa6sIKfQ.jpeg",
+    "sha256": "c16e27c69e6dabea64267622283e49db2cb9124b6c9809ebbd49c171370dd111",
+    "webpSha256": "c7ef839cb3251a317bfebefecd379a0f2c9faa80af52517bf87194008dc1f9db",
+    "src": "assets/archive/US-2010.webp"
+  },
+  {
+    "id": "CA-1988",
+    "country": "CA",
+    "year": 1988,
+    "date": "1988年1月2日",
+    "place": "美国 · 加利福尼亚州兰乔米拉日",
+    "title": "加美自由贸易协定签署时的底片接触印相",
+    "caption": "里根签署加美自由贸易协定的官方摄影记录，保留了档案的接触印相原貌。",
+    "credit": "Fackelman · 美国白宫摄影办公室／里根总统图书馆",
+    "license": "美国公有领域",
+    "licenseUrl": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+    "source": "https://www.reaganlibrary.gov/archives/photo/44650-02",
+    "original": "https://www.reaganlibrary.gov/sites/default/files/archives/audiovisual/contactsheets/44650.jpg",
+    "sha256": "44667f3065b70708a0084e4d7b1b32205c919d6ea247a1390e95155a44627562",
+    "webpSha256": "a71109db3dc8c56f2f70fec6628c942a1ccf93d132deb55cb4fa5f40707f5ff9",
+    "src": "assets/archive/CA-1988.webp"
+  },
+  {
+    "id": "GB-2017",
+    "country": "GB",
+    "year": 2017,
+    "date": "2017年3月29日",
+    "place": "英国 · 唐宁街",
+    "title": "英国正式启动退出欧盟程序的信函",
+    "caption": "英国首相向欧洲理事会主席递交的正式通知。这里展示官方发布原件的首页。",
+    "credit": "英国首相办公室 · Crown copyright",
+    "license": "Open Government Licence v3.0",
+    "licenseUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "source": "https://www.gov.uk/government/publications/prime-ministers-letter-to-donald-tusk-triggering-article-50",
+    "original": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/793058/PM_letter_to_His_Excellency_Mr_Donald_Tusk__1_.pdf",
+    "sha256": "ca385270164d570e669ba87c7d9e610648a2295ddc7a06264fa800d101251c40",
+    "webpSha256": "82c048acc222ee960144922f88c3828fdabe8d68d4d7a7eab2eb975d480fdd86",
+    "src": "assets/archive/GB-2017.webp",
+    "transform": "官方 PDF 首页转为 WebP"
+  }
+];

@@ -4,22 +4,28 @@
     ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[char]);
   const media = path => root.FamilyOfflinePhotos?.[path] || path;
   const byYear = new Map(root.FamilyArchive.map(photo => [photo.year, photo]));
+  const byCountryYear = new Map((root.FamilyLocalArchive || []).map(photo => [photo.id,photo]));
+  for (const id of ['JP-1995','JP-2011','GB-2007','US-1983','CA-1992']) {
+    const [country,year] = id.split('-');
+    const photo = byYear.get(Number(year));
+    if (photo) byCountryYear.set(id,{ ...photo,id,country });
+  }
 
   function archivePhoto(photo, hero = false) {
     if (!photo) return '';
     const credit = `<a href="${escape(photo.source)}" target="_blank" rel="noopener noreferrer">${escape(photo.credit)} · 原始档案</a> · <a href="${escape(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${escape(photo.license)}</a>`;
     return `<figure class="archive-photo${hero ? ' era-cover' : ''}">
-      <button type="button" class="photo-open" data-archive="${photo.year}" aria-label="放大历史影像 · ${escape(photo.title)}">
+      <button type="button" class="photo-open" data-archive="${photo.id||photo.year}" aria-label="放大历史影像 · ${escape(photo.title)}">
         <img src="${media(photo.src)}" alt="${escape(photo.caption)}" ${hero?'':'loading="lazy"'} decoding="async">
       </button>
-      <figcaption><small>同年档案 · ${escape(photo.date)} · ${escape(photo.place)}</small>
+      <figcaption><small>${photo.country?'本地主题档案':'同年档案'} · ${escape(photo.date)} · ${escape(photo.place)}</small>
         <strong>${escape(photo.title)}</strong><span>${escape(photo.caption)}</span>
-        <details><summary>影像出处</summary>${credit} · 等比缩放与 WebP 转码</details>
+        <details><summary>影像出处</summary>${credit} · ${escape(photo.transform||'等比缩放与 WebP 转码')}</details>
       </figcaption></figure>`;
   }
 
-  function yearVisual(year, title, hero = false) {
-    const photo = byYear.get(year);
+  function yearVisual(year, title, hero = false, country = '') {
+    const photo = byCountryYear.get(country+'-'+year) || byYear.get(year);
     if (photo) return archivePhoto(photo, hero);
     const path = 'assets/history/' + year + '.webp';
     const alt = year + ' 年历史背景插画 · ' + title;
@@ -62,7 +68,7 @@
   function showPhoto(button) {
     const dialog = document.getElementById('photo-dialog');
     const image = button.querySelector('img');
-    const photo = byYear.get(Number(button.dataset.archive));
+    const photo = byCountryYear.get(button.dataset.archive) || byYear.get(Number(button.dataset.archive));
     dialog.querySelector('h2').textContent = photo?.title || image.alt;
     const enlarged = dialog.querySelector('img');
     enlarged.src = image.src;
